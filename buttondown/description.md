@@ -1,6 +1,6 @@
 <!-- Buttondown > Settings > General: newsletter name, description, and the Web page text. -->
 
-**Newsletter name:** France Data Events
+**Newsletter name:** French Data Events
 
 **Username:** france-data-events (must match `BUTTONDOWN_USERNAME` in config/country.mjs)
 
@@ -16,4 +16,4 @@
 
 **Appearance:** keep the accent colour black (the digest draws its own masthead with a deep-blue rule, `#1F3A93`). Paste `buttondown/web.css` into Settings > Web > Custom CSS (see the note inside the file about the tag placement rules).
 
-**After the first signup flow works:** run `node scripts/buttondown-redirects.mjs --apply` (sets the "thanks" and "confirmed" pages) and set the sender name to "France Data Events" with reply-to contact@francedataevents.com.
+**After the first signup flow works:** run `node scripts/buttondown-redirects.mjs --apply` (sets the "thanks" and "confirmed" pages) and set the sender name to "French Data Events" with reply-to contact@frenchdataevents.fr.

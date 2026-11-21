@@ -7,7 +7,7 @@ import { sampleEvents } from '../../scripts/lib/sample-events.mjs';
 import { SUBSCRIBE_ACTION } from '../../src/lib/newsletter.mjs';
 import { SITE_URL } from '../../config/country.mjs';
 
-// Links follow the configured site address (GitHub Pages now, francedataevents.com after go-live).
+// Links follow the configured site address (GitHub Pages now, frenchdataevents.fr after go-live).
 const U = SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 const ev = (o) => ({
@@ -174,10 +174,10 @@ test('multi-day event shows "jusqu’au" in French and "to" in English', () => {
 	assert.match(renderDigest(s, 'en').body, /to 27 Nov/);
 });
 
-test('masthead says "France Data Events" (mark + blue accent rule), not the website name', () => {
+test('masthead says "French Data Events" (mark + blue accent rule), not the website name', () => {
 	for (const locale of ['fr', 'en']) {
 		const { body } = renderDigest(sel, locale);
-		assert.match(body, />France Data Events</);
+		assert.match(body, />French Data Events</);
 		assert.match(body, /border:2px solid #000000/); // the mark frame
 		assert.match(body, /height="3"[^>]*background:#1F3A93/); // the 3px accent rule
 		assert.ok(!body.includes('#e30613'));

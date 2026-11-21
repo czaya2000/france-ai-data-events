@@ -1,7 +1,7 @@
 /* Textes de l'interface en français. Typé comme les mêmes `Messages` que en.ts :
    une clé manquante ici est une erreur de type. Ton : neutre, simple, direct ;
    on évite d'interpeller le lecteur quand la phrase s'en passe. Le nom du produit
-   « France Data Events » reste en anglais dans les deux langues. */
+   « French Data Events » reste en anglais dans les deux langues. */
 import type { Messages } from './en.ts';
 
 /** "de " / "d’" before a plural noun: "de conférences", "d’événements". */

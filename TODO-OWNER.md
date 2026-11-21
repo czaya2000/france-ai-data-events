@@ -1,11 +1,11 @@
-# Owner to-do (France Data Events)
+# Owner to-do (French Data Events)
 
 Only things you can do. In order. The site already runs at **https://czaya2000.github.io/france-ai-data-events/** (not indexable on purpose). Everything below is needed for go-live, none of it blocks the preview.
 
 ## 1. Buy the domain
 
-1. Go to your registrar. Search `francedataevents.com` (it looked unregistered on 21 Nov 2026 by RDAP; confirm there, premium or reserved names are possible). Buy it, 1 year or more, with privacy/WHOIS protection on.
-2. Optional defensive buy: `francedataevents.fr` (a `.fr` needs a registrant with an address in the EU/EEA). If bought, set it to redirect to `https://francedataevents.com` at the registrar.
+1. Go to your registrar. Search `frenchdataevents.fr` (it looked unregistered on 21 Nov 2026 by RDAP; confirm there, premium or reserved names are possible). Buy it, 1 year or more, with privacy/WHOIS protection on.
+2. Optional defensive buy: `frenchdataevents.fr` (a `.fr` needs a registrant with an address in the EU/EEA). If bought, set it to redirect to `https://frenchdataevents.fr` at the registrar.
 
 ## 2. DNS for GitHub Pages (at the registrar's DNS panel)
 
@@ -15,18 +15,18 @@ Delete any parking A/AAAA records and a `www` CNAME that points at the apex, the
 - 4 apex `AAAA` records: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
 - `www` `CNAME` to `czaya2000.github.io`
 
-## 3. DNS for email (ImprovMX, so `contact@francedataevents.com` reaches you)
+## 3. DNS for email (ImprovMX, so `contact@frenchdataevents.fr` reaches you)
 
-1. Sign up at improvmx.com, add domain `francedataevents.com`.
+1. Sign up at improvmx.com, add domain `frenchdataevents.fr`.
 2. Add the DNS records it shows: 2 `MX` records (`mx1.improvmx.com` priority 10, `mx2.improvmx.com` priority 20) and one `TXT` SPF record (`v=spf1 include:spf.improvmx.com ~all`; merge it if the domain already has an SPF record).
 3. Create the alias `contact@` forwarding to your own mailbox. Send a test mail to it.
 
 ## 4. Switch the site to the custom domain (the one-line change)
 
 1. In `config/country.mjs` change `const DEFAULT_SITE_URL = GITHUB_PAGES_URL;` to `const DEFAULT_SITE_URL = CUSTOM_DOMAIN_URL;`.
-2. Create `public/CNAME` containing exactly `francedataevents.com`.
+2. Create `public/CNAME` containing exactly `frenchdataevents.fr`.
 3. In the same file set `INDEXABLE = true` (removes noindex, opens robots.txt, emits the sitemap).
-4. Commit and push to `main`. Then GitHub repo > Settings > Pages > Custom domain = `francedataevents.com` > Save; when the certificate is ready tick **Enforce HTTPS**.
+4. Commit and push to `main`. Then GitHub repo > Settings > Pages > Custom domain = `frenchdataevents.fr` > Save; when the certificate is ready tick **Enforce HTTPS**.
 5. Open the site, check one event page and `/en/`.
 
 ## 5. Claude secret for the daily refresh
@@ -42,21 +42,21 @@ Delete any parking A/AAAA records and a `www` CNAME that points at the apex, the
 3. Paste the confirmation and welcome texts from `buttondown/confirmation-email.md` and `welcome-email.md`; check the `{{ confirmation_url }}` variable against Buttondown's docs.
 4. Run `node scripts/buttondown-tag-css.mjs` (needs the API key), paste its lines into `buttondown/web.css`, then paste the whole file into Settings > Web > Custom CSS.
 5. Settings > Programming > API: create a key, add it as repository secret `BUTTONDOWN_API_KEY`. Until then the Monday draft step skips itself.
-6. Redirect URLs (Settings): after the form `https://francedataevents.com/subscribe/thanks/`, after confirmation `https://francedataevents.com/subscribe/confirmed/`.
+6. Redirect URLs (Settings): after the form `https://frenchdataevents.fr/subscribe/thanks/`, after confirmation `https://frenchdataevents.fr/subscribe/confirmed/`.
 7. Every Monday two drafts (French, English) appear. Check them, send them yourself. Local previews: `preview/digest-fr.html`, `preview/digest-en.html`.
 
 ## 7. Umami analytics
 
-1. Open https://umami-data-events.vercel.app > Settings > Websites > Add website: name `France Data Events`, domain `francedataevents.com`.
+1. Open https://umami-data-events.vercel.app > Settings > Websites > Add website: name `French Data Events`, domain `frenchdataevents.fr`.
 2. Copy the website ID into `UMAMI_WEBSITE_ID` in `config/country.mjs`. Until then no analytics script is emitted anywhere.
 
 ## 8. Search Console
 
-After step 4: Google Search Console > add property `francedataevents.com` (DNS TXT verification), submit `https://francedataevents.com/sitemap-index.xml`. Do the same in Bing Webmaster Tools. Put the verification token in `GOOGLE_SITE_VERIFICATION` if you use the meta method.
+After step 4: Google Search Console > add property `frenchdataevents.fr` (DNS TXT verification), submit `https://frenchdataevents.fr/sitemap-index.xml`. Do the same in Bing Webmaster Tools. Put the verification token in `GOOGLE_SITE_VERIFICATION` if you use the meta method.
 
 ## 9. FormSubmit activation
 
-After step 3 works and the site is on the domain: open the contact form and the submit-event form once and send a short real message from each. FormSubmit emails an activation link to `contact@francedataevents.com`; click it. Until then submissions are held.
+After step 3 works and the site is on the domain: open the contact form and the submit-event form once and send a short real message from each. FormSubmit emails an activation link to `contact@frenchdataevents.fr`; click it. Until then submissions are held.
 
 ## 10. Reviews
 

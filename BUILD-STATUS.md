@@ -1,4 +1,4 @@
-# France Data Events: build status (21 Nov 2026)
+# French Data Events: build status (21 Nov 2026)
 
 DONE. All five phases are finished and pushed to https://github.com/czaya2000/france-ai-data-events (public).
 
@@ -22,5 +22,5 @@ Open issues
 - Legal text and French copy need a native/legal review.
 
 Owner to-dos (exact steps in TODO-OWNER.md, in order)
-1. Buy francedataevents.com (optionally .fr). 2. DNS for GitHub Pages. 3. ImprovMX for contact@. 4. One-line domain switch + CNAME + INDEXABLE=true.
+1. Buy frenchdataevents.fr (optionally .fr). 2. DNS for GitHub Pages. 3. ImprovMX for contact@. 4. One-line domain switch + CNAME + INDEXABLE=true.
 5. Secret CLAUDE_CODE_OAUTH_TOKEN (same as Germany). 6. Buttondown newsletter + API key. 7. Umami website ID. 8. Search Console. 9. FormSubmit activation. 10. Native French and legal review.

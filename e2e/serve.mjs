@@ -11,7 +11,7 @@ const env = {
 	E2E_EVENTS: 'e2e/fixtures/events.json',
 	E2E_OUT: './dist-e2e',
 	SITE_TODAY: '2026-11-18', // a Wednesday; Monday 16 .. Sunday 22 is "this week"
-	// Serve at the origin root (no /france-ai-data-events/ base) so tests can use plain paths.
+	// Serve at the origin root (no sub-path base) so tests can use plain paths.
 	// The base-path build is checked separately by `npm run test:i18n` and the QA curl checks.
 	SITE_URL: `http://localhost:${port}`,
 };

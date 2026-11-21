@@ -9,7 +9,7 @@ Scope: the France edition as built in one autonomous run. Result: all checks bel
 | `npm test` (offline: parsers incl. jsonld / luma-calendar / openagenda, dedupe 16 positive + 14 negative French pairs, ledger, caps, Eventbrite politeness, discovery caps, verify/apply, i18n, schedule, digest) | 177 pass, 0 fail |
 | `npm run build` with 199 real events | 458 pages |
 | `npm run validate` | OK, 199 events valid |
-| `npm run test:ics` | 56 French + 56 English feeds valid, `TZID=Europe/Paris`, UIDs `@francedataevents.com` |
+| `npm run test:ics` | 56 French + 56 English feeds valid, `TZID=Europe/Paris`, UIDs `@frenchdataevents.fr` |
 | `npm run test:agent` (llms.txt, llms-full.txt, per-city and per-type md) | OK |
 | `npm run test:i18n` | 229 French + 229 English pages: lang, hreflang pairs, switch targets, no phrase leaks, noindex, base paths |
 | `npm run test:e2e` (Playwright, frozen clock 2026-11-18, browser zone America/Los_Angeles, desktop 1280 + mobile 390, fr + en) | 306 pass; also green in `deploy.yml` on GitHub |
@@ -19,7 +19,7 @@ Scope: the France edition as built in one autonomous run. Result: all checks bel
 
 ## Behaviour covered by e2e
 
-Filters (city, format, search, week = today..Sunday, month = today..end of month), ended events hidden at build and in client JS (Europe/Paris end time, else 23:59:59), running events under "Aujourd'hui" / "Today", cards show city + time only, FR/EN switch with slug mapping, forms (FormSubmit target `contact@francedataevents.com`, Buttondown `france-data-events` with exactly one `lang-fr`/`lang-en`), ICS feeds, noindex and robots, no Umami script while the ID is empty.
+Filters (city, format, search, week = today..Sunday, month = today..end of month), ended events hidden at build and in client JS (Europe/Paris end time, else 23:59:59), running events under "Aujourd'hui" / "Today", cards show city + time only, FR/EN switch with slug mapping, forms (FormSubmit target `contact@frenchdataevents.fr`, Buttondown `france-data-events` with exactly one `lang-fr`/`lang-en`), ICS feeds, noindex and robots, no Umami script while the ID is empty.
 
 ## Deployed site
 

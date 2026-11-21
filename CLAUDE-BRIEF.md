@@ -1,10 +1,10 @@
-# Build brief: France Data Events (francedataevents.com)
+# Build brief: French Data Events (frenchdataevents.fr)
 
 French twin of germandataevents.com (itself the German edition of swissdataevents.ch). Built 21 November 2026 in one autonomous run, from a copy of the German repo (`../germany-ai-data-events`, read-only template: never modified, never pushed) plus the research in `../france-research` (approved by the owner).
 
 Product: a public list of upcoming **AI and data events in France** (meetups, conferences, workshops, networking, webinars). French at `/`, English at `/en/`. Browse by city and format, weekly email digest (Buttondown, later), calendar feeds (ICS / Google Calendar), JSON / RSS / llms.txt for apps and agents. It refreshes itself daily.
 
-Name: **France Data Events** (`SITE_NAME`, English in both languages). Domain: francedataevents.com, **not bought yet**. Contact: contact@francedataevents.com (ImprovMX forwarding, later).
+Name: **French Data Events** (`SITE_NAME`, English in both languages). Domain: frenchdataevents.fr, **not bought yet**. Contact: contact@frenchdataevents.fr (ImprovMX forwarding, later).
 
 ## 1. What stays identical to Germany
 

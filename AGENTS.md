@@ -1,4 +1,4 @@
-# France Data Events: operating notes
+# French Data Events: operating notes
 
 French edition of germandataevents.com (German edition of swissdataevents.ch). Spec: `CLAUDE-BRIEF.md`. Decisions: `DECISIONS.md`. Source registry: `SOURCES.fr.md` / `config/sources.json`. Owner steps: `TODO-OWNER.md`. The German repo (`../germany-ai-data-events`) is a read-only template: never write there.
 
@@ -38,4 +38,4 @@ French edition of germandataevents.com (German edition of swissdataevents.ch). S
 - Strings: `src/i18n/en.ts` defines the shape, `src/i18n/fr.ts` is typed `Messages`. Use `t(locale)`; no hard-coded UI copy. Stored values (titles, organisers, venues, topics) are shown as stored; `displayCity`, `formatLabel`, `localizeCost` translate stored English values at render time.
 - Paths: `src/i18n/paths.mjs` (`localePath`, `switchLocalePath`, `hubPath`, `legalPath('legal'|'privacy', locale)`). Format hubs: `/conferences/`, `/ateliers/`, `/webinaires/`, `/meetups/`, `/networking/` <-> `/en/conferences/`, `/en/workshops/`, `/en/webinars/`, ...; legal: `/mentions-legales/` <-> `/en/legal-notice/`, `/confidentialite/` <-> `/en/privacy/`.
 - Newsletter: Buttondown `france-data-events`, exactly one of `lang-fr` / `lang-en` plus optional `city-<slug>` / `format-<slug>`. The Monday digest creates two drafts only (French: not `lang-en`; English: `lang-en`); never send.
-- Product name `SITE_NAME` "France Data Events" (English in both languages). `CONTACT_EMAIL` in `config/country.mjs` is the only contact constant; `FORM_ENDPOINT` is FormSubmit + that address.
+- Product name `SITE_NAME` "French Data Events" (English in both languages). `CONTACT_EMAIL` in `config/country.mjs` is the only contact constant; `FORM_ENDPOINT` is FormSubmit + that address.

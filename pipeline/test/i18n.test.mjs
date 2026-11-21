@@ -82,7 +82,7 @@ test('legal pages: no placeholders or draft banners, owner name present', () => 
 test('FORM_ENDPOINT posts to FormSubmit with the contact mailbox', async () => {
 	const { FORM_ENDPOINT, CONTACT_EMAIL } = await import('../../config/country.mjs');
 	assert.equal(FORM_ENDPOINT, `https://formsubmit.co/${CONTACT_EMAIL}`);
-	assert.equal(FORM_ENDPOINT, 'https://formsubmit.co/contact@francedataevents.com');
+	assert.equal(FORM_ENDPOINT, 'https://formsubmit.co/contact@frenchdataevents.fr');
 });
 
 test('switchLocalePath: 404 page', () => {
@@ -248,5 +248,5 @@ test('isoDateIn / today: the date in Europe/Paris, not UTC; SITE_TODAY freezes i
 
 test('contact email is the France mailbox', async () => {
 	const { CONTACT_EMAIL } = await import('../../config/country.mjs');
-	assert.equal(CONTACT_EMAIL, 'contact@francedataevents.com');
+	assert.equal(CONTACT_EMAIL, 'contact@frenchdataevents.fr');
 });

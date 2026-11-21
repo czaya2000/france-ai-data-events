@@ -4,7 +4,7 @@ import { LOCALES, NOW, at, open } from './helpers';
 /* France-specific checks: not indexable yet, Europe/Paris in the calendar feeds, the form and
    newsletter endpoints, French-first language handling, ICS download. */
 
-const FORM = 'https://formsubmit.co/contact@francedataevents.com';
+const FORM = 'https://formsubmit.co/contact@frenchdataevents.fr';
 
 test.describe('not indexable yet (INDEXABLE=false)', () => {
 	for (const loc of LOCALES) {
@@ -61,7 +61,7 @@ test.describe('forms markup', () => {
 
 test.describe('ICS feeds', () => {
 	for (const loc of LOCALES) {
-		test(`city feed is Europe/Paris with a francedataevents.com UID domain (${loc})`, async ({ request }) => {
+		test(`city feed is Europe/Paris with a frenchdataevents.fr UID domain (${loc})`, async ({ request }) => {
 			const res = await request.get(at(loc, '/calendar/paris.ics'));
 			expect(res.status()).toBe(200);
 			expect(res.headers()['content-type']).toContain('text/calendar');
@@ -69,7 +69,7 @@ test.describe('ICS feeds', () => {
 			expect(ics).toContain('BEGIN:VCALENDAR');
 			expect(ics).toContain('TZID=Europe/Paris');
 			expect(ics).not.toMatch(/Europe\/Berlin|Europe\/Zurich/);
-			expect(ics).toMatch(/UID:[^\r\n]+@francedataevents\.com/);
+			expect(ics).toMatch(/UID:[^\r\n]+@frenchdataevents\.fr/);
 			expect((ics.match(/BEGIN:VEVENT/g) || []).length).toBe(9);
 			// 17:00 local (Paris) event stays 17:00 in the feed, not shifted to the browser zone.
 			expect(ics).toMatch(/DTSTART;TZID=Europe\/Paris:20261118T170000/);

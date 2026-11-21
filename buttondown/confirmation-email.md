@@ -6,7 +6,7 @@
 
 Bonjour,
 
-Merci de vous abonner à la lettre hebdomadaire de **France Data Events** : chaque lundi, les événements data et IA des deux prochaines semaines en France, selon les villes et les formats que vous avez choisis.
+Merci de vous abonner à la lettre hebdomadaire de **French Data Events** : chaque lundi, les événements data et IA des deux prochaines semaines en France, selon les villes et les formats que vous avez choisis.
 
 Pour finaliser votre inscription, confirmez votre adresse e-mail :
 
@@ -14,13 +14,13 @@ Pour finaliser votre inscription, confirmez votre adresse e-mail :
 
 Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : rien ne sera envoyé.
 
-Une question ? Écrivez à contact@francedataevents.com.
+Une question ? Écrivez à contact@frenchdataevents.fr.
 
 ---
 
 Hello,
 
-Thanks for subscribing to the weekly **France Data Events** digest: every Monday, the data and AI events in France for the next two weeks, matched to the cities and formats you picked.
+Thanks for subscribing to the weekly **French Data Events** digest: every Monday, the data and AI events in France for the next two weeks, matched to the cities and formats you picked.
 
 To finish signing up, please confirm your email address:
 
@@ -28,4 +28,4 @@ To finish signing up, please confirm your email address:
 
 If you didn't ask for this, just ignore this message and nothing will be sent.
 
-Questions? Write to contact@francedataevents.com.
+Questions? Write to contact@frenchdataevents.fr.

@@ -1,24 +1,20 @@
 // Everything country-specific lives here. Plain .mjs so Astro, the Node
 // scripts (validator, digest, indexnow) and the pipeline can all import it.
 //
-// ---- GOING LIVE ON THE CUSTOM DOMAIN: one line --------------------------------------------------
-// Today the site is served from GitHub Pages under a sub-path. When francedataevents.com is
-// connected (see TODO-OWNER.md), change DEFAULT_SITE_URL below from GITHUB_PAGES_URL to
-// CUSTOM_DOMAIN_URL and add public/CNAME containing `francedataevents.com`. The base path then
-// becomes empty and every internal link follows. Nothing else needs editing.
+// Domain: frenchdataevents.fr (public/CNAME must match). The site builds at the domain root.
+// INDEXABLE stays false until launch (see TODO-OWNER.md).
 export const COUNTRY_CODE = 'FR';
 export const COUNTRY_NAME = 'France';
 export const TIMEZONE = 'Europe/Paris';
 export const CURRENCY = 'EUR';
 export const LOCALE = 'fr_FR';
 
-export const SITE_NAME = 'France Data Events';
-export const SITE_SHORT = 'France Data Events';
+export const SITE_NAME = 'French Data Events';
+export const SITE_SHORT = 'French Data Events';
 
-export const CUSTOM_DOMAIN_URL = 'https://francedataevents.com';
+export const CUSTOM_DOMAIN_URL = 'https://frenchdataevents.fr';
 export const GITHUB_PAGES_URL = 'https://czaya2000.github.io/france-ai-data-events';
-// >>> THE ONE LINE TO CHANGE WHEN THE DOMAIN IS READY: GITHUB_PAGES_URL -> CUSTOM_DOMAIN_URL <<<
-const DEFAULT_SITE_URL = GITHUB_PAGES_URL;
+const DEFAULT_SITE_URL = CUSTOM_DOMAIN_URL;
 const siteUrl = new URL(process.env.SITE_URL || DEFAULT_SITE_URL);
 /** Origin only, no path: Astro's `site`. */
 export const SITE_ORIGIN = siteUrl.origin;
@@ -38,8 +34,8 @@ export const REPO_URL = 'https://github.com/czaya2000/france-ai-data-events';
 export const INDEXABLE = false;
 
 // Owner-supplied values (open items are listed in the owner notes file).
-export const CONTACT_EMAIL = 'contact@francedataevents.com';
-export const FORM_ENDPOINT = 'https://formsubmit.co/contact@francedataevents.com';
+export const CONTACT_EMAIL = 'contact@frenchdataevents.fr';
+export const FORM_ENDPOINT = 'https://formsubmit.co/contact@frenchdataevents.fr';
 export const BUTTONDOWN_USERNAME = 'france-data-events';
 export const GOOGLE_SITE_VERIFICATION = '';
 export const INDEXNOW_KEY = '';
