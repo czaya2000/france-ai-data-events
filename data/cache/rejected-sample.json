@@ -1,0 +1,354 @@
+{
+	"dedupeMerges": [
+		{
+			"kept": "🚀 Découvrez la nouvelle ère de l'agentic coding",
+			"merged": "⚽ Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
+			"date": "2026-11-26",
+			"sources": [
+				"meetup:strasbourg-aws-user-group",
+				"meetup:strasbourg-aws-user-group"
+			]
+		},
+		{
+			"kept": "The AI Collective Podcast with AJ & Catherine: Monday, Nov 23",
+			"merged": "The AI Collective Podcast with AJ & Catherine: Tuesday, Nov 24",
+			"date": "2026-11-23",
+			"sources": [
+				"luma-cal:genai-collective",
+				"luma-cal:genai-collective"
+			]
+		},
+		{
+			"kept": "The AI Collective Podcast with AJ & Catherine: Tuesday, Dec 1",
+			"merged": "The AI Collective Podcast with AJ & Catherine: Wednesday, Dec 2",
+			"date": "2026-12-01",
+			"sources": [
+				"luma-cal:genai-collective",
+				"luma-cal:genai-collective"
+			]
+		},
+		{
+			"kept": "The AI Collective Podcast with AJ & Catherine: Thursday, Dec 3",
+			"merged": "The AI Collective Podcast with AJ & Catherine: Friday, Dec 4",
+			"date": "2026-12-03",
+			"sources": [
+				"luma-cal:genai-collective",
+				"luma-cal:genai-collective"
+			]
+		},
+		{
+			"kept": "AI Tinkerers Paris: PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
+			"merged": "PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
+			"date": "2026-12-01",
+			"sources": [
+				"agentconfs",
+				"aitinkerers-paris"
+			]
+		},
+		{
+			"kept": "AI Tinkerers Paris: Physical AI — Builders Day",
+			"merged": "Physical AI — Builders Day",
+			"date": "2026-12-02",
+			"sources": [
+				"agentconfs",
+				"aitinkerers-paris"
+			]
+		},
+		{
+			"kept": "Visite du site VERESCENCE SOMME avec les élèves du collège Millevoye d'Abbeville",
+			"merged": "Visite du site VERESCENCE SOMME avec les élèves du collège Ponthieu d'Abbeville",
+			"date": "2026-11-26",
+			"sources": [
+				"openagenda",
+				"openagenda"
+			]
+		},
+		{
+			"kept": "🚀 Découvrez la nouvelle ère de l'agentic coding",
+			"merged": "⚽ Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
+			"date": "2026-11-26",
+			"sources": [
+				"meetup:strasbourg-aws-user-group",
+				"brainberg-fr"
+			]
+		},
+		{
+			"kept": "World AI Cannes Festival",
+			"merged": "World AI Cannes Festival 2027",
+			"date": "2027-02-10",
+			"sources": [
+				"agentconfs",
+				"aieventlist-europe"
+			]
+		},
+		{
+			"kept": "Cloud Native AI Summit Europe",
+			"merged": "Cloud Native AI Summit Europe 2026",
+			"date": "2026-12-02",
+			"sources": [
+				"agentconfs",
+				"aieventlist-paris"
+			]
+		},
+		{
+			"kept": "Adopt AI Grand Palais",
+			"merged": "Adopt AI 2026 — Grand Palais Paris",
+			"date": "2026-12-03",
+			"sources": [
+				"agentconfs",
+				"aieventlist-paris"
+			]
+		},
+		{
+			"kept": "Adopt AI Grand Palais",
+			"merged": "Adopt AI 2026 — Grand Palais Paris",
+			"date": "2026-12-03",
+			"sources": [
+				"agentconfs",
+				"aieventlist-europe"
+			]
+		},
+		{
+			"kept": "Cloud Native AI Summit Europe",
+			"merged": "Cloud Native AI Summit Europe 2026",
+			"date": "2026-12-02",
+			"sources": [
+				"agentconfs",
+				"aieventlist-europe"
+			]
+		},
+		{
+			"kept": "Future Intelligence - L'IA au service de l'environnement",
+			"merged": "Future Intelligence",
+			"date": "2026-12-10",
+			"sources": [
+				"eventbrite-online",
+				"brainberg-fr"
+			]
+		},
+		{
+			"kept": "Build It Summit 2026",
+			"merged": "Build It Summit",
+			"date": "2026-12-01",
+			"sources": [
+				"aieventlist-paris",
+				"brainberg-fr"
+			]
+		},
+		{
+			"kept": "Cloud Native AI Summit Europe",
+			"merged": "Cloud Native AI Summit - EUROPE 2026",
+			"date": "2026-12-02",
+			"sources": [
+				"agentconfs",
+				"brainberg-fr"
+			]
+		},
+		{
+			"kept": "Facilitateur, formateur, coach : maîtrisez l'IA générative",
+			"merged": "IA avancée pour facilitateur, formateur, coach",
+			"date": "2026-11-24",
+			"sources": [
+				"eventbrite-online",
+				"briefia-meetups"
+			]
+		},
+		{
+			"kept": "Conférence Intelligence Artificielle",
+			"merged": "Journée de l'Entrepreneur : Intelligence Artificielle Générative",
+			"date": "2026-11-26",
+			"sources": [
+				"eventbrite-online",
+				"briefia-meetups"
+			]
+		},
+		{
+			"kept": "ADOPT'TON IA - Expérimentez l’IA pour votre entreprise",
+			"merged": "ADOPT’TON IA",
+			"date": "2026-11-26",
+			"sources": [
+				"openagenda",
+				"briefia-meetups"
+			]
+		},
+		{
+			"kept": "AI for Chip Design @NeurIPS",
+			"merged": "AI for Chip Design at NeurIPS 2026",
+			"date": "2026-12-12",
+			"sources": [
+				"agentconfs",
+				"briefia-meetups"
+			]
+		},
+		{
+			"kept": "Cloud Native AI Summit Europe",
+			"merged": "Cloud Native AI Summit Paris 2026 — European Edition",
+			"date": "2026-12-02",
+			"sources": [
+				"agentconfs",
+				"createwith-paris"
+			]
+		},
+		{
+			"kept": "AI for Chip Design @NeurIPS",
+			"merged": "AI for Chip Design at NeurIPS 2026",
+			"date": "2026-12-12",
+			"sources": [
+				"agentconfs",
+				"createwith-paris"
+			]
+		}
+	],
+	"keywordRejects": [
+		{
+			"title": "Notion Paris Summit",
+			"date": "2026-11-25",
+			"source": "luma-paris"
+		},
+		{
+			"title": "Finance Engineer Hackathon",
+			"date": "2026-12-02",
+			"source": "luma-paris"
+		},
+		{
+			"title": "Soirée Speak Easy & animation magicien à Nice (40-50 ans)",
+			"date": "2026-12-04",
+			"source": "eventbrite-nice"
+		},
+		{
+			"title": "Big Ballers: Dinner with Entrepreneurs | Nice",
+			"date": "2026-11-29",
+			"source": "eventbrite-nice"
+		},
+		{
+			"title": "Discover Nice’s hidden treasures with a scavenger hunt by World City Trail!",
+			"date": "2026-11-21",
+			"source": "eventbrite-nice"
+		},
+		{
+			"title": "Complete Terroir Experience in Nice – 8 Wines and 4 Artisan Cheeses",
+			"date": "2026-11-21",
+			"source": "eventbrite-nice"
+		},
+		{
+			"title": "Café philo : La vérité est-elle une opinion ?",
+			"date": "2026-11-21",
+			"source": "eventbrite-strasbourg"
+		},
+		{
+			"title": "café philo: l'espoir est-il une illusion?",
+			"date": "2026-12-04",
+			"source": "eventbrite-strasbourg"
+		},
+		{
+			"title": "Calme, lucidité, liberté: l'art de vivre selon Sénèque",
+			"date": "2026-12-11",
+			"source": "eventbrite-strasbourg"
+		},
+		{
+			"title": "Crack the codes of Montpellier with our thrilling outdoor escape game!",
+			"date": "2026-11-21",
+			"source": "eventbrite-montpellier"
+		},
+		{
+			"title": "AFTERWORK 34 - ST JEAN DE VEDAS",
+			"date": "2026-12-16",
+			"source": "eventbrite-montpellier"
+		},
+		{
+			"title": "Immersion: Breathwork et Set Ambient",
+			"date": "2026-12-05",
+			"source": "eventbrite-montpellier"
+		},
+		{
+			"title": "Conversation autour du Vivant avec Thierry Paquot et Delphine Gleizes",
+			"date": "2027-01-06",
+			"source": "eventbrite-online"
+		},
+		{
+			"title": "Odoo Academy Facturation - Bordeaux",
+			"date": "2026-11-24",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "November Workshop",
+			"date": "2026-11-24",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Afterwork IT : possibilités d'optimisation du CA",
+			"date": "2026-11-25",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "PIGD - Paris Indie Games Developers",
+			"date": "2026-11-26",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "DevFest Paris 2026",
+			"date": "2026-11-27",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Bitcoin, le Débrief",
+			"date": "2026-11-30",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Paris Angular #9",
+			"date": "2026-12-01",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Open Source Experience 2026",
+			"date": "2026-12-09",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Demo Day : Nos apprenants vous dévoilent leurs projets",
+			"date": "2026-12-11",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Apéro music tech : rencontre et visite du Studio Gorgone",
+			"date": "2026-12-15",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "WomenHack - Paris Employer Ticket - March 17, 2027",
+			"date": "2027-03-17",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "EurIPS 2026 — NeurIPS in Paris",
+			"date": "2026-12-09",
+			"source": "aieventlist-europe"
+		},
+		{
+			"title": "Agile France 2027 : Transformons dans un monde incertain",
+			"date": "2027-03-18",
+			"source": "devevents"
+		},
+		{
+			"title": "FORUM DE L'INSERTION IAE",
+			"date": "2026-12-03",
+			"source": "openagenda"
+		},
+		{
+			"title": "Les permanences de L' IAE rencontre avec la structure ADEF",
+			"date": "2026-12-10",
+			"source": "openagenda"
+		},
+		{
+			"title": "L'IAE (Insertion par l'activité économique), un tremplin vers l'emploi. Ce mois-ci focus sur l'Eclaircie.",
+			"date": "2027-02-16",
+			"source": "openagenda"
+		},
+		{
+			"title": "Seminar: Terrestrial Space Infrastructure and Great-Power Competition – Aaron Bateman (GWU)",
+			"date": "2026-11-23",
+			"source": "hi-paris-ics"
+		}
+	]
+}

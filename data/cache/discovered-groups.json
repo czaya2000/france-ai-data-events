@@ -1,0 +1,207 @@
+{
+	"groups": {
+		"ac-cdg": {
+			"firstSeen": "2026-11-21",
+			"via": "meetup:paris-big-data",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"lyondatascience": {
+			"firstSeen": "2026-11-21",
+			"via": "meetup:lyon-data-science",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"rencontres-tech-innovation": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"aperos-agiles-montpellier": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"chtijug": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"paris-tech-afterwork-talks-networking": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"gdg-rennes": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"finistdevs": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"staff42": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"proxiadnord": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"solutiontech": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"android-paris": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"hacksxb": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"parisapi": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"yeeso-itwomen-network": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"alpesjug": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"lyonjs": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"digital-nomads-remote-workers-montpellier": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"meetup-harrycow-coworking-toulouse": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"maxsessions": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"rladies-limoges": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"cara-grenoble": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"software-craftsmanship-lille": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"strasbourg-net-group": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"lyondigitalhub": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"meetup-programmez": {
+			"firstSeen": "2026-11-21",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"ksug-in": {
+			"firstSeen": "2026-11-21",
+			"via": "agentconfs",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"paris-philosophy-cafe": {
+			"firstSeen": "2026-11-21",
+			"via": "briefia-meetups",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		},
+		"le-meetup-du-laptop-ux-creation": {
+			"firstSeen": "2026-11-21",
+			"via": "briefia-meetups",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-21"
+		}
+	}
+}

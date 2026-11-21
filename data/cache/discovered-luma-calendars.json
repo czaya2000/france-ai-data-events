@@ -1,0 +1,103 @@
+{
+	"calendars": {
+		"cal-cedsWn0tyHau5wm": {
+			"name": "ConUt - Les Controverses d'Utilité publique",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-Zmi833D8RL64n80": {
+			"name": "Alan",
+			"slug": "alan.eu",
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-1hB7mHUJ8WZ0l8h": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-8yPHi9oITkCB5CI": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-J4VgRvXXVDcDOuf": {
+			"name": "Paris Hardware Meetup",
+			"slug": "Paris-hardware-meetup",
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-QEWfkaGcHSASBfq": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-0ICm7FJKGW0OHUA": {
+			"name": "PoC Innovation",
+			"slug": null,
+			"city": "Le Kremlin-Bicêtre",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-ouvsbv3Gj9kvRGD": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		},
+		"cal-R4V662MAZSQBUp5": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-21",
+			"trust": "noisy"
+		}
+	},
+	"slugs": {
+		"reppeu2t": "cal-cedsWn0tyHau5wm",
+		"meetup-agents-ia-choix-d-architecture-et-retours-d": "cal-5HpS5DjhfyP4hWY",
+		"o1eopuwy": "cal-Zmi833D8RL64n80",
+		"xpowbqmg": "cal-1hB7mHUJ8WZ0l8h",
+		"dhroozcr": "cal-WJ39DQIi7A27vbQ",
+		"7nyhq1eu": "cal-8yPHi9oITkCB5CI",
+		"psoxd0ql": "cal-J4VgRvXXVDcDOuf",
+		"ifryicgz": "cal-SwHrfSaaRPdwqZ3",
+		"clickh-mistral-hack-paris": "cal-gmMOid1Rsqc3Hih",
+		"aw4xfgtp": "cal-uMgjGxbPzEpAZ16",
+		"2vub4eep": "cal-QEWfkaGcHSASBfq",
+		"rex-du-graphe-au-edge-computing-concevoir-une-ia-i": "cal-5HpS5DjhfyP4hWY",
+		"datacraft-uy31": "cal-5HpS5DjhfyP4hWY",
+		"meetup-agents-ia-2-ce-qui-marche-et-ce-qui-coince": "cal-5HpS5DjhfyP4hWY",
+		"datacraft-k1ko": "cal-5HpS5DjhfyP4hWY",
+		"iwlbokns": "cal-0ICm7FJKGW0OHUA",
+		"xyiow6bw": "cal-gwYMy5LI7QXBjQt",
+		"c5a15vyu": "cal-sLRQJwogROB6ZmW",
+		"ai-builders-paris-nov": "cal-ouvsbv3Gj9kvRGD",
+		"xey84lw8": "cal-R4V662MAZSQBUp5",
+		"nerds-winter-of-code": "cal-E74MDlDKBaeAwXK",
+		"aic-ab-11-21": "cal-E74MDlDKBaeAwXK",
+		"aic-ch-11-21": "cal-E74MDlDKBaeAwXK",
+		"genai-em4z": "cal-E74MDlDKBaeAwXK",
+		"aic-do-11-23": "cal-E74MDlDKBaeAwXK"
+	}
+}
