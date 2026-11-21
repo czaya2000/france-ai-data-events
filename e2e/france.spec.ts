@@ -22,9 +22,13 @@ test.describe('not indexable yet (INDEXABLE=false)', () => {
 		expect(robots).toMatch(/Disallow:\s*\/\s*$/m);
 		expect((await request.get('/sitemap-index.xml')).status()).toBe(404);
 	});
-	test('no analytics script while UMAMI_WEBSITE_ID is empty', async ({ page }) => {
+	test('self-hosted Umami script is restricted to the site domain', async ({ page }) => {
 		await page.goto('/');
-		await expect(page.locator('script[data-website-id]')).toHaveCount(0);
+		const s = page.locator('script[data-website-id]');
+		await expect(s).toHaveCount(1);
+		await expect(s).toHaveAttribute('data-website-id', '58997630-33d4-4cf2-a171-1178d161205b');
+		await expect(s).toHaveAttribute('src', 'https://umami-data-events.vercel.app/script.js');
+		await expect(s).toHaveAttribute('data-domains', /frenchdataevents\.fr/);
 	});
 });
 
@@ -42,10 +46,10 @@ test.describe('forms markup', () => {
 			}
 		});
 
-		test(`newsletter form posts to Buttondown france-data-events with exactly one language tag (${loc})`, async ({ page }) => {
+		test(`newsletter form posts to Buttondown french-data-events with exactly one language tag (${loc})`, async ({ page }) => {
 			await open(page, at(loc, '/paris/'), NOW.wed);
 			const form = page.locator('form.subscribe-form').first();
-			await expect(form).toHaveAttribute('action', /buttondown\.com\/api\/emails\/embed-subscribe\/france-data-events$/);
+			await expect(form).toHaveAttribute('action', /buttondown\.com\/api\/emails\/embed-subscribe\/french-data-events$/);
 			await expect(form.locator('input[type="radio"][value^="lang-"]')).toHaveCount(2);
 			const values = await form.locator('input[type="radio"][value^="lang-"]').evaluateAll((els) => els.map((e) => (e as HTMLInputElement).value).sort());
 			expect(values).toEqual(['lang-en', 'lang-fr']);

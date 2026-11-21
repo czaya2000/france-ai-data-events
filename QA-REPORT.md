@@ -19,7 +19,7 @@ Scope: the France edition as built in one autonomous run. Result: all checks bel
 
 ## Behaviour covered by e2e
 
-Filters (city, format, search, week = today..Sunday, month = today..end of month), ended events hidden at build and in client JS (Europe/Paris end time, else 23:59:59), running events under "Aujourd'hui" / "Today", cards show city + time only, FR/EN switch with slug mapping, forms (FormSubmit target `contact@frenchdataevents.fr`, Buttondown `france-data-events` with exactly one `lang-fr`/`lang-en`), ICS feeds, noindex and robots, no Umami script while the ID is empty.
+Filters (city, format, search, week = today..Sunday, month = today..end of month), ended events hidden at build and in client JS (Europe/Paris end time, else 23:59:59), running events under "Aujourd'hui" / "Today", cards show city + time only, FR/EN switch with slug mapping, forms (FormSubmit target `contact@frenchdataevents.fr`, Buttondown `french-data-events` with exactly one `lang-fr`/`lang-en`), ICS feeds, noindex and robots, no Umami script while the ID is empty.
 
 ## Deployed site
 

@@ -37,7 +37,7 @@ Delete any parking A/AAAA records and a `www` CNAME that points at the apex, the
 
 ## 6. Buttondown newsletter
 
-1. Create the newsletter with username `france-data-events` (that name is wired in the code; if you pick another, change `BUTTONDOWN_USERNAME` in `config/country.mjs`).
+1. Done: newsletter exists with username `french-data-events` (that name is wired in the code; if you pick another, change `BUTTONDOWN_USERNAME` in `config/country.mjs`).
 2. Create the tags listed in `buttondown/description.md`, give each a public description, set the accent colour to black (Settings > Appearance), turn on double opt-in.
 3. Paste the confirmation and welcome texts from `buttondown/confirmation-email.md` and `welcome-email.md`; check the `{{ confirmation_url }}` variable against Buttondown's docs.
 4. Run `node scripts/buttondown-tag-css.mjs` (needs the API key), paste its lines into `buttondown/web.css`, then paste the whole file into Settings > Web > Custom CSS.
@@ -48,7 +48,7 @@ Delete any parking A/AAAA records and a `www` CNAME that points at the apex, the
 ## 7. Umami analytics
 
 1. Open https://umami-data-events.vercel.app > Settings > Websites > Add website: name `French Data Events`, domain `frenchdataevents.fr`.
-2. Copy the website ID into `UMAMI_WEBSITE_ID` in `config/country.mjs`. Until then no analytics script is emitted anywhere.
+2. Done 2026-11-21: website ID `58997630-33d4-4cf2-a171-1178d161205b` is set in `UMAMI_WEBSITE_ID` (`config/country.mjs`); the script is restricted to `frenchdataevents.fr` via data-domains.
 
 ## 8. Search Console
 

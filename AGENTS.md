@@ -19,7 +19,7 @@ French edition of germandataevents.com (German edition of swissdataevents.ch). S
 
 - No Node script calls the Anthropic API or reads `CLAUDE_CODE_OAUTH_TOKEN`; only `daily-refresh.yml` references the secret and skips the Claude step with a notice when it is missing. No secrets in the repo.
 - `INDEXABLE=false` until the domain is live: noindex meta, `Disallow: /`, no sitemap, no IndexNow. No `public/CNAME` until then.
-- Umami: `UMAMI_WEBSITE_ID` empty means no script at all.
+- Umami: `UMAMI_WEBSITE_ID` is set (empty would mean no script at all).
 - Third-party listings (Brief IA, allai, Meetup city pages, Eventbrite): facts only, never descriptions; blurbs are generated. Eventbrite: slow, cached, backs off, never bypassed.
 - Public pages carry no TODO / Brouillon / Draft text (tests enforce it).
 - LF line endings. Commit to `main`.
@@ -37,5 +37,5 @@ French edition of germandataevents.com (German edition of swissdataevents.ch). S
 - Page bodies live once in `src/views/*.astro` (prop `locale`); `src/pages/**` are thin wrappers (French at root, same file under `src/pages/en/`). A new page = one view + two wrappers.
 - Strings: `src/i18n/en.ts` defines the shape, `src/i18n/fr.ts` is typed `Messages`. Use `t(locale)`; no hard-coded UI copy. Stored values (titles, organisers, venues, topics) are shown as stored; `displayCity`, `formatLabel`, `localizeCost` translate stored English values at render time.
 - Paths: `src/i18n/paths.mjs` (`localePath`, `switchLocalePath`, `hubPath`, `legalPath('legal'|'privacy', locale)`). Format hubs: `/conferences/`, `/ateliers/`, `/webinaires/`, `/meetups/`, `/networking/` <-> `/en/conferences/`, `/en/workshops/`, `/en/webinars/`, ...; legal: `/mentions-legales/` <-> `/en/legal-notice/`, `/confidentialite/` <-> `/en/privacy/`.
-- Newsletter: Buttondown `france-data-events`, exactly one of `lang-fr` / `lang-en` plus optional `city-<slug>` / `format-<slug>`. The Monday digest creates two drafts only (French: not `lang-en`; English: `lang-en`); never send.
+- Newsletter: Buttondown `french-data-events`, exactly one of `lang-fr` / `lang-en` plus optional `city-<slug>` / `format-<slug>`. The Monday digest creates two drafts only (French: not `lang-en`; English: `lang-en`); never send.
 - Product name `SITE_NAME` "French Data Events" (English in both languages). `CONTACT_EMAIL` in `config/country.mjs` is the only contact constant; `FORM_ENDPOINT` is FormSubmit + that address.

@@ -8,7 +8,7 @@ import type { Locale } from '../i18n';
    Loi Informatique et Libertés; provider facts (transfer mechanisms, retention) follow each provider's own
    public documentation, as already researched for the German edition; where a provider is silent the text says so.
    Facts checked in the code: self-hosted fonts (Base.astro), Umami script only when UMAMI_WEBSITE_ID is set
-   (config/country.mjs, empty today), plain POST forms to FormSubmit (ContactPage, SubmitPage), Buttondown
+   (config/country.mjs, set), plain POST forms to FormSubmit (ContactPage, SubmitPage), Buttondown
    form (Subscribe.astro), no cookies set by the site. Not legal advice. */
 interface Props {
 	locale: Locale;
@@ -68,12 +68,12 @@ const legal = localePath(legalPath('legal', locale), locale);
 
 				<h2>4. Mesure d’audience avec Umami (auto-hébergé)</h2>
 				<p>
-					Lorsqu’elle est activée, la mesure d’audience repose sur Umami, que nous exploitons nous-mêmes (pas
-					d’Umami Cloud). Le script est alors chargé depuis notre propre instance, à l’adresse{' '}
-					<code>umami-data-events.vercel.app</code>. L’instance tourne chez Vercel (Vercel Inc., États-Unis) ; les
+					Nous mesurons l’audience avec Umami, que nous exploitons nous-mêmes (pas d’Umami Cloud). Le script de
+					mesure est chargé depuis notre propre instance, à l’adresse{' '}
+					<code>umami-data-events.vercel.app</code>, et ne compte que les visites du domaine{' '}
+					<code>frenchdataevents.fr</code>. L’instance tourne chez Vercel (Vercel Inc., États-Unis) ; les
 					données de mesure sont stockées dans une base de données chez Supabase, dans la région de l’Union
-					européenne. Tant que cette mesure n’est pas activée sur le site, aucun script d’analyse n’est chargé.
-					Umami fonctionne sans cookies.
+					européenne. Umami fonctionne sans cookies.
 				</p>
 				<p>
 					Ce qui est enregistré : pages vues et actions ponctuelles (par exemple un clic sur un lien d’inscription ou sur
@@ -272,11 +272,10 @@ const legal = localePath(legalPath('legal', locale), locale);
 
 				<h2>4. Audience measurement with Umami (self-hosted)</h2>
 				<p>
-					When it is switched on, audience measurement uses Umami, which we run ourselves (not Umami Cloud). The script is
-					then loaded from our own instance at <code>umami-data-events.vercel.app</code>. The instance runs on Vercel
-					(Vercel Inc., USA); the measurement data is kept in a database at Supabase, in the European Union region. As
-					long as the measurement is not switched on for the site, no analytics script is loaded. Umami works without
-					cookies.
+					We measure audience with Umami, which we run ourselves (not Umami Cloud). The measurement script is loaded
+					from our own instance at <code>umami-data-events.vercel.app</code> and only counts visits to the domain{' '}
+					<code>frenchdataevents.fr</code>. The instance runs on Vercel (Vercel Inc., USA); the measurement data is
+					kept in a database at Supabase, in the European Union region. Umami works without cookies.
 				</p>
 				<p>
 					What is recorded: page views and single actions (for example a click on a sign-up link or on "Subscribe to

@@ -36,11 +36,11 @@ export const INDEXABLE = false;
 // Owner-supplied values (open items are listed in the owner notes file).
 export const CONTACT_EMAIL = 'contact@frenchdataevents.fr';
 export const FORM_ENDPOINT = 'https://formsubmit.co/contact@frenchdataevents.fr';
-export const BUTTONDOWN_USERNAME = 'france-data-events';
+export const BUTTONDOWN_USERNAME = 'french-data-events';
 export const GOOGLE_SITE_VERIFICATION = '';
 export const INDEXNOW_KEY = '';
 /** Optional analytics. An empty website ID renders no tracking script at all. The owner adds the ID later. */
-export const UMAMI_WEBSITE_ID = '';
+export const UMAMI_WEBSITE_ID = '58997630-33d4-4cf2-a171-1178d161205b';
 /** Self-hosted Umami (Vercel). */
 export const UMAMI_SCRIPT_URL = 'https://umami-data-events.vercel.app/script.js';
 export const CLOUDFLARE_BEACON_TOKEN = '';

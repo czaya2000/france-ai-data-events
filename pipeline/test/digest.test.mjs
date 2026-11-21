@@ -22,8 +22,8 @@ const events = [
 ];
 const sel = selectEvents(events, { today: '2026-11-23' });
 
-test('subscribe endpoint is the france-data-events embed form', () => {
-	assert.equal(SUBSCRIBE_ACTION, 'https://buttondown.com/api/emails/embed-subscribe/france-data-events');
+test('subscribe endpoint is the french-data-events embed form', () => {
+	assert.equal(SUBSCRIBE_ACTION, 'https://buttondown.com/api/emails/embed-subscribe/french-data-events');
 });
 
 test('subjects differ by language and carry the ISO week (S48 in French)', () => {

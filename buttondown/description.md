@@ -2,7 +2,7 @@
 
 **Newsletter name:** French Data Events
 
-**Username:** france-data-events (must match `BUTTONDOWN_USERNAME` in config/country.mjs)
+**Username:** french-data-events (must match `BUTTONDOWN_USERNAME` in config/country.mjs)
 
 **Description (FR):** Chaque lundi, les événements data et IA des deux prochaines semaines en France : meetups, conférences, ateliers et webinaires, selon vos villes et vos formats. Gratuit, sans publicité.
 
