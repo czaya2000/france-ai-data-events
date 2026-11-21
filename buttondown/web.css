@@ -1,0 +1,40 @@
+/* Buttondown web CSS (Settings → Web → Custom CSS). Source of truth: paste this
+   whole file there after editing. Ported from the Swiss newsletter's web.css;
+   matches src/styles/theme.css (Archivo, black on warm off-white, red accent, square corners).
+   Keep Buttondown's own email accent colour BLACK (Settings → Appearance), otherwise it
+   adds a second coloured header on top of the digest's own masthead. */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
+body, body *:not(code):not(pre) { font-family: Archivo, 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
+body { background: #fbfbf9; color: #000; }
+h1 { letter-spacing: -0.02em; font-weight: 600; }
+button, input, textarea, select, .portal-btn, .button { border-radius: 0 !important; }
+.portal-btn--primary, .button { background: #000 !important; border-color: #000 !important; color: #fbfbf9 !important; }
+.portal-btn--primary:hover, .button:hover { background: #e30613 !important; border-color: #e30613 !important; }
+.archive__button { border-radius: 0 !important; text-transform: none !important; letter-spacing: 0 !important; font-weight: 500 !important; background: #000 !important; border-color: #000 !important; color: #fbfbf9 !important; }
+.archive__button:hover { background: #e30613 !important; border-color: #e30613 !important; }
+.card { border-radius: 0 !important; }
+.header-navigation { border-bottom: 3px solid #e30613; }
+.header-brand-name { text-transform: none !important; font-weight: 700; letter-spacing: -0.015em; }
+
+/* Preferences: tag checkboxes show the public description, not the tag name. */
+.field-group:has(.tag-field) { display: flex; align-items: center; gap: 8px; margin: 0; }
+.checkbox-label:has(.tag-field) .input-label { display: none; }
+.field-group:has(.tag-field) .helper-text { margin: 0; font-size: 15px; color: #000; }
+
+/* Two columns, Städte / Cities and Formate / Formats, in a fixed order. Buttondown lists
+   tags ticked-first, so each tag is placed by its id (the data-tag-id of the tag's checkbox).
+   NEW city-* OR format-* TAG = NEW LINE HERE: add one `.field-group:has([data-tag-id="..."])`
+   rule with the next free grid-row in the right column, or it falls out of the grid.
+   The lang-fr / lang-en tags are NOT city/format tags: they sit in a full-width row below. */
+.preferences-fields { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; row-gap: 10px; align-items: center; }
+.preferences-fields .field-group { margin: 0 !important; padding: 0 !important; }
+.preferences-fields::before, .preferences-fields::after { grid-row: 1; font-weight: 600; font-size: 13px; color: #6b6b70; padding-bottom: 4px; border-bottom: 1px solid #dededa; margin-bottom: 4px; }
+.preferences-fields::before { content: 'Städte / Cities · keine Auswahl = alle'; grid-column: 1; }
+.preferences-fields::after { content: 'Formate / Formats · keine Auswahl = alle'; grid-column: 2; }
+.field-group:has([data-tag-id="sub_tag_1zjnn7x58a9fd82v6fanxsm09p"]) { grid-column: 1; grid-row: 2; } /* city-berlin */
+.field-group:has([data-tag-id="sub_tag_6takf2ppyk9v5r7z7ryjfw0c8s"]) { grid-column: 2; grid-row: 2; } /* format-meetup */
+/* Language row (below the city/format grid). Pick one; no choice = German. */
+.field-group:has([data-tag-id="sub_tag_7pb4wcgv459ga80vyk2nf3hczt"]) { grid-column: 1 / -1; grid-row: 40; } /* lang-fr */
+.field-group:has([data-tag-id="sub_tag_0j9cyj4v6594b8h4wdgj065305"]) { grid-column: 1 / -1; grid-row: 41; } /* lang-en */
+/* TODO when the other tags exist: city-hamburg, city-munich, ... in column 1 (rows 3, 4, ...)
+   and format-conference, format-webinar, ... in column 2 (rows 3, 4, ...). Copy the lines above. */

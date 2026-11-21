@@ -1,0 +1,234 @@
+---
+import LegalShell from '../components/LegalShell.astro';
+import { SITE_NAME, SITE_URL, CONTACT_EMAIL } from '../lib/events';
+import { localePath, legalPath } from '../i18n/paths.mjs';
+import type { Locale } from '../i18n';
+
+/* Impressum (§ 5 DDG, § 18 Abs. 2 MStV) and disclaimer, German and English.
+   Owner name: Marcin Czajkowski; no postal address by owner decision; nothing is invented.
+   Not legal advice. */
+interface Props {
+	locale: Locale;
+}
+const { locale } = Astro.props;
+const de = locale === 'de';
+const path = legalPath('impressum', locale);
+const title = de ? `Impressum – ${SITE_NAME}` : `Legal notice (Impressum) – ${SITE_NAME}`;
+const description = de
+	? `Wer ${SITE_NAME} betreibt, wie man den Betreiber erreicht, und Haftungsausschluss.`
+	: `Who runs ${SITE_NAME}, how to reach the operator, and the disclaimer.`;
+---
+
+<LegalShell title={title} description={description} locale={locale} path={path}>
+	{
+		de ? (
+			<>
+				<h1>Impressum</h1>
+
+				<dl>
+					<dt>Diensteanbieter (§ 5 DDG)</dt>
+					<dd>
+						Marcin Czajkowski
+					</dd>
+
+					<dt>Kontakt</dt>
+					<dd>
+						E-Mail: {CONTACT_EMAIL}<br />
+						<a href={localePath("/contact/", "de")}>Kontaktformular</a>
+					</dd>
+
+					<dt>Verantwortlich für Inhalte (§ 18 Abs. 2 MStV)</dt>
+					<dd>Marcin Czajkowski, Kontakt wie oben.</dd>
+
+					<dt>Verbraucherstreitbeilegung (§ 36 VSBG)</dt>
+					<dd>
+						Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Die Plattform der EU-Kommission zur Online-Streitbeilegung finden Sie unter <a href="https://ec.europa.eu/consumers/odr/" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Unsere E-Mail-Adresse finden Sie oben.
+					</dd>
+
+					<dt>Worum es auf dieser Website geht</dt>
+					<dd>
+						germandataevents.com ist ein kostenloses, nichtkommerzielles Verzeichnis von KI- und Daten-Events in Deutschland, dazu ein Newsletter, betrieben von einer Privatperson. Die Angaben stammen von den öffentlichen
+						Seiten der Veranstalter und werden täglich geprüft; sie können sich beim Veranstalter aber jederzeit
+						ändern. {SITE_NAME} verkauft keine Tickets und erhält keine Provision.
+					</dd>
+				</dl>
+
+				<h2 id="haftungsausschluss">Haftungsausschluss</h2>
+				<p>
+					Die gesetzliche Haftung, insbesondere bei Vorsatz, grober Fahrlässigkeit und bei Verletzung von Leben,
+					Körper oder Gesundheit, lässt sich nicht ausschließen und bleibt unberührt.
+				</p>
+
+				<h2>Haftung für Inhalte</h2>
+				<p>
+					Als Diensteanbieter sind wir nach den allgemeinen Gesetzen, nach Art. 6 ff. der Verordnung (EU) 2022/2065
+					(Digital Services Act) und nach § 7 DDG für eigene Inhalte auf diesen Seiten verantwortlich. Wir sind jedoch
+					nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu
+					forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der
+					Nutzung von Informationen nach den allgemeinen Gesetzen bleiben unberührt. Eine Haftung ist erst ab
+					Kenntnis einer konkreten Rechtsverletzung möglich; bei Bekanntwerden entsprechender Rechtsverletzungen
+					entfernen wir die betreffenden Inhalte umgehend.
+				</p>
+
+				<h2>Haftung für Links</h2>
+				<p>
+					Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für
+					diese fremden Inhalte können wir keine Gewähr übernehmen; verantwortlich ist stets der jeweilige Anbieter
+					oder Betreiber der verlinkten Seite. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Eine
+					permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer
+					Rechtsverletzung nicht zumutbar; bei Bekanntwerden von Rechtsverletzungen entfernen wir die betreffenden
+					Links umgehend.
+				</p>
+
+				<h2>Richtigkeit der Event-Angaben</h2>
+				<p>
+					Die Event-Daten (Titel, Datum, Ort, Preis, Beschreibung, Anmeldelink) werden aus öffentlichen Quellen
+					Dritter übernommen und regelmäßig geprüft. Für Richtigkeit, Vollständigkeit und Aktualität übernehmen
+					wir keine Gewähr, soweit gesetzlich zulässig. Bitte bestätigen Sie alle Angaben vor Anreise oder Zahlung
+					auf der Seite des Veranstalters.
+				</p>
+
+				<h2>Veranstaltungen Dritter</h2>
+				<p>
+					Alle gelisteten Veranstaltungen werden von Dritten organisiert und durchgeführt. {SITE_NAME} ist weder
+					Veranstalter noch Vertragspartner, verkauft keine Tickets und vermittelt keine Verträge. Termine, Orte,
+					Programme und Preise können sich ändern, Veranstaltungen können verschoben oder abgesagt werden;
+					Änderungen und Absagen liegen allein beim Veranstalter.
+				</p>
+
+				<h2>Keine Empfehlung</h2>
+				<p>
+					Die Aufnahme einer Veranstaltung ist keine Empfehlung, kein Qualitätsurteil und keine Billigung des
+					Veranstalters, der Inhalte oder der Referenten.
+				</p>
+
+				<h2>Urheberrecht und Datenlizenz</h2>
+				<p>
+					Die Eventangaben als solche (Titel, Datum, Ort, Preis und ähnliche Sachangaben) sind nicht als solche
+					urheberrechtlich geschützt. Die von uns geschriebenen Texte, die Auswahl und Darstellung der Inhalte sowie
+					das Design dieser Website unterliegen dem Urheberrecht des Betreibers.
+				</p>
+				<p>
+					Die von uns zusammengestellte Sammlung der Eventdaten, veröffentlicht unter <code>/data/</code> und in{' '}
+					<code>events.json</code>, darf unter der Lizenz{' '}
+					<a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">Creative Commons Namensnennung 4.0 International (CC BY 4.0)</a>{' '}
+					weiterverwendet werden, mit Namensnennung „German Data Events“ und Link auf{' '}
+					<a href={SITE_URL}>{SITE_URL}</a>.
+				</p>
+				<p>
+					Namen, Logos, Titel und Beschreibungen der Veranstaltungen gehören den jeweiligen Veranstaltern bzw.
+					Rechteinhabern und werden nur zur Information über die Veranstaltung genannt. Wenn Sie als Rechteinhaber
+					eine Nennung oder einen Inhalt entfernt oder geändert haben möchten, schreiben Sie uns über das
+					Kontaktformular oder per E-Mail; wir reagieren umgehend.
+				</p>
+
+				<p class="updated">
+					Datenschutz: siehe <a href={localePath(legalPath('datenschutz', 'de'), 'de')}>Datenschutzerklärung</a>.
+					Stand: 20. November 2026.
+				</p>
+			</>
+		) : (
+			<>
+				<h1>Legal notice (Impressum)</h1>
+				<p class="note">
+					German law requires this notice; the German version (switch language, top right) is the binding one.
+				</p>
+
+				<dl>
+					<dt>Service provider (§ 5 DDG)</dt>
+					<dd>
+						Marcin Czajkowski
+					</dd>
+
+					<dt>Contact</dt>
+					<dd>
+						Email: {CONTACT_EMAIL}<br />
+						<a href={localePath("/contact/", "en")}>Contact form</a>
+					</dd>
+
+					<dt>Responsible for content (§ 18 para. 2 MStV)</dt>
+					<dd>Marcin Czajkowski, contact as above.</dd>
+
+					<dt>Consumer dispute resolution (§ 36 VSBG)</dt>
+					<dd>
+						We are neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board. The EU Commission's online dispute resolution platform is available at <a href="https://ec.europa.eu/consumers/odr/" rel="noopener">https://ec.europa.eu/consumers/odr/</a>. Our email address is given above.
+					</dd>
+
+					<dt>What this site is</dt>
+					<dd>
+						germandataevents.com is a free, non-commercial listing of AI and data events in Germany, plus a newsletter, operated by a private person. The details come from the organisers' public pages and
+						are checked daily, but can change at the organiser at any time. {SITE_NAME} sells no tickets and
+						receives no commission.
+					</dd>
+				</dl>
+
+				<h2 id="disclaimer">Disclaimer</h2>
+				<p>
+					Statutory liability, in particular for intent, gross negligence and injury to life, body or health, cannot
+					be excluded and remains unaffected.
+				</p>
+
+				<h2>Liability for content</h2>
+				<p>
+					As a service provider we are responsible for our own content on these pages under the general laws, Art. 6
+					et seq. of Regulation (EU) 2022/2065 (Digital Services Act) and § 7 DDG. We are not, however, obliged to
+					monitor transmitted or stored third-party information or to investigate circumstances that indicate
+					unlawful activity. Obligations to remove or block the use of information under the general laws remain
+					unaffected. Liability is only possible from the point at which we learn of a specific infringement; once we
+					do, we remove the content concerned promptly.
+				</p>
+
+				<h2>Liability for links</h2>
+				<p>
+					Our offer contains links to external third-party websites over whose content we have no influence. We
+					cannot accept any liability for that third-party content; the respective provider or operator of the linked
+					page is always responsible for it. No legal violations were apparent when the links were set. Continuous
+					monitoring of linked pages is not reasonable without concrete indications of an infringement; if we learn of
+					one, we remove the links concerned promptly.
+				</p>
+
+				<h2>Accuracy of event data</h2>
+				<p>
+					Event data (title, date, place, price, description, sign-up link) is taken from third parties' public
+					sources and checked regularly. To the extent permitted by law we give no warranty for accuracy,
+					completeness or timeliness. Please confirm every detail on the organiser's page before you travel or pay.
+				</p>
+
+				<h2>Events run by third parties</h2>
+				<p>
+					All listed events are organised and run by third parties. {SITE_NAME} is neither organiser nor contracting
+					party, sells no tickets and brokers no contracts. Dates, venues, programmes and prices may change, and
+					events may be postponed or cancelled; changes and cancellations are solely the organiser's matter.
+				</p>
+
+				<h2>No endorsement</h2>
+				<p>
+					Listing an event is not a recommendation, a quality judgement or an endorsement of the organiser, the
+					content or the speakers.
+				</p>
+
+				<h2>Copyright and data licence</h2>
+				<p>
+					Event facts as such (title, date, place, price and similar factual details) are not protected by copyright.
+					The texts we write, the selection and presentation of content, and the design of this site remain the
+					copyright of the operator.
+				</p>
+				<p>
+					The compilation of event data we publish at <code>/data/</code> and in <code>events.json</code> may be
+					reused under the{' '}
+					<a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>{' '}
+					licence, with attribution to "German Data Events" and a link to <a href={SITE_URL}>{SITE_URL}</a>.
+				</p>
+				<p>
+					Event names, logos, titles and descriptions belong to the respective organisers or rights holders and are
+					named only to inform about the event. If you are a rights holder and want a mention or content removed or
+					changed, write to us through the contact form or by email; we respond promptly.
+				</p>
+
+				<p class="updated">
+					Privacy: see the <a href={localePath(legalPath('datenschutz', 'en'), 'en')}>privacy policy</a>. Last updated: 20 November 2026.
+				</p>
+			</>
+		)
+	}
+</LegalShell>

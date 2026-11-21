@@ -1,0 +1,42 @@
+{
+  "name": "france-ai-data-events",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "validate": "node scripts/validate-events.mjs",
+    "test:ics": "node scripts/test-ics.mjs",
+    "test:agent": "node scripts/test-agent-files.mjs",
+    "test:i18n": "node scripts/test-i18n.mjs",
+    "archive": "node scripts/archive-past.mjs",
+    "data:fix": "node scripts/fix-existing-data.mjs",
+    "digest": "node scripts/build-digest.mjs",
+    "indexnow": "node scripts/indexnow.mjs",
+    "pipeline:fetch": "node pipeline/prepare.mjs --dry-run",
+    "pipeline:prepare": "node pipeline/prepare.mjs",
+    "pipeline:enrich-local": "node pipeline/enrich-local.mjs",
+    "pipeline:backfill-de": "node pipeline/backfill-blurbs.mjs",
+    "pipeline:apply": "node pipeline/apply.mjs",
+    "test": "node --test \"pipeline/test/*.test.mjs\"",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^6.4.8",
+    "fast-xml-parser": "^5.12.1"
+  },
+  "allowScripts": {
+    "esbuild": true
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "ical.js": "^2.2.1"
+  },
+  "private": true
+}
