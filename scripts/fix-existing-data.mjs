@@ -1,15 +1,18 @@
 // One-shot, idempotent data migration: junk organiser values -> cleaned / url domain, and city precedence
+// and emoji stripped from titles
 // (venue, then url, beats a conflicting feed city). Applies to src/data/events.json and archive.json.
 // Usage: node scripts/fix-existing-data.mjs [--dry-run]
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { organiserOrDomain } from '../pipeline/lib/normalize.mjs';
 import { resolveCity } from '../pipeline/lib/city.mjs';
+import { stripEmoji } from '../src/lib/strip-emoji.mjs';
 
 const dry = process.argv.includes('--dry-run');
 const files = ['events.json', 'archive.json'].map((f) => fileURLToPath(new URL('../src/data/' + f, import.meta.url)));
 const orgChanges = [];
 const cityChanges = [];
+const titleChanges = [];
 
 for (const file of files) {
 	if (!existsSync(file)) continue;
@@ -18,6 +21,12 @@ for (const file of files) {
 	if (!Array.isArray(list)) continue;
 	let touched = false;
 	for (const ev of list) {
+		// Emoji in titles (ids and slugs stay as they are: they are URLs and ledger keys).
+		for (const k of ['title', 'title_en', 'title_fr']) {
+			if (typeof ev[k] !== 'string') continue;
+			const t = stripEmoji(ev[k]);
+			if (t !== ev[k]) { titleChanges.push(`${ev.id}: ${k} "${ev[k]}" -> "${t}"`); ev[k] = t; touched = true; }
+		}
 		const organiser = organiserOrDomain(ev.organiser, ev.url);
 		// Also turns an aggregator domain stored by the old fallback (aieventlist.ai, luma.com, ...) into "Not listed".
 		if (organiser && organiser !== ev.organiser) {
@@ -40,6 +49,8 @@ for (const file of files) {
 
 console.log(`Organiser fixed: ${orgChanges.length}`);
 for (const l of orgChanges) console.log('  ' + l);
+console.log(`Titles cleaned: ${titleChanges.length}`);
+for (const l of titleChanges) console.log('  ' + l);
 console.log(`City changed: ${cityChanges.length}`);
 for (const l of cityChanges) console.log('  ' + l);
 if (dry) console.log('(dry run, nothing written)');

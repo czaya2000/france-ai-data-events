@@ -14,6 +14,7 @@ import {
 	cityTag,
 	formatTag,
 } from '../../src/lib/newsletter.mjs';
+import { stripEmoji } from '../../src/lib/strip-emoji.mjs';
 import { blurbFor } from '../../src/lib/blurb.mjs';
 import { SITE_URL, SITE_NAME } from '../../config/country.mjs';
 import { hasEnded } from '../../src/lib/schedule.mjs';
@@ -246,7 +247,7 @@ export function renderDigest(sel, locale) {
 			`<div style="font-size:28px;font-weight:600;line-height:1;">${s.day}</div>` +
 			`<div style="font-size:12px;color:${T.muted};margin-top:5px;white-space:nowrap;">${s.weekday}, ${s.month}${through}</div>` +
 			`</td><td valign="top" style="padding:18px 0;${td}">` +
-			plainA(link(e), esc(e.title), 'font-size:18px;font-weight:500;line-height:1.28;letter-spacing:-0.01em;') +
+			plainA(link(e), esc(stripEmoji(e.title)), 'font-size:18px;font-weight:500;line-height:1.28;letter-spacing:-0.01em;') +
 			`<div style="font-size:14px;color:${T.ink2};margin-top:6px;">${meta}</div>` +
 			blurbHtml +
 			`<div style="font-size:13px;margin-top:10px;">${[format, cost].filter(Boolean).join('&nbsp;&nbsp;')}</div>` +

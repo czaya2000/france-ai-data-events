@@ -8,6 +8,7 @@ import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { WINDOW_DAYS } from '../config/country.mjs';
 import { today as parisToday } from './lib/time.mjs';
+import { stripEmoji } from '../src/lib/strip-emoji.mjs';
 import { loadJson, loadLedger, lookup, matchesExisting, record, saveJson } from './lib/ledger.mjs';
 import { sameEvent } from './lib/dedupe.mjs';
 import { makeCandidate } from './lib/normalize.mjs';
@@ -122,7 +123,7 @@ export function applyEnrichment({ root = ROOT, today = parisToday(), windowDays 
 			continue;
 		}
 		const ev = {
-			title: c.title,
+			title: stripEmoji(c.title),
 			date: c.start,
 			...(c.end && c.end > c.start ? { endDate: c.end } : {}),
 			...(c.time ? { time: c.time } : {}),
