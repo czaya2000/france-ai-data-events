@@ -4,7 +4,7 @@ import { LOCALES, NOW, at, open } from './helpers';
 /* France-specific checks: not indexable yet, Europe/Paris in the calendar feeds, the form and
    newsletter endpoints, French-first language handling, ICS download. */
 
-const FORM = 'https://formsubmit.co/contact@frenchdataevents.fr';
+const FORM = 'https://formsubmit.co/hallo@germandataevents.com';
 
 test.describe('not indexable yet (INDEXABLE=false)', () => {
 	for (const loc of LOCALES) {

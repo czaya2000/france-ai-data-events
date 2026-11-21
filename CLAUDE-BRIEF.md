@@ -4,7 +4,7 @@ French twin of germandataevents.com (itself the German edition of swissdataevent
 
 Product: a public list of upcoming **AI and data events in France** (meetups, conferences, workshops, networking, webinars). French at `/`, English at `/en/`. Browse by city and format, weekly email digest (Buttondown, later), calendar feeds (ICS / Google Calendar), JSON / RSS / llms.txt for apps and agents. It refreshes itself daily.
 
-Name: **French Data Events** (`SITE_NAME`, English in both languages). Domain: frenchdataevents.fr, **not bought yet**. Contact: contact@frenchdataevents.fr (ImprovMX forwarding, later).
+Name: **French Data Events** (`SITE_NAME`, English in both languages). Domain: frenchdataevents.fr, **not bought yet**. Contact: hallo@germandataevents.com (ImprovMX forwarding, later).
 
 ## 1. What stays identical to Germany
 

@@ -34,8 +34,8 @@ export const REPO_URL = 'https://github.com/czaya2000/france-ai-data-events';
 export const INDEXABLE = false;
 
 // Owner-supplied values (open items are listed in the owner notes file).
-export const CONTACT_EMAIL = 'contact@frenchdataevents.fr';
-export const FORM_ENDPOINT = 'https://formsubmit.co/contact@frenchdataevents.fr';
+export const CONTACT_EMAIL = 'hallo@germandataevents.com';
+export const FORM_ENDPOINT = 'https://formsubmit.co/hallo@germandataevents.com';
 export const BUTTONDOWN_USERNAME = 'french-data-events';
 export const GOOGLE_SITE_VERIFICATION = '';
 export const INDEXNOW_KEY = '';

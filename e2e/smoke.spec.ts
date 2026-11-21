@@ -112,10 +112,10 @@ test.describe('legal pages in both languages', () => {
 		await expect(page.locator('footer a[href="/en/legal-notice/"]')).toHaveCount(1);
 		await expect(page.locator('footer a[href="/en/privacy/"]')).toHaveCount(1);
 		for (const [p, texts] of [
-			['/mentions-legales/', ['Marcin Czajkowski', 'contact@frenchdataevents.fr', 'LCEN', 'CC BY 4.0']],
-			['/en/legal-notice/', ['Marcin Czajkowski', 'contact@frenchdataevents.fr', 'LCEN', 'CC BY 4.0']],
-			['/confidentialite/', ['Marcin Czajkowski', 'contact@frenchdataevents.fr', 'CNIL', 'GitHub', 'Buttondown', 'FormSubmit']],
-			['/en/privacy/', ['Marcin Czajkowski', 'contact@frenchdataevents.fr', 'CNIL', 'GitHub', 'Buttondown', 'FormSubmit']],
+			['/mentions-legales/', ['Marcin Czajkowski', 'hallo@germandataevents.com', 'LCEN', 'CC BY 4.0']],
+			['/en/legal-notice/', ['Marcin Czajkowski', 'hallo@germandataevents.com', 'LCEN', 'CC BY 4.0']],
+			['/confidentialite/', ['Marcin Czajkowski', 'hallo@germandataevents.com', 'CNIL', 'GitHub', 'Buttondown', 'FormSubmit']],
+			['/en/privacy/', ['Marcin Czajkowski', 'hallo@germandataevents.com', 'CNIL', 'GitHub', 'Buttondown', 'FormSubmit']],
 		] as [string, string[]][]) {
 			await page.goto(p);
 			const main = page.locator('main');

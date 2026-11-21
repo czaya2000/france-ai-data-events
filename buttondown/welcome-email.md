@@ -12,7 +12,7 @@ Votre inscription est confirmée, merci. Voici comment ça marche :
 - Chaque e-mail contient un lien pour **modifier vos villes et formats** ou vous désabonner à tout moment.
 - L'inscription à un événement se fait toujours sur la page de l'organisateur : nous ne vendons pas de billets.
 
-Vous organisez un événement ? Proposez-le sur [frenchdataevents.fr](https://frenchdataevents.fr/submit/). Une erreur à signaler ? Répondez simplement à ce message ou écrivez à contact@frenchdataevents.fr.
+Vous organisez un événement ? Proposez-le sur [frenchdataevents.fr](https://frenchdataevents.fr/submit/). Une erreur à signaler ? Répondez simplement à ce message ou écrivez à hallo@germandataevents.com.
 
 À lundi,
 Marcin
@@ -28,7 +28,7 @@ You're subscribed, thank you. Here is how it works:
 - Every email has a link to **change your cities and formats** or unsubscribe at any time.
 - You always register on the organiser's own page: we don't sell tickets.
 
-Running an event? Submit it at [frenchdataevents.fr/en/submit/](https://frenchdataevents.fr/en/submit/). Spotted a mistake? Just reply to this message or write to contact@frenchdataevents.fr.
+Running an event? Submit it at [frenchdataevents.fr/en/submit/](https://frenchdataevents.fr/en/submit/). Spotted a mistake? Just reply to this message or write to hallo@germandataevents.com.
 
 See you Monday,
 Marcin

@@ -15,7 +15,7 @@ Delete any parking A/AAAA records and a `www` CNAME that points at the apex, the
 - 4 apex `AAAA` records: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
 - `www` `CNAME` to `czaya2000.github.io`
 
-## 3. DNS for email (ImprovMX, so `contact@frenchdataevents.fr` reaches you)
+## 3. DNS for email (ImprovMX, so `hallo@germandataevents.com` reaches you)
 
 1. Sign up at improvmx.com, add domain `frenchdataevents.fr`.
 2. Add the DNS records it shows: 2 `MX` records (`mx1.improvmx.com` priority 10, `mx2.improvmx.com` priority 20) and one `TXT` SPF record (`v=spf1 include:spf.improvmx.com ~all`; merge it if the domain already has an SPF record).
@@ -56,7 +56,7 @@ After step 4: Google Search Console > add property `frenchdataevents.fr` (DNS TX
 
 ## 9. FormSubmit activation
 
-After step 3 works and the site is on the domain: open the contact form and the submit-event form once and send a short real message from each. FormSubmit emails an activation link to `contact@frenchdataevents.fr`; click it. Until then submissions are held.
+After step 3 works and the site is on the domain: open the contact form and the submit-event form once and send a short real message from each. FormSubmit emails an activation link to `hallo@germandataevents.com`; click it. Until then submissions are held.
 
 ## 10. Reviews
 

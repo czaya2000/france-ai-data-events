@@ -14,7 +14,7 @@ Pour finaliser votre inscription, confirmez votre adresse e-mail :
 
 Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : rien ne sera envoyé.
 
-Une question ? Écrivez à contact@frenchdataevents.fr.
+Une question ? Écrivez à hallo@germandataevents.com.
 
 ---
 
@@ -28,4 +28,4 @@ To finish signing up, please confirm your email address:
 
 If you didn't ask for this, just ignore this message and nothing will be sent.
 
-Questions? Write to contact@frenchdataevents.fr.
+Questions? Write to hallo@germandataevents.com.
