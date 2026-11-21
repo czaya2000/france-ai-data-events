@@ -72,7 +72,12 @@ if (sel.soon.length === 0) {
 	process.exit(0);
 }
 
-const emails = LOCALES.map((locale) => ({ locale, ...renderDigest(sel, locale) }));
+// --test: "[TEST] " subject prefix; still a draft, never sent. Verified through the API below.
+const testMode = Boolean(args.test);
+const emails = LOCALES.map((locale) => {
+	const m = { locale, ...renderDigest(sel, locale) };
+	return testMode ? { ...m, subject: `[TEST] ${m.subject}` } : m;
+});
 
 // ---- Summary ----------------------------------------------------------------
 
@@ -209,6 +214,17 @@ try {
 } catch (err) {
 	failed = true;
 	console.error(err.message);
+}
+
+// --test: prove through the API that both test emails exist and are still drafts.
+if (testMode && !failed) {
+	for (const m of emails) {
+		const r = await call('GET', `/emails?subject=${encodeURIComponent(m.subject)}`);
+		const hit = (r.json?.results ?? []).find((e) => e.subject === m.subject);
+		const kb = hit ? Math.round(Buffer.byteLength(hit.body ?? '') / 1024) : 0;
+		console.log(`VERIFY ${m.locale}: ${hit ? `id ${hit.id}, status ${hit.status}, subject "${hit.subject}", body ${kb} KB` : 'NOT FOUND'}`);
+		if (!hit || hit.status !== 'draft') failed = true;
+	}
 }
 if (failed) process.exit(1);
 console.log('Drafts only: review and send them from the Buttondown dashboard.');

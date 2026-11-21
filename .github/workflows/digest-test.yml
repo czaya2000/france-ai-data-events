@@ -1,0 +1,25 @@
+### Manual: create two TEST DRAFTS ("[TEST] ..." French + English) in Buttondown from the current data.
+### Drafts only: nothing is sent or scheduled. The script verifies both are status "draft".
+name: Digest test drafts
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  digest-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Create [TEST] drafts
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: node scripts/build-digest.mjs --test --replace
