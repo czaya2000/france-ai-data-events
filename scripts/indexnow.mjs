@@ -51,7 +51,7 @@ function changedUrls(beforePath) {
 	// The homepage and the city / type pages that list those events, but only
 	// the ones in the sitemap (a thin hub is noindex).
 	const indexable = new Set(sitemapUrls());
-	// Both languages: German at the root, English under /en/.
+	// Both languages: French at the root, English under /en/.
 	const listings = LOCALES.flatMap((l) => [
 		`${SITE}${LOCALE_PREFIX[l]}/`,
 		...HUBS.filter((h) => touched.some((e) => h.matches(e))).map((h) => `${SITE}${LOCALE_PREFIX[l]}${hubPath(h, l)}`),

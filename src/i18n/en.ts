@@ -1,4 +1,4 @@
-/* English UI strings. This file defines the shape: de.ts is typed as the same
+/* English UI strings. This file defines the shape: fr.ts is typed as the same
    `Messages`, so a key missing from either language is a type error.
    Strings with variables are functions. Product name: see SITE_NAME in
    config/country.mjs (kept in English in both languages for now). */

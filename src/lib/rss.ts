@@ -5,7 +5,7 @@ import { LOCALE_PREFIX } from '../i18n/paths.mjs';
 
 /* RSS 2.0 of upcoming events, newest listings first (by firstSeen), so a
    feed reader or agent sees what was just added. One feed per language:
-   /rss.xml (German) and /en/rss.xml (English), same items, same links to the
+   /rss.xml (French) and /en/rss.xml (English), same items, same links to the
    event pages of that language. Hand-written: it is a few lines and avoids
    another dependency. */
 

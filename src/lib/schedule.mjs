@@ -7,7 +7,7 @@ import { TIMEZONE } from '../../config/country.mjs';
 
 const pad = (n) => String(n).padStart(2, '0');
 
-/** The Berlin wall-clock "YYYY-MM-DDTHH:MM:SS" of an instant. */
+/** The Paris wall-clock "YYYY-MM-DDTHH:MM:SS" of an instant. */
 export function wallClockIn(instant, timeZone = TIMEZONE) {
 	const p = new Intl.DateTimeFormat('en-CA', {
 		timeZone,
@@ -24,7 +24,7 @@ export function wallClockIn(instant, timeZone = TIMEZONE) {
 	return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:${p.second}`;
 }
 
-/** Now in Berlin wall-clock. Test hooks, unset in production: SITE_NOW (ISO instant, e.g.
+/** Now in Paris wall-clock. Test hooks, unset in production: SITE_NOW (ISO instant, e.g.
     2026-11-20T13:00:00+01:00) freezes date and time; SITE_TODAY (YYYY-MM-DD) freezes the date
     at 00:00, so nothing has ended yet that day. */
 export function siteNow() {
@@ -41,7 +41,7 @@ export function endTimeOf(time) {
 	return m ? `${pad(Number(m[1]))}:${m[2]}` : null;
 }
 
-/** When the event is over, Berlin wall-clock: the end time on the last day, or the last second of the
+/** When the event is over, Paris wall-clock: the end time on the last day, or the last second of the
     last day (endDate, else date) when there is no end time. */
 export function endWall(data) {
 	const day = data.endDate ?? data.date;
@@ -49,7 +49,7 @@ export function endWall(data) {
 	return end ? `${day}T${end}:00` : `${day}T23:59:59`;
 }
 
-/** True once the event's end instant is before `now` (Berlin wall-clock; default: now). */
+/** True once the event's end instant is before `now` (Paris wall-clock; default: now). */
 export function hasEnded(data, now = siteNow()) {
 	return endWall(data) < now;
 }
@@ -59,7 +59,7 @@ export function isRunningToday(data, now = siteNow()) {
 	return !hasEnded(data, now) && data.date <= now.slice(0, 10);
 }
 
-/** Listing card meta line: ONLY the city and the time ("Köln, 14:30–22:30", or just "Berlin").
+/** Listing card meta line: ONLY the city and the time ("Lyon, 14:30–22:30", or just "Paris").
     Never the venue or address; those stay on the event page. The event data has no online or
     hybrid field, so no "+ online" is added (it would have to be parsed out of the venue text). */
 export function cardMeta(city, time) {

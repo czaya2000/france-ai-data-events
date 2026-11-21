@@ -4,9 +4,9 @@ import { LOCALES, NOW, at, open, expectConsistent, type Loc } from './helpers';
 /* Smoke suite: every page type in both languages loads without console errors or horizontal overflow,
    the dialogs and forms behave, and the counts shown agree with the list. Runs at 1280 px and 390 px. */
 
-const CITY_HUBS = ['berlin', 'munich', 'hamburg', 'frankfurt', 'cologne', 'stuttgart', 'online', 'other-france'];
+const CITY_HUBS = ['paris', 'lyon', 'toulouse', 'marseille-aix', 'nice-sophia', 'bordeaux', 'lille', 'nantes', 'rennes', 'grenoble', 'strasbourg', 'montpellier', 'online', 'other-france'];
 const FORMAT_HUBS: Record<Loc, string[]> = {
-	de: ['meetups', 'konferenzen', 'workshops', 'networking', 'webinare'],
+	fr: ['meetups', 'conferences', 'ateliers', 'networking', 'webinaires'],
 	en: ['meetups', 'conferences', 'workshops', 'networking', 'webinars'],
 };
 
@@ -30,7 +30,7 @@ for (const loc of LOCALES) {
 			'/data/',
 			'/submit/thanks/',
 			'/contact/thanks/',
-			'/events/b-sun-span/',
+			'/events/p-sun-span/',
 		];
 		for (const p of pages) {
 			test(`${p} loads clean, no overflow, right language`, async ({ page }) => {
@@ -52,7 +52,7 @@ for (const loc of LOCALES) {
 		}
 
 		test('hub headline count equals the listed events', async ({ page }) => {
-			for (const slug of ['berlin', 'munich', 'hamburg', 'online']) {
+			for (const slug of ['paris', 'lyon', 'toulouse', 'online']) {
 				await open(page, at(loc, `/${slug}/`), NOW.wed);
 				const headline = await page.locator('.statement-sub').innerText();
 				const shown = (await expectConsistent(page, loc)).length;
@@ -60,15 +60,15 @@ for (const loc of LOCALES) {
 			}
 		});
 
-		test('empty hub (Cologne) shows an honest empty state', async ({ page }) => {
-			await open(page, at(loc, '/cologne/'), NOW.wed);
+		test('empty hub (Strasbourg) shows an honest empty state', async ({ page }) => {
+			await open(page, at(loc, '/strasbourg/'), NOW.wed);
 			expect(await expectConsistent(page, loc)).toEqual([]);
 			await expect(page.locator('#empty-state')).toBeVisible();
 		});
 
 		test('event page: facts, register link, back link, ended banner absent', async ({ page }) => {
-			await page.goto(at(loc, '/events/b-sun-span/'));
-			await expect(page.locator('h1')).toHaveText('Berlin Weekend Spanning');
+			await page.goto(at(loc, '/events/p-sun-span/'));
+			await expect(page.locator('h1')).toHaveText('Paris Conférence du week-end');
 			const register = page.locator('a.register-btn[href^="https://example.org/"]');
 			await expect(register).toHaveAttribute('href', /utm_source=/);
 			await expect(page.locator('.ended')).toHaveCount(0);
@@ -87,8 +87,8 @@ for (const loc of LOCALES) {
 
 test.describe('legal pages in both languages', () => {
 	const pairs: [string, string, string][] = [
-		['/impressum/', '/en/legal-notice/', 'Impressum'],
-		['/datenschutz/', '/en/privacy/', 'Datenschutzerklärung'],
+		['/mentions-legales/', '/en/legal-notice/', 'Mentions légales'],
+		['/confidentialite/', '/en/privacy/', 'confidentialité'],
 	];
 	for (const [de, en, h1] of pairs) {
 		test(`${de} <-> ${en}: language, switch, no overflow`, async ({ page }) => {
@@ -104,24 +104,24 @@ test.describe('legal pages in both languages', () => {
 			expect(errors).toEqual([]);
 		});
 	}
-	test('every page links to the legal pages in its own language, legal pages are final: no placeholders or draft banner, name, email, VSBG and CC BY note present', async ({ page }) => {
+	test('every page links to the legal pages in its own language, legal pages are final: no placeholders or draft banner, name, email and CC BY note present', async ({ page }) => {
 		await page.goto('/');
-		await expect(page.locator('footer a[href="/impressum/"]')).toHaveCount(1);
-		await expect(page.locator('footer a[href="/datenschutz/"]')).toHaveCount(1);
+		await expect(page.locator('footer a[href="/mentions-legales/"]')).toHaveCount(1);
+		await expect(page.locator('footer a[href="/confidentialite/"]')).toHaveCount(1);
 		await page.goto('/en/');
 		await expect(page.locator('footer a[href="/en/legal-notice/"]')).toHaveCount(1);
 		await expect(page.locator('footer a[href="/en/privacy/"]')).toHaveCount(1);
 		for (const [p, texts] of [
-			['/impressum/', ['Marcin Czajkowski', 'contact@francedataevents.com', '§ 36 VSBG', 'CC BY 4.0']],
-			['/en/legal-notice/', ['Marcin Czajkowski', 'contact@francedataevents.com', '§ 36 VSBG', 'CC BY 4.0']],
-			['/datenschutz/', ['Marcin Czajkowski', 'contact@francedataevents.com', 'Art. 77 DSGVO', 'Devro LABS']],
-			['/en/privacy/', ['Marcin Czajkowski', 'contact@francedataevents.com', 'Art. 77 GDPR', 'Devro LABS']],
+			['/mentions-legales/', ['Marcin Czajkowski', 'contact@francedataevents.com', 'LCEN', 'CC BY 4.0']],
+			['/en/legal-notice/', ['Marcin Czajkowski', 'contact@francedataevents.com', 'LCEN', 'CC BY 4.0']],
+			['/confidentialite/', ['Marcin Czajkowski', 'contact@francedataevents.com', 'CNIL', 'GitHub', 'Buttondown', 'FormSubmit']],
+			['/en/privacy/', ['Marcin Czajkowski', 'contact@francedataevents.com', 'CNIL', 'GitHub', 'Buttondown', 'FormSubmit']],
 		] as [string, string[]][]) {
 			await page.goto(p);
 			const main = page.locator('main');
 			for (const t of texts) await expect(main).toContainText(t);
 			await expect(main).not.toContainText('TODO');
-			await expect(main).not.toContainText(/Entwurf|Draft/);
+			await expect(main).not.toContainText(/Brouillon|Draft|\[\[/);
 		}
 	});
 });
@@ -129,13 +129,13 @@ test.describe('legal pages in both languages', () => {
 test.describe('calendar dialog', () => {
 	for (const loc of LOCALES) {
 		test(`opens, labelled, traps focus, closes with Esc and returns focus (${loc})`, async ({ page }) => {
-			await open(page, at(loc, '/berlin/'), NOW.wed);
+			await open(page, at(loc, '/paris/'), NOW.wed);
 			const opener = page.locator('.icon-btn[data-cal-open]');
 			await opener.click();
 			const dialog = page.locator('#cal-dialog');
 			await expect(dialog).toBeVisible();
 			await expect(dialog).toHaveAttribute('aria-labelledby', 'cal-title');
-			await expect(page.locator('#cal-title')).toHaveText(loc === 'fr' ? 'Kalender abonnieren' : /Save to my calendar|Subscribe/i);
+			await expect(page.locator('#cal-title')).toHaveText(loc === 'fr' ? 'Ajouter à mon agenda' : /Save to my calendar|Subscribe/i);
 			// While the modal is open, focus is inside it (or has left the page for the browser UI), never on the page behind.
 			for (let i = 0; i < 12; i++) {
 				await page.keyboard.press('Tab');
@@ -152,29 +152,27 @@ test.describe('calendar dialog', () => {
 
 		test(`hub pre-selects its city and the feed link is in the page language (${loc})`, async ({ page, context, request }) => {
 			await context.grantPermissions(['clipboard-read', 'clipboard-write']);
-			await open(page, at(loc, '/berlin/'), NOW.wed);
+			await open(page, at(loc, '/paris/'), NOW.wed);
 			await page.locator('.cal-cta').click();
-			await expect(page.locator('#cal-city')).toHaveValue('berlin');
-			const feed = `http://localhost:4329`; // SITE_URL is the production origin; the path is what we check
-			void feed;
+			await expect(page.locator('#cal-city')).toHaveValue('paris');
 			const url = await page.locator('#cal-url').inputValue();
-			expect(url).toBe(`https://francedataevents.com${loc === 'en' ? '/en' : ''}/calendar/berlin.ics`);
+			expect(url).toBe(`http://localhost:4329${loc === 'en' ? '/en' : ''}/calendar/paris.ics`);
 			await expect(page.locator('#cal-apple')).toHaveAttribute('href', url.replace('https:', 'webcal:'));
-			await expect(page.locator('#cal-google')).toHaveAttribute('href', /calendar\.google\.com.*cid=webcal/);
+			await expect(page.locator('#cal-google')).toHaveAttribute('href', /calendar\.google\.com.*cid=(webcal|http)/); // the e2e origin is http://localhost; on https production it is webcal
 			await expect(page.locator('#cal-outlook')).toHaveAttribute('href', /outlook\.live\.com.*addfromweb/);
 			await expect(page.locator('#cal-count')).toContainText('9');
 			const res = await request.get(new URL(url).pathname);
 			expect(res.status()).toBe(200);
 			expect(res.headers()['content-type']).toContain('text/calendar');
 			await page.locator('#cal-copy').click();
-			await expect(page.locator('#cal-copy')).toHaveText(loc === 'fr' ? 'Kopiert' : /Copied/);
+			await expect(page.locator('#cal-copy')).toHaveText(loc === 'fr' ? 'Copié' : /Copied/);
 			expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(url);
 		});
 
 		test(`a city + format with no events disables the links (${loc})`, async ({ page }) => {
 			await open(page, at(loc, '/'), NOW.wed);
 			await page.locator('.cal-cta').click();
-			await page.locator('#cal-city').selectOption('hamburg');
+			await page.locator('#cal-city').selectOption('toulouse');
 			await page.locator('#cal-format').selectOption('meetup');
 			await expect(page.locator('#cal-copy')).toBeDisabled();
 			await expect(page.locator('#cal-apple')).not.toHaveAttribute('href', /.+/);
@@ -183,13 +181,13 @@ test.describe('calendar dialog', () => {
 	}
 
 	test('opened from filters: one city and one format pre-select; several do not pick the first one', async ({ page }) => {
-		await open(page, '/berlin/?format=Meetup&format=Workshop', NOW.wed);
+		await open(page, '/paris/?format=Meetup&format=Workshop', NOW.wed);
 		await page.locator('.cal-cta').click();
-		await expect(page.locator('#cal-city')).toHaveValue('berlin');
+		await expect(page.locator('#cal-city')).toHaveValue('paris');
 		// Two formats ticked: the calendar cannot follow both, so it must not silently pick one.
 		await expect(page.locator('#cal-format')).toHaveValue('');
 		await page.locator('#cal-close').click();
-		await open(page, '/berlin/?format=Meetup', NOW.wed);
+		await open(page, '/paris/?format=Meetup', NOW.wed);
 		await page.locator('.cal-cta').click();
 		await expect(page.locator('#cal-format')).toHaveValue('meetup');
 		await expect(page.locator('#cal-count')).toContainText('3');
@@ -199,7 +197,7 @@ test.describe('calendar dialog', () => {
 test.describe('subscribe dialog', () => {
 	for (const loc of LOCALES) {
 		test(`email is validated first; the dialog opens, ticks the hub city, tags the language (${loc})`, async ({ page }) => {
-			await open(page, at(loc, '/berlin/'), NOW.wed);
+			await open(page, at(loc, '/paris/'), NOW.wed);
 			const form = page.locator('form.subscribe-form').first();
 			const opener = form.locator('.sub-open');
 			await opener.click();
@@ -212,8 +210,8 @@ test.describe('subscribe dialog', () => {
 			const dialog = form.locator('dialog');
 			await expect(dialog).toBeVisible();
 			await expect(form.locator('.sub-email')).toHaveText('reader@example.org');
-			await expect(form.locator('input[value="city-berlin"]')).toBeChecked();
-			await expect(form.locator('input[value="city-munich"]')).not.toBeChecked();
+			await expect(form.locator('input[value="city-paris"]')).toBeChecked();
+			await expect(form.locator('input[value="city-lyon"]')).not.toBeChecked();
 			await expect(form.locator(`input[type="radio"][value="lang-${loc}"]`)).toBeChecked();
 			await expect(form.locator('input[type="radio"]:checked')).toHaveCount(1);
 			await page.keyboard.press('Escape');
@@ -231,7 +229,7 @@ test.describe('subscribe dialog', () => {
 			body = route.request().postData() ?? '';
 			await route.fulfill({ status: 200, contentType: 'text/html', body: '<p>stubbed</p>' });
 		});
-		await open(page, '/berlin/', NOW.wed);
+		await open(page, '/paris/', NOW.wed);
 		const form = page.locator('form.subscribe-form').first();
 		await form.locator('input[type="email"]').fill('reader@example.org');
 		await form.locator('.sub-open').click();
@@ -239,7 +237,7 @@ test.describe('subscribe dialog', () => {
 		await Promise.all([page.waitForRequest(/buttondown/), form.locator('.sub-submit').click()]);
 		expect(body).toContain('email=reader%40example.org');
 		expect(body).toContain('tag=lang-fr');
-		expect(body).toContain('tag=city-berlin');
+		expect(body).toContain('tag=city-paris');
 		expect(body).toContain('tag=format-meetup');
 	});
 });
@@ -253,7 +251,7 @@ test.describe('forms', () => {
 			sent = true;
 			return route.fulfill({ status: 200, body: 'x' });
 		});
-		for (const [loc, msg] of [['fr', 'Bitte füllen Sie dieses Feld aus.'], ['en', /fill|required/i]] as const) {
+		for (const [loc, msg] of [['fr', 'Merci de remplir ce champ.'], ['en', /fill|required/i]] as const) {
 			await page.goto(at(loc, '/submit/'));
 			await page.locator('#submit-form button[type="submit"]').click();
 			const first = page.locator('#submit-form input[name="event_title"]');
@@ -278,13 +276,13 @@ test.describe('forms', () => {
 		expect(await end.evaluate((el: HTMLInputElement) => el.validity.valid)).toBe(true);
 	});
 
-	test('submit form: a bad URL and a bad email give the German message', async ({ page }) => {
+	test('submit form: a bad URL and a bad email give the French message', async ({ page }) => {
 		await page.goto('/submit/');
 		await page.fill('input[name="event_url"]', 'not a url');
 		await page.fill('input[name="email"]', 'nope');
 		await page.locator('#submit-form button[type="submit"]').click();
 		const url = await page.locator('input[name="event_url"]').evaluate((el: HTMLInputElement) => el.validationMessage);
-		expect(url).toMatch(/Web-Adresse/);
+		expect(url).toMatch(/adresse web/);
 	});
 
 	test('contact form: required fields, in the page language', async ({ page }) => {
@@ -297,11 +295,11 @@ test.describe('forms', () => {
 		await page.locator('#contact-form button[type="submit"]').click();
 		await expect(page.locator('#contact-form input[name="name"]')).toBeFocused();
 		const msg = await page.locator('#contact-form input[name="name"]').evaluate((el: HTMLInputElement) => el.validationMessage);
-		expect(msg).toBe('Bitte füllen Sie dieses Feld aus.');
+		expect(msg).toBe('Merci de remplir ce champ.');
 		await page.fill('#contact-form input[name="name"]', 'A');
 		await page.fill('#contact-form input[name="email"]', 'nope');
 		await page.locator('#contact-form button[type="submit"]').click();
-		expect(await page.locator('#contact-form input[name="email"]').evaluate((el: HTMLInputElement) => el.validationMessage)).toMatch(/E-Mail/);
+		expect(await page.locator('#contact-form input[name="email"]').evaluate((el: HTMLInputElement) => el.validationMessage)).toMatch(/adresse e-mail/);
 		expect(sent).toBe(false);
 	});
 
@@ -309,7 +307,7 @@ test.describe('forms', () => {
 		await page.goto('/en/contact/?topic=sponsor');
 		await expect(page.locator('#intro-sponsor')).toBeVisible();
 		await expect(page.locator('#intro-default')).toBeHidden();
-		await expect(page.locator('#contact-subject')).toHaveValue(/Sponsor/i);
+		await expect(page.locator('#contact-subject')).toHaveValue(/sponsor/i);
 	});
 });
 

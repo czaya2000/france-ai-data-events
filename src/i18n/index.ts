@@ -1,7 +1,7 @@
 /* Entry point of the i18n layer: `t(locale)` for the strings, plus the
    helpers that turn stored values (city names, formats, hubs, costs) into
    display text. Path helpers are in ./paths.mjs, date/cost formatting in ./format.ts. */
-import { de } from './de.ts';
+import { fr } from './fr.ts';
 import { en } from './en.ts';
 import type { Messages } from './en.ts';
 import type { Locale } from './format.ts';
@@ -26,7 +26,7 @@ export function fmt(template: string, vars: Record<string, string | number>): st
 	return template.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? ''));
 }
 
-/** A stored place name for display: "Online (FR)" -> "En ligne" (French) / "Online" (English); "Other France" -> "Autres villes". Handles "Garching (Munich)". Unknown places show as stored. */
+/** A stored place name for display: "Online (FR)" -> "En ligne" (French) / "Online" (English); "Other France" -> "Autres villes". Handles "Saclay (Paris)". Unknown places show as stored. */
 export function displayCity(city: string, locale: Locale): string {
 	const names = t(locale).placeNames;
 	if (names[city]) return names[city];

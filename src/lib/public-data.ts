@@ -57,7 +57,7 @@ export const ENDPOINTS = {
 
 /* ---- Markdown for AI agents ------------------------------------------
    /llms.txt (short map), /llms-full.txt (every upcoming event) and one list
-   per city and type (/berlin.md, /conferences.md). All of them are written
+   per city and type (/paris.md, /conferences.md). All of them are written
    from publicEvent(), the same shape as /events.json, in the same build. */
 
 export type PublicEvent = ReturnType<typeof publicEvent>;
@@ -73,7 +73,7 @@ const SERIES_DAYS = 7;
 
 const MD_MONTH = new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 
-/** Site-relative path of a hub's markdown list: "/berlin/" -> "/berlin.md" (add the base for href). */
+/** Site-relative path of a hub's markdown list: "/paris/" -> "/paris.md" (add the base for href). */
 export function hubMarkdownPath(hub: { slug: string }): string {
 	return `/${hub.slug}.md`;
 }

@@ -73,7 +73,7 @@ const emptyText =
 			? s.emptyAll
 			: s.emptyFiltered;
 
-// Filter values stay the stored (English) ones, so ?city=Munich links work in both languages;
+// Filter values stay the stored (English) ones, so ?city=Lyon links work in both languages;
 // only the label is translated.
 const cities = [...new Set(events.map((e) => cityGroup(e.city)))]
 	.map((value) => ({ value, label: displayCity(value, locale) }))
@@ -91,7 +91,6 @@ const strings = {
 	today: s.today,
 	runs: s.runsUntil('{d}', '{m}'),
 	intl: INTL_LOCALE[locale],
-	de: locale === 'fr',
 };
 
 // Events arrive sorted by date, so grouping is a single pass. An event that has begun (it started
@@ -99,7 +98,7 @@ const strings = {
 // started earlier shows today's date with "runs until ..." instead of its start day. Events that
 // start later sit in the week they start in. Ended events are already filtered out by
 // getUpcomingEvents; the page script redoes this grouping and the filter with the visitor's
-// Berlin clock, so the list stays right between daily builds.
+// Paris clock, so the list stays right between daily builds.
 const todayIso = today();
 type Row = (typeof events)[number];
 type Group = { key: string; primary: string; current: boolean; rows: Row[] };
@@ -253,7 +252,7 @@ for (const e of events) {
 							const free = isFree(e.cost);
 							// Card meta line: only the city and the time. Venue and address live on the event page.
 							// Built as one string: separate JSX expressions would each be
-							// wrapped in whitespace, producing "Berlin , 09:00".
+							// wrapped in whitespace, producing "Paris , 09:00".
 							const metaLine = cardMeta(displayCity(e.city, locale), e.time);
 							// The summary in this page's language; where only the other language exists it is
 							// shown as it is, marked with its own lang.
@@ -352,7 +351,7 @@ for (const e of events) {
 			var params = new URLSearchParams(location.search);
 			var state = {
 				q: params.get('q') || '',
-				// Repeated params (?city=Berlin&city=Munich), so old single-value
+				// Repeated params (?city=Paris&city=Lyon), so old single-value
 				// links keep working unchanged.
 				cities: params.getAll('city').filter(Boolean),
 				formats: params.getAll('format').filter(Boolean),
@@ -490,7 +489,7 @@ for (const e of events) {
 				return toISO(d);
 			}
 
-			// The page is built once a day, so the grouping is redone here with the visitor's Berlin clock:
+			// The page is built once a day, so the grouping is redone here with the visitor's Paris clock:
 			// an event that has begun and not ended sits in the "Today" group (a multi-day one that started
 			// earlier shows today's date with "runs until ..."); later events sit in the week they start in.
 			// Ended events stay in the list but are hidden by applyFilters (end time, not just the date).
@@ -501,7 +500,7 @@ for (const e of events) {
 				var day = new Intl.DateTimeFormat(strings.intl, { day: 'numeric', timeZone: 'UTC' });
 				var dayMonth = new Intl.DateTimeFormat(strings.intl, { day: 'numeric', month: 'long', timeZone: 'UTC' });
 				var left =
-					start.getUTCMonth() === end.getUTCMonth() ? day.format(start) + (strings.de ? '.' : '') : dayMonth.format(start);
+					start.getUTCMonth() === end.getUTCMonth() ? day.format(start) : dayMonth.format(start);
 				return left + ' – ' + dayMonth.format(end);
 			}
 			function spineParts(iso) {
@@ -615,7 +614,7 @@ for (const e of events) {
 						(!query || (d.search || '').indexOf(query) !== -1) &&
 						(state.cities.length === 0 || state.cities.indexOf(d.city) !== -1) &&
 						(state.formats.length === 0 || state.formats.indexOf(d.format) !== -1) &&
-						d.end >= bounds.wall && // not over yet: end time, else the end of its last day (Berlin)
+						d.end >= bounds.wall && // not over yet: end time, else the end of its last day (Paris)
 						d.endDate >= bounds.start &&
 						(!bounds.end || d.date <= bounds.end);
 					row.hidden = !matches;

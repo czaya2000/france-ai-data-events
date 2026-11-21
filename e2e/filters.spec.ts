@@ -26,15 +26,15 @@ for (const loc of LOCALES) {
 
 		test('city and format combine; Clear resets', async ({ page }) => {
 			await open(page, at(loc, '/'), NOW.wed);
-			await tick(page, 'city', 'Berlin');
+			await tick(page, 'city', 'Paris');
 			expect((await expectConsistent(page, loc)).length).toBe(9);
 			await tick(page, 'format', 'Meetup');
 			expect((await expectConsistent(page, loc)).sort()).toEqual(
-				['Berlin Next Monday', 'Berlin Sunday Meetup', 'Berlin Wednesday Talk'],
+				['Paris Lundi prochain', 'Paris Meetup du dimanche', 'Paris Causerie du mercredi'].sort(),
 			);
-			await tick(page, 'city', 'Munich'); // two cities, one format
+			await tick(page, 'city', 'Lyon'); // two cities, one format
 			expect((await expectConsistent(page, loc)).sort()).toEqual(
-				['Berlin Next Monday', 'Berlin Sunday Meetup', 'Berlin Wednesday Talk', 'Munich Thursday Meetup'],
+				['Paris Lundi prochain', 'Paris Meetup du dimanche', 'Paris Causerie du mercredi', 'Lyon Meetup du jeudi'].sort(),
 			);
 			await page.locator('#city-toggle').click();
 			await page.locator('#city-clear').click();
@@ -47,31 +47,31 @@ for (const loc of LOCALES) {
 
 		test('city + format + week + search all combine, and the URL records them', async ({ page }) => {
 			await open(page, at(loc, '/'), NOW.wed);
-			await tick(page, 'city', 'Berlin');
+			await tick(page, 'city', 'Paris');
 			await tick(page, 'format', 'Meetup');
 			await tab(page, loc, 'week').click();
-			expect((await expectConsistent(page, loc)).sort()).toEqual(['Berlin Sunday Meetup', 'Berlin Wednesday Talk']);
-			await search(page, 'SUNDAY');
-			expect(await expectConsistent(page, loc)).toEqual(['Berlin Sunday Meetup']);
-			await expect(page).toHaveURL(/q=SUNDAY/);
-			await expect(page).toHaveURL(/city=Berlin/);
+			expect((await expectConsistent(page, loc)).sort()).toEqual(['Paris Meetup du dimanche', 'Paris Causerie du mercredi'].sort());
+			await search(page, 'DIMANCHE');
+			expect(await expectConsistent(page, loc)).toEqual(['Paris Meetup du dimanche']);
+			await expect(page).toHaveURL(/q=DIMANCHE/);
+			await expect(page).toHaveURL(/city=Paris/);
 			await expect(page).toHaveURL(/format=Meetup/);
 			await expect(page).toHaveURL(/when=week/);
 		});
 
 		test('no match shows the empty text, count 0 and no week headings', async ({ page }) => {
-			await open(page, at(loc, '/berlin/'), NOW.wed);
+			await open(page, at(loc, '/paris/'), NOW.wed);
 			await search(page, 'zzzz-nothing');
 			expect(await expectConsistent(page, loc)).toEqual([]);
-			await expect(page.locator('#empty-state')).toHaveText(loc === 'fr' ? /Keine Events passen/ : /No events match/);
+			await expect(page.locator('#empty-state')).toHaveText(loc === 'fr' ? /Aucun événement ne correspond/ : /No events match/);
 			await page.locator('#filter-search').fill('');
 			expect((await expectConsistent(page, loc)).length).toBe(9);
 		});
 
 		test('state from the URL is applied on load', async ({ page }) => {
-			await open(page, at(loc, '/?city=Berlin&city=Munich&format=Meetup&when=week&q=talk'), NOW.wed);
-			expect(await expectConsistent(page, loc)).toEqual(['Berlin Wednesday Talk']);
-			await expect(page.locator('#filter-search')).toHaveValue('talk');
+			await open(page, at(loc, '/?city=Paris&city=Lyon&format=Meetup&when=week&q=causerie'), NOW.wed);
+			expect(await expectConsistent(page, loc)).toEqual(['Paris Causerie du mercredi']);
+			await expect(page.locator('#filter-search')).toHaveValue('causerie');
 			await expect(page.locator('#city-toggle')).toContainText('+1');
 		});
 
@@ -87,10 +87,10 @@ for (const loc of LOCALES) {
 		});
 
 		test('hub pages have no filter for what they already answer', async ({ page }) => {
-			await open(page, at(loc, '/berlin/'), NOW.wed);
+			await open(page, at(loc, '/paris/'), NOW.wed);
 			await expect(page.locator('#city-filter')).toHaveCount(0);
 			await expect(page.locator('#format-filter')).toHaveCount(1);
-			await open(page, at(loc, loc === 'fr' ? '/konferenzen/' : '/conferences/'), NOW.wed);
+			await open(page, at(loc, loc === 'fr' ? '/conferences/' : '/conferences/'), NOW.wed);
 			await expect(page.locator('#format-filter')).toHaveCount(0);
 			await expect(page.locator('#city-filter')).toHaveCount(1);
 			expect((await expectConsistent(page, loc)).length).toBe(4); // Started Earlier, Thursday, Dec Summit, Weekend Spanning
@@ -118,43 +118,43 @@ for (const loc of LOCALES) {
 }
 
 test.describe('language switch', () => {
-	test('keeps filters and hash; DE <-> EN land on the same page', async ({ page }) => {
-		await open(page, '/?city=Berlin&when=week#subscribe', NOW.wed);
+	test('keeps filters and hash; FR <-> EN land on the same page', async ({ page }) => {
+		await open(page, '/?city=Paris&when=week#subscribe', NOW.wed);
 		await page.getByRole('link', { name: 'EN', exact: true }).click();
-		await expect(page).toHaveURL(/\/en\/\?city=Berlin&when=week#subscribe$/);
+		await expect(page).toHaveURL(/\/en\/\?city=Paris&when=week#subscribe$/);
 		await expect(page.locator('html')).toHaveAttribute('lang', 'en');
 		expect((await expectConsistent(page, 'en')).length).toBe(6);
 		await expect(tab(page, 'en', 'week')).toHaveAttribute('aria-pressed', 'true');
-		await expect(page.locator('#city-toggle')).toHaveText(/Berlin/);
-		await page.getByRole('link', { name: 'DE', exact: true }).click();
-		await expect(page).toHaveURL(/\/\?city=Berlin&when=week#subscribe$/);
+		await expect(page.locator('#city-toggle')).toHaveText(/Paris/);
+		await page.getByRole('link', { name: 'FR', exact: true }).click();
+		await expect(page).toHaveURL(/\/\?city=Paris&when=week#subscribe$/);
 		await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
-		await expect(page.locator('#result-count')).toHaveText('6 Events');
+		await expect(page.locator('#result-count')).toHaveText('6 événements');
 	});
 
 	test('format hubs map to their translated slug and keep the query', async ({ page }) => {
-		await open(page, '/konferenzen/?when=week', NOW.wed);
+		await open(page, '/conferences/?when=week', NOW.wed);
 		await page.getByRole('link', { name: 'EN', exact: true }).click();
 		await expect(page).toHaveURL(/\/en\/conferences\/\?when=week$/);
-		await page.getByRole('link', { name: 'DE', exact: true }).click();
-		await expect(page).toHaveURL(/\/konferenzen\/\?when=week$/);
+		await page.getByRole('link', { name: 'FR', exact: true }).click();
+		await expect(page).toHaveURL(/\/conferences\/\?when=week$/);
 	});
 
-	test('city names are translated in the filter, values stay English (Munich <-> München)', async ({ page }) => {
-		await open(page, '/?city=Munich', NOW.wed);
-		await expect(page.locator('#city-toggle')).toHaveText(/München/);
+	test('city names are translated in the filter, values stay English (En ligne <-> Online)', async ({ page }) => {
+		await open(page, '/?city=Online%20(FR)', NOW.wed);
+		await expect(page.locator('#city-toggle')).toHaveText(/En ligne/);
 		await page.getByRole('link', { name: 'EN', exact: true }).click();
-		await expect(page.locator('#city-toggle')).toHaveText(/Munich/);
+		await expect(page.locator('#city-toggle')).toHaveText(/Online/);
 	});
 
-	test('German page has no English UI copy and the English page no German', async ({ page }) => {
+	test('French page has no English UI copy and the English page no German', async ({ page }) => {
 		await open(page, '/', NOW.wed);
-		const de = await page.locator('body').innerText();
-		for (const w of ['This week', 'This month', 'events shown', 'Save to my calendar', 'All events']) expect(de).not.toContain(w);
-		expect(de).toContain('Kostenlos');
+		const fr = await page.locator('body').innerText();
+		for (const w of ['This week', 'This month', 'events shown', 'Save to my calendar', 'All events']) expect(fr).not.toContain(w);
+		expect(fr).toContain('Gratuit');
 		await open(page, '/en/', NOW.wed);
 		const en = await page.locator('body').innerText();
-		for (const w of ['Diese Woche', 'Dieser Monat', 'angezeigt', 'Kalender abonnieren', 'Kostenlos']) expect(en).not.toContain(w);
+		for (const w of ['Cette semaine', 'Ce mois-ci', 'Ajouter à mon agenda', 'Gratuit', 'Aujourd’hui']) expect(en).not.toContain(w);
 		expect(en).toContain('Free');
 		expect(TXT.en.week).toBe('This week');
 	});

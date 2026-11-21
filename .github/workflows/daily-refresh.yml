@@ -17,7 +17,7 @@ name: Daily refresh
 on:
   schedule:
     # Off-peak minute, UTC (no DST handling in GitHub cron).
-    - cron: "37 4 * * *"
+    - cron: "17 5 * * *"
   workflow_dispatch:
     inputs:
       skip_claude:
@@ -35,13 +35,16 @@ permissions:
   id-token: write
 
 concurrency:
-  group: germany-refresh
+  group: france-refresh
   cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      # The secret is read only to test whether it exists; its value is never printed.
+      HAS_CLAUDE_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
 
     steps:
       - uses: actions/checkout@v7
@@ -63,9 +66,14 @@ jobs:
         # Writes has_work=true|false and count=<n> to $GITHUB_OUTPUT, and work/TASK.md.
         run: npm run pipeline:prepare
 
+      - name: Claude step skipped (secret CLAUDE_CODE_OAUTH_TOKEN is not set)
+        if: ${{ !inputs.deploy_only && steps.prepare.outputs.has_work == 'true' && env.HAS_CLAUDE_TOKEN != 'true' }}
+        run: |
+          echo "::notice::CLAUDE_CODE_OAUTH_TOKEN is not set: skipping the Claude step. New candidates stay deferred and the site deploys unchanged. See TODO-OWNER.md."
+
       - name: Claude step (classify new candidates)
         id: claude
-        if: ${{ !inputs.deploy_only && !inputs.skip_claude && steps.prepare.outputs.has_work == 'true' }}
+        if: ${{ !inputs.deploy_only && !inputs.skip_claude && steps.prepare.outputs.has_work == 'true' && env.HAS_CLAUDE_TOKEN == 'true' }}
         # A failure here must not stop the run: apply treats everything as deferred and the
         # unchanged site still deploys.
         continue-on-error: true
@@ -136,7 +144,7 @@ jobs:
         with:
           path: dist
 
-      # Monday digest: two Buttondown DRAFTS (German + English) from the refreshed data.
+      # Monday digest: two Buttondown DRAFTS (French + English) from the refreshed data.
       # Drafts only; nobody is emailed from here, the owner reviews and sends in the
       # dashboard. Skipped when the secret is missing. A failure here must not block the
       # deploy. The script sends the Authorization, X-API-Version and Content-Type headers.

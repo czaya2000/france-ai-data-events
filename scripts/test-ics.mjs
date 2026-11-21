@@ -79,10 +79,10 @@ const missing = Object.keys(modalCounts).filter((s) => !files.includes(`${s}.ics
 if (missing.length) fail(`modal offers feeds with no file: ${missing.join(', ')}`);
 
 // Timezone sanity around both DST switches (last Sunday of October and March).
-// 17:30 Berlin on 2026-10-29 (CET) is 16:30 UTC; on 2026-10-22 (CEST) it is 15:30 UTC.
+// 17:30 Paris on 2026-10-29 (CET) is 16:30 UTC; on 2026-10-22 (CEST) it is 15:30 UTC.
 // 2027-03-27 (Saturday before the switch) is CET (+1), 2027-03-29 (Monday after) is CEST (+2).
 {
-	const base = { id: 'tz-check', title: 'TZ', time: '17:30–19:00', city: 'Berlin', organiser: 'x', blurb: 'x', pageUrl: `${SITE_URL}/` };
+	const base = { id: 'tz-check', title: 'TZ', time: '17:30–19:00', city: 'Paris', organiser: 'x', blurb: 'x', pageUrl: `${SITE_URL}/` };
 	const dates = ['2026-10-29', '2026-10-22', '2027-03-27', '2027-03-29'];
 	const cal = new ICAL.Component(
 		ICAL.parse(buildCalendar('t', dates.map((date, i) => ({ ...base, id: `tz-check-${i}`, date })))),
@@ -97,28 +97,28 @@ if (missing.length) fail(`modal offers feeds with no file: ${missing.join(', ')}
 
 // UID stability: correcting an event's title, date, time and URL keeps its UID.
 {
-	const before = { id: 'berlin-ai-meetup-2026', title: 'Berlin AI Meetup', date: '2026-11-10', time: '18:00', city: 'Berlin', organiser: 'x', blurb: 'x', pageUrl: `${SITE_URL}/events/berlin-ai-meetup-2026/` };
-	const after = { ...before, title: 'Berlin AI Meetup (moved)', date: '2026-11-17', time: '18:30–20:30', venue: 'New venue', pageUrl: 'https://example.org/changed' };
+	const before = { id: 'paris-ai-meetup-2026', title: 'Paris AI Meetup', date: '2026-11-10', time: '18:00', city: 'Paris', organiser: 'x', blurb: 'x', pageUrl: `${SITE_URL}/events/paris-ai-meetup-2026/` };
+	const after = { ...before, title: 'Paris AI Meetup (moved)', date: '2026-11-17', time: '18:30–20:30', venue: 'New venue', pageUrl: 'https://example.org/changed' };
 	const uidOf = (e) => new ICAL.Component(ICAL.parse(buildCalendar('t', [e]))).getFirstSubcomponent('vevent').getFirstPropertyValue('uid');
 	if (uidOf(before) !== uidOf(after)) fail('UID changed when the event was edited');
 	if (uidOf(before) !== eventUid(before.id)) fail('UID is not built from the event id');
 }
 
-// The English feeds (/en/calendar/) have the same files and the same UIDs as the German ones, with English text.
+// The English feeds (/en/calendar/) have the same files and the same UIDs as the French ones, with English text.
 {
 	const enDir = new URL('dist/en/calendar/', root);
 	const enFiles = readdirSync(enDir).filter((f) => f.endsWith('.ics')).sort();
 	if (enFiles.join() !== files.join()) fail('/en/calendar/ has different feed files than /calendar/');
 	const uids = (text) => [...text.matchAll(/^UID:(.*)$/gm)].map((m) => m[1]).sort().join();
 	for (const file of enFiles) {
-		const de = readFileSync(new URL(file, dir), 'utf8');
+		const fr = readFileSync(new URL(file, dir), 'utf8');
 		const en = readFileSync(new URL(file, enDir), 'utf8');
-		if (uids(de) !== uids(en)) fail(`${file}: German and English feed have different UIDs`);
-		if (/Veranstalter:|Details und Anmeldung:/.test(en)) fail(`${file}: German text in the English feed`);
-		if (/Organiser: |Details and registration:/.test(de)) fail(`${file}: English text in the German feed`);
-		if (!de.includes('/events/') || en.includes(`${SITE_URL}/events/`)) fail(`${file}: event links are not in the feed's language`);
+		if (uids(fr) !== uids(en)) fail(`${file}: French and English feed have different UIDs`);
+		if (/Organisateur : |Détails et inscription :/.test(en)) fail(`${file}: French text in the English feed`);
+		if (/Organiser: |Details and registration:/.test(fr)) fail(`${file}: English text in the French feed`);
+		if ((fr.includes('BEGIN:VEVENT') && !fr.includes('/events/')) || en.includes(`${SITE_URL}/events/`)) fail(`${file}: event links are not in the feed's language`);
 	}
-	console.log(`${enFiles.length} English feed files match the German ones`);
+	console.log(`${enFiles.length} English feed files match the French ones`);
 }
 
 if (failures) {

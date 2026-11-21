@@ -24,7 +24,7 @@ interface Props {
 const { locale, placement, compact = false, preset = [], note } = Astro.props;
 const s = t(locale);
 const LANGS = [
-	{ code: 'fr', label: 'Deutsch' },
+	{ code: 'fr', label: 'Français' },
 	{ code: 'en', label: 'English' },
 ];
 const id = (s: string) => `sub-${placement}-${s}`;

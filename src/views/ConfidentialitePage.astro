@@ -4,316 +4,334 @@ import { SITE_NAME, SITE_URL, CONTACT_EMAIL } from '../lib/events';
 import { localePath, legalPath } from '../i18n/paths.mjs';
 import type { Locale } from '../i18n';
 
-/* Datenschutzerklärung / privacy policy, German and English. Facts checked in the
-   code: self-hosted fonts (Base.astro), self-hosted Umami (config/country.mjs), plain POST forms to
-   FormSubmit (ContactPage, SubmitPage), Buttondown embed form (Subscribe.astro), no cookies set by the site.
-   Provider statements follow each provider's own public documentation; where it is silent the text says so.
-   The owner notes file lists what could not be verified. Not legal advice. */
+/* Politique de confidentialité / privacy policy, French and English. Written for the RGPD and the French
+   Loi Informatique et Libertés; provider facts (transfer mechanisms, retention) follow each provider's own
+   public documentation, as already researched for the German edition; where a provider is silent the text says so.
+   Facts checked in the code: self-hosted fonts (Base.astro), Umami script only when UMAMI_WEBSITE_ID is set
+   (config/country.mjs, empty today), plain POST forms to FormSubmit (ContactPage, SubmitPage), Buttondown
+   form (Subscribe.astro), no cookies set by the site. Not legal advice. */
 interface Props {
 	locale: Locale;
 }
 const { locale } = Astro.props;
-const de = locale === 'de';
-const path = legalPath('datenschutz', locale);
-const title = de ? `Datenschutzerklärung – ${SITE_NAME}` : `Privacy policy – ${SITE_NAME}`;
-const description = de ? `Was ${SITE_NAME} erhebt, was nicht, und warum.` : `What ${SITE_NAME} collects, what it does not, and why.`;
-const impressum = localePath(legalPath('impressum', locale), locale);
+const fr = locale === 'fr';
+const path = legalPath('privacy', locale);
+const title = fr ? `Politique de confidentialité – ${SITE_NAME}` : `Privacy policy – ${SITE_NAME}`;
+const description = fr
+	? `Ce que ${SITE_NAME} collecte, ce qu’il ne collecte pas, et pourquoi.`
+	: `What ${SITE_NAME} collects, what it does not, and why.`;
+const legal = localePath(legalPath('legal', locale), locale);
 ---
 
 <LegalShell title={title} description={description} locale={locale} path={path}>
 	{
-		de ? (
+		fr ? (
 			<>
-				<h1>Datenschutzerklärung</h1>
+				<h1>Politique de confidentialité</h1>
 
-				<h2>1. Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
+				<h2>1. Responsable du traitement</h2>
 				<p>
-					Marcin Czajkowski, E-Mail: {CONTACT_EMAIL}, <a href={localePath('/contact/', 'de')}>Kontaktformular</a>.
-					Weitere Angaben im <a href={impressum}>Impressum</a>.
-				</p>
-
-				<h2>2. Überblick</h2>
-				<p>
-					Diese Website setzt keine Cookies und lädt keine Schriften, Karten, Videos oder Werbung von Drittanbietern.
-					Personenbezogene Daten fallen an beim Aufruf der Seite (Hosting), bei der Reichweitenmessung, beim
-					Newsletter und bei den Formularen. Die Schrift (Archivo) wird von dieser Website selbst ausgeliefert; es
-					geht keine Anfrage an einen Schriftanbieter wie Google Fonts.
+					Marcin Czajkowski, e-mail : {CONTACT_EMAIL}, <a href={localePath('/contact/', 'fr')}>formulaire de contact</a>.
+					Autres informations dans les <a href={legal}>mentions légales</a>.
 				</p>
 
-				<h2>3. Hosting bei GitHub Pages und Server-Logfiles</h2>
+				<h2>2. En bref</h2>
 				<p>
-					Diese Website wird über GitHub Pages ausgeliefert (GitHub, Inc., USA, ein Unternehmen von Microsoft). Beim
-					Aufruf verarbeitet GitHub technisch notwendige Verbindungsdaten, insbesondere Ihre IP-Adresse, Datum und
-					Uhrzeit, aufgerufene Adresse, Browser und Betriebssystem. Nach der Dokumentation von GitHub Pages wird die
-					IP-Adresse von Besuchern zu Sicherheitszwecken protokolliert und gespeichert, unabhängig davon, ob Sie bei
-					GitHub angemeldet sind. Wir selbst haben keinen Zugriff auf diese Logfiles.
-				</p>
-				<p>
-					Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und
-					zuverlässigen Bereitstellung der Website). Speicherdauer: GitHub nennt in der Dokumentation zu Pages keine
-					feste Frist; die Daten werden von GitHub für den Zeitraum gespeichert, der in der{' '}
-					<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" hreflang="en">Datenschutzerklärung von GitHub</a>{' '}
-					beschrieben ist.
-				</p>
-				<p>
-					Drittlandübermittlung: Die Daten können in die USA übermittelt werden. GitHub ist nach eigenen Angaben unter
-					dem EU-US Data Privacy Framework zertifiziert (einschließlich der UK-Erweiterung und des Swiss-US Data
-					Privacy Framework); die Zertifizierung ist im{' '}
-					<a href="https://www.dataprivacyframework.gov/participant/6174" rel="noopener" hreflang="en">Verzeichnis des Data Privacy Framework</a>{' '}
-					einsehbar. Zusätzlich beschreibt GitHub Standardvertragsklauseln als Garantie für Übermittlungen in seiner
-					Dokumentation.
+					Ce site ne dépose aucun cookie et ne charge ni police, ni carte, ni vidéo, ni publicité provenant de tiers.
+					Des données personnelles sont traitées lors de la consultation d’une page (hébergement), pour la mesure
+					d’audience lorsqu’elle est activée, pour la lettre d’information et pour les formulaires. La police de
+					caractères (Archivo) est servie par le site lui-même : aucune requête n’est envoyée à un fournisseur de
+					polices comme Google Fonts.
 				</p>
 
-				<h2>4. Reichweitenmessung mit Umami (selbst gehostet)</h2>
+				<h2>3. Hébergement chez GitHub Pages et journaux serveur</h2>
 				<p>
-					Zur Reichweitenmessung nutzen wir Umami, das wir selbst betreiben (keine Umami Cloud). Das Messskript wird von
-					unserer eigenen Instanz unter <code>umami-data-events.vercel.app</code> geladen. Die Instanz läuft bei Vercel
-					(Vercel Inc., USA); die Messdaten liegen in einer Datenbank bei Supabase. Umami arbeitet ohne Cookies.
+					Le site est servi par GitHub Pages (GitHub, Inc., États-Unis, filiale de Microsoft). Lors de votre visite,
+					GitHub traite des données de connexion techniquement nécessaires, notamment votre adresse IP, la date et
+					l’heure, l’adresse demandée, le navigateur et le système d’exploitation. Selon la documentation de GitHub
+					Pages, l’adresse IP des visiteurs est journalisée et conservée à des fins de sécurité, que vous soyez connecté
+					à GitHub ou non. L’éditeur n’a lui-même pas accès à ces journaux.
 				</p>
 				<p>
-					Erfasst werden Seitenaufrufe und einzelne Aktionen (z. B. Klick auf eine Anmeldeseite oder auf „Kalender
-					abonnieren“) mit aufgerufener Adresse, Herkunftsseite, Browser, Betriebssystem, Gerätetyp,
-					Bildschirmgröße, Sprache und grobem Herkunftsland. Eine Profilbildung findet nicht statt.
+					Base légale : article 6, paragraphe 1, point f) du RGPD (intérêt légitime à fournir le site de façon sûre et
+					fiable). Durée de conservation : la documentation de GitHub Pages n’indique pas de durée fixe ; GitHub conserve
+					les données pour la durée décrite dans sa{' '}
+					<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" hreflang="en">politique de confidentialité</a>.
 				</p>
 				<p>
-					Besucher werden nach der Dokumentation von Umami über eine anonyme Sitzungskennung zusammengefasst, die aus
-					Website-ID, IP-Adresse, User-Agent und einem wechselnden Salt als Hash berechnet wird. Die IP-Adresse wird
-					dafür und für die grobe Standortbestimmung verarbeitet, aber nicht als Feld im Datensatz der Messung
-					gespeichert. Der Salt wechselt standardmäßig monatlich; wir haben keine andere Einstellung hinterlegt. Die
-					Kennung ist keine Garantie für absolute Anonymität. Unabhängig davon können die beteiligten Hosting-Anbieter
-					(insbesondere Vercel) IP-Adressen in ihren eigenen Betriebs- und Sicherheitsprotokollen verarbeiten; auch das
-					weist die Dokumentation von Umami ausdrücklich aus.
-				</p>
-				<p>
-					Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, zu verstehen, wie die Website genutzt
-					wird, auf datensparsame Weise). Die Messung speichert nichts auf Ihrem Gerät und liest nichts davon aus. Nur
-					wenn Sie die Messung selbst abschalten, wird in Ihrem Browser ein Merker gesetzt (siehe unten). Speicherdauer:
-					Die Messdaten werden nur so lange aufbewahrt, wie sie für die Auswertung der Nutzung erforderlich sind.
-				</p>
-				<p>
-					Widerspruch: Hängen Sie <code>?notrack</code> an die Adresse einer beliebigen Seite dieser Website, zum
-					Beispiel <code>{`${SITE_URL}/?notrack`}</code>. Das setzt im lokalen Speicher Ihres
-					Browsers den Eintrag <code>umami.disabled=1</code>, und dieser Browser wird nicht mehr gezählt. Mit{' '}
-					<code>?track</code> schalten Sie die Messung wieder ein. Löschen Sie die Browserdaten, geht der Merker verloren.
-				</p>
-				<p>
-					Drittlandübermittlung: Vercel Inc. (USA) ist nach eigenen Angaben unter dem EU-US Data Privacy Framework
-					zertifiziert (einschließlich UK-Erweiterung und Swiss-US Data Privacy Framework,{' '}
-					<a href="https://www.dataprivacyframework.gov/participant/6847" rel="noopener" hreflang="en">Verzeichnis</a>) und bietet
-					einen Auftragsverarbeitungsvertrag an, der Standardvertragsklauseln einbezieht. Für die Datenbank bei Supabase
-					stützt sich Supabase für Übermittlungen in die USA und nach Singapur nach eigener Dokumentation auf
-					Standardvertragsklauseln in seinem Auftragsverarbeitungsvertrag (
-					<a href="https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq" rel="noopener" hreflang="en">Supabase: Übermittlungen</a>
-					). Eine Zertifizierung von Supabase unter dem Data Privacy Framework behaupten wir nicht. Den Standort der
-					Datenbank nennen wir hier nicht.
+					Transfert hors de l’Union européenne : les données peuvent être transférées aux États-Unis. GitHub indique
+					être certifié au titre du EU-U.S. Data Privacy Framework (y compris l’extension britannique et le Swiss-U.S.
+					Data Privacy Framework) ; la certification figure dans la{' '}
+					<a href="https://www.dataprivacyframework.gov/participant/6174" rel="noopener" hreflang="en">liste du Data Privacy Framework</a>.
+					Sa documentation décrit en outre les clauses contractuelles types comme garantie pour les transferts.
 				</p>
 
-				<h2>5. Wöchentlicher Newsletter (Buttondown)</h2>
+				<h2>4. Mesure d’audience avec Umami (auto-hébergé)</h2>
 				<p>
-					Für den Newsletter nutzen wir Buttondown (Buttondown, LLC, USA) als Dienstleister (Auftragsverarbeiter).
-					Wenn Sie das Formular absenden, werden Ihre E-Mail-Adresse, Ihre Auswahl (Sprache, Städte, Formate) und der
-					Ort des Formulars an Buttondown übermittelt. Sie erhalten eine Bestätigungs-E-Mail; erst nach Klick auf den
-					Link in dieser E-Mail sind Sie angemeldet (Double-Opt-in). Nach den Angaben von Buttondown speichert der
-					Dienst außer Ihrer E-Mail-Adresse auch die IP-Adresse und Metadaten zur Herkunftsseite (Referrer), mit denen
-					Sie sich angemeldet haben.
+					Lorsqu’elle est activée, la mesure d’audience repose sur Umami, que nous exploitons nous-mêmes (pas
+					d’Umami Cloud). Le script est alors chargé depuis notre propre instance, à l’adresse{' '}
+					<code>umami-data-events.vercel.app</code>. L’instance tourne chez Vercel (Vercel Inc., États-Unis) ; les
+					données de mesure sont stockées dans une base de données chez Supabase, dans la région de l’Union
+					européenne. Tant que cette mesure n’est pas activée sur le site, aucun script d’analyse n’est chargé.
+					Umami fonctionne sans cookies.
 				</p>
 				<p>
-					Rechtsgrundlage ist Ihre Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. Sie können sie jederzeit mit Wirkung für
-					die Zukunft widerrufen: über den Abmeldelink in jeder E-Mail oder per E-Mail an uns. Wir speichern Ihre
-					Daten, solange Sie angemeldet sind. Nach Angaben von Buttondown werden Abmeldungen und Löschanfragen
-					unverzüglich umgesetzt.
+					Ce qui est enregistré : pages vues et actions ponctuelles (par exemple un clic sur un lien d’inscription ou sur
+					« S’abonner au calendrier »), avec l’adresse de la page, la page d’origine, le navigateur, le système
+					d’exploitation, le type d’appareil, la taille d’écran, la langue et un pays d’origine approximatif. Aucun
+					profil n’est constitué.
 				</p>
 				<p>
-					Datenschutzerklärung von Buttondown:{' '}
-					<a href="https://buttondown.com/legal/privacy" rel="noopener" hreflang="en">buttondown.com/legal/privacy</a>;
-					Informationen zur DSGVO:{' '}
+					D’après la documentation d’Umami, les visiteurs sont regroupés grâce à un identifiant de session anonyme,
+					calculé comme une empreinte (hash) de l’identifiant du site, de l’adresse IP, de l’agent utilisateur et d’un
+					sel qui change régulièrement. L’adresse IP sert à ce calcul et à la localisation approximative, mais n’est pas
+					enregistrée comme champ de la mesure. Le sel change chaque mois par défaut ; nous n’avons pas configuré
+					autre chose. Cet identifiant n’est pas une garantie d’anonymat absolu. Par ailleurs, les hébergeurs concernés
+					(notamment Vercel) peuvent traiter des adresses IP dans leurs propres journaux d’exploitation et de
+					sécurité, ce que la documentation d’Umami indique également.
+				</p>
+				<p>
+					Base légale : article 6, paragraphe 1, point f) du RGPD (intérêt légitime à comprendre l’usage du site, de
+					façon respectueuse de la vie privée). La mesure n’écrit rien sur votre appareil et n’y lit rien ; seul le
+					fait de la désactiver vous-même place un indicateur dans votre navigateur (voir ci-dessous). Durée de
+					conservation : les données de mesure ne sont conservées que le temps nécessaire à l’analyse de l’usage du
+					site.
+				</p>
+				<p>
+					Opposition : ajoutez <code>?notrack</code> à l’adresse de n’importe quelle page du site, par exemple{' '}
+					<code>{`${SITE_URL}/?notrack`}</code>. Cela inscrit <code>umami.disabled=1</code> dans le stockage local de
+					votre navigateur, et ce navigateur n’est plus comptabilisé. <code>?track</code> réactive la mesure. Si vous
+					effacez les données du navigateur, l’indicateur disparaît.
+				</p>
+				<p>
+					Transferts hors de l’Union européenne : Vercel Inc. (États-Unis) indique être certifié au titre du EU-U.S.
+					Data Privacy Framework (y compris l’extension britannique et le Swiss-U.S. Data Privacy Framework,{' '}
+					<a href="https://www.dataprivacyframework.gov/participant/6847" rel="noopener" hreflang="en">liste</a>) et propose un
+					accord de traitement des données qui intègre les clauses contractuelles types. Pour la base de données chez
+					Supabase, la documentation de Supabase indique s’appuyer, pour les transferts vers les États-Unis et
+					Singapour, sur les clauses contractuelles types de son accord de traitement des données (
+					<a href="https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq" rel="noopener" hreflang="en">Supabase : transferts</a>).
+					Nous n’affirmons pas que Supabase est certifié au titre du Data Privacy Framework.
+				</p>
+
+				<h2>5. Lettre d’information hebdomadaire (Buttondown)</h2>
+				<p>
+					Pour la lettre d’information, nous utilisons Buttondown (Buttondown, LLC, États-Unis) comme prestataire
+					(sous-traitant). Lorsque vous envoyez le formulaire, votre adresse e-mail, vos choix (langue, villes, formats) et
+					l’emplacement du formulaire sont transmis à Buttondown. Vous recevez un e-mail de confirmation ; vous n’êtes
+					inscrit(e) qu’après avoir cliqué sur le lien qu’il contient (double consentement). Selon Buttondown, le
+					service enregistre, en plus de votre adresse e-mail, l’adresse IP et des métadonnées sur la page d’origine
+					(référent) avec lesquelles vous vous êtes inscrit(e).
+				</p>
+				<p>
+					Base légale : votre consentement, article 6, paragraphe 1, point a) du RGPD. Vous pouvez le retirer à tout
+					moment, pour l’avenir : via le lien de désinscription présent dans chaque e-mail ou en nous écrivant. Nous
+					conservons vos données tant que vous restez abonné(e). Selon Buttondown, les désinscriptions et demandes de
+					suppression sont traitées immédiatement.
+				</p>
+				<p>
+					Politique de confidentialité de Buttondown :{' '}
+					<a href="https://buttondown.com/legal/privacy" rel="noopener" hreflang="en">buttondown.com/legal/privacy</a> ;
+					informations sur le RGPD :{' '}
 					<a href="https://buttondown.com/legal/gdpr-eu-compliance" rel="noopener" hreflang="en">buttondown.com/legal/gdpr-eu-compliance</a>.
-					Drittlandübermittlung (USA): Buttondown speichert Abonnentendaten laut seiner Liste der Unterauftragsverarbeiter
-					in den USA (AWS, Region us-west-2) und veröffentlicht einen{' '}
-					<a href="https://buttondown.com/legal/data-processing-agreement" rel="noopener" hreflang="en">Auftragsverarbeitungsvertrag</a>,
-					der nach seinen Angaben Standardvertragsklauseln einbezieht (
-					<a href="https://buttondown.com/legal/subprocessors" rel="noopener" hreflang="en">Unterauftragsverarbeiter</a>
-					). Eine Zertifizierung von Buttondown unter dem Data Privacy Framework behaupten wir nicht.
+					Transfert hors de l’Union européenne (États-Unis) : d’après sa liste de sous-traitants ultérieurs, Buttondown
+					stocke les données des abonnés aux États-Unis (AWS, région us-west-2) et publie un{' '}
+					<a href="https://buttondown.com/legal/data-processing-agreement" rel="noopener" hreflang="en">accord de traitement des données</a>{' '}
+					qui, selon sa propre description, intègre les clauses contractuelles types (
+					<a href="https://buttondown.com/legal/subprocessors" rel="noopener" hreflang="en">sous-traitants ultérieurs</a>).
+					Nous n’affirmons pas que Buttondown est certifié au titre du Data Privacy Framework.
 				</p>
 				<p>
-					Wir nutzen keine Öffnungs- und Klickmessung in den E-Mails. Buttondown bietet beides nur als zuschaltbare
-					Option an (standardmäßig aus, sofern der Betreiber sie nicht einschaltet). Sollte sich das ändern, passen wir
-					diese Erklärung an.
+					Nous n’utilisons pas de suivi des ouvertures ni des clics dans les e-mails. Buttondown ne propose les deux
+					qu’en option (désactivées par défaut tant que l’éditeur ne les active pas). Si cela devait changer, nous
+					mettrions cette politique à jour.
 				</p>
 
-				<h2>6. Kontakt- und Event-Formulare (FormSubmit)</h2>
+				<h2>6. Formulaires de contact et de proposition d’événement (FormSubmit)</h2>
 				<p>
-					Das Kontaktformular und das Formular „Event einreichen“ senden Ihre Eingaben über den Dienst FormSubmit
-					(formsubmit.co, Betreiber laut Website: Devro LABS) per E-Mail an {CONTACT_EMAIL}. Übermittelt werden die
-					Angaben im Formular: bei der Kontaktanfrage Name, E-Mail-Adresse und Nachricht, bei einer Event-Einreichung
-					Eventdaten (Titel, Datum, Ort, Link, Beschreibung, Veranstalter) sowie Name und E-Mail-Adresse der
-					einreichenden Person. FormSubmit verarbeitet diese Daten technisch, um sie weiterzuleiten; dabei fallen
-					auch Verbindungsdaten wie die IP-Adresse an. Ein verstecktes Feld dient dem Spamschutz.
+					Le formulaire de contact et le formulaire « Proposer un événement » transmettent ce que vous saisissez par
+					e-mail à {CONTACT_EMAIL}, par l’intermédiaire du service FormSubmit (formsubmit.co, exploitant indiqué sur son
+					site : Devro LABS). Sont transmis les champs du formulaire : pour un message, nom, adresse e-mail et
+					message ; pour une proposition d’événement, les informations de l’événement (titre, date, lieu, lien,
+					description, organisateur) ainsi que le nom et l’adresse e-mail de la personne qui l’envoie. FormSubmit
+					traite ces données techniquement pour les transmettre ; des données de connexion comme l’adresse IP sont
+					également générées. Un champ masqué sert de protection anti-spam.
 				</p>
 				<p>
-					Nach den Hilfeseiten von FormSubmit werden Einsendungen dort 30 Tage aufbewahrt (hochgeladene Dateien
-					nicht). FormSubmit setzt zum Spamschutz Google reCAPTCHA ein. Wir haben diese Prüfung nicht abgeschaltet;
-					daher kann beim Absenden eines Formulars auf Seiten von FormSubmit eine reCAPTCHA-Prüfung stattfinden, wobei
-					Google als weiterer Empfänger beteiligt sein kann. Auf unseren eigenen Seiten binden wir reCAPTCHA nicht ein.
+					D’après les pages d’aide de FormSubmit, les envois y sont conservés 30 jours (les fichiers joints ne le
+					sont pas). FormSubmit documente l’usage de Google reCAPTCHA pour lutter contre le spam. Nous n’avons pas
+					désactivé cette vérification : un contrôle reCAPTCHA peut donc s’exécuter côté FormSubmit lors de l’envoi, et
+					Google peut alors être un destinataire supplémentaire. Nous n’intégrons pas reCAPTCHA sur nos propres pages.
 				</p>
 				<p>
-					Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, soweit Ihre Anfrage auf einen Vertrag oder vorvertragliche
-					Maßnahmen zielt, sonst Art. 6 Abs. 1 lit. f DSGVO (Bearbeitung Ihrer Anfrage). In unserem Postfach
-					bewahren wir eine Nachricht nur so lange auf, wie es zur Bearbeitung der Anfrage nötig ist, und löschen sie
-					danach, soweit keine Aufbewahrungspflichten bestehen.
+					Base légale : article 6, paragraphe 1, point f) du RGPD (intérêt légitime à traiter votre demande). Dans notre
+					propre boîte de réception, nous ne conservons un message que le temps nécessaire au traitement de la demande,
+					puis le supprimons, sauf obligation légale de conservation.
 				</p>
 				<p>
-					Hinweis zur Übermittlung: FormSubmit hat in seinen öffentlich zugänglichen Unterlagen (zuletzt{' '}
-					<a href="https://formsubmit.co/privacy.pdf" rel="noopener" hreflang="en">Datenschutzerklärung</a>, Stand 17. Januar 2019)
-					weder einen Hosting-Standort noch einen Auftragsverarbeitungsvertrag noch einen Übermittlungsmechanismus für
-					Daten aus der EU (Data Privacy Framework, Standardvertragsklauseln) angegeben. Das Absenden eines Formulars
-					ist daher mit der Weitergabe an einen Drittanbieter verbunden, möglicherweise in ein Drittland, und diese
-					Übermittlung ist nicht nach dem üblichen DSGVO-Standard dokumentiert. Wenn Sie das nicht möchten, schreiben
-					Sie uns direkt per E-Mail an {CONTACT_EMAIL}.
-				</p>
-
-				<h2>7. Links zu Veranstaltern</h2>
-				<p>
-					Die Anmelde-Schaltflächen verweisen auf die Seite des Veranstalters und tragen eine Markierung
-					(<code>utm_source</code>), damit Veranstalter sehen können, dass ein Besucher von hier kam. Beim Klick
-					verlassen Sie diese Website; was die Seite des Veranstalters mit Ihren Daten tut, richtet sich nach dessen
-					Datenschutzerklärung.
+					Remarque sur les transferts : dans sa documentation publique (en dernier lieu sa{' '}
+					<a href="https://formsubmit.co/privacy.pdf" rel="noopener" hreflang="en">politique de confidentialité</a>, en
+					vigueur au 17 janvier 2019), FormSubmit n’indique ni lieu d’hébergement, ni accord de traitement des données,
+					ni mécanisme de transfert pour les données de l’Union européenne (Data Privacy Framework, clauses
+					contractuelles types). L’envoi d’un formulaire implique donc la transmission des données à un prestataire
+					tiers, éventuellement dans un pays tiers, et ce transfert n’est pas documenté selon le standard habituel du
+					RGPD. Si vous préférez l’éviter, écrivez-nous directement à {CONTACT_EMAIL}.
 				</p>
 
-				<h2>8. Keine Cookies, keine weiteren Drittanbieter</h2>
+				<h2>7. Liens vers les organisateurs</h2>
 				<p>
-					Diese Website setzt keine Cookies und bindet keine weiteren Drittanbieter-Inhalte ein (keine Schriften-CDNs,
-					keine Karten, keine Social-Media-Plugins). Die Sprachumschaltung ist ein einfacher Link und speichert
-					nichts. Einzige Ausnahme ist der oben beschriebene Merker <code>umami.disabled</code>, den Sie selbst durch
-					<code>?notrack</code> setzen. Wir aktualisieren diese Erklärung, wenn ein Dienst hinzukommt, wegfällt oder
-					sich wesentlich ändert.
+					Les boutons d’inscription renvoient vers la page de l’organisateur et portent un marqueur (<code>utm_source</code>)
+					qui permet à l’organisateur de voir qu’un visiteur vient d’ici. En cliquant, vous quittez ce site ; l’usage de
+					vos données par la page de l’organisateur relève de sa propre politique de confidentialité.
 				</p>
 
-				<h2>9. Ihre Rechte</h2>
-				<p>Sie haben gegenüber dem Verantwortlichen folgende Rechte:</p>
+				<h2>8. Pas de cookies, pas d’autres tiers</h2>
+				<p>
+					Ce site ne dépose aucun cookie et n’intègre aucun autre contenu tiers (pas de CDN de polices, pas de cartes,
+					pas de modules de réseaux sociaux). Le changement de langue est un simple lien et ne mémorise rien. La
+					seule exception est l’indicateur <code>umami.disabled</code> décrit plus haut, que vous placez vous-même avec{' '}
+					<code>?notrack</code>. Nous mettons cette politique à jour lorsqu’un service est ajouté, retiré ou
+					sensiblement modifié.
+				</p>
+
+				<h2>9. Vos droits</h2>
+				<p>Vous disposez à l’égard du responsable du traitement des droits suivants :</p>
 				<ul>
-					<li>Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17) und Einschränkung der Verarbeitung (Art. 18);</li>
-					<li>Datenübertragbarkeit (Art. 20);</li>
+					<li>accès (art. 15 du RGPD), rectification (art. 16), effacement (art. 17) et limitation du traitement (art. 18) ;</li>
+					<li>portabilité des données (art. 20) ;</li>
 					<li>
-						Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aus Gründen, die sich aus
-						Ihrer besonderen Situation ergeben (Art. 21);
+						opposition aux traitements fondés sur l’article 6, paragraphe 1, point f) du RGPD, pour des raisons tenant à
+						votre situation particulière (art. 21) ;
 					</li>
-					<li>Widerruf einer Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3), etwa vom Newsletter.</li>
+					<li>retrait du consentement à tout moment, pour l’avenir (art. 7, paragraphe 3), par exemple pour la lettre d’information ;</li>
+					<li>
+						directives relatives au sort de vos données après votre décès (art. 85 de la loi n° 78-17 du 6 janvier 1978
+						« Informatique et Libertés »).
+					</li>
 				</ul>
 				<p>
-					Wenden Sie sich dazu an die E-Mail-Adresse in Abschnitt 1. Zudem haben Sie das Recht, sich bei einer
-					Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Sie können die Beschwerde bei einer Aufsichtsbehörde einreichen, insbesondere in dem Mitgliedstaat Ihres gewöhnlichen Aufenthaltsorts, Ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes. Eine Übersicht der Aufsichtsbehörden in Deutschland führt der BfDI: <a href="https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html" rel="noopener">bfdi.bund.de</a>.
-				</p>
-				<p>
-					Die Angabe Ihrer Daten ist weder gesetzlich noch vertraglich vorgeschrieben; ohne E-Mail-Adresse können wir
-					Ihnen aber keinen Newsletter senden und keine Anfrage beantworten. Eine automatisierte Entscheidungsfindung
-					einschließlich Profiling findet nicht statt.
+					Pour exercer ces droits, écrivez à l’adresse e-mail indiquée à la section 1 ; une pièce d’identité n’est
+					demandée qu’en cas de doute raisonnable sur votre identité.
 				</p>
 
-				<p class="updated">Stand: 20. November 2026.</p>
+				<h2>10. Réclamation auprès de la CNIL</h2>
+				<p>
+					Vous avez le droit d’introduire une réclamation auprès d’une autorité de contrôle (art. 77 du RGPD). En France,
+					il s’agit de la Commission nationale de l’informatique et des libertés (CNIL), 3 place de Fontenoy, 75007
+					Paris, <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">cnil.fr/fr/plaintes</a>. Vous pouvez aussi
+					saisir l’autorité de l’État membre de votre résidence habituelle ou de votre lieu de travail.
+				</p>
+				<p>
+					Fournir vos données n’est une obligation ni légale ni contractuelle ; sans adresse e-mail, nous ne pouvons
+					toutefois ni vous envoyer la lettre d’information, ni répondre à une demande. Aucune décision automatisée, y
+					compris de profilage, n’est prise.
+				</p>
+
+				<p class="updated">Dernière mise à jour : 21 novembre 2026.</p>
 			</>
 		) : (
 			<>
 				<h1>Privacy policy</h1>
-				<p class="note">The German version (switch language, top right) is the binding one.</p>
+				<p class="note">The French version (language switch, top right) is the reference text.</p>
 
-				<h2>1. Controller (Art. 4(7) GDPR)</h2>
+				<h2>1. Controller</h2>
 				<p>
-					Marcin Czajkowski, email: {CONTACT_EMAIL}, <a href={localePath('/contact/', 'en')}>contact form</a>.
-					More details in the <a href={impressum}>legal notice</a>.
+					Marcin Czajkowski, email: {CONTACT_EMAIL}, <a href={localePath('/contact/', 'en')}>contact form</a>. More
+					details in the <a href={legal}>legal notice</a>.
 				</p>
 
-				<h2>2. Overview</h2>
+				<h2>2. In short</h2>
 				<p>
-					This website sets no cookies and loads no fonts, maps, videos or advertising from third parties. Personal
-					data arises when you open a page (hosting), through audience measurement, the newsletter and the forms. The
-					typeface (Archivo) is served by this site itself; no request goes to a font provider such as Google Fonts.
+					This website sets no cookies and loads no fonts, maps, videos or advertising from third parties. Personal data
+					arises when you open a page (hosting), through audience measurement when it is switched on, the newsletter and
+					the forms. The typeface (Archivo) is served by this site itself; no request goes to a font provider such as
+					Google Fonts.
 				</p>
 
 				<h2>3. Hosting on GitHub Pages and server logs</h2>
 				<p>
 					This website is delivered through GitHub Pages (GitHub, Inc., USA, a Microsoft company). When you open it,
 					GitHub processes technically necessary connection data, in particular your IP address, date and time, the
-					address requested, browser and operating system. According to the GitHub Pages documentation, the visitor's
-					IP address is logged and stored for security purposes, whether or not you are signed in to GitHub. We have
-					no access to these logs ourselves.
+					address requested, browser and operating system. According to the GitHub Pages documentation, the visitor's IP
+					address is logged and stored for security purposes, whether or not you are signed in to GitHub. The publisher
+					has no access to these logs.
 				</p>
 				<p>
 					Legal basis: Art. 6(1)(f) GDPR (legitimate interest in providing the website securely and reliably).
-					Retention: GitHub's Pages documentation does not state a fixed period; GitHub keeps the data for the period
-					set out in{' '}
+					Retention: GitHub's Pages documentation does not state a fixed period; GitHub keeps the data for the period set
+					out in{' '}
 					<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>.
 				</p>
 				<p>
-					Transfer to a third country: the data may be transferred to the USA. GitHub states that it is certified
-					under the EU-U.S. Data Privacy Framework (including the UK Extension and the Swiss-U.S. Data Privacy
-					Framework); the listing is available in the{' '}
+					Transfer outside the EU: the data may be transferred to the USA. GitHub states that it is certified under the
+					EU-U.S. Data Privacy Framework (including the UK Extension and the Swiss-U.S. Data Privacy Framework); the
+					listing is in the{' '}
 					<a href="https://www.dataprivacyframework.gov/participant/6174" rel="noopener">Data Privacy Framework list</a>.
 					GitHub's documentation also describes Standard Contractual Clauses as a transfer safeguard.
 				</p>
 
 				<h2>4. Audience measurement with Umami (self-hosted)</h2>
 				<p>
-					We measure reach with Umami, which we run ourselves (not Umami Cloud). The tracking script is loaded from our
-					own instance at <code>umami-data-events.vercel.app</code>. The instance runs on Vercel (Vercel Inc., USA);
-					the measurement data is kept in a database at Supabase. Umami works without cookies.
+					When it is switched on, audience measurement uses Umami, which we run ourselves (not Umami Cloud). The script is
+					then loaded from our own instance at <code>umami-data-events.vercel.app</code>. The instance runs on Vercel
+					(Vercel Inc., USA); the measurement data is kept in a database at Supabase, in the European Union region. As
+					long as the measurement is not switched on for the site, no analytics script is loaded. Umami works without
+					cookies.
 				</p>
 				<p>
 					What is recorded: page views and single actions (for example a click on a sign-up link or on "Subscribe to
-					calendar") with the page address, referrer, browser, operating system, device type, screen size, language
-					and a rough country of origin. No profiles are built.
+					calendar") with the page address, referrer, browser, operating system, device type, screen size, language and a
+					rough country of origin. No profiles are built.
 				</p>
 				<p>
-					According to Umami's documentation, visitors are grouped through an anonymous session identifier that is a
-					hash of the website ID, the visitor's IP address, the browser's User-Agent and a rotating salt. The IP
-					address is processed for this and for approximate location, but is not stored as a field in the analytics
-					record. The salt rotates monthly by default; we have not configured anything else. The identifier is not a
-					guarantee of absolute anonymity. Separately, the hosting providers involved (in particular Vercel) may
-					process IP addresses in their own operational and security logs, as Umami's documentation also points out.
+					According to Umami's documentation, visitors are grouped through an anonymous session identifier that is a hash
+					of the website ID, the visitor's IP address, the browser's User-Agent and a rotating salt. The IP address is
+					processed for this and for approximate location, but is not stored as a field in the analytics record. The salt
+					rotates monthly by default; we have not configured anything else. The identifier is not a guarantee of
+					absolute anonymity. Separately, the hosting providers involved (in particular Vercel) may process IP addresses
+					in their own operational and security logs, as Umami's documentation also points out.
 				</p>
 				<p>
 					Legal basis: Art. 6(1)(f) GDPR (legitimate interest in understanding how the site is used, in a
-					privacy-friendly way). The measurement stores nothing on your device and reads nothing from it. Only if you
-					switch the measurement off yourself is a flag set in your browser (see below). Retention: the measurement
-					data is kept only as long as it is needed to analyse how the site is used.
+					privacy-friendly way). The measurement stores nothing on your device and reads nothing from it; only if you
+					switch it off yourself is a flag set in your browser (see below). Retention: the measurement data is kept only
+					as long as it is needed to analyse how the site is used.
 				</p>
 				<p>
 					Objection: add <code>?notrack</code> to the address of any page on this site, for example{' '}
-					<code>{`${SITE_URL}/en/?notrack`}</code>. This sets the entry <code>umami.disabled=1</code>
-					in your browser's local storage, and this browser is no longer counted. <code>?track</code> turns the
-					measurement back on. If you clear your browser data, the flag is lost.
+					<code>{`${SITE_URL}/en/?notrack`}</code>. This sets the entry <code>umami.disabled=1</code> in your browser's
+					local storage, and this browser is no longer counted. <code>?track</code> turns the measurement back on. If you
+					clear your browser data, the flag is lost.
 				</p>
 				<p>
-					Transfer to a third country: Vercel Inc. (USA) states that it is certified under the EU-U.S. Data Privacy
-					Framework (including the UK Extension and the Swiss-U.S. Data Privacy Framework,{' '}
+					Transfers outside the EU: Vercel Inc. (USA) states that it is certified under the EU-U.S. Data Privacy Framework
+					(including the UK Extension and the Swiss-U.S. Data Privacy Framework,{' '}
 					<a href="https://www.dataprivacyframework.gov/participant/6847" rel="noopener">listing</a>) and offers a data
-					processing agreement that incorporates Standard Contractual Clauses. For the database at Supabase, Supabase's
-					own documentation says it relies on Standard Contractual Clauses in its data processing addendum for transfers
-					to the USA and Singapore (<a href="https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq" rel="noopener">Supabase: transfers</a>).
-					We do not claim that Supabase is certified under the Data Privacy Framework. We do not state the database
-					location here.
+					processing agreement that incorporates Standard Contractual Clauses. For the database at Supabase, Supabase's own
+					documentation says it relies on Standard Contractual Clauses in its data processing addendum for transfers to
+					the USA and Singapore (<a href="https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq" rel="noopener">Supabase: transfers</a>).
+					We do not claim that Supabase is certified under the Data Privacy Framework.
 				</p>
 
 				<h2>5. Weekly newsletter (Buttondown)</h2>
 				<p>
-					For the newsletter we use Buttondown (Buttondown, LLC, USA) as a service provider (processor). When you
-					submit the form, your email address, your choices (language, cities, formats) and the place of the form are
-					sent to Buttondown. You receive a confirmation email; you are subscribed only after you click the link in it
-					(double opt-in). According to Buttondown, besides your email address it also stores the IP address and
-					referrer-level metadata with which you subscribed.
+					For the newsletter we use Buttondown (Buttondown, LLC, USA) as a service provider (processor). When you submit
+					the form, your email address, your choices (language, cities, formats) and the place of the form are sent to
+					Buttondown. You receive a confirmation email; you are subscribed only after you click the link in it (double
+					opt-in). According to Buttondown, besides your email address it also stores the IP address and referrer-level
+					metadata with which you subscribed.
 				</p>
 				<p>
-					Legal basis is your consent, Art. 6(1)(a) GDPR. You can withdraw it at any time with effect for the future: with
-					the unsubscribe link in every email or by writing to us. We keep your data for as long as you stay
-					subscribed. According to Buttondown, unsubscribe and deletion requests are honoured immediately.
+					Legal basis: your consent, Art. 6(1)(a) GDPR. You can withdraw it at any time with effect for the future: with
+					the unsubscribe link in every email or by writing to us. We keep your data for as long as you stay subscribed.
+					According to Buttondown, unsubscribe and deletion requests are honoured immediately.
 				</p>
 				<p>
 					Buttondown's privacy policy:{' '}
-					<a href="https://buttondown.com/legal/privacy" rel="noopener">buttondown.com/legal/privacy</a>; GDPR
-					information:{' '}
+					<a href="https://buttondown.com/legal/privacy" rel="noopener">buttondown.com/legal/privacy</a>; GDPR information:{' '}
 					<a href="https://buttondown.com/legal/gdpr-eu-compliance" rel="noopener">buttondown.com/legal/gdpr-eu-compliance</a>.
-					Transfer to a third country (USA): according to its list of subprocessors, Buttondown stores subscriber data
-					in the USA (AWS, region us-west-2), and it publishes a{' '}
+					Transfer outside the EU (USA): according to its list of subprocessors, Buttondown stores subscriber data in the
+					USA (AWS, region us-west-2), and it publishes a{' '}
 					<a href="https://buttondown.com/legal/data-processing-agreement" rel="noopener">data processing agreement</a>{' '}
 					that, by its own description, incorporates Standard Contractual Clauses (
 					<a href="https://buttondown.com/legal/subprocessors" rel="noopener">subprocessors</a>). We do not claim that
@@ -326,44 +344,43 @@ const impressum = localePath(legalPath('impressum', locale), locale);
 
 				<h2>6. Contact and event-submission forms (FormSubmit)</h2>
 				<p>
-					The contact form and the "Submit an event" form send your input by email to {CONTACT_EMAIL} through the
-					service FormSubmit (formsubmit.co, operator named on its website: Devro LABS). What is sent is what you type
-					into the form: for a contact request name, email address and message; for an event submission the event
-					details (title, date, place, link, description, organiser) and the submitter's name and email address.
-					FormSubmit processes this data technically to forward it; connection data such as the IP address arises as
-					well. A hidden field serves as spam protection.
+					The contact form and the "Submit an event" form send your input by email to {CONTACT_EMAIL} through the service
+					FormSubmit (formsubmit.co, operator named on its website: Devro LABS). What is sent is what you type into the
+					form: for a contact request name, email address and message; for an event submission the event details (title,
+					date, place, link, description, organiser) and the submitter's name and email address. FormSubmit processes this
+					data technically to forward it; connection data such as the IP address arises as well. A hidden field serves as
+					spam protection.
 				</p>
 				<p>
 					According to FormSubmit's help pages, submissions are retained there for 30 days (uploaded files are not).
-					FormSubmit documents Google reCAPTCHA as part of its spam protection. We have not switched this check off, so
-					a reCAPTCHA check may run on FormSubmit's side when a form is sent, and Google may then be an additional
+					FormSubmit documents Google reCAPTCHA as part of its spam protection. We have not switched this check off, so a
+					reCAPTCHA check may run on FormSubmit's side when a form is sent, and Google may then be an additional
 					recipient. We do not embed reCAPTCHA on our own pages.
 				</p>
 				<p>
-					Legal basis: Art. 6(1)(b) GDPR where your request aims at a contract or pre-contractual steps, otherwise
-					Art. 6(1)(f) GDPR (handling your request). In our own mailbox we keep a message only as long as needed to
-					handle the request and delete it afterwards, unless a retention duty applies.
+					Legal basis: Art. 6(1)(f) GDPR (legitimate interest in handling your request). In our own mailbox we keep a
+					message only as long as needed to handle the request and delete it afterwards, unless a retention duty applies.
 				</p>
 				<p>
 					Note on transfers: in its public documentation (most recently its{' '}
 					<a href="https://formsubmit.co/privacy.pdf" rel="noopener">privacy policy</a>, effective 17 January 2019)
-					FormSubmit has not published a hosting location, a data processing agreement or a mechanism for transfers of
-					EU data (Data Privacy Framework, Standard Contractual Clauses). Submitting a form therefore involves passing
-					data to a third-party provider, possibly in a third country, and this transfer is not documented to the usual
-					GDPR standard. If you prefer not to use it, write to us directly at {CONTACT_EMAIL}.
+					FormSubmit has not published a hosting location, a data processing agreement or a mechanism for transfers of EU
+					data (Data Privacy Framework, Standard Contractual Clauses). Submitting a form therefore involves passing data
+					to a third-party provider, possibly in a third country, and this transfer is not documented to the usual GDPR
+					standard. If you prefer not to use it, write to us directly at {CONTACT_EMAIL}.
 				</p>
 
 				<h2>7. Links to organisers</h2>
 				<p>
 					The sign-up buttons lead to the organiser's own page and carry a marker (<code>utm_source</code>) so that
-					organisers can see that a visitor came from here. When you click, you leave this website; what the
-					organiser's page does with your data is governed by its own privacy policy.
+					organisers can see that a visitor came from here. When you click, you leave this website; what the organiser's
+					page does with your data is governed by its own privacy policy.
 				</p>
 
 				<h2>8. No cookies, no further third parties</h2>
 				<p>
-					This website sets no cookies and embeds no further third-party content (no font CDNs, no maps, no social
-					media plugins). The language switch is a plain link and stores nothing. The only exception is the
+					This website sets no cookies and embeds no further third-party content (no font CDNs, no maps, no social media
+					plugins). The language switch is a plain link and stores nothing. The only exception is the{' '}
 					<code>umami.disabled</code> flag described above, which you set yourself with <code>?notrack</code>. We update
 					this policy when a service is added, removed or materially changed.
 				</p>
@@ -374,22 +391,32 @@ const impressum = localePath(legalPath('impressum', locale), locale);
 					<li>access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17) and restriction of processing (Art. 18);</li>
 					<li>data portability (Art. 20);</li>
 					<li>
-						objection to processing based on Art. 6(1)(f) GDPR on grounds relating to your particular situation
-						(Art. 21);
+						objection to processing based on Art. 6(1)(f) GDPR on grounds relating to your particular situation (Art. 21);
 					</li>
-					<li>withdrawal of consent with effect for the future (Art. 7(3)), for example from the newsletter.</li>
+					<li>withdrawal of consent at any time, with effect for the future (Art. 7(3)), for example from the newsletter;</li>
+					<li>
+						instructions about what happens to your data after your death (art. 85 of French Law No. 78-17 of 6 January
+						1978, the "Informatique et Libertés" act).
+					</li>
 				</ul>
 				<p>
-					Write to the email address in section 1. You also have the right to lodge a complaint with a data
-					protection supervisory authority (Art. 77 GDPR). You may lodge it with a supervisory authority, in particular in the Member State of your habitual residence, place of work or the place of the alleged infringement. The BfDI lists the German authorities at <a href="https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html" rel="noopener">bfdi.bund.de</a>; the EDPB lists the authorities of all Member States at <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_en" rel="noopener">edpb.europa.eu</a>.
+					To exercise these rights, write to the email address in section 1; proof of identity is requested only if there
+					is reasonable doubt about who you are.
+				</p>
+
+				<h2>10. Complaint to the CNIL</h2>
+				<p>
+					You have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR). In France that is the
+					Commission nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy, 75007 Paris,{' '}
+					<a href="https://www.cnil.fr/en" rel="noopener">cnil.fr</a>. You may also contact the authority of
+					the EU Member State where you habitually live or work.
 				</p>
 				<p>
 					Providing your data is neither a legal nor a contractual requirement; without an email address, however, we
-					cannot send you the newsletter or answer a request. There is no automated decision-making, including
-					profiling.
+					cannot send you the newsletter or answer a request. There is no automated decision-making, including profiling.
 				</p>
 
-				<p class="updated">Last updated: 20 November 2026.</p>
+				<p class="updated">Last updated: 21 November 2026.</p>
 			</>
 		)
 	}

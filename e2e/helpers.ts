@@ -4,16 +4,16 @@ import { expect, type Page } from '@playwright/test';
    clock with Playwright's page.clock; the browser's time zone is America/Los_Angeles (playwright.config.ts),
    so a test also proves the site uses Europe/Paris, not the visitor's zone. */
 export const NOW = {
-	/** Wednesday 18 Nov, 18:30 in Berlin: the 17:00-18:00 talk is over. */
+	/** Wednesday 18 Nov, 18:30 in Paris: the 17:00-18:00 talk is over. */
 	wedEvening: '2026-11-18T18:30:00+01:00',
 	wed: '2026-11-18T12:00:00+01:00', // the 17:00-18:00 talk is still ahead
-	/** Sunday 22 Nov, 23:30 in Berlin (still Sunday). */
+	/** Sunday 22 Nov, 23:30 in Paris (still Sunday). */
 	sunLate: '2026-11-22T23:30:00+01:00',
-	/** Monday 23 Nov, 00:30 in Berlin; still Sunday afternoon in Los Angeles. */
+	/** Monday 23 Nov, 00:30 in Paris; still Sunday afternoon in Los Angeles. */
 	monEarly: '2026-11-23T00:30:00+01:00',
-	/** Monday 30 Nov, 23:30 in Berlin (last day of the month). */
+	/** Monday 30 Nov, 23:30 in Paris (last day of the month). */
 	novEnd: '2026-11-30T23:30:00+01:00',
-	/** Tuesday 1 Dec, 00:30 in Berlin; still 30 Nov in Los Angeles. */
+	/** Tuesday 1 Dec, 00:30 in Paris; still 30 Nov in Los Angeles. */
 	decStart: '2026-12-01T00:30:00+01:00',
 };
 
@@ -24,7 +24,7 @@ export type Loc = (typeof LOCALES)[number];
 export const at = (loc: Loc, path: string) => (loc === 'en' ? `/en${path}` : path);
 
 export const TXT = {
-	de: { week: 'Diese Woche', month: 'Dieser Monat', all: 'Alle', count: (n: number) => (n === 1 ? '1 Event' : `${n} Events`) },
+	fr: { week: 'Cette semaine', month: 'Ce mois-ci', all: 'Tous', count: (n: number) => (n === 1 ? '1 événement' : `${n} événements`) },
 	en: { week: 'This week', month: 'This month', all: 'All', count: (n: number) => (n === 1 ? '1 event' : `${n} events`) },
 };
 
@@ -36,7 +36,7 @@ export async function open(page: Page, url: string, now: string = NOW.wed) {
 }
 
 export const titles = (page: Page) =>
-	page.$$eval('.row:not([hidden]) .title', (els) => els.map((e) => (e.textContent || '').replace(/\(new\)|\(neu\)/, '').trim()));
+	page.$$eval('.row:not([hidden]) .title', (els) => els.map((e) => (e.textContent || '').replace(/\(new\)|\(nouveau\)/, '').trim()));
 
 export const shownCount = (page: Page) => page.locator('#result-count').innerText();
 

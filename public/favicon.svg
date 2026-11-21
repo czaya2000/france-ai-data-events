@@ -7,11 +7,11 @@
     <rect x="3" y="8.5" width="18" height="1.5" class="band" />
     <style>
         .frame { stroke: #000000; }
-        .rule  { fill:   #E30613; }
-        .band  { fill:   #FFCE00; }
+        .rule  { fill:   #1F3A93; }
+        .band  { fill:   #E1000F; }
         @media (prefers-color-scheme: dark) {
             .frame { stroke: #F4F3EF; }
-            .rule  { fill:   #FF4438; }
+            .rule  { fill:   #6F8CFF; }
         }
     </style>
 </svg>

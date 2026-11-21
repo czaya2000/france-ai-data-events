@@ -1,19 +1,24 @@
-// Builds the weekly digest and saves it in Buttondown as TWO DRAFTS: a German
+// Builds the weekly digest and saves it in Buttondown as TWO DRAFTS: a French
 // email and an English one, from the same event data.
 //
 // Audience (Buttondown API 2026-04-01 `filters`, with tag IDs from GET /v1/tags):
 //   English draft: subscribers who have the tag lang-en.
-//   German draft:  subscribers who do not have lang-en (so lang-fr, and anyone
-//                  with no language tag, get German).
+//   French draft:  subscribers who do not have lang-en (so lang-fr, and anyone
+//                  with no language tag, get French).
 // Inside each email, Liquid conditions on city-<slug> / format-<slug> tags show
 // each reader only the matching events (src/lib/newsletter.mjs). Rendering lives
 // in scripts/lib/digest.mjs.
 //
+//   npm run digest:preview                              # writes preview/digest-fr.html + digest-en.html, no API calls
 //   node scripts/build-digest.mjs --dry-run             # subjects + summary, no API calls
 //   node scripts/build-digest.mjs --dry-run --show-body # also print both bodies
 //   BUTTONDOWN_API_KEY=... node scripts/build-digest.mjs   # create the drafts
 //
 // Options:
+//   --preview       write preview/digest-<locale>.html (shows what a reader with no tag choice sees).
+//                   If src/data/events.json has nothing in the window, a built-in SAMPLE of French events
+//                   is used and the pages carry a "sample data" banner; those are never to be sent.
+//                   No API calls, no key needed. Implies --dry-run.
 //   --dry-run       print, don't call the API
 //   --show-body     with --dry-run: print the HTML bodies too
 //   --ahead=N       include events from today through today + N days (default 14)
@@ -25,11 +30,12 @@
 // sends the X-Buttondown-Live-Dangerously header and never emails anyone.
 // Idempotent: if this week's draft (same subject) exists, nothing is created.
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { newsletterCity } from '../src/lib/newsletter.mjs';
 import { isoDateIn } from '../src/i18n/format.ts';
 import { wallClockIn } from '../src/lib/schedule.mjs';
-import { LOCALES, LANG_TAGS, selectEvents, renderDigest, audienceFilters, newTagPayload } from './lib/digest.mjs';
+import { LOCALES, LANG_TAGS, selectEvents, renderDigest, audienceFilters, newTagPayload, previewPage } from './lib/digest.mjs';
+import { sampleEvents } from './lib/sample-events.mjs';
 
 const API = 'https://api.buttondown.com/v1';
 const API_VERSION = '2026-04-01';
@@ -40,16 +46,26 @@ const args = Object.fromEntries(
 		return [k, v ?? true];
 	}),
 );
-const dryRun = Boolean(args['dry-run']);
+const preview = Boolean(args.preview);
+const dryRun = Boolean(args['dry-run']) || preview;
 const today = args.today ?? isoDateIn(new Date()); // Europe/Paris date
 
-const sel = selectEvents(JSON.parse(readFileSync('src/data/events.json', 'utf8')), {
-	today,
-	ahead: Number(args.ahead ?? 14),
-	from: args.from,
-	// A pretend --today starts that day at 00:00; otherwise the real Berlin time, so events already over are left out.
-	now: args.today ? `${today}T00:00:00` : wallClockIn(new Date()),
-});
+const select = (events) =>
+	selectEvents(events, {
+		today,
+		ahead: Number(args.ahead ?? 14),
+		from: args.from,
+		// A pretend --today starts that day at 00:00; otherwise the real Paris time, so events already over are left out.
+		now: args.today ? `${today}T00:00:00` : wallClockIn(new Date()),
+	});
+
+let sel = select(JSON.parse(readFileSync('src/data/events.json', 'utf8')));
+let usingSample = false;
+if (preview && sel.soon.length === 0) {
+	sel = select(sampleEvents(today));
+	usingSample = true;
+	console.log('No real events in the window: using the built-in SAMPLE events for the preview.');
+}
 
 if (sel.soon.length === 0) {
 	console.log(`Nothing in the next ${args.ahead ?? 14} days. No digest this week.`);
@@ -75,6 +91,15 @@ for (const m of emails) {
 		`  unfiltered size per look: full cards with blurbs ${m.looksKb[0]} KB, full cards no blurbs ${m.looksKb[1]} KB`,
 	);
 	if (m.overBudget) console.log('  WARNING: still over budget even without blurbs. Gmail may clip it for readers with no filters.');
+}
+
+if (preview) {
+	mkdirSync('preview', { recursive: true });
+	for (const m of emails) {
+		const file = `preview/digest-${m.locale}.html`;
+		writeFileSync(file, previewPage(m, m.locale, { sample: usingSample }));
+		console.log(`Wrote ${file}`);
+	}
 }
 
 if (dryRun) {

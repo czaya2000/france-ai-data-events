@@ -30,7 +30,7 @@ const CITY_COPY = Object.fromEntries(
 );
 
 // URL slug and wording per event type. `one` / `many` are used in sentences.
-// `slug` is the English URL (under /en/) and the stable key; `slugFr` the German one at the root.
+// `slug` is the English URL (under /en/) and the stable key; `slugFr` the French one at the root.
 // The wording here is English only (used by the markdown lists); the French wording is in src/i18n/fr.ts.
 const FORMAT_COPY = {
 	Meetup: { slug: 'meetups', slugFr: 'meetups', plural: 'Meetups', one: 'meetup', many: 'meetups' },

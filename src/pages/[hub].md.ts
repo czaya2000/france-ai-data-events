@@ -5,8 +5,8 @@ import { ENDPOINTS, MD_LIST_BUDGET, eventsMarkdown, freshnessLine, publicEvent }
 import { HUBS } from '../lib/hubs.mjs';
 import { SITE_HOST } from '../../config/country.mjs';
 
-/* /berlin.md, /conferences.md and so on: the markdown copy of each city and
-   type page (src/pages/[hub]/index.astro), for AI agents (English; the pages are German at the root and English under /en/, and the Canonical line names the English page). One per hub in
+/* /paris.md, /conferences.md and so on: the markdown copy of each city and
+   type page (src/pages/[hub]/index.astro), for AI agents (English; the pages are French at the root and English under /en/, and the Canonical line names the English page). One per hub in
    src/lib/hubs.mjs, so a link never 404s; /llms.txt links the ones with
    enough events. Not in the sitemap: the HTML page is the one to index. */
 

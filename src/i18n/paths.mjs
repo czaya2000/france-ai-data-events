@@ -28,9 +28,15 @@ export const FRENCH_ONLY = [];
 /** French slug -> English slug of the legal pages. */
 export const LEGAL_SLUGS = { 'mentions-legales': 'legal-notice', confidentialite: 'privacy' };
 
-/** Site path of a legal page in the given locale: legalPath('mentions-legales', 'en') -> "/legal-notice/". */
+/** Stable page keys -> French slug. */
+const LEGAL_KEYS = { legal: 'mentions-legales', privacy: 'confidentialite' };
+
+/** Site path of a legal page in the given locale: legalPath('legal', 'en') -> "/legal-notice/",
+    legalPath('privacy', 'fr') -> "/confidentialite/". */
 export function legalPath(page, locale) {
-	return `/${locale === 'fr' ? page : LEGAL_SLUGS[page]}/`;
+	const fr = LEGAL_KEYS[page];
+	if (!fr) throw new Error(`unknown legal page: ${page}`);
+	return `/${locale === 'fr' ? fr : LEGAL_SLUGS[fr]}/`;
 }
 
 export const isLocale = (v) => LOCALES.includes(v);

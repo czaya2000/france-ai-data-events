@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /* Checks the two language versions in dist/ (run `npm run build` first):
-   - dist/index.html (German) and dist/en/index.html (English) exist
+   - dist/index.html (French) and dist/en/index.html (English) exist
    - <html lang> matches the folder; og:locale matches
-   - hreflang alternates (de, en, x-default) point to built files and are
+   - hreflang alternates (fr, en, x-default) point to built files and are
      reciprocal; the canonical is the page's own address
-   - the DE | EN switch on every page: aria-current on the active language,
+   - the FR | EN switch on every page: aria-current on the active language,
      the other link leads to a built file
-   - no German UI phrases on English pages and no English UI phrases on German
+   - no French UI phrases on English pages and no English UI phrases on French
      pages (event titles, blurbs and other stored data are left out)
    - robots meta follows INDEXABLE: no site-wide noindex, nofollow when true
      (only page-level noindex on thanks/confirmed/404 and thin hubs)
@@ -34,7 +34,7 @@ function walk(dir) {
 	});
 }
 
-if (!existsSync(join(dist, 'index.html'))) fail('dist/index.html (German home) is missing');
+if (!existsSync(join(dist, 'index.html'))) fail('dist/index.html (French home) is missing');
 if (!existsSync(join(dist, 'en', 'index.html'))) fail('dist/en/index.html (English home) is missing');
 if (failures) process.exit(1);
 
@@ -70,13 +70,13 @@ const byUrl = new Map(pages.map((p) => [urlFor(p.file), p]));
 
 // UI phrases that must not appear in the other language. Capitalised or specific enough
 // not to match harmless substrings; stored data is removed before the scan.
-const GERMAN = [
-	'Kalender abonnieren', 'Newsletter abonnieren', 'Zurück zu allen Events', 'Alle Events', 'Diese Woche',
-	'Dieser Monat', 'Zurücksetzen', 'Veranstalter', 'Uhrzeit', 'Anmeldeseite', 'Suchen', 'Weiter zu', 'Anstehende',
-	'Seite nicht gefunden', 'Nachricht senden', 'Event einreichen', 'Postfach', 'Konferenz', 'Kostenlos',
-	'Nicht angegeben', 'Städte', 'Schließen', 'Daten & Feeds', 'Geprüft über', 'Beim Veranstalter anmelden',
-	'Zuletzt geprüft', 'angezeigt', 'Nach Stadt', 'Kontaktformular', 'Zur Prüfung senden', 'Danke', 'Wir senden',
-	'Übrige Orte', 'München', 'Köln', 'Ihr wöchentlicher', 'Jeden Montag', 'KI- und Daten',
+const FRENCH = [
+	'Ajouter à mon agenda', 'Recevoir la newsletter', 'Retour à tous les événements', 'Tous les événements', 'Cette semaine',
+	'Ce mois-ci', 'Réinitialiser', 'Organisateur', 'Horaire', 'Rechercher', 'Aller sur', 'prochains événements',
+	'Page introuvable', 'Envoyer le message', 'Proposer un événement', 'boîte mail', 'Conférences', 'Gratuit',
+	'Non indiqué', 'Toutes les villes', 'Fermer', 'Données et flux', 'Vérifié via', 'S’inscrire auprès',
+	'Dernière vérification', 'affichés', 'Par ville', 'formulaire dédié', 'Envoyer pour vérification', 'Merci',
+	'Autres villes', 'En ligne', 'Chaque lundi', 'IA et data',
 ];
 const ENGLISH = [
 	'Save to my calendar', 'Get weekly digest', 'Back to all events', 'All events', 'This week', 'This month',
@@ -91,7 +91,7 @@ function uiText(html, isEventPage) {
 	let h = html
 		.replace(/<script(?![^>]*id="(?:cal-strings|listing-strings|invalid-strings)")[^>]*>[\s\S]*?<\/script>/g, '')
 		.replace(/<style[\s\S]*?<\/style>/g, '')
-		.replace(/<section class="alt-lang[\s\S]*?<\/section>/g, '') // English block on the German 404
+		.replace(/<section class="alt-lang[\s\S]*?<\/section>/g, '') // English block on the French 404
 		.replace(/<!--[\s\S]*?-->/g, '')
 		.replace(/<ul class="events"[^>]*>[\s\S]*?<\/ul>/, '')
 		.replace(/<p class="blurb"[^>]*>[\s\S]*?<\/p>/g, '');
@@ -145,7 +145,7 @@ for (const { file, html } of pages) {
 	if (alts.length) {
 		const map = Object.fromEntries(alts);
 		for (const l of ['fr', 'en', 'x-default']) if (!map[l]) fail(`${rel}: hreflang ${l} missing`);
-		if (map['x-default'] !== map.fr) fail(`${rel}: x-default does not point to the German page`);
+		if (map['x-default'] !== map.fr) fail(`${rel}: x-default does not point to the French page`);
 		if (map[locale] !== canonical) fail(`${rel}: hreflang ${locale} is not the canonical`);
 		if (!/<meta property="og:locale:alternate"/.test(html)) fail(`${rel}: og:locale:alternate missing`);
 		for (const l of ['fr', 'en']) {
@@ -164,8 +164,8 @@ for (const { file, html } of pages) {
 		fail(`${rel}: no hreflang alternates, but the page has a counterpart`);
 	}
 
-	// Impressum and privacy are one click away, in the page's own language
-	const legal = locale === 'fr' ? ['/impressum/', '/datenschutz/'] : ['/en/legal-notice/', '/en/privacy/'];
+	// Legal notice and privacy are one click away, in the page's own language
+	const legal = locale === 'fr' ? ['/mentions-legales/', '/confidentialite/'] : ['/en/legal-notice/', '/en/privacy/'];
 	for (const l of legal) if (!html.includes(`href="${BASE}${l}"`)) fail(`${rel}: no footer link to ${l}`);
 
 	// language switch
@@ -202,16 +202,16 @@ for (const { file, html } of pages) {
 		const path = BASE && h.startsWith(BASE) ? h.slice(BASE.length) : h;
 		const neutral = /^\/(fonts|_astro|favicon|apple-touch|og-image|events\.json|llms|rss\.xml|[a-z-]+\.md)/.test(path);
 		const toEnglish = path === '/en' || path.startsWith('/en/') || path.startsWith('/en?') || path.startsWith('/en#');
-		// The German 404 deliberately links to the English home (GitHub Pages serves it for /en/ too).
+		// The French 404 deliberately links to the English home (GitHub Pages serves it for /en/ too).
 		const notFoundToEn = is404 && locale === 'fr' && path === '/en/';
 		if (!neutral && !notFoundToEn && !switchHrefs.has(h) && toEnglish !== (locale === 'en')) fail(rel + ': link ' + h + " leaves the page's language");
 	}
 
 	// phrases
 	const text = uiText(html, isEventPage);
-	const wrong = locale === 'en' ? GERMAN : ENGLISH;
+	const wrong = locale === 'en' ? FRENCH : ENGLISH;
 	for (const phrase of wrong) {
-		if (text.includes(phrase)) fail(`${rel}: ${locale === 'en' ? 'German' : 'English'} UI phrase "${phrase}" on a ${locale} page`);
+		if (text.includes(phrase)) fail(`${rel}: ${locale === 'en' ? 'French' : 'English'} UI phrase "${phrase}" on a ${locale} page`);
 	}
 
 	// newsletter tag and calendar feed language
@@ -220,7 +220,7 @@ for (const { file, html } of pages) {
 		const radios = [...form.matchAll(/<input[^>]*type="radio"[^>]*>/g)].map((m) => m[0]).filter((i) => /name="tag"/.test(i));
 		const values = radios.map((i) => attr(i, 'value')).sort().join();
 		const checked = radios.filter((i) => /\schecked/.test(i)).map((i) => attr(i, 'value'));
-		if (values !== 'lang-fr,lang-en' || checked.join() !== `lang-${locale}`) {
+		if (values !== 'lang-en,lang-fr' || checked.join() !== `lang-${locale}`) {
 			fail(`${rel}: newsletter form must offer lang-fr and lang-en radios with only lang-${locale} checked`);
 		}
 		if (/type="hidden"[^>]*name="tag"/.test(form)) fail(`${rel}: newsletter form has a hidden tag input`);
@@ -270,7 +270,7 @@ if (INDEXABLE) {
 	}
 } else if (!/^Disallow: \/$/m.test(robots)) fail('robots.txt should disallow everything while INDEXABLE is false');
 
-console.log(`${counts.de} German pages, ${counts.en} English pages checked` + (INDEXABLE ? `, ${sitemapUrls} sitemap URLs` : ''));
+console.log(`${counts.fr} French pages, ${counts.en} English pages checked` + (INDEXABLE ? `, ${sitemapUrls} sitemap URLs` : ''));
 if (failures) {
 	console.error(`\n${failures} problem${failures === 1 ? '' : 's'}`);
 	process.exit(1);

@@ -21,7 +21,7 @@ export interface FeedOption {
 	label: string;
 }
 
-/** "Köln" → "koln", "Online (FR)" → "online-fr". */
+/** "Hérault" → "herault", "Online (FR)" → "online-fr". */
 export function slugify(s: string): string {
 	return s
 		.normalize('NFD')
@@ -35,7 +35,7 @@ export function feedSlug(city: string, format: string): string {
 	return [city, format].filter(Boolean).join('__') || 'all';
 }
 
-/** Site path of a feed: German text at /calendar/, English text at /en/calendar/ (same file names, same UIDs). */
+/** Site path of a feed: French text at /calendar/, English text at /en/calendar/ (same file names, same UIDs). */
 export function feedPath(slug: string, locale: Locale = 'fr'): string {
 	return `${LOCALE_PREFIX[locale]}/calendar/${slug}.ics`;
 }

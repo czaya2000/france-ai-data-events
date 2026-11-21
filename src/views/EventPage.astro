@@ -75,7 +75,7 @@ const homeUrl = `${SITE_URL}${LOCALE_PREFIX[locale]}/`;
 const allUpcoming = await getUpcomingEvents();
 const upcoming = ended ? allUpcoming : [];
 
-// Link up to the city page (/berlin/), when that page has enough events to be live.
+// Link up to the city page (/paris/), when that page has enough events to be live.
 const cityHubMatch = cityHubFor(e);
 const cityHub =
 	cityHubMatch && isHubLive(cityHubMatch, allUpcoming.map((u) => u.data)) ? cityHubMatch : undefined;

@@ -2,7 +2,7 @@
 // Pure functions (no network, no file reads) so pipeline/test/digest.test.mjs can
 // import them offline. scripts/build-digest.mjs is the command-line wrapper.
 //
-// One set of events, rendered once per language (German and English). Each event
+// One set of events, rendered once per language (French and English). Each event
 // sits inside a Buttondown (Django/Liquid) condition, so a reader only sees events
 // whose city AND format match their tags; no choice means "all"
 // (see src/lib/newsletter.mjs).
@@ -43,8 +43,8 @@ export function isoWeek(iso) {
 
 const COPY = {
 	en: {
-		subject: (week, year) => `German data & AI events · week ${week}, ${year}`,
-		intro: 'Data and AI events in Germany, picked for your cities and event types.',
+		subject: (week, year) => `France data & AI events · week ${week}, ${year}`,
+		intro: 'Data and AI events in France, picked for your cities and event types.',
 		soonTitle: 'Next two weeks',
 		newLegend: 'new this week.',
 		soonEmpty: 'Nothing in your cities and event types in the next two weeks.',
@@ -56,19 +56,19 @@ const COPY = {
 		until: (day, month) => `to ${day} ${month}`,
 		looks: ['full cards with blurbs', 'full cards, no blurbs'],
 	},
-	de: {
-		subject: (week, year) => `Daten- & KI-Events in Deutschland · KW ${week}, ${year}`,
-		intro: 'Daten- und KI-Events in Deutschland, passend zu Ihren Städten und Formaten.',
-		soonTitle: 'Die nächsten zwei Wochen',
-		newLegend: 'neu diese Woche.',
-		soonEmpty: 'In den nächsten zwei Wochen gibt es nichts in Ihren Städten und Formaten.',
-		freshTitle: 'Neu diese Woche',
-		freshNote: 'Seit letztem Montag hinzugekommen, nach den nächsten zwei Wochen.',
-		freshEmpty: 'Diese Woche gibt es nichts Neues in Ihren Städten und Formaten.',
-		seeAll: 'Alle kommenden Events ansehen',
-		manage: 'Städte und Formate ändern',
-		until: (day, month) => `bis ${day}. ${month}`,
-		looks: ['volle Karten mit Kurztext', 'volle Karten ohne Kurztext'],
+	fr: {
+		subject: (week, year) => `Événements data & IA en France · S${week}, ${year}`,
+		intro: 'Les événements data et IA en France, choisis selon vos villes et vos formats.',
+		soonTitle: 'Les deux prochaines semaines',
+		newLegend: 'nouveau cette semaine.',
+		soonEmpty: 'Rien dans vos villes et formats au cours des deux prochaines semaines.',
+		freshTitle: 'Nouveau cette semaine',
+		freshNote: 'Ajouté depuis lundi dernier, après les deux prochaines semaines.',
+		freshEmpty: 'Rien de nouveau cette semaine dans vos villes et formats.',
+		seeAll: 'Voir tous les événements à venir',
+		manage: 'Modifier vos villes et formats',
+		until: (day, month) => `jusqu’au ${day} ${month}`,
+		looks: ['cartes complètes avec résumés', 'cartes complètes sans résumés'],
 	},
 };
 
@@ -100,8 +100,8 @@ export function selectEvents(allEvents, { today, ahead = 14, from = today, now =
  * Buttondown API 2026-04-01 `filters` for one language's email. Tag IDs come from
  * GET /v1/tags (names are not accepted here).
  *   en: subscribers who have lang-en.
- *   de: subscribers who do NOT have lang-en, so lang-fr and subscribers with no
- *       language tag (older signups) both get the German email.
+ *   fr: subscribers who do NOT have lang-en, so lang-fr and subscribers with no
+ *       language tag both get the French email.
  */
 export function audienceFilters(locale, langEnTagId) {
 	if (!langEnTagId) throw new Error('lang-en tag id is required');
@@ -163,7 +163,7 @@ const T = {
 	ink2: '#3f3f45',
 	muted: '#6b6b70',
 	border: '#dededa',
-	accent: '#e30613',
+	accent: '#1F3A93',
 	font: 'Archivo,Helvetica,Arial,sans-serif',
 };
 const UTM = 'utm_source=newsletter&utm_medium=email&utm_campaign=digest';
@@ -185,7 +185,7 @@ export function shortBlurb(text, max = 140) {
 	return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:\s]+$/, '') + '…';
 }
 
-// Card meta line: ONLY the city and the time ("Berlin, 09:00", or just "Berlin").
+// Card meta line: ONLY the city and the time ("Paris, 09:00", or just "Paris").
 // Never the venue, street or any other address part; the full address lives on the event page.
 export function placeMeta(city, time) {
 	return [city, time].map((x) => String(x ?? "").trim()).filter(Boolean);
@@ -211,7 +211,7 @@ export function renderDigest(sel, locale) {
 		new Intl.DateTimeFormat(INTL_LOCALE[locale], { ...opts, timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
 
 	// Every anchor carries its colour inline with !important, so Buttondown's and Gmail's
-	// default blue link style cannot win. Same values as the Swiss digest.
+	// default blue link style cannot win. Same values as the German and Swiss digests.
 	const a = (href, text, color = T.ink) =>
 		`<a href="${href}" style="color:${color} !important;text-decoration:underline !important;">${text}</a>`;
 	const plainA = (href, text, extra = '') =>
@@ -234,7 +234,7 @@ export function renderDigest(sel, locale) {
 		const meta = placeMeta(displayCity(e.city, locale), e.time).map(esc).join(', ');
 		const td = `border-bottom:1px solid ${T.border};font-family:${T.font};`;
 		const b = blurbFor(e, locale);
-		// A German email falls back to the English text when no German blurb exists yet.
+		// A French email falls back to the English text when no French blurb exists yet.
 		const blurbHtml =
 			blurb && b.text
 				? `<div${b.lang !== locale ? ` lang="${b.lang}"` : ''} style="font-size:13px;color:${T.muted};margin-top:3px;">${esc(shortBlurb(b.text))}</div>`
@@ -289,7 +289,7 @@ ${p(a('{{ manage_subscription_url }}', c.manage, T.muted), `margin-top:10px;font
 </div>`;
 
 	function buildBody(top) {
-		// German short months already end in a full stop ("Dez."): add one only if missing.
+		// French short months end in a full stop ("janv."): add one only if missing.
 		const rangeText = `${datePart(from, { day: 'numeric', month: 'short' })} – ${datePart(horizon, { day: 'numeric', month: 'short' })}`;
 		const range = rangeText.endsWith('.') ? rangeText : `${rangeText}.`;
 		const sections = section(c.soonTitle, range, soon, c.soonEmpty, top);
@@ -308,7 +308,7 @@ ${outro}
 	}
 
 	// Worst case is a reader with no filters, who sees every row. Every event always
-	// uses the same full Swiss card (date spine, title, place, chip); only the blurbs
+	// uses the same full card (date spine, title, place, chip); only the blurbs
 	// are dropped when the email would pass the Gmail clip. Never a mixed layout.
 	let level = 0;
 	let body = buildBody({ blurb: true });
@@ -329,4 +329,53 @@ ${outro}
 		looksKb,
 		overBudget: kb > BUDGET_KB,
 	};
+}
+
+// ---- Local preview ----------------------------------------------------------
+
+/**
+ * Resolves Buttondown's Liquid for a reader with NO tag choice (sees every event): keeps the
+ * `if` branches, drops every `else` branch (the "nothing matched" fallback) and fills the
+ * manage-subscription link with "#". Used only for the local preview files, never for sending.
+ */
+export function previewBody(body) {
+	const out = [];
+	let skipFrom = 0; // depth at which an else-branch is being skipped (0 = not skipping)
+	let depth = 0;
+	for (const line of body.split('\n')) {
+		const tag = line.trim().match(/^\{%\s*(if|else|endif)\b/);
+		if (tag?.[1] === 'if') {
+			depth++;
+			continue;
+		}
+		if (tag?.[1] === 'else') {
+			if (!skipFrom) skipFrom = depth;
+			continue;
+		}
+		if (tag?.[1] === 'endif') {
+			if (skipFrom === depth) skipFrom = 0;
+			depth--;
+			continue;
+		}
+		if (!skipFrom) out.push(line.replace(/\{\{ manage_subscription_url \}\}/g, '#'));
+	}
+	return out.join('\n');
+}
+
+/** A complete HTML page around one preview body, with an optional "sample data" banner. */
+export function previewPage(email, locale, { sample = false } = {}) {
+	const note =
+		locale === 'fr' ? 'APERÇU AVEC DES DONNÉES D’EXEMPLE : ne jamais envoyer.' : 'PREVIEW WITH SAMPLE DATA: never send.';
+	const banner = sample
+		? `<div style="background:#fff3cd;color:#664d03;font:14px Helvetica,Arial,sans-serif;padding:10px 16px;text-align:center;">${note}</div>`
+		: '';
+	return `<!doctype html>
+<html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(email.subject)}</title></head>
+<body style="margin:0;background:#fbfbf9;">
+${banner}
+<p style="font:12px Helvetica,Arial,sans-serif;color:#6b6b70;text-align:center;margin:8px;">Subject: ${esc(email.subject)}</p>
+${previewBody(email.body)}
+</body></html>
+`;
 }

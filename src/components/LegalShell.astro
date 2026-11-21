@@ -4,9 +4,9 @@ import SiteNav from './SiteNav.astro';
 import SiteFooter from './SiteFooter.astro';
 import type { Locale } from '../i18n';
 
-/* Frame shared by the legal pages (Impressum / legal notice, Datenschutz /
-   privacy): header, footer and the plain reading style. The text itself lives in
-   src/views/ImpressumPage.astro and DatenschutzPage.astro. */
+/* Frame shared by the legal pages (mentions légales / legal notice, politique de
+   confidentialité / privacy): header, footer and the plain reading style. The text itself lives in
+   src/views/MentionsLegalesPage.astro and ConfidentialitePage.astro. */
 interface Props {
 	title: string;
 	description: string;
@@ -39,6 +39,11 @@ const { title, description, locale, path } = Astro.props;
 		font-size: 0.95rem;
 		font-weight: 600;
 		margin: 28px 0 6px;
+	}
+	.legal h3 {
+		font-size: 0.9rem;
+		font-weight: 600;
+		margin: 18px 0 4px;
 	}
 	.legal p,
 	.legal li {

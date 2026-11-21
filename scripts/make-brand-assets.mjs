@@ -1,8 +1,8 @@
 // Regenerates public/favicon.ico, public/apple-touch-icon.png and public/og-image.png.
 // One-off design tool, not part of the build: `node scripts/make-brand-assets.mjs`
 // (needs Playwright's chromium: `npx playwright install chromium`).
-// Same visual system as the Swiss site (Archivo, black, warm off-white, red accent,
-// square mark); German branding is limited to a thin gold band under the red rule.
+// Same visual system as the Swiss site (Archivo, black, warm off-white, blue accent,
+// square mark); French branding is limited to a thin red band under the blue rule.
 import { chromium } from 'playwright';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -16,8 +16,8 @@ const font = (w) => pathToFileURL(pub(`fonts/archivo-latin-${w}.woff2`)).href;
 const BG = '#fbfbf9';
 const mark = (size) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24">
 <rect x="3" y="4" width="18" height="17" fill="none" stroke="#000" stroke-width="2"/>
-<rect x="3" y="4" width="18" height="4.5" fill="#E30613"/>
-<rect x="3" y="8.5" width="18" height="1.5" fill="#FFCE00"/></svg>`;
+<rect x="3" y="4" width="18" height="4.5" fill="#1F3A93"/>
+<rect x="3" y="8.5" width="18" height="1.5" fill="#E1000F"/></svg>`;
 
 const browser = await chromium.launch();
 const shot = async (html, w, h) => {
@@ -73,23 +73,23 @@ h1{position:absolute;left:72px;top:150px;margin:0;width:900px;font-weight:400;fo
 </style>
 <body>
 <div class="brand">${mark(44)}<span>${SITE_NAME}</span></div>
-<h1>Every AI and data event in Germany, in one place.</h1>
-<div class="sub">Conferences, meetups, workshops and webinars across Germany.</div>
+<h1>Every AI and data event in France, in one place.</h1>
+<div class="sub">Conferences, meetups, workshops and webinars across France.</div>
 <div class="host">${SITE_HOST}</div>
-<div class="bar" style="flex-direction:row"><i style="background:#000;flex:1"></i><i style="background:#E30613;flex:1"></i><i style="background:#FFCE00;flex:1"></i></div>
+<div class="bar" style="flex-direction:row"><i style="background:#000;flex:1"></i><i style="background:#1F3A93;flex:1"></i><i style="background:#E1000F;flex:1"></i></div>
 </body>`;
 writeFileSync(pub('og-image.png'), await shot(og, 1200, 630));
 
 await browser.close();
 
-// favicon.svg keeps the Swiss file's structure plus the gold band.
+// favicon.svg is written by hand (blue rule, red band).
 const svg = readFileSync(pub('favicon.svg'), 'utf8');
 if (!svg.includes('class="band"')) {
 	writeFileSync(
 		pub('favicon.svg'),
 		svg
 			.replace('    <style>', '    <rect x="3" y="8.5" width="18" height="1.5" class="band" />\n    <style>')
-			.replace('.rule  { fill:   #E30613; }\n        @media', '.rule  { fill:   #E30613; }\n        .band  { fill:   #FFCE00; }\n        @media'),
+			.replace('.rule  { fill:   #1F3A93; }\n        @media', '.rule  { fill:   #1F3A93; }\n        .band  { fill:   #E1000F; }\n        @media'),
 	);
 }
 console.log('brand assets written');

@@ -5,17 +5,17 @@ import { t, type Locale } from '../i18n';
 
 /* One footer for every page. The page-specific line (last-scanned, scope
    note) comes through the slot; the link row is the same everywhere so
-   organisers and sponsors can always find their way in. Impressum and
-   Datenschutz are always one click away, in the page's own language
-   (/impressum/ and /datenschutz/, /en/legal-notice/ and /en/privacy/). */
+   organisers and sponsors can always find their way in. The legal notice and
+   the privacy policy are always one click away, in the page's own language
+   (/mentions-legales/ and /confidentialite/, /en/legal-notice/ and /en/privacy/). */
 
 interface Props {
 	locale: Locale;
 }
 const { locale } = Astro.props;
 const s = t(locale);
-const privacyHref = localePath(legalPath('datenschutz', locale), locale);
-const impressumHref = localePath(legalPath('impressum', locale), locale);
+const privacyHref = localePath(legalPath('privacy', locale), locale);
+const impressumHref = localePath(legalPath('legal', locale), locale);
 
 // Link row suppressed for now — flip back on when ready.
 const SHOW_LINKS = false;

@@ -3,7 +3,7 @@
    script (scripts/test-ics.mjs) can load it straight into Node.
 
    Written by hand because the `ics` npm package cannot emit TZID-qualified
-   times with a VTIMEZONE block, and local German times are the point. */
+   times with a VTIMEZONE block, and local French times are the point. */
 
 import { TIMEZONE, UID_DOMAIN as CONFIG_UID_DOMAIN, SITE_NAME, SITE_HOST } from '../../config/country.mjs';
 import { t } from '../i18n/index.ts';
@@ -149,7 +149,7 @@ export function localOffset(iso: string): '+01:00' | '+02:00' {
 	return iso >= lastSunday(year, 3) && iso < lastSunday(year, 10) ? '+02:00' : '+01:00';
 }
 
-/** ISO 8601 local date-time with the Berlin offset, e.g. 2026-10-29T17:30:00+01:00. */
+/** ISO 8601 local date-time with the Paris offset, e.g. 2026-10-29T17:30:00+01:00. */
 export function isoDateTime(iso: string, minutes: number): string {
 	const day = addDays(iso, Math.floor(minutes / 1440));
 	const m = ((minutes % 1440) + 1440) % 1440;

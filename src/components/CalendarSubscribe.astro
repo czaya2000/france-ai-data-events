@@ -14,7 +14,7 @@ const s = t(locale).calendar;
 
 const upcoming = await getUpcomingEvents();
 const { cities, formats } = feedOptions(upcoming, locale);
-// The links point at the feed in the page's language: /calendar/ (German) or /en/calendar/ (English).
+// The links point at the feed in the page's language: /calendar/ (French) or /en/calendar/ (English).
 const feeds = Object.fromEntries(
 	listFeeds(upcoming, locale).map((f) => [
 		f.slug,

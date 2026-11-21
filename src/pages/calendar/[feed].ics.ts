@@ -5,7 +5,7 @@ import { buildCalendar } from '../../lib/ics';
 
 /* Static calendar subscription feeds, regenerated on every build — so the
    daily refresh keeps them current with no workflow changes. Same
-   date window as the homepage (getUpcomingEvents). German text at /calendar/,
+   date window as the homepage (getUpcomingEvents). French text at /calendar/,
    English at /en/calendar/ (src/pages/en/calendar/[feed].ics.ts): same files, same UIDs. */
 
 export const getStaticPaths = (async () => {
