@@ -17,11 +17,12 @@
     "archive": "node scripts/archive-past.mjs",
     "data:fix": "node scripts/fix-existing-data.mjs",
     "digest": "node scripts/build-digest.mjs",
+    "digest:preview": "node scripts/build-digest.mjs --preview",
     "indexnow": "node scripts/indexnow.mjs",
     "pipeline:fetch": "node pipeline/prepare.mjs --dry-run",
     "pipeline:prepare": "node pipeline/prepare.mjs",
     "pipeline:enrich-local": "node pipeline/enrich-local.mjs",
-    "pipeline:backfill-de": "node pipeline/backfill-blurbs.mjs",
+    "pipeline:backfill-fr": "node pipeline/backfill-blurbs.mjs",
     "pipeline:apply": "node pipeline/apply.mjs",
     "test": "node --test \"pipeline/test/*.test.mjs\"",
     "test:e2e": "playwright test"

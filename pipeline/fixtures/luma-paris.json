@@ -1,0 +1,211 @@
+{
+ "entries": [
+  {
+   "api_id": "evt-8jgE8r6bW6AxKhd",
+   "event": {
+    "api_id": "evt-8jgE8r6bW6AxKhd",
+    "name": "RUN x HOT PILATES x RECOVER",
+    "start_at": "2026-11-21T08:30:00.000Z",
+    "end_at": "2026-11-21T11:30:00.000Z",
+    "url": "7uxu3rd5",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "8 Rue d'Uzès, Paris",
+     "full_address": "EMBER - Hot Pilates Studio, 8 Rue d'Uzès, 75002 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "Personal"
+   },
+   "hosts": [
+    {
+     "name": "Marion"
+    }
+   ]
+  },
+  {
+   "api_id": "evt-WBC4ZhlqpzIqRLF",
+   "event": {
+    "api_id": "evt-WBC4ZhlqpzIqRLF",
+    "name": "✍️ Offline Writing Party | Le Kawaa du Lucernaire | Paris 6th",
+    "start_at": "2026-11-21T09:00:00.000Z",
+    "end_at": "2026-11-21T11:45:00.000Z",
+    "url": "3qye7pjy",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "53 Rue Notre Dame des Champs, Paris",
+     "full_address": "Le kawaa du Lucernaire, 53 Rue Notre Dame des Champs, 75006 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "The Offline Club | Paris"
+   },
+   "hosts": [
+    {
+     "name": "Stefania The Offline Club Paris"
+    }
+   ]
+  },
+  {
+   "api_id": "evt-408DQk8Asia2Ekx",
+   "event": {
+    "api_id": "evt-408DQk8Asia2Ekx",
+    "name": "🥥 ConUt - Paris : Tous artistes avec L'IA ?",
+    "start_at": "2026-11-21T15:00:00.000Z",
+    "end_at": "2026-11-21T17:30:00.000Z",
+    "url": "reppeu2t",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "78 Rue Amelot, Paris",
+     "full_address": "Danysz Gallery, 78 Rue Amelot, 75011 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "ConUt - Les Controverses d'Utilité publique"
+   },
+   "hosts": [
+    {
+     "name": "Allain"
+    }
+   ]
+  },
+  {
+   "api_id": "evt-7oabTleG7y4gABl",
+   "event": {
+    "api_id": "evt-7oabTleG7y4gABl",
+    "name": "Build your side hustle Hackathon",
+    "start_at": "2026-11-22T11:00:00.000Z",
+    "end_at": "2026-11-22T18:00:00.000Z",
+    "url": "dc3ynvnx",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "5 Parv. Alan Turing, Paris",
+     "full_address": "La Felicità, 5 Parv. Alan Turing, 75013 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "Personal"
+   },
+   "hosts": [
+    {
+     "name": "Francesca Morichelli"
+    }
+   ]
+  },
+  {
+   "api_id": "evt-bwSe0lID5Bj9CSd",
+   "event": {
+    "api_id": "evt-bwSe0lID5Bj9CSd",
+    "name": "📚 Offline Reading Party | La Dame aux plantes | TOC x Verso | 🍃 La Maison du Jardinage et du Compostage | Paris 12e arr.",
+    "start_at": "2026-11-22T12:30:00.000Z",
+    "end_at": "2026-11-22T15:30:00.000Z",
+    "url": "n6plshk0",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "41 Rue Paul-Belmondo, Paris",
+     "full_address": "Maison du Jardinage, 41 Rue Paul-Belmondo, 75012 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "The Offline Club | Paris"
+   },
+   "hosts": [
+    {
+     "name": "Stefania The Offline Club Paris"
+    }
+   ]
+  },
+  {
+   "api_id": "evt-84x715VADfe7Ygh",
+   "event": {
+    "api_id": "evt-84x715VADfe7Ygh",
+    "name": "Forum d'Alliance Digitale",
+    "start_at": "2026-11-24T07:30:00.000Z",
+    "end_at": "2026-11-24T16:30:00.000Z",
+    "url": "wew0g4qi",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "3 Rue Mazarine, Paris",
+     "full_address": "3 Mazarium, 3 Rue Mazarine, 75006 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "Personal"
+   },
+   "hosts": [
+    {
+     "name": "Alliance Digitale"
+    }
+   ]
+  },
+  {
+   "api_id": "evt-u2PYKQCGjzb5tCB",
+   "event": {
+    "api_id": "evt-u2PYKQCGjzb5tCB",
+    "name": "Product Builder Night #2",
+    "start_at": "2026-11-24T17:30:00.000Z",
+    "end_at": "2026-11-24T19:00:00.000Z",
+    "url": "cl94iv50",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "65 Rue Ordener, Paris",
+     "full_address": "65 Rue Ordener, 75018 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "Personal"
+   },
+   "hosts": [
+    {
+     "name": "Le Ticket"
+    }
+   ]
+  },
+  {
+   "api_id": "evt-vu0mJJSVs9DKOSd",
+   "event": {
+    "api_id": "evt-vu0mJJSVs9DKOSd",
+    "name": "Protest: What Makes Us Take to the Streets? | W&W #1 with Sarah Durieux",
+    "start_at": "2026-11-24T18:30:00.000Z",
+    "end_at": "2026-11-24T20:00:00.000Z",
+    "url": "eckzo762",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR"
+    }
+   },
+   "calendar": {
+    "name": "Wine & Wisdom"
+   },
+   "hosts": [
+    {
+     "name": "Jai Felinski"
+    }
+   ]
+  }
+ ],
+ "has_more": false
+}

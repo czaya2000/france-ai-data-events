@@ -1377,6 +1377,7 @@
   },
   {
     "id": "meetup-city-pages",
+    "discoveryOnly": true,
     "type": "jsonld",
     "label": "Meetup city pages",
     "url": "https://www.meetup.com/fr-FR/cities/fr/{city}/events/",
@@ -1517,7 +1518,9 @@
     "cityHint": "Toulouse",
     "country": "FR",
     "note": "VERIFIED RSS but it is the news feed (10 items), not an event calendar; /evenements/ is 404",
-    "tier": 3
+    "tier": 3,
+    "disabled": true,
+    "disabledReason": "News feed, not an event calendar: its dates are publication dates, so it would list news as events. Kept for reference."
   },
   {
     "id": "miai",
@@ -1568,7 +1571,9 @@
     "cityHint": "Paris",
     "country": "FR",
     "note": "VERIFIED RSS (news); events page https://www.universite-paris-saclay.fr/evenements is HTML, no ICS",
-    "tier": 3
+    "tier": 3,
+    "disabled": true,
+    "disabledReason": "News feed, not an event calendar: its dates are publication dates, so it would list news as events. Kept for reference."
   },
   {
     "id": "sorbonne-evenements",
@@ -1711,7 +1716,9 @@
     "role": "lead",
     "country": "FR",
     "note": "VERIFIED RSS (15 items) but it is a news site; /en/type/event/ is an article list, not a dated calendar. Lead only.",
-    "tier": 3
+    "tier": 3,
+    "disabled": true,
+    "disabledReason": "News feed, not an event calendar: its dates are publication dates, so it would list news as events. Kept for reference."
   },
   {
     "id": "cerim-lille",

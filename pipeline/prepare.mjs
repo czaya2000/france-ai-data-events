@@ -4,15 +4,16 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileS
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { MAX_NEW_CANDIDATES_PER_RUN, MAX_PAGES_PER_RUN, SITE_SCOPE, WINDOW_DAYS } from '../config/country.mjs';
-import { today as berlinToday } from './lib/time.mjs';
-import { dropReason } from './lib/filter.mjs';
+import { today as parisToday } from './lib/time.mjs';
+import { dropReason, keywords } from './lib/filter.mjs';
 import { dedupe } from './lib/dedupe.mjs';
 import { hubLabel } from './lib/city.mjs';
 import { loadJson, loadLedger, lookup, matchesExisting, prune, record, saveJson, touch, updateMissing } from './lib/ledger.mjs';
 import { buildReport } from './lib/report.mjs';
 import { BOOTSTRAP_CAP, applyCap, candidateId, chunk, compactCandidate, renderTask, safeId } from './lib/work.mjs';
 import { MODULES, normaliseRaw, runFeedSource } from './sources/index.mjs';
-import { groupsInCandidate, icsUrl } from './sources/meetup.mjs';
+import { icsUrl } from './sources/meetup.mjs';
+import { CAPS, lumaSourcesFrom, newLumaSlugs, newMeetupGroups, pollableGroups, resolveLumaSlugs, testMeetupGroups } from './lib/discovery.mjs';
 import { fetchPage } from './sources/scrape.mjs';
 import { getText } from './lib/cache.mjs';
 
@@ -23,6 +24,7 @@ const P = {
 	archive: join(ROOT, 'src/data/archive.json'),
 	ledger: join(ROOT, 'data/cache/ledger.json'),
 	groups: join(ROOT, 'data/cache/discovered-groups.json'),
+	lumaCals: join(ROOT, 'data/cache/discovered-luma-calendars.json'),
 	health: join(ROOT, 'data/cache/source-health.json'),
 	rejected: join(ROOT, 'data/cache/rejected-sample.json'),
 	httpCache: join(ROOT, 'data/cache/http'),
@@ -61,7 +63,7 @@ const isoWeekday = (date) => ((new Date(date + 'T00:00:00Z').getUTCDay() + 6) % 
 
 export async function prepare(opts = {}) {
 	const t0 = Date.now();
-	const today = opts.today ?? berlinToday();
+	const today = opts.today ?? parisToday();
 	const windowDays = Number(process.env.WINDOW_DAYS ?? WINDOW_DAYS);
 	const cap = opts.bootstrap ? BOOTSTRAP_CAP : Number(process.env.MAX_NEW_CANDIDATES_PER_RUN ?? MAX_NEW_CANDIDATES_PER_RUN);
 	const maxPages = Number(process.env.MAX_PAGES_PER_RUN ?? MAX_PAGES_PER_RUN);
@@ -73,6 +75,9 @@ export async function prepare(opts = {}) {
 	health.pageHashes ??= {};
 	const groupsFile = loadJson(P.groups, { groups: {} });
 	groupsFile.groups ??= {};
+	const lumaFile = loadJson(P.lumaCals, { calendars: {}, slugs: {} });
+	lumaFile.calendars ??= {};
+	lumaFile.slugs ??= {};
 	const ledger = loadLedger(P.ledger);
 	const existing = [...loadJson(P.events, []), ...loadJson(P.archive, [])];
 	const rejectedSample = loadJson(P.rejected, { dedupeMerges: [], keywordRejects: [] });
@@ -82,12 +87,11 @@ export async function prepare(opts = {}) {
 	// Discovered Meetup groups that passed the ICS check are polled from now on (trust: noisy).
 	const known = new Set(sources.filter((s) => s.type === 'meetup').map((s) => s.id.slice(7)));
 	const feeds = sources.filter((s) => s.type !== 'scrape');
-	for (const [g, info] of Object.entries(groupsFile.groups)) {
-		if (info.icsOk && !known.has(g)) {
-			feeds.push({ id: 'meetup:' + g, type: 'meetup', label: 'Meetup', url: icsUrl(g), trust: 'noisy', onlineOk: true, country: 'FR', curatedCalendar: true, discovered: true });
-			known.add(g);
-		}
-	}
+	const meetupSource = (g) => ({ id: 'meetup:' + g, type: 'meetup', label: 'Meetup', url: icsUrl(g), trust: 'noisy', onlineOk: true, country: 'FR', curatedCalendar: true, discovered: true });
+	for (const g of pollableGroups(groupsFile.groups, known, CAPS.meetupPolledTotal)) feeds.push(meetupSource(g));
+	for (const g of Object.keys(groupsFile.groups)) known.add(g);
+	const lumaKnown = new Set(sources.filter((x) => x.type === 'luma-calendar' && x.calendarId).map((x) => x.calendarId));
+	feeds.push(...lumaSourcesFrom(lumaFile, lumaKnown, CAPS.lumaPolledTotal));
 	const selected = feeds.filter((s) => !opts.only || opts.only.includes(s.id));
 
 	// ---- 1. fetch ----
@@ -100,43 +104,50 @@ export async function prepare(opts = {}) {
 			res.rawCount = out.rawCount;
 			res.candidates = ctx.limit ? out.candidates.slice(0, ctx.limit) : out.candidates;
 		} catch (e) {
-			res.error = String(e.message ?? e).slice(0, 120);
+			// A source that blocked us (Eventbrite 403/405/429, or its per-run budget) is disabled for this run, not failed.
+			if (e?.blocked) { res.disabled = true; src.disabledReason = String(e.message).slice(0, 140); }
+			else res.error = String(e.message ?? e).slice(0, 120);
 		}
 		res.ms = Date.now() - t;
 		return res;
 	});
 
-	// ---- 2. Meetup group discovery (rule A1) ----
+	// ---- 2. self-expanding discovery (rule A1): Meetup groups and Luma calendars, capped ----
 	const discovered = [];
-	const maxDiscover = opts.bootstrap ? 80 : 25;
-	const newGroups = new Map();
-	for (const r of results) {
-		for (const c of r.candidates) {
-			for (const g of [...groupsInCandidate(c), ...(c.meetupGroups ?? [])]) {
-				if (!known.has(g) && !groupsFile.groups[g] && !newGroups.has(g)) newGroups.set(g, r.src.id);
-			}
+	// Follow a group or calendar only when it was seen on an AI/data-looking listing (keyword filter, title and short description).
+	const kw = keywords();
+	const onTopic = (c) => !kw.exclude.test(c.title) && (c.acceptAll || kw.include.test(`${c.title} ${(c.desc ?? '').slice(0, 300)}`));
+	const newGroups = newMeetupGroups(results, known, groupsFile.groups, onTopic);
+	const tested = await testMeetupGroups(newGroups, groupsFile.groups, {
+		ctx, today, cap: ctx.limit ? 3 : opts.bootstrap ? CAPS.meetupNewPerRunBootstrap : CAPS.meetupNewPerRun,
+	});
+	for (const { group, info, parsed } of tested) {
+		discovered.push({ group, kind: 'meetup', icsOk: info.icsOk });
+		if (info.icsOk && parsed) {
+			const src = meetupSource(group);
+			const out = normaliseRaw(src, parsed, ctx);
+			results.push({ src, candidates: out.candidates, rawCount: out.rawCount, ms: 0, error: null });
 		}
 	}
-	let tested = 0;
-	for (const [g, via] of newGroups) {
-		if (tested >= (ctx.limit ? 3 : maxDiscover)) break;
-		tested++;
-		const info = { firstSeen: today, via, trust: 'noisy', icsOk: false, checked: today };
+	const newSlugs = newLumaSlugs(results, lumaFile, onTopic);
+	const addedCals = await resolveLumaSlugs(newSlugs, lumaFile, lumaKnown, {
+		ctx, today, cap: ctx.limit ? 2 : opts.bootstrap ? CAPS.lumaNewPerRunBootstrap : CAPS.lumaNewPerRun,
+	});
+	for (const id of addedCals) {
+		const src = lumaSourcesFrom({ calendars: { [id]: lumaFile.calendars[id] } }, lumaKnown)[0];
+		let res = { src, candidates: [], rawCount: 0, ms: 0, error: null };
 		try {
-			const r = await getText(icsUrl(g), ctx, { accept: 'text/calendar, */*', retries: 0 });
-			const ct = r.headers?.get?.('content-type') ?? '';
-			info.icsOk = r.ok && (/calendar/i.test(ct) || r.text.includes('BEGIN:VCALENDAR'));
-			if (info.icsOk) {
-				const src = { id: 'meetup:' + g, type: 'meetup', label: 'Meetup', url: icsUrl(g), trust: 'noisy', onlineOk: true, country: 'FR', curatedCalendar: true, discovered: true };
-				const { parseIcs } = await import('./lib/ical.mjs');
-				const out = normaliseRaw(src, parseIcs(r.text));
-				results.push({ src, candidates: out.candidates, rawCount: out.rawCount, ms: 0, error: null });
-			}
-		} catch {
-			info.icsOk = false;
+			const out = await runFeedSource(src, ctx);
+			res = { ...res, candidates: out.candidates, rawCount: out.rawCount };
+		} catch (e) {
+			res.error = String(e.message ?? e).slice(0, 120);
 		}
-		groupsFile.groups[g] = info;
-		discovered.push({ group: g, icsOk: info.icsOk });
+		results.push(res);
+		discovered.push({ group: lumaFile.calendars[id].slug ?? id, kind: 'luma', icsOk: !res.error });
+	}
+
+	for (const r of results) {
+		if (r.src.discoveryOnly) { r.note = `${r.candidates.length} listings used for group discovery only`; r.candidates = []; }
 	}
 
 	// ---- 3. filter ----
@@ -334,7 +345,7 @@ export async function prepare(opts = {}) {
 			.map((c) => ({ n: c.members.length, title: c.title, sources: [...new Set(c.members.map((m) => m.sourceId))] })),
 		problems: [
 			...feedFailed.map((r) => `${r.src.id}: FAILED (${r.error})`),
-			...results.filter((r) => !r.error && !r.disabled && r.candidates.length === 0 && !r.src.discovered).map((r) => `${r.src.id}: empty (0 items${r.rawCount ? `, ${r.rawCount} raw` : ''})${r.src.note ? ' - ' + r.src.note : ''}`),
+			...results.filter((r) => !r.error && !r.disabled && r.candidates.length === 0 && !r.src.discovered && !r.src.discoveryOnly).map((r) => `${r.src.id}: empty (0 items${r.rawCount ? `, ${r.rawCount} raw` : ''})${r.src.note ? ' - ' + r.src.note : ''}`),
 			...warnings.map((w) => 'WARNING ' + w),
 		],
 		discovered,
@@ -350,6 +361,7 @@ export async function prepare(opts = {}) {
 	if (!opts.dry) {
 		saveJson(P.ledger, ledger);
 		saveJson(P.groups, groupsFile);
+		saveJson(P.lumaCals, lumaFile);
 		saveJson(P.health, health);
 		saveJson(P.rejected, rejectedSample);
 		writeFileSync(join(P.work, 'run-report.md'), md);

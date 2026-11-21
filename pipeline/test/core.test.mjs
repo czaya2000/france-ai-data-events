@@ -1,17 +1,19 @@
+import './env.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { utcToLocal, zonedToUtc, addDays, daysBetween } from '../lib/time.mjs';
+import { utcToLocal, zonedToUtc, addDays, daysBetween, parseStamp } from '../lib/time.mjs';
 import { parseIcs } from '../lib/ical.mjs';
 import { canonicalUrl, ledgerKeys, parseDateText, costFromPrice } from '../lib/normalize.mjs';
-import { citiesCompatible, detectCity, hubLabel, hubSlug } from '../lib/city.mjs';
+import { canonicalCity, citiesCompatible, detectCity, hubLabel, hubSlug, resolveCity } from '../lib/city.mjs';
 import { dropReason, loadKeywords } from '../lib/filter.mjs';
 import { emptyLedger, lookup, matchesExisting, prune, record, touch, updateMissing, loadLedger, saveJson } from '../lib/ledger.mjs';
 import { applyCap, candidateId, chunk, compactCandidate, MAX_INPUT_CHARS } from '../lib/work.mjs';
 import { getText } from '../lib/cache.mjs';
 import { prepare } from '../prepare.mjs';
+import { resetEventbriteBlock } from '../sources/eventbrite.mjs';
 import { cand } from './helpers.mjs';
 
 const kw = loadKeywords();
@@ -24,21 +26,26 @@ const mk = (o) => {
 };
 
 // ---- time ----
-test('UTC to Europe/Berlin around the March 2027 DST switch (28 Mar, 01:00 UTC)', () => {
-	assert.deepEqual(utcToLocal(Date.parse('2027-03-28T00:30:00Z')), { date: '2027-03-28', time: '01:30' }); // CET
-	assert.deepEqual(utcToLocal(Date.parse('2027-03-28T01:30:00Z')), { date: '2027-03-28', time: '03:30' }); // CEST
+test('UTC to Europe/Paris around the spring DST switch (29 Mar 2026, 01:00 UTC)', () => {
+	assert.deepEqual(utcToLocal(Date.parse('2026-03-29T00:30:00Z')), { date: '2026-03-29', time: '01:30' }); // CET
+	assert.deepEqual(utcToLocal(Date.parse('2026-03-29T01:00:00Z')), { date: '2026-03-29', time: '03:00' }); // CEST: 02:00-03:00 does not exist
+	assert.deepEqual(utcToLocal(Date.parse('2026-03-28T23:30:00Z')), { date: '2026-03-29', time: '00:30' });
 });
-test('UTC to Europe/Berlin around the October 2026 DST switch (25 Oct, 01:00 UTC)', () => {
+test('UTC to Europe/Paris around the autumn DST switch (25 Oct 2026, 01:00 UTC)', () => {
 	assert.deepEqual(utcToLocal(Date.parse('2026-10-25T00:30:00Z')), { date: '2026-10-25', time: '02:30' }); // CEST
-	assert.deepEqual(utcToLocal(Date.parse('2026-10-25T01:30:00Z')), { date: '2026-10-25', time: '02:30' }); // CET
+	assert.deepEqual(utcToLocal(Date.parse('2026-10-25T01:30:00Z')), { date: '2026-10-25', time: '02:30' }); // CET, the hour repeats
 	assert.deepEqual(utcToLocal(Date.parse('2026-10-24T22:30:00Z')), { date: '2026-10-25', time: '00:30' }); // date rolls over
 });
+test('UTC to Europe/Paris around the March 2027 DST switch (28 Mar, 01:00 UTC)', () => {
+	assert.deepEqual(utcToLocal(Date.parse('2027-03-28T00:30:00Z')), { date: '2027-03-28', time: '01:30' });
+	assert.deepEqual(utcToLocal(Date.parse('2027-03-28T01:30:00Z')), { date: '2027-03-28', time: '03:30' });
+});
 test('zonedToUtc handles other zones and DST', () => {
-	assert.equal(new Date(zonedToUtc(2026, 11, 20, 18, 0, 'Europe/Berlin')).toISOString(), '2026-11-20T17:00:00.000Z');
-	assert.equal(new Date(zonedToUtc(2026, 7, 1, 18, 0, 'Europe/Berlin')).toISOString(), '2026-07-01T16:00:00.000Z');
+	assert.equal(new Date(zonedToUtc(2026, 11, 20, 18, 0, 'Europe/Paris')).toISOString(), '2026-11-20T17:00:00.000Z');
+	assert.equal(new Date(zonedToUtc(2026, 7, 1, 18, 0, 'Europe/Paris')).toISOString(), '2026-07-01T16:00:00.000Z');
 	assert.equal(new Date(zonedToUtc(2026, 11, 20, 12, 0, 'America/New_York')).toISOString(), '2026-11-20T17:00:00.000Z');
 });
-test('ICS: UTC times and floating TZID times are both converted to Berlin', () => {
+test('ICS: UTC times and floating TZID times are both converted to Paris', () => {
 	const ics = [
 		'BEGIN:VCALENDAR', 'VERSION:2.0',
 		'BEGIN:VEVENT', 'UID:a', 'DTSTART:20261024T223000Z', 'DTEND:20261025T003000Z', 'SUMMARY:UTC event', 'END:VEVENT',
@@ -48,7 +55,16 @@ test('ICS: UTC times and floating TZID times are both converted to Berlin', () =
 	const { events } = parseIcs(ics);
 	assert.equal(events[0].start, '2026-10-25');
 	assert.equal(events[0].time, '00:30–02:30'); // 22:30Z-00:30Z around the switch = 00:30-02:30 local
-	assert.equal(events[1].time, '18:00–19:00'); // London 17:00 = Berlin 18:00
+	assert.equal(events[1].time, '18:00–19:00'); // London 17:00 = Paris 18:00
+});
+test('parseStamp: schema.org stamps with offsets, naive local times and date-only values', () => {
+	assert.deepEqual(parseStamp('2026-12-01'), { date: '2026-12-01', time: undefined, dateOnly: true });
+	assert.deepEqual(parseStamp('2026-12-01T18:30:00'), { date: '2026-12-01', time: '18:30', dateOnly: false });
+	assert.deepEqual(parseStamp('2026-11-26T17:30:00+00:00'), { date: '2026-11-26', time: '18:30', dateOnly: false });
+	assert.deepEqual(parseStamp('2026-07-01T17:30:00+02:00'), { date: '2026-07-01', time: '17:30', dateOnly: false });
+	assert.deepEqual(parseStamp('2026-11-25T00:00:00+00:00'), { date: '2026-11-25', time: undefined, dateOnly: true }); // feeds use 00:00Z for "no time"
+	assert.deepEqual(parseStamp('2026-11-30T23:00:00+00:00'), { date: '2026-12-01', time: undefined, dateOnly: true }); // = 00:00 Paris
+	assert.equal(parseStamp('next week'), null);
 });
 test('date helpers', () => {
 	assert.equal(addDays('2026-11-30', 1), '2026-12-01');
@@ -56,22 +72,28 @@ test('date helpers', () => {
 });
 
 // ---- text ----
-test('date text parsing, German and English', () => {
-	assert.deepEqual(parseDateText('Summit: 16.–20. November 2026, Berlin'), { start: '2026-11-16', end: '2026-11-20' });
-	assert.deepEqual(parseDateText('AI.SUMMIT 2026: 24. November 2026, Hamburg'), { start: '2026-11-24', end: '2026-11-24' });
+test('date text parsing: French, English and the German dates of one feed', () => {
+	assert.deepEqual(parseDateText('Compute! Paris : du 25 au 26 novembre 2026'), { start: '2026-11-25', end: '2026-11-26' });
+	assert.deepEqual(parseDateText('Salon Data & IA, 1er avril 2027, Nantes'), { start: '2027-04-01', end: '2027-04-01' });
+	assert.deepEqual(parseDateText('Forum du 28 novembre au 2 décembre 2026'), { start: '2026-11-28', end: '2026-12-02' });
+	assert.deepEqual(parseDateText('3-5 décembre 2026'), { start: '2026-12-03', end: '2026-12-05' });
+	assert.deepEqual(parseDateText('Lancement le 5 janv. 2027'), { start: '2027-01-05', end: '2027-01-05' });
+	assert.deepEqual(parseDateText('Le 12 août 2027'), { start: '2027-08-12', end: '2027-08-12' });
+	assert.deepEqual(parseDateText('Termin 05.03.2027'), { start: '2027-03-05', end: '2027-03-05' });
+	assert.deepEqual(parseDateText('rendez-vous le 12/12/2026'), { start: '2026-12-12', end: '2026-12-12' });
 	assert.deepEqual(parseDateText('happening on December 10, 2026'), { start: '2026-12-10', end: '2026-12-10' });
 	assert.deepEqual(parseDateText('Dec 10-11, 2026'), { start: '2026-12-10', end: '2026-12-11' });
-	assert.deepEqual(parseDateText('1.–2. Dezember 2026'), { start: '2026-12-01', end: '2026-12-02' });
-	assert.deepEqual(parseDateText('Termin 05.03.2027'), { start: '2027-03-05', end: '2027-03-05' });
+	assert.deepEqual(parseDateText('Build It Summit (1.–3. Dezember 2026)'), { start: '2026-12-01', end: '2026-12-03' });
+	assert.deepEqual(parseDateText('2026-11-20'), { start: '2026-11-20', end: '2026-11-20' });
 	assert.equal(parseDateText('no date here'), null);
 });
 test('canonical URLs and ledger keys', () => {
-	assert.equal(canonicalUrl('https://www.meetup.com/PyData-Berlin/events/317368516/?utm_source=x'), 'meetup.com/pydata-berlin/events/317368516');
+	assert.equal(canonicalUrl('https://www.meetup.com/Paris-AI/events/317368516/?utm_source=x'), 'meetup.com/paris-ai/events/317368516');
 	assert.equal(canonicalUrl('https://lu.ma/abc123?utm_medium=y'), 'luma.com/abc123');
-	assert.equal(canonicalUrl('https://www.eventbrite.de/e/ai-monday-tickets-2003969207846?aff=x'), 'eventbrite/2003969207846');
+	assert.equal(canonicalUrl('https://www.eventbrite.fr/e/ia-monday-tickets-2003969207846?aff=x'), 'eventbrite/2003969207846');
 	assert.equal(canonicalUrl('https://Example.com/a/b/?utm_campaign=1&id=7#frag'), 'example.com/a/b?id=7');
-	const keys = ledgerKeys({ url: 'https://example.com/x/', title: 'AI Meetup 2026 Berlin', start: '2026-12-01' });
-	assert.deepEqual(keys, ['u:example.com/x', 't:ai|2026-12-01']);
+	const keys = ledgerKeys({ url: 'https://example.com/x/', title: 'Soirée IA 2026 à Paris', start: '2026-12-01' });
+	assert.deepEqual(keys, ['u:example.com/x', 't:ia|2026-12-01']);
 });
 test('cost formatting', () => {
 	assert.equal(costFromPrice({ isFree: true }), 'Free');
@@ -79,48 +101,86 @@ test('cost formatting', () => {
 	assert.equal(costFromPrice({ priceFrom: 199, priceTo: 499, currency: 'EUR' }), 'From EUR 199');
 	assert.equal(costFromPrice({}), null);
 });
-test('city detection, hubs and compatibility', () => {
-	assert.equal(detectCity('Haus 3, 80331 München'), 'Munich');
-	assert.equal(detectCity('Frankfurt am Main'), 'Frankfurt');
-	assert.equal(detectCity('Sankt Georgen im Schwarzwald'), null);
-	assert.equal(hubSlug('Potsdam'), 'berlin');
-	assert.equal(hubLabel('Leipzig'), 'Other Germany');
-	assert.equal(hubLabel('Online (DE)'), 'Online (DE)');
-	assert.equal(citiesCompatible('Berlin', 'Potsdam'), true);
-	assert.equal(citiesCompatible('Berlin', 'Munich'), false);
-	assert.equal(citiesCompatible('Leipzig', 'Dresden'), false);
-	assert.equal(citiesCompatible(null, 'Munich'), true);
-	assert.equal(citiesCompatible('Online (DE)', 'Munich'), true);
+test('city detection: French places, accent-insensitive, with hubs for the suburbs', () => {
+	assert.equal(detectCity('Station F, 5 Parvis Alan Turing, 75013 Paris'), 'Paris');
+	assert.equal(detectCity('Campus de Saclay, Palaiseau'), 'Saclay'); // first place named; both are in the Paris hub
+	assert.equal(detectCity('École polytechnique, Palaiseau'), 'Palaiseau');
+	assert.equal(detectCity('Cité internationale, LYON'), 'Lyon');
+	assert.equal(detectCity('aix en provence'), 'Aix-en-Provence');
+	assert.equal(detectCity('Marché de Lérins, Valbonne'), 'Valbonne');
+	assert.equal(detectCity('Villeneuve d’Ascq'), "Villeneuve-d'Ascq");
+	assert.equal(detectCity('Nice place to meet'), null); // ordinary English word, never found inside text
+	assert.equal(detectCity('city tours of the old town'), null);
+	assert.equal(detectCity('Saint-Sever-du-Moustier'), null); // unknown village
+});
+test('canonicalCity: postcode, district and online spellings', () => {
+	assert.equal(canonicalCity('Paris 15e'), 'Paris');
+	assert.equal(canonicalCity('75008 Paris'), 'Paris');
+	assert.equal(canonicalCity('Lyon Cedex 03'), 'Lyon');
+	assert.equal(canonicalCity('Aix'), 'Aix-en-Provence');
+	assert.equal(canonicalCity('Nice'), 'Nice'); // a whole city field is trusted
+	assert.equal(canonicalCity('En ligne'), 'Online (FR)');
+	assert.equal(canonicalCity('Webinaire'), 'Online (FR)');
+	assert.equal(canonicalCity('Visioconférence'), 'Online (FR)');
+	assert.equal(canonicalCity('Saint-Sever-du-Moustier'), 'Saint-Sever-du-Moustier');
+	assert.equal(canonicalCity(''), null);
+});
+test('hubs and compatibility', () => {
+	assert.equal(hubSlug('Palaiseau'), 'paris');
+	assert.equal(hubSlug('Saint-Denis'), 'paris');
+	assert.equal(hubSlug('Villeurbanne'), 'lyon');
+	assert.equal(hubSlug('Sophia-Antipolis'), 'nice-sophia');
+	assert.equal(hubSlug('Aix-en-Provence'), 'marseille-aix');
+	assert.equal(hubLabel('Dijon'), 'Other France');
+	assert.equal(hubLabel('Saint-Sever-du-Moustier'), 'Other France');
+	assert.equal(hubLabel('Online (FR)'), 'Online (FR)');
+	assert.equal(citiesCompatible('Paris', 'Saclay'), true);
+	assert.equal(citiesCompatible('Paris', 'Lyon'), false);
+	assert.equal(citiesCompatible('Dijon', 'Tours'), false);
+	assert.equal(citiesCompatible(null, 'Lyon'), true);
+	assert.equal(citiesCompatible('Online (FR)', 'Lyon'), true);
+});
+test('resolveCity: venue then URL override a conflicting feed city, a bare city name does not', () => {
+	assert.equal(resolveCity({ city: 'Paris', venue: '12 rue de la République, 69002 Lyon' }), 'Lyon');
+	assert.equal(resolveCity({ city: 'Paris', venue: 'Paris, France' }), 'Paris');
+	assert.equal(resolveCity({ city: 'Paris', url: 'https://toulouse-tech-hub.fr/evenements/x' }), 'Toulouse');
+	assert.equal(resolveCity({ city: 'Online (FR)', venue: 'Lyon' }), 'Online (FR)');
 });
 
 // ---- filters ----
 test('filter: country, online, window, cancelled, duration, keyword, exclude', () => {
 	assert.equal(dropReason(mk({ title: 'AI Meetup' }), base), null);
-	assert.equal(dropReason(mk({ country: 'CH' }), base), 'country');
+	assert.equal(dropReason(mk({ country: 'DE' }), base), 'country');
 	assert.equal(dropReason(mk({ country: null, online: true, onlineOk: true }), base), null);
 	assert.equal(dropReason(mk({ country: null, online: true, onlineOk: false }), base), 'country');
 	assert.equal(dropReason(mk({ start: '2026-11-01', end: '2026-11-05' }), base), 'window');
 	assert.equal(dropReason(mk({ start: '2026-11-18', end: '2026-11-21' }), base), null); // still running
 	assert.equal(dropReason(mk({ start: '2027-03-21', end: '2027-03-21' }), base), 'window'); // day 121
 	assert.equal(dropReason(mk({ start: '2027-03-20', end: '2027-03-20' }), base), null); // day 120
-	assert.equal(dropReason(mk({ title: 'AI Night (abgesagt)' }), base), 'cancelled');
-	assert.equal(dropReason(mk({ title: 'AI Night verschoben' }), base), 'cancelled');
+	assert.equal(dropReason(mk({ title: 'Soirée IA (annulée)' }), base), 'cancelled');
+	assert.equal(dropReason(mk({ title: 'Meetup Data reporté' }), base), 'cancelled');
+	assert.equal(dropReason(mk({ title: 'AI Night postponed' }), base), 'cancelled');
+	assert.equal(dropReason(mk({ title: 'Data report 2026 launch' }), base), null); // "report" alone is an English word, not "reporté"
 	assert.equal(dropReason(mk({ cancelled: true }), base), 'cancelled');
 	assert.equal(dropReason(mk({ start: '2026-12-01', end: '2027-02-20' }), base), 'long');
 	assert.equal(dropReason(mk({ start: '2026-12-01', end: '2027-02-20', trust: 'curated' }), base), null);
 	assert.equal(dropReason(mk({ title: 'Pottery evening', desc: 'clay' }), base), 'keyword');
 	assert.equal(dropReason(mk({ title: 'Pottery evening', acceptAll: true }), base), null);
 	assert.equal(dropReason(mk({ title: 'Speed dating for data people' }), base), 'excluded');
-	for (const t of ['Databricks Summit', 'KI in der Praxis', 'Künstliche Intelligenz Konferenz', 'Power BI Usergroup', 'dbt meetup', 'Data Mesh Day', 'RAG workshop', 'Microsoft Fabric Hands-on', 'MLOps Stammtisch', 'Agentic coding']) {
+	for (const t of ['Databricks Summit', "L'IA en pratique", 'Intelligence artificielle : conférence', 'Apprentissage automatique pour tous', 'Power BI Usergroup', 'dbt meetup', 'Data Mesh Day', 'RAG workshop', 'Microsoft Fabric Hands-on', 'MLOps Paris', 'Agentic coding', 'Soirée données ouvertes', 'Gouvernance des données', 'Atelier ChatGPT pour les TPE', 'IA générative : retours de prod']) {
 		assert.equal(dropReason(mk({ title: t }), base), null, t);
 	}
-	assert.equal(dropReason(mk({ title: 'Evening', desc: 'About data platforms' }), base), null); // description counts
+	for (const t of ['Dégustation de vins', 'Salon de l’emploi', 'Soirée yoga du mardi', 'Brunch networking']) {
+		assert.notEqual(dropReason(mk({ title: t, desc: 'données' }), base), null, t);
+	}
+	assert.equal(dropReason(mk({ title: 'Evening', desc: 'About data platforms' }), base), null);
+	assert.equal(dropReason(mk({ title: 'Soirée', desc: 'Parlons des données de santé' }), base), null); // accented words in the description // description counts
 });
 
 // ---- ledger ----
 test('ledger: known by URL key or by title+date key; rejected stays known', () => {
 	const l = emptyLedger();
-	const a = mk({ title: 'AI Night Berlin', url: 'https://example.com/ai-night' });
+	const a = mk({ title: 'AI Night Paris', url: 'https://example.com/ai-night' });
 	record(l, a, 'rejected', { today: '2026-11-20', reason: 'offtopic' });
 	assert.equal(lookup(l, a).decision, 'rejected');
 	const sameUrl = mk({ title: 'Renamed', url: 'https://example.com/ai-night/?utm_source=x' });
@@ -143,26 +203,26 @@ test('ledger: touch updates lastSeen and merges sources; prune drops entries 7 d
 });
 test('ledger: vanished events removed only after two successful misses, never on a failed fetch, once per day', () => {
 	const l = emptyLedger();
-	const a = mk({ sourceId: 'mcml', start: '2026-12-10', end: '2026-12-10', url: 'https://mcml.ai/events/x/' });
-	record(l, a, 'accepted', { today: '2026-11-20', eventId: 'ev-mcml' });
-	const whole = new Set(['mcml']);
-	const run = (day, ok, seen) => updateMissing(l, { seen: new Map([['mcml', new Set(seen)]]), okSources: new Set(ok ? ['mcml'] : []), wholeCalendar: whole, today: day });
+	const a = mk({ sourceId: 'hi-paris-ics', start: '2026-12-10', end: '2026-12-10', url: 'https://hi-paris.fr/event/x/' });
+	record(l, a, 'accepted', { today: '2026-11-20', eventId: 'ev-hi' });
+	const whole = new Set(['hi-paris-ics']);
+	const run = (day, ok, seen) => updateMissing(l, { seen: new Map([['hi-paris-ics', new Set(seen)]]), okSources: new Set(ok ? ['hi-paris-ics'] : []), wholeCalendar: whole, today: day });
 	assert.deepEqual(run('2026-11-21', false, []), []); // fetch failed: nothing counted
 	l.lastMissingCheck = null;
 	assert.deepEqual(run('2026-11-22', true, []), []); // first miss
 	assert.deepEqual(run('2026-11-22', true, []), []); // same day again: not double counted
 	assert.equal(lookup(l, a).missingDays, 1);
-	assert.deepEqual(run('2026-11-23', true, []), ['ev-mcml']); // second consecutive miss
+	assert.deepEqual(run('2026-11-23', true, []), ['ev-hi']); // second consecutive miss
 	l.lastMissingCheck = null;
 	lookup(l, a).missingDays = 1;
 	assert.deepEqual(run('2026-11-24', true, [a.key]), []); // seen again: reset
 	assert.equal(lookup(l, a).missingDays, 0);
 });
 test('known events: match against events.json by URL or fuzzy title+date', () => {
-	const existing = [{ title: 'MLcon Berlin 2026', date: '2026-11-16', city: 'Berlin', url: 'https://mlconference.ai/berlin/' }];
-	assert.ok(matchesExisting(mk({ title: 'Something else', url: 'https://mlconference.ai/berlin/?utm_source=x', start: '2026-11-16' }), existing));
-	assert.ok(matchesExisting(mk({ title: 'MLConf Berlin 2026', url: 'https://hackevents.net/x', start: '2026-11-16' }), existing));
-	assert.equal(matchesExisting(mk({ title: 'PyData Berlin', url: 'https://x.example/p', start: '2026-12-03' }), existing), null);
+	const existing = [{ title: 'Compute! Paris 2026', date: '2026-11-25', city: 'Paris', url: 'https://compute.example.fr/paris/' }];
+	assert.ok(matchesExisting(mk({ title: 'Something else', url: 'https://compute.example.fr/paris/?utm_source=x', start: '2026-11-25' }), existing));
+	assert.ok(matchesExisting(mk({ title: 'Compute Paris 2026', url: 'https://brainberg.eu/x', start: '2026-11-25' }), existing));
+	assert.equal(matchesExisting(mk({ title: 'PyData Lyon', url: 'https://x.example/p', start: '2026-12-03', city: 'Lyon' }), existing), null);
 });
 
 // ---- caps and hand-off ----
@@ -209,16 +269,24 @@ test('conditional GET: 304 reuses the cached body; no body file means no conditi
 });
 
 // ---- end to end with a fake network ----
-test('prepare (offline): one failing source never fails the run; failure recorded', async () => {
-	const ics = readFileSync(new URL('../fixtures/hessian.ics', import.meta.url), 'utf8');
+test('prepare (offline): one failing source never fails the run; failure recorded; blocked source is disabled, not failed', async () => {
+	const ics = readFileSync(new URL('../fixtures/hi-paris.ics', import.meta.url), 'utf8');
 	const fetchImpl = async (url) => {
-		if (String(url).includes('hessian.ai')) return new Response(ics, { status: 200, headers: { 'content-type': 'text/calendar' } });
+		if (String(url).includes('hi-paris.fr')) return new Response(ics, { status: 200, headers: { 'content-type': 'text/calendar' } });
+		if (String(url).includes('eventbrite')) return new Response('slow down', { status: 429, headers: { 'retry-after': '120' } });
 		return new Response('nope', { status: 404 });
 	};
-	const res = await prepare({ dry: true, scrape: false, only: ['hessian-ai', 'mcml'], today: '2026-11-20', fetchImpl });
+	process.env.PIPELINE_MIN_GAP_MS = '0';
+	process.env.EVENTBRITE_GAP_MS = '0';
+	resetEventbriteBlock();
+	const res = await prepare({ dry: true, scrape: false, only: ['hi-paris-ics', 'afia', 'eventbrite-paris', 'eventbrite-lyon'], today: '2026-11-21', fetchImpl });
+	assert.equal(res.report.feedDisabled, 2); // Eventbrite answered 429 once: both city sources disabled for the run
 	assert.equal(res.report.feedTotal, 2);
 	assert.equal(res.report.feedOk, 1);
-	assert.ok(res.report.problems.some((p) => p.startsWith('mcml: FAILED')));
-	assert.ok(res.report.sources.find((s) => s.id === 'hessian-ai').fetched > 0);
+	assert.ok(res.report.problems.some((p) => p.startsWith('afia: FAILED')));
+	assert.ok(!res.report.problems.some((p) => p.startsWith('eventbrite')));
+	assert.ok(res.report.sources.find((s) => s.id === 'hi-paris-ics').fetched > 0);
 	assert.match(res.md, /Per city \(after dedupe\)/);
+	assert.match(res.md, /disabled: .*429/);
+	resetEventbriteBlock();
 });

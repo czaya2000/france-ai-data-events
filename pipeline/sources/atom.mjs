@@ -1,4 +1,4 @@
-// Atom sources (CAIML Cologne). Only entries that carry a date are kept: the date is taken from the
+// Atom sources (none in the French registry today; kept for future feeds). Only entries that carry a date are kept: the date is taken from the
 // /YYYY/MM/DD/ part of the entry URL, else from a date in the text; announcements without one are dropped.
 import { getText } from '../lib/cache.mjs';
 import { parseAtom } from '../lib/feeds.mjs';

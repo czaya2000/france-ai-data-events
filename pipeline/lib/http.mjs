@@ -30,7 +30,7 @@ export async function httpGet(url, opts = {}) {
 		if (attempt > 0) await sleep(800 * 2 ** (attempt - 1));
 		await throttle(host, gapMs);
 		try {
-			const headers = { 'User-Agent': userAgent, Accept: accept ?? '*/*', 'Accept-Language': 'en,de;q=0.8' };
+			const headers = { 'User-Agent': userAgent, Accept: accept ?? '*/*', 'Accept-Language': 'fr,en;q=0.8' };
 			if (etag) headers['If-None-Match'] = etag;
 			if (lastModified) headers['If-Modified-Since'] = lastModified;
 			const res = await fetchImpl(url, { headers, redirect: 'follow', signal: AbortSignal.timeout(timeoutMs) });

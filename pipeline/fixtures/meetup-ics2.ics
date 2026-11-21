@@ -3,12 +3,12 @@ VERSION:2.0
 PRODID:-//Meetup//Meetup Calendar 1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-NAME:KI-Community Betreute Intelligenz
-X-WR-CALNAME:KI-Community Betreute Intelligenz
+NAME:Le Wagon Bordeaux | Formations Tech & IA
+X-WR-CALNAME:Le Wagon Bordeaux | Formations Tech & IA
 BEGIN:VTIMEZONE
-TZID:Europe/Berlin
-TZURL:http://tzurl.org/zoneinfo-outlook/Europe/Berlin
-X-LIC-LOCATION:Europe/Berlin
+TZID:Europe/Paris
+TZURL:http://tzurl.org/zoneinfo-outlook/Europe/Paris
+X-LIC-LOCATION:Europe/Paris
 BEGIN:DAYLIGHT
 TZOFFSETFROM:+0100
 TZOFFSETTO:+0200
@@ -25,285 +25,167 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event_317046701@meetup.com
+UID:event_317037910@meetup.com
 SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20261126T170000
-DTEND;TZID=Europe/Berlin:20261126T190000
-SUMMARY:Nürnberger Special mit 3 vorkuratierten Sessions (Newsflash & Bar
- camp)
-DESCRIPTION:KI-Community Betreute Intelligenz\n**Im November gibt’s ein 
- Special bei Betreute Intelligenz im Möbelkollektiv mit drei spannenden Se
- ssions!**\nDu willst wissen\, was sich in der KI-Welt getan hat\, was davo
- n im Alltag wirklich hilft und was eher Hype ist? Dann komm vorbei. Wir st
- arten mit unserem KI-Newsflash und bringen die wichtigsten Entwicklungen d
- es vergangenen Monats auf den Punkt. Fürs anschließende Barcamp haben wi
- r diesmal drei Sessions vorbereitet:\n\n**KI spart Zeit. Und dann?**\nDomi
- nik gibt einen Impuls dazu\, was nach dem Zeitsparen kommt. Warum ist gute
- r Kontext bei komplexen Aufgaben so wichtig? Was geht heute schon mit KI u
- nd wo liegen die Grenzen? Dazu gibt’s einen Denkanstoß zur Datensouver
- änität und danach Zeit für den Austausch.\n\n**Vom Use Case zum verläs
- slichen KI-Agenten**\nCarsten zeigt Schritt für Schritt\, wie er aus eine
- m konkreten Anwendungsfall Skills und Agenten baut\, die ihm wichtige Aufg
- aben zuverlässig abnehmen. An einem Beispiel aus dem Publikum schauen wir
-  gemeinsam\, wie sein Vorgehen im Alltag funktioniert.\n\n**Live-Vibecodin
- g mit Replit**\nSteffen baut mit euch live ein Tool\, das formal korrekte 
- Rechnungen erstellt und genau die Funktionen mitbringt\, die er für seine
-  eigene Buchhaltung braucht.\n\n**Agenda:**\n\n* **News-Flash:** Zu Beginn
-  gibt’s eine knackige Session mit den neuesten Trends und Entwicklungen 
- – prägnant und auf den Punkt gebracht.\n* **Austausch:** Danach gestalt
- en wir offene Runden zu den vorkuratierten und auch euren Themen\n* **Offe
- nes Ende:** Bleib\, solange du möchtest\, und lass den Abend mit neuen Id
- een und Gesprächen ausklingen.\n\n**Wann und wo?**\n📆 Jeden vierten Do
- nnerstag im Monat\n⏰ 17:00 Uhr\n📍 Möbelkollektiv\, Wiesentalstraße 
- 40\, Bauteil C\, 3. OG\, 90419 Nürnberg\nFür reichlich Getränke und fei
- nsten Kaffee ist gesorgt – du musst nur noch kommen!\n\nVorkenntnisse si
- nd nicht nötig\, nur dein Interesse und deine Neugier.\nDer Wert liegt im
-  gemeinsamen Erkunden und Einordnen. Bleib\, solange du möchtest. Wir hab
- en kein festes Ende!
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317046701
- /
+DTSTAMP:20261121T070852Z
+DTSTART;TZID=Europe/Paris:20261124T183000
+DTEND;TZID=Europe/Paris:20261124T220000
+SUMMARY:Hackathon : révéler les conflits d'intérêt dans la santé grâ
+ ce aux données
+DESCRIPTION:Le Wagon Bordeaux | Formations Tech & IA\nExplorez les donnée
+ s publiques des versements des laboratoires aux professionnels de santé.\
+ n\n💊 **Saviez-vous que chaque versement d'un laboratoire pharmaceutique
+  à un professionnel de santé est public ?**\n\nDepuis le scandale du Mé
+ diator\, les laboratoires ont l'obligation de déclarer tout versement env
+ ers des professionnels ou associations du domaine de la santé. Ces donné
+ es sont publiées sur Transparence Santé pour permettre aux citoyens de c
+ ontrôler les risques de conflit d'intérêt.\n\nLe problème ? Cette base
+  souffre de gros problèmes de qualité.\n\nChez Euros for Docs\, nous l'a
+ vons traitée\, structurée et publiée pour la rendre exploitable par tou
+ te personne non experte en traitement de données.\n\n🚀 **Le hackathon*
+ *\nAvec Data For Good Bordeaux\, nous organisons un hackathon pour aller p
+ lus loin :\n\n→ Faire connaître ces données auprès du grand public\n\
+ n→ Les réutiliser pour sensibiliser aux conflits d'intérêt\n\n→ Est
+ imer la faisabilité technique de nouveaux cas d'usage\n\n👉 Pas besoin 
+ d'être expert : toutes les données seront mises à disposition sous diff
+ érentes formes\, et des bénévoles vous accompagneront pour les comprend
+ re et les manipuler.\n\n🎯 **3 sujets au choix**\n📊 Représenter autr
+ ement les données (un design Canva par exemple)\, quitte à se concentrer
+  sur une niche\n🔗Mettre en avant les liens d'intérêt indirects : les 
+ montants versés à des cabinets médicaux ou associations dans lesquels s
+ ont impliqués des professionnels de santé\n🗂️ Proposer de nouvelles
+  sources de données à intégrer à Euros for Docs\, et montrer par exemp
+ le le flux de cette donnée depuis sa source jusqu'à un tableau de bord\n
+ \n💡 Vous avez votre propre idée ? Une table vous est réservée\, et v
+ ous pouvez proposer votre sujet dès l'inscription.\n\n🗂️ **Les donn
+ ées disponibles**\n→ **Déclarations** : tous les versements effectués
+  par les laboratoires\n→ **Bénéficiaires effectifs** : les liens entre
+  entreprises (cabinets médicaux\, entreprises de conseil) et professionne
+ ls de santé\n→ **Administrateurs d'associations** : pour relier indirec
+ tement associations et professionnels de santé\n→ **Annuaires officiels
+  data.gouv** : fichiers SIREN\, RNA et RPPS\n\nLes données sont déjà en
+ tièrement publiques : des tableaux de bord sont disponibles sur le site E
+ uros for Docs\, et toutes les données existent en format parquet pour les
+  profils tech.\n\n🕕 **Programme**\n🥗 Auberge espagnole : l'événeme
+ nt tombe à l'heure du repas\, pensez à apporter de quoi grignoter et boi
+ re à partager !\n18h30 · Accueil\n18h45 · Présentation\n19h15 · Créa
+ tion des groupes\n19h20 · Début des ateliers\n21h30 · Présentation des
+  résultats\n22h00 · Fin de l'événement\n\n🔁 **Et après ?**\nLes pr
+ ojets pourront continuer en groupes de travail asynchrones sur le Mattermo
+ st de Data For Good.\n\nINSCRIPTION OBLIGATOIRE :[ ICI ](https://www.lewag
+ on.com/fr/events/hackathon-reveler-les-conflits-d-interet-dans-la-sante-gr
+ ace-aux-donnees-UCSLWZ)
+URL;VALUE=URI:https://www.meetup.com/le-wagon-bordeaux-coding-station-boot
+ camp/events/317037910/
 STATUS:CONFIRMED
-CREATED:20261019T122733Z
-LAST-MODIFIED:20261019T122733Z
+CREATED:20261018T185029Z
+LAST-MODIFIED:20261018T185029Z
 CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:event_316485687@meetup.com
+UID:event_317312936@meetup.com
 SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20261210T100000
-DTEND;TZID=Europe/Berlin:20261210T120000
-SUMMARY:Betreute Intelligenz am Vormittag (Freeflow)
-DESCRIPTION:KI-Community Betreute Intelligenz\nHerzlich willkommen zur bet
- reuten Intelligenz am Vormittag!\n\nWir treffen uns immer am 2. Donnerstag
-  im Monat frisch ausgeruht von 10 bis 12 in Fürth bei der ABF im GS28:\n\
- n**ABF Gruppe**\n**Gebhardtstraße 28**\n2\\. OG Ost \\(Kaminzimmer\\)\n**
- 90762 Fürth**\n[https://gs28.de/](https://gs28.de/)\n\nBitte beachtet die
-  Anfahrtsbeschreibung. Die Parkplätze der Apotheke vor dem GS28 sind tabu
- ! Die Zahl der Plätze ist limiitiert\, ihr müsst euch explizit anmelden.
- \n\nEs warten Kaffee\, Internet und Getränke auf euch. Ihr bringt eure No
- tebooks\, Modelle\, Datensätze oder einfach nur ganz viele Fragen mit - g
- emeinsam experimentieren wir mit allem\, was wir dabei haben.\n\nOder wie 
- Markus und Adam gerne so fein sagen: "Doing\, not talking!"\n\nWer möchte
- \, darf zu Beginn gerne kurz ein Thema vorstellen\, einen Einblick teilen 
- oder einfach nur seine brennenden Fragen in den Raum stellen.\n\nDer Termi
- n ist so gewählt\, dass im Anschluss noch reichlich Luft ist. Wenn es als
- o gerade läuft\, dann lassen wir laufen. Der Letzte räumt die Krümel au
- f :)\n\nWir freuen uns auf euch!\nMax\, Thor\, Tobias\, Stefan² & Steffen
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/316485687
- /
+DTSTAMP:20261121T070852Z
+DTSTART;TZID=Europe/Paris:20261127T164500
+DTEND;TZID=Europe/Paris:20261127T184500
+SUMMARY:Journée Portes Ouvertes au Wagon Bordeaux
+DESCRIPTION:Le Wagon Bordeaux | Formations Tech & IA\nVous envisagez une r
+ econversion\, souhaitez développer de nouvelles compétences en **IA\, da
+ ta\, software ou product**\, ou êtes simplement curieux de découvrir les
+  métiers de la tech ?\nVenez découvrir **Le Wagon Bordeaux de l’intér
+ ieur** lors d’une soirée portes ouvertes. ✨\n\nAu programme :\n**16h4
+ 5 – 17h \\| Accueil**\nAccueil des participants autour d’un café\, pr
+ ésentation rapide du déroulé de la soirée et découverte du campus.\n\
+ n**17h – 18h \\| Découvrez une partie d’une journée type au Wagon**\
+ nPlongez dans le quotidien de nos étudiants actuellement en formation\, n
+ otamment en **Data Analytics** et en **IA Software**.\nVous pourrez décou
+ vrir deux temps forts de leur apprentissage :\n\n* **La présentation de p
+ etits projets réalisés en milieu de formation**\, à travers des pitchs 
+ d’étudiants. Ces projets leur permettent de mettre en pratique les noti
+ ons étudiées et de commencer à construire leur portfolio.\n* **Un temps
+  de challenges et de mise en pratique**\, pendant lequel le formateur revi
+ ent sur certaines notions vues en cours et accompagne les étudiants dans 
+ leur résolution.\n\nUne immersion concrète dans notre pédagogie\, basé
+ e sur la pratique\, la collaboration et l’apprentissage par projet.\n\n*
+ *18h – 18h30 \\| Information session**\nParticipez à une présentation 
+ de nos formations et découvrez :\n\n* les différentes formations du Wago
+ n\n* les différents formats et prochaines dates de rentrée \;\n* le proc
+ essus d’admission \;\n* les solutions de financement \;\n* l’accompagn
+ ement carrière et les débouchés.\n\n**À partir de 18h30 \\| Échanges 
+ et networking 🍸**\nTerminez la soirée autour d’un moment convivial a
+ vec nos étudiants actuels\, nos formateurs et notre équipe.\nCe sera l
+ ’occasion de poser toutes vos questions\, de découvrir les expériences
+  de celles et ceux qui sont actuellement en formation et de vous faire une
+  idée concrète de l’ambiance du campus.\n\nInformations pratiques :\n
+ 📅 **Vendredi 27 novembre**\n\n🕓 **De 16h45 à 19h**\n📍 **Le Wagon
+  Bordeaux**\n🎟️ **Événement gratuit\, inscription obligatoire sur n
+ otre site internet**\n\nUne soirée pour découvrir notre pédagogie et le
+ s projets de nos étudiants pour voir si l’une de nos formations peut co
+ rrespondre à votre prochain projet professionnel.🚀\n\n**Prochaines ren
+ trées :**\n👉 Du 13 avril au 12 juin 2026 - temps plein\n👉 Du 23 mai
+  au 21 novembre 2026 - temps partiel
+URL;VALUE=URI:https://www.meetup.com/le-wagon-bordeaux-coding-station-boot
+ camp/events/317312936/
 STATUS:CONFIRMED
-CREATED:20260909T165836Z
-LAST-MODIFIED:20260909T165836Z
+CREATED:20261106T134556Z
+LAST-MODIFIED:20261106T134556Z
 CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:event_317087714@meetup.com
+UID:event_317101005@meetup.com
 SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20261217T170000
-DTEND;TZID=Europe/Berlin:20261217T210000
-SUMMARY:KI-Party: 100 Events Betreute Intelligenz 🥳
-DESCRIPTION:KI-Community Betreute Intelligenz\n100 Events voller spannende
- r Gespräche\, neuer Ideen und großartiger Menschen. Deswegen ist es verd
- ammt nochmal Zeit\, diesen Meislenstein gemeinsam zu feiern!\n\nWir blicke
- n kurz in unsere Historie\, schauen nach vorne und lassen den Abend bei ei
- ner besonderen **KI-Party** ausklingen.\nWas genau wir vorhaben\, bleibt n
- och eine kleine Überraschung. Stay tuned - weitere Ankündigungen folgen!
- \n\nFür Getränke\, Snacks und gute Gesellschaft ist gesorgt!\n\nStart: 1
- 7:00\nOpen End
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317087714
- /
+DTSTAMP:20261121T070852Z
+DTSTART;TZID=Europe/Paris:20261128T100000
+DTEND;TZID=Europe/Paris:20261128T170000
+SUMMARY:Venez discuter de votre projet au Salon de l’Industrie
+DESCRIPTION:Le Wagon Bordeaux | Formations Tech & IA\n**Venez nous rencont
+ rer au Salon SINE\, le salon Industrie & Emploi !**\n\nLe Wagon sera prés
+ ent pour échanger avec vous autour de votre projet professionnel\, de vot
+ re orientation ou de votre reconversion. Venez découvrir les métiers et 
+ les formations du numérique\, poser toutes vos questions et bénéficier 
+ de conseils pour construire la suite de votre parcours.\n\nLe Salon SINE p
+ ropose également plus de 400 opportunités d’emploi\, des rencontres av
+ ec des recruteurs\, des ateliers\, des conférences et des animations imme
+ rsives autour des métiers de l’industrie.\n\n📅 **28 novembre\, de 10
+  h à 17 h**\n\n📍 **Palais de la Bourse\, Bordeaux**\n\nInscrivez-vous 
+ dès maintenant et venez échanger avec notre équipe !\nINSCRIPTION:[ ICI
+  ](https://www.lewagon.com/fr/events/venez-discuter-de-votre-projet-au-sal
+ on-de-l-industrie-5o8QZn)
+URL;VALUE=URI:https://www.meetup.com/le-wagon-bordeaux-coding-station-boot
+ camp/events/317101005/
 STATUS:CONFIRMED
-CREATED:20261022T113926Z
-LAST-MODIFIED:20261022T113926Z
+CREATED:20261023T074050Z
+LAST-MODIFIED:20261023T074050Z
 CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:event_317289417@meetup.com
+UID:event_317101319@meetup.com
 SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20270107T170000
-DTEND;TZID=Europe/Berlin:20270107T190000
-SUMMARY:Betreute Intelligenz in Erlangen bei Spirit Link (Newsflash + Barc
- amp)
-DESCRIPTION:KI-Community Betreute Intelligenz\nDu willst KI nicht nur span
- nend finden\, sondern wirklich **im Alltag nutzen**? Dann bist du bei dies
- em Meetup genau richtig.\nWir bauen eine **Community für KI in der Anwend
- ung** auf – ein Ort\, an dem sich Menschen gegenseitig unterstützen\, E
- rfahrungen teilen und gemeinsam lernen. Egal ob du gerade erst startest od
- er schon Heavy-User von KI-Tools bist: Komm vorbei\, tausche dich aus und 
- nimm konkrete Ideen mit nach Hause.\n**Was dich erwartet:**\n\n* 📰 **15
- -Minuten-Newsflash:** Kurz & kompakt die wichtigsten KI-Updates und neuen 
- Tools\, die du kennen solltest.\n* 💬 **Barcamp-Style Sessions:** Danach
-  gestalten wir das Programm gemeinsam.\n* 🤝 **Austausch auf Augenhöhe:
- ** Keine Frontbeschallung – jede\\*r kann Fragen stellen\, eigene Erfahr
- ungen einbringen oder selbst eine Session anbieten.\n* 🥤 **Getränke in
- klusive:** Für Drinks ist gesorgt\, damit wir in entspannter Atmosphäre 
- ins Gespräch kommen.\n\n**Wann und Wo:**\n\n* 📆 jeden ersten Donnersta
- g jeden zweiten Monat\n* ⏰ 17:00 Uhr\n* 📍 bei Spirit Link - Allee am 
- Röthelheimpark 41\, 91052 Erlangen
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317289417
- /
+DTSTAMP:20261121T070852Z
+DTSTART;TZID=Europe/Paris:20261128T100000
+DTEND;TZID=Europe/Paris:20261128T170000
+SUMMARY:Venez discuter de votre projet au Salon de l’Industrie et de l'E
+ mploi
+DESCRIPTION:Le Wagon Bordeaux | Formations Tech & IA\n**Venez nous rencont
+ rer au Salon SINE\, le salon Industrie & Emploi !**\n\nLe Wagon sera prés
+ ent pour échanger avec vous autour de votre projet professionnel\, de vot
+ re orientation ou de votre reconversion. Venez découvrir les métiers et 
+ les formations du numérique\, poser toutes vos questions et bénéficier 
+ de conseils pour construire la suite de votre parcours.\nLe Salon SINE pro
+ pose également plus de 400 opportunités d’emploi\, des rencontres avec
+  des recruteurs\, des ateliers\, des conférences et des animations immers
+ ives autour des métiers de l’industrie.\n\n📅 **28 novembre\, de 10 h
+  à 17 h**\n📍 **Palais de la Bourse\, Bordeaux**\n\nInscrivez-vous dès
+  maintenant et venez échanger avec notre équipe !\nINSCRIPTION : [ICI ](
+ https://www.bordeauxgironde.cci.fr/salon-sine)
+URL;VALUE=URI:https://www.meetup.com/le-wagon-bordeaux-coding-station-boot
+ camp/events/317101319/
 STATUS:CONFIRMED
-CREATED:20261104T210228Z
-LAST-MODIFIED:20261104T210228Z
+CREATED:20261023T090016Z
+LAST-MODIFIED:20261023T090016Z
 CLASS:PUBLIC
 END:VEVENT
-BEGIN:VEVENT
-UID:event_317289319@meetup.com
-SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20270304T170000
-DTEND;TZID=Europe/Berlin:20270304T190000
-SUMMARY:Betreute Intelligenz in Erlangen bei Spirit Link (Newsflash + Barc
- amp)
-DESCRIPTION:KI-Community Betreute Intelligenz\nDu willst KI nicht nur span
- nend finden\, sondern wirklich **im Alltag nutzen**? Dann bist du bei dies
- em Meetup genau richtig.\nWir bauen eine **Community für KI in der Anwend
- ung** auf – ein Ort\, an dem sich Menschen gegenseitig unterstützen\, E
- rfahrungen teilen und gemeinsam lernen. Egal ob du gerade erst startest od
- er schon Heavy-User von KI-Tools bist: Komm vorbei\, tausche dich aus und 
- nimm konkrete Ideen mit nach Hause.\n**Was dich erwartet:**\n\n* 📰 **15
- -Minuten-Newsflash:** Kurz & kompakt die wichtigsten KI-Updates und neuen 
- Tools\, die du kennen solltest.\n* 💬 **Barcamp-Style Sessions:** Danach
-  gestalten wir das Programm gemeinsam.\n* 🤝 **Austausch auf Augenhöhe:
- ** Keine Frontbeschallung – jede\\*r kann Fragen stellen\, eigene Erfahr
- ungen einbringen oder selbst eine Session anbieten.\n* 🥤 **Getränke in
- klusive:** Für Drinks ist gesorgt\, damit wir in entspannter Atmosphäre 
- ins Gespräch kommen.\n\n**Wann und Wo:**\n\n* 📆 jeden ersten Donnersta
- g jeden zweiten Monat\n* ⏰ 17:00 Uhr\n* 📍 bei Spirit Link - Allee am 
- Röthelheimpark 41\, 91052 Erlangen
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317289319
- /
-STATUS:CONFIRMED
-CREATED:20261104T204719Z
-LAST-MODIFIED:20261104T204719Z
-CLASS:PUBLIC
-END:VEVENT
-BEGIN:VEVENT
-UID:event_317289468@meetup.com
-SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20270506T170000
-DTEND;TZID=Europe/Berlin:20270506T190000
-SUMMARY:Betreute Intelligenz in Erlangen bei Spirit Link (Newsflash + Barc
- amp)
-DESCRIPTION:KI-Community Betreute Intelligenz\nDu willst KI nicht nur span
- nend finden\, sondern wirklich **im Alltag nutzen**? Dann bist du bei dies
- em Meetup genau richtig.\nWir bauen eine **Community für KI in der Anwend
- ung** auf – ein Ort\, an dem sich Menschen gegenseitig unterstützen\, E
- rfahrungen teilen und gemeinsam lernen. Egal ob du gerade erst startest od
- er schon Heavy-User von KI-Tools bist: Komm vorbei\, tausche dich aus und 
- nimm konkrete Ideen mit nach Hause.\n**Was dich erwartet:**\n\n* 📰 **15
- -Minuten-Newsflash:** Kurz & kompakt die wichtigsten KI-Updates und neuen 
- Tools\, die du kennen solltest.\n* 💬 **Barcamp-Style Sessions:** Danach
-  gestalten wir das Programm gemeinsam.\n* 🤝 **Austausch auf Augenhöhe:
- ** Keine Frontbeschallung – jede\\*r kann Fragen stellen\, eigene Erfahr
- ungen einbringen oder selbst eine Session anbieten.\n* 🥤 **Getränke in
- klusive:** Für Drinks ist gesorgt\, damit wir in entspannter Atmosphäre 
- ins Gespräch kommen.\n\n**Wann und Wo:**\n\n* 📆 jeden ersten Donnersta
- g jeden zweiten Monat\n* ⏰ 17:00 Uhr\n* 📍 bei Spirit Link - Allee am 
- Röthelheimpark 41\, 91052 Erlangen
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317289468
- /
-STATUS:CONFIRMED
-CREATED:20261104T211047Z
-LAST-MODIFIED:20261104T211047Z
-CLASS:PUBLIC
-END:VEVENT
-BEGIN:VEVENT
-UID:event_317289602@meetup.com
-SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20270701T170000
-DTEND;TZID=Europe/Berlin:20270701T190000
-SUMMARY:Betreute Intelligenz in Erlangen bei Spirit Link (Newsflash + Barc
- amp)
-DESCRIPTION:KI-Community Betreute Intelligenz\nDu willst KI nicht nur span
- nend finden\, sondern wirklich **im Alltag nutzen**? Dann bist du bei dies
- em Meetup genau richtig.\nWir bauen eine **Community für KI in der Anwend
- ung** auf – ein Ort\, an dem sich Menschen gegenseitig unterstützen\, E
- rfahrungen teilen und gemeinsam lernen. Egal ob du gerade erst startest od
- er schon Heavy-User von KI-Tools bist: Komm vorbei\, tausche dich aus und 
- nimm konkrete Ideen mit nach Hause.\n**Was dich erwartet:**\n\n* 📰 **15
- -Minuten-Newsflash:** Kurz & kompakt die wichtigsten KI-Updates und neuen 
- Tools\, die du kennen solltest.\n* 💬 **Barcamp-Style Sessions:** Danach
-  gestalten wir das Programm gemeinsam.\n* 🤝 **Austausch auf Augenhöhe:
- ** Keine Frontbeschallung – jede\\*r kann Fragen stellen\, eigene Erfahr
- ungen einbringen oder selbst eine Session anbieten.\n* 🥤 **Getränke in
- klusive:** Für Drinks ist gesorgt\, damit wir in entspannter Atmosphäre 
- ins Gespräch kommen.\n\n**Wann und Wo:**\n\n* 📆 jeden ersten Donnersta
- g jeden zweiten Monat\n* ⏰ 17:00 Uhr\n* 📍 bei Spirit Link - Allee am 
- Röthelheimpark 41\, 91052 Erlangen
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317289602
- /
-STATUS:CONFIRMED
-CREATED:20261104T211754Z
-LAST-MODIFIED:20261104T211754Z
-CLASS:PUBLIC
-END:VEVENT
-BEGIN:VEVENT
-UID:event_317289632@meetup.com
-SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20270902T170000
-DTEND;TZID=Europe/Berlin:20270902T190000
-SUMMARY:Betreute Intelligenz in Erlangen bei Spirit Link (Newsflash + Barc
- amp)
-DESCRIPTION:KI-Community Betreute Intelligenz\nDu willst KI nicht nur span
- nend finden\, sondern wirklich **im Alltag nutzen**? Dann bist du bei dies
- em Meetup genau richtig.\nWir bauen eine **Community für KI in der Anwend
- ung** auf – ein Ort\, an dem sich Menschen gegenseitig unterstützen\, E
- rfahrungen teilen und gemeinsam lernen. Egal ob du gerade erst startest od
- er schon Heavy-User von KI-Tools bist: Komm vorbei\, tausche dich aus und 
- nimm konkrete Ideen mit nach Hause.\n**Was dich erwartet:**\n\n* 📰 **15
- -Minuten-Newsflash:** Kurz & kompakt die wichtigsten KI-Updates und neuen 
- Tools\, die du kennen solltest.\n* 💬 **Barcamp-Style Sessions:** Danach
-  gestalten wir das Programm gemeinsam.\n* 🤝 **Austausch auf Augenhöhe:
- ** Keine Frontbeschallung – jede\\*r kann Fragen stellen\, eigene Erfahr
- ungen einbringen oder selbst eine Session anbieten.\n* 🥤 **Getränke in
- klusive:** Für Drinks ist gesorgt\, damit wir in entspannter Atmosphäre 
- ins Gespräch kommen.\n\n**Wann und Wo:**\n\n* 📆 jeden ersten Donnersta
- g jeden zweiten Monat\n* ⏰ 17:00 Uhr\n* 📍 bei Spirit Link - Allee am 
- Röthelheimpark 41\, 91052 Erlangen
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317289632
- /
-STATUS:CONFIRMED
-CREATED:20261104T211900Z
-LAST-MODIFIED:20261104T211900Z
-CLASS:PUBLIC
-END:VEVENT
-BEGIN:VEVENT
-UID:event_317289667@meetup.com
-SEQUENCE:1
-DTSTAMP:20261120T080617Z
-DTSTART;TZID=Europe/Berlin:20271104T170000
-DTEND;TZID=Europe/Berlin:20271104T190000
-SUMMARY:Betreute Intelligenz in Erlangen bei Spirit Link (Newsflash + Barc
- amp)
-DESCRIPTION:KI-Community Betreute Intelligenz\nDu willst KI nicht nur span
- nend finden\, sondern wirklich **im Alltag nutzen**? Dann bist du bei dies
- em Meetup genau richtig.\nWir bauen eine **Community für KI in der Anwend
- ung** auf – ein Ort\, an dem sich Menschen gegenseitig unterstützen\, E
- rfahrungen teilen und gemeinsam lernen. Egal ob du gerade erst startest od
- er schon Heavy-User von KI-Tools bist: Komm vorbei\, tausche dich aus und 
- nimm konkrete Ideen mit nach Hause.\n**Was dich erwartet:**\n\n* 📰 **15
- -Minuten-Newsflash:** Kurz & kompakt die wichtigsten KI-Updates und neuen 
- Tools\, die du kennen solltest.\n* 💬 **Barcamp-Style Sessions:** Danach
-  gestalten wir das Programm gemeinsam.\n* 🤝 **Austausch auf Augenhöhe:
- ** Keine Frontbeschallung – jede\\*r kann Fragen stellen\, eigene Erfahr
- ungen einbringen oder selbst eine Session anbieten.\n* 🥤 **Getränke in
- klusive:** Für Drinks ist gesorgt\, damit wir in entspannter Atmosphäre 
- ins Gespräch kommen.\n\n**Wann und Wo:**\n\n* 📆 jeden ersten Donnersta
- g jeden zweiten Monat\n* ⏰ 17:00 Uhr\n* 📍 bei Spirit Link - Allee am 
- Röthelheimpark 41\, 91052 Erlangen
-URL;VALUE=URI:https://www.meetup.com/betreute-intelligenz/events/317289667
- /
-STATUS:CONFIRMED
-CREATED:20261104T211953Z
-LAST-MODIFIED:20261104T211953Z
-CLASS:PUBLIC
-END:VEVENT
+X-ORIGINAL-URL:https://www.meetup.com/le-wagon-bordeaux-coding-station-boo
+ tcamp/events/ical/
+X-WR-CALNAME:Le Wagon Bordeaux | Formations Tech & IA
 END:VCALENDAR

@@ -1,10 +1,10 @@
 // RSS sources. Each feed has quirks about where the event date lives; `src.dateMode` selects the rule:
-//   slug-date  - date is the leading YYYY-MM-DD of the URL path (mcml.ai)
-//   pubdate    - pubDate is the event date (LMU events feed)
-//   text       - parse a German or English date from title, then description (DeutschlandKI, aieventlist, Startup City)
+//   slug-date  - date is the leading YYYY-MM-DD of the URL path
+//   pubdate    - pubDate is the event date
+//   text       - parse a French or English date from title, then description (aieventlist, Hi! PARIS...)
 import { getText } from '../lib/cache.mjs';
 import { parseRss } from '../lib/feeds.mjs';
-import { detectCity, ONLINE } from '../lib/city.mjs';
+import { detectCity, isOnlineText, ONLINE } from '../lib/city.mjs';
 import { makeCandidate, parseDateText, stripHtml } from '../lib/normalize.mjs';
 import { utcToLocal } from '../lib/time.mjs';
 
@@ -37,14 +37,14 @@ export function normalise(it, src) {
 	const desc = stripHtml(it.description);
 	const d = dateFor(it, src, desc);
 	if (!d) return null;
-	const title = it.title.replace(/\s*\((?:\d{1,2}\.\s*[–-]\s*)?\d{1,2}\.\s*[^)]*\d{4}\)\s*$/, '').replace(/:\s*\d{1,2}\.[^,]*\d{4},\s*[^,]+$/, '').trim() || it.title;
-	const ortLine = /Ort:\s*([^\n]+)/.exec(desc)?.[1];
-	const city = detectCity(ortLine ?? '') ?? detectCity(it.title) ?? detectCity(it.categories.join(' ')) ?? src.cityHint ?? null;
-	const online = /\bonline\b/i.test(ortLine ?? '') && !detectCity(ortLine ?? '');
+	const title = it.title.replace(/\s*\([^)]*\b20\d\d\)\s*$/, '').trim() || it.title;
+	const ortLine = /(?:Lieu|Adresse|Où|Location|Venue)\s*:\s*([^\n]+)/i.exec(desc)?.[1];
+	const city = detectCity(ortLine ?? '') ?? detectCity(it.title) ?? detectCity(it.categories.join(' ')) ?? detectCity(desc.slice(0, 400)) ?? src.cityHint ?? null;
+	const online = isOnlineText(ortLine ?? '');
 	return makeCandidate(
 		{
 			title, start: d.start, end: d.end, city: online ? ONLINE : city, venue: ortLine && !online ? ortLine : undefined,
-			organiser: src.organiser, url: it.link || it.guid, desc, online, country: src.country ?? (city ? 'DE' : null),
+			organiser: src.organiser, url: it.link || it.guid, desc, online, country: src.country ?? (city ? 'FR' : null),
 		},
 		src,
 	);

@@ -1,0 +1,410 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//213.186.33.17//NONSGML kigkonsult.se iCalcreator 2.26.9//
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-FROM-URL:https://afia.asso.fr
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:STANDARD
+DTSTART:20261025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+RDATE:20271031T030000
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20270328T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+RDATE:20280326T020000
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ai1ec-11343@afia.asso.fr
+DTSTAMP:20261121T074711Z
+CATEGORIES:
+CONTACT:
+DESCRIPTION:L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, es
+ t de promouvoir et de favoriser le développement de l’Intelligence Artific
+ ielle (IA) sous ses différentes formes\, de regrouper et de faire croître 
+ la communauté française en IA\, et d’en assurer la visibilité.\n\nL'AFIA e
+ st membre de l'EURAI (European Association for Artificial Intelligence).  
+ \n\n\n\nLa campagne d'adhésion 2026 à l’association est ouverte !\, accéde
+ z au site d’adhésion\n(trois modes d’adhésion sont possibles : personne in
+ dividuelle\, personne morale ou entreprise).\n\n\n\n \n\n\n\n	Événements AF
+ IA à venir\n\n\n\n\n\n\n			\n													\n					\n						Avr\n						18\n						dim\n											\n					\n																					\n\n									\n																					\n												Jour entier\n											\n										\n										
+ \n											ESIA 2027\n																							@ IUT/Faculté des sciences de Blois\, site Jean Jaurès\n																					\n									\n
+ \n									\n\n		\n	\n		ESIA 2027\n					@ IUT/Faculté des sciences de Blois\, site Jean Jaurè
+ s\n					\n\n	\n	\n					Avr 18 – Avr 21 Jour entier\n			\n\n	\n			Plus d’informations ici: htt
+ ps://afia.asso.fr/ecoles-saisonnieres-afia/esia-2027/.\n	\n\n\n								\n							 													 						 					\n				\n			 		\n
+ 	 \n			\n							\n					Voir le calendrier\n					\n				\n			\n							\n	\n		\n		\n							Ajouter\n						\n		\n	\n			\n		\n			\n				\n				Ajouter au
+  calendrier Timely\n			\n		\n		\n			\n				\n				Ajouter à Google\n			\n		\n		\n			\n				\n				Ajouter à Outloo
+ k\n			\n		\n		\n			\n				\n				Ajouter au calendrier Apple\n			\n		\n		\n						\n				\n				Ajouter à un autre cal
+ endrier\n			\n		\n		\n			\n				\n				Exporter vers XML
+DTSTART;VALUE=DATE:20250630
+DTEND;VALUE=DATE:20250705
+LOCATION:Université de Bourgogne Bâtiment Polytech Dijon @ 9 Av. Alain Sava
+ ry\, 21000 Dijon
+SEQUENCE:0
+SUMMARY:PFIA 2025
+X-COST-TYPE:free
+X-WP-IMAGES-URL:thumbnail\;https://afia.asso.fr/wp-content/uploads/2024/07/
+ eurai_logo.png\;90\;48\,medium\;https://afia.asso.fr/wp-content/uploads/20
+ 24/07/eurai_logo.png\;90\;48\,large\;https://afia.asso.fr/wp-content/uploa
+ ds/2024/07/eurai_logo.png\;90\;48\,full\;https://afia.asso.fr/wp-content/u
+ ploads/2024/07/eurai_logo.png\;90\;48
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div id='pl-3575
+ '  class='panel-layout' ><div id='pg-3575-0'  class='panel-grid panel-no-s
+ tyle' ><div id='pgc-3575-0-0'  class='panel-grid-cell' ><div id='panel-357
+ 5-0-0-0' class='so-panel widget widget_sow-editor panel-first-child panel-
+ last-child' data-index='0' ><div\n			\n			class='so-widget-sow-editor so-widget-
+ sow-editor-base'\n			\n		>\n<div class='siteorigin-widget-tinymce textwidget'>
+ \n	<p>L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, est de p
+ romouvoir et de favoriser le développement de l’Intelligence Artificielle 
+ (IA) sous ses différentes formes\, de regrouper et de faire croître la com
+ munauté française en IA\, et d’en assurer la visibilité.</p>\n<p><img load
+ ing='lazy' decoding='async' class='' src='https://afia.asso.fr/wp-content/
+ uploads/2024/07/eurai_logo.png' alt='EURAI' width='90' height='48' /><br /
+ >\n<span style='font-size: 10pt\;'><em>L'AFIA est membre de l'<a href='htt
+ ps://eurai.org/'>EURAI</a> (European Association for Artificial Intelligen
+ ce).  </em></span></p>\n<table style='height: 93px\; width: 99.45205479452
+ 055%\; border-collapse: collapse\; background-color: #edfcff\;' border='1'
+ >\n<tbody>\n<tr style='height: 93px\;'>\n<td style='width: 100%\; height: 
+ 93px\;'><strong>La campagne d'adhésion 2026 à l’association est ouverte !<
+ /strong>\, accédez au <a href='https://afia.asso.fr/adhesion/'>site d’adhé
+ sion</a><br />\n<em>(trois modes d’adhésion sont possibles : personne indi
+ viduelle\, personne morale ou entreprise)</em>.</td>\n</tr>\n</tbody>\n</t
+ able>\n<p> </p>\n</div>\n</div></div></div><div id='pgc-3575-0-1'  class='
+ panel-grid-cell' ><div id='panel-3575-0-1-0' class='so-panel widget widget
+ _ai1ec_agenda_widget panel-first-child panel-last-child' data-index='1' >
+ \n\n	<h3 class='widget-title'>Événements AFIA à venir</h3>\n\n<style>\n<!--
+ \n\n-->\n</style>\n<div class='timely ai1ec-agenda-widget-view ai1ec-clear
+ fix'>\n\n			<div>\n													<div class='ai1ec-date\n					'>\n					<a class='ai1ec-date-title ai1
+ ec-load-view'\n						href='https://afia.asso.fr/calendar/action~oneday/exact_dat
+ e~18-4-2027/'>\n						<div class='ai1ec-month'>Avr</div>\n						<div class='ai1ec-day'
+ >18</div>\n						<div class='ai1ec-weekday'>dim</div>\n											</a>\n					<div class='ai1ec-d
+ ate-events'>\n																					<div class='ai1ec-event\n									ai1ec-event-id-11978\n									ai1ec-event-i
+ nstance-id-92\n									ai1ec-allday'>\n\n									<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n										class='ai1ec-popup-trigger ai1ec-load-event'>\n
+ 																					<span class='ai1ec-allday-badge'>\n												Jour entier\n											</span>\n										\n										<span class='ai
+ 1ec-event-title'>\n											ESIA 2027\n																							<span class='ai1ec-event-location'\n													>@ IUT/F
+ aculté des sciences de Blois\, site Jean Jaurès</span>\n																					</span>\n									</a>\n\n									<
+ div class='ai1ec-popover ai1ec-popup \n	ai1ec-event-instance-id-92'>\n\n		\n	<
+ span class='ai1ec-popup-title'>\n		<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n		   class='ai1ec-load-event'\n			>ESIA 2027</a>\n					<s
+ pan class='ai1ec-event-location'\n				>@ IUT/Faculté des sciences de Blois\, s
+ ite Jean Jaurès</span>\n					</span>\n\n	\n	<div class='ai1ec-event-time'>\n					Avr 1
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-11414@afia.asso.fr
+DTSTAMP:20261121T074711Z
+CATEGORIES:
+CONTACT:
+DESCRIPTION:L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, es
+ t de promouvoir et de favoriser le développement de l’Intelligence Artific
+ ielle (IA) sous ses différentes formes\, de regrouper et de faire croître 
+ la communauté française en IA\, et d’en assurer la visibilité.\n\nL'AFIA e
+ st membre de l'EURAI (European Association for Artificial Intelligence).  
+ \n\n\n\nLa campagne d'adhésion 2026 à l’association est ouverte !\, accéde
+ z au site d’adhésion\n(trois modes d’adhésion sont possibles : personne in
+ dividuelle\, personne morale ou entreprise).\n\n\n\n \n\n\n\n	Événements AF
+ IA à venir\n\n\n\n\n\n\n			\n													\n					\n						Avr\n						18\n						dim\n											\n					\n																					\n\n									\n																					\n												Jour entier\n											\n										\n										
+ \n											ESIA 2027\n																							@ IUT/Faculté des sciences de Blois\, site Jean Jaurès\n																					\n									\n
+ \n									\n\n		\n	\n		ESIA 2027\n					@ IUT/Faculté des sciences de Blois\, site Jean Jaurè
+ s\n					\n\n	\n	\n					Avr 18 – Avr 21 Jour entier\n			\n\n	\n			Plus d’informations ici: htt
+ ps://afia.asso.fr/ecoles-saisonnieres-afia/esia-2027/.\n	\n\n\n								\n							 													 						 					\n				\n			 		\n
+ 	 \n			\n							\n					Voir le calendrier\n					\n				\n			\n							\n	\n		\n		\n							Ajouter\n						\n		\n	\n			\n		\n			\n				\n				Ajouter au
+  calendrier Timely\n			\n		\n		\n			\n				\n				Ajouter à Google\n			\n		\n		\n			\n				\n				Ajouter à Outloo
+ k\n			\n		\n		\n			\n				\n				Ajouter au calendrier Apple\n			\n		\n		\n						\n				\n				Ajouter à un autre cal
+ endrier\n			\n		\n		\n			\n				\n				Exporter vers XML
+DTSTART;VALUE=DATE:20251014
+DTEND;VALUE=DATE:20251015
+LOCATION:Université de Toulouse
+SEQUENCE:0
+SUMMARY:EFIA 2025
+X-COST-TYPE:free
+X-WP-IMAGES-URL:thumbnail\;https://afia.asso.fr/wp-content/uploads/2024/07/
+ eurai_logo.png\;90\;48\,medium\;https://afia.asso.fr/wp-content/uploads/20
+ 24/07/eurai_logo.png\;90\;48\,large\;https://afia.asso.fr/wp-content/uploa
+ ds/2024/07/eurai_logo.png\;90\;48\,full\;https://afia.asso.fr/wp-content/u
+ ploads/2024/07/eurai_logo.png\;90\;48
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div id='pl-3575
+ '  class='panel-layout' ><div id='pg-3575-0'  class='panel-grid panel-no-s
+ tyle' ><div id='pgc-3575-0-0'  class='panel-grid-cell' ><div id='panel-357
+ 5-0-0-0' class='so-panel widget widget_sow-editor panel-first-child panel-
+ last-child' data-index='0' ><div\n			\n			class='so-widget-sow-editor so-widget-
+ sow-editor-base'\n			\n		>\n<div class='siteorigin-widget-tinymce textwidget'>
+ \n	<p>L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, est de p
+ romouvoir et de favoriser le développement de l’Intelligence Artificielle 
+ (IA) sous ses différentes formes\, de regrouper et de faire croître la com
+ munauté française en IA\, et d’en assurer la visibilité.</p>\n<p><img load
+ ing='lazy' decoding='async' class='' src='https://afia.asso.fr/wp-content/
+ uploads/2024/07/eurai_logo.png' alt='EURAI' width='90' height='48' /><br /
+ >\n<span style='font-size: 10pt\;'><em>L'AFIA est membre de l'<a href='htt
+ ps://eurai.org/'>EURAI</a> (European Association for Artificial Intelligen
+ ce).  </em></span></p>\n<table style='height: 93px\; width: 99.45205479452
+ 055%\; border-collapse: collapse\; background-color: #edfcff\;' border='1'
+ >\n<tbody>\n<tr style='height: 93px\;'>\n<td style='width: 100%\; height: 
+ 93px\;'><strong>La campagne d'adhésion 2026 à l’association est ouverte !<
+ /strong>\, accédez au <a href='https://afia.asso.fr/adhesion/'>site d’adhé
+ sion</a><br />\n<em>(trois modes d’adhésion sont possibles : personne indi
+ viduelle\, personne morale ou entreprise)</em>.</td>\n</tr>\n</tbody>\n</t
+ able>\n<p> </p>\n</div>\n</div></div></div><div id='pgc-3575-0-1'  class='
+ panel-grid-cell' ><div id='panel-3575-0-1-0' class='so-panel widget widget
+ _ai1ec_agenda_widget panel-first-child panel-last-child' data-index='1' >
+ \n\n	<h3 class='widget-title'>Événements AFIA à venir</h3>\n\n<style>\n<!--
+ \n\n-->\n</style>\n<div class='timely ai1ec-agenda-widget-view ai1ec-clear
+ fix'>\n\n			<div>\n													<div class='ai1ec-date\n					'>\n					<a class='ai1ec-date-title ai1
+ ec-load-view'\n						href='https://afia.asso.fr/calendar/action~oneday/exact_dat
+ e~18-4-2027/'>\n						<div class='ai1ec-month'>Avr</div>\n						<div class='ai1ec-day'
+ >18</div>\n						<div class='ai1ec-weekday'>dim</div>\n											</a>\n					<div class='ai1ec-d
+ ate-events'>\n																					<div class='ai1ec-event\n									ai1ec-event-id-11978\n									ai1ec-event-i
+ nstance-id-92\n									ai1ec-allday'>\n\n									<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n										class='ai1ec-popup-trigger ai1ec-load-event'>\n
+ 																					<span class='ai1ec-allday-badge'>\n												Jour entier\n											</span>\n										\n										<span class='ai
+ 1ec-event-title'>\n											ESIA 2027\n																							<span class='ai1ec-event-location'\n													>@ IUT/F
+ aculté des sciences de Blois\, site Jean Jaurès</span>\n																					</span>\n									</a>\n\n									<
+ div class='ai1ec-popover ai1ec-popup \n	ai1ec-event-instance-id-92'>\n\n		\n	<
+ span class='ai1ec-popup-title'>\n		<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n		   class='ai1ec-load-event'\n			>ESIA 2027</a>\n					<s
+ pan class='ai1ec-event-location'\n				>@ IUT/Faculté des sciences de Blois\, s
+ ite Jean Jaurès</span>\n					</span>\n\n	\n	<div class='ai1ec-event-time'>\n					Avr 1
+ 8 – Avr 21 <span class='ai1ec-allday-badge'>Jour entier</span>\n			</div>\n\n
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-11770@afia.asso.fr
+DTSTAMP:20261121T074711Z
+CATEGORIES;LANGUAGE=fr-FR:Journée
+CONTACT:
+DESCRIPTION:L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, es
+ t de promouvoir et de favoriser le développement de l’Intelligence Artific
+ ielle (IA) sous ses différentes formes\, de regrouper et de faire croître 
+ la communauté française en IA\, et d’en assurer la visibilité.\n\nL'AFIA e
+ st membre de l'EURAI (European Association for Artificial Intelligence).  
+ \n\n\n\nLa campagne d'adhésion 2026 à l’association est ouverte !\, accéde
+ z au site d’adhésion\n(trois modes d’adhésion sont possibles : personne in
+ dividuelle\, personne morale ou entreprise).\n\n\n\n \n\n\n\n	Événements AF
+ IA à venir\n\n\n\n\n\n\n			\n													\n					\n						Avr\n						18\n						dim\n											\n					\n																					\n\n									\n																					\n												Jour entier\n											\n										\n										
+ \n											ESIA 2027\n																							@ IUT/Faculté des sciences de Blois\, site Jean Jaurès\n																					\n									\n
+ \n									\n\n		\n	\n		ESIA 2027\n					@ IUT/Faculté des sciences de Blois\, site Jean Jaurè
+ s\n					\n\n	\n	\n					Avr 18 – Avr 21 Jour entier\n			\n\n	\n			Plus d’informations ici: htt
+ ps://afia.asso.fr/ecoles-saisonnieres-afia/esia-2027/.\n	\n\n\n								\n							 													 						 					\n				\n			 		\n
+ 	 \n			\n							\n					Voir le calendrier\n					\n				\n			\n							\n	\n		\n		\n							Ajouter\n						\n		\n	\n			\n		\n			\n				\n				Ajouter au
+  calendrier Timely\n			\n		\n		\n			\n				\n				Ajouter à Google\n			\n		\n		\n			\n				\n				Ajouter à Outloo
+ k\n			\n		\n		\n			\n				\n				Ajouter au calendrier Apple\n			\n		\n		\n						\n				\n				Ajouter à un autre cal
+ endrier\n			\n		\n		\n			\n				\n				Exporter vers XML
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+LOCATION:LAAS\, Toulouse
+SEQUENCE:0
+SUMMARY:PDIA 2026
+X-COST-TYPE:free
+X-WP-IMAGES-URL:thumbnail\;https://afia.asso.fr/wp-content/uploads/2024/07/
+ eurai_logo.png\;90\;48\,medium\;https://afia.asso.fr/wp-content/uploads/20
+ 24/07/eurai_logo.png\;90\;48\,large\;https://afia.asso.fr/wp-content/uploa
+ ds/2024/07/eurai_logo.png\;90\;48\,full\;https://afia.asso.fr/wp-content/u
+ ploads/2024/07/eurai_logo.png\;90\;48
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div id='pl-3575
+ '  class='panel-layout' ><div id='pg-3575-0'  class='panel-grid panel-no-s
+ tyle' ><div id='pgc-3575-0-0'  class='panel-grid-cell' ><div id='panel-357
+ 5-0-0-0' class='so-panel widget widget_sow-editor panel-first-child panel-
+ last-child' data-index='0' ><div\n			\n			class='so-widget-sow-editor so-widget-
+ sow-editor-base'\n			\n		>\n<div class='siteorigin-widget-tinymce textwidget'>
+ \n	<p>L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, est de p
+ romouvoir et de favoriser le développement de l’Intelligence Artificielle 
+ (IA) sous ses différentes formes\, de regrouper et de faire croître la com
+ munauté française en IA\, et d’en assurer la visibilité.</p>\n<p><img load
+ ing='lazy' decoding='async' class='' src='https://afia.asso.fr/wp-content/
+ uploads/2024/07/eurai_logo.png' alt='EURAI' width='90' height='48' /><br /
+ >\n<span style='font-size: 10pt\;'><em>L'AFIA est membre de l'<a href='htt
+ ps://eurai.org/'>EURAI</a> (European Association for Artificial Intelligen
+ ce).  </em></span></p>\n<table style='height: 93px\; width: 99.45205479452
+ 055%\; border-collapse: collapse\; background-color: #edfcff\;' border='1'
+ >\n<tbody>\n<tr style='height: 93px\;'>\n<td style='width: 100%\; height: 
+ 93px\;'><strong>La campagne d'adhésion 2026 à l’association est ouverte !<
+ /strong>\, accédez au <a href='https://afia.asso.fr/adhesion/'>site d’adhé
+ sion</a><br />\n<em>(trois modes d’adhésion sont possibles : personne indi
+ viduelle\, personne morale ou entreprise)</em>.</td>\n</tr>\n</tbody>\n</t
+ able>\n<p> </p>\n</div>\n</div></div></div><div id='pgc-3575-0-1'  class='
+ panel-grid-cell' ><div id='panel-3575-0-1-0' class='so-panel widget widget
+ _ai1ec_agenda_widget panel-first-child panel-last-child' data-index='1' >
+ \n\n	<h3 class='widget-title'>Événements AFIA à venir</h3>\n\n<style>\n<!--
+ \n\n-->\n</style>\n<div class='timely ai1ec-agenda-widget-view ai1ec-clear
+ fix'>\n\n			<div>\n													<div class='ai1ec-date\n					'>\n					<a class='ai1ec-date-title ai1
+ ec-load-view'\n						href='https://afia.asso.fr/calendar/action~oneday/exact_dat
+ e~18-4-2027/'>\n						<div class='ai1ec-month'>Avr</div>\n						<div class='ai1ec-day'
+ >18</div>\n						<div class='ai1ec-weekday'>dim</div>\n											</a>\n					<div class='ai1ec-d
+ ate-events'>\n																					<div class='ai1ec-event\n									ai1ec-event-id-11978\n									ai1ec-event-i
+ nstance-id-92\n									ai1ec-allday'>\n\n									<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n										class='ai1ec-popup-trigger ai1ec-load-event'>\n
+ 																					<span class='ai1ec-allday-badge'>\n												Jour entier\n											</span>\n										\n										<span class='ai
+ 1ec-event-title'>\n											ESIA 2027\n																							<span class='ai1ec-event-location'\n													>@ IUT/F
+ aculté des sciences de Blois\, site Jean Jaurès</span>\n																					</span>\n									</a>\n\n									<
+ div class='ai1ec-popover ai1ec-popup \n	ai1ec-event-instance-id-92'>\n\n		\n	<
+ span class='ai1ec-popup-title'>\n		<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n		   class='ai1ec-load-event'\n			>ESIA 2027</a>\n					<s
+ pan class='ai1ec-event-location'\n				>@ IUT/Faculté des sciences de Blois\, s
+ ite Jean Jaurès</span>\n					</span>\n\n	\n	<div class='ai1ec-event-time'>\n					Avr 1
+ 8 – Avr 21 <span class='ai1ec-allday-badge'>Jour entier</span>\n			</div>\n\n
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-11978@afia.asso.fr
+DTSTAMP:20261121T074711Z
+CATEGORIES:
+CONTACT:
+DESCRIPTION:L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, es
+ t de promouvoir et de favoriser le développement de l’Intelligence Artific
+ ielle (IA) sous ses différentes formes\, de regrouper et de faire croître 
+ la communauté française en IA\, et d’en assurer la visibilité.\n\nL'AFIA e
+ st membre de l'EURAI (European Association for Artificial Intelligence).  
+ \n\n\n\nLa campagne d'adhésion 2026 à l’association est ouverte !\, accéde
+ z au site d’adhésion\n(trois modes d’adhésion sont possibles : personne in
+ dividuelle\, personne morale ou entreprise).\n\n\n\n \n\n\n\n	Événements AF
+ IA à venir\n\n\n\n\n\n\n			\n													\n					\n						Avr\n						18\n						dim\n											\n					\n																					\n\n									\n																					\n												Jour entier\n											\n										\n										
+ \n											ESIA 2027\n																							@ IUT/Faculté des sciences de Blois\, site Jean Jaurès\n																					\n									\n
+ \n									\n\n		\n	\n		ESIA 2027\n					@ IUT/Faculté des sciences de Blois\, site Jean Jaurè
+ s\n					\n\n	\n	\n					Avr 18 – Avr 21 Jour entier\n			\n\n	\n			Plus d’informations ici: htt
+ ps://afia.asso.fr/ecoles-saisonnieres-afia/esia-2027/.\n	\n\n\n								\n							 													 						 					\n				\n			 		\n
+ 	 \n			\n							\n					Voir le calendrier\n					\n				\n			\n							\n	\n		\n		\n							Ajouter\n						\n		\n	\n			\n		\n			\n				\n				Ajouter au
+  calendrier Timely\n			\n		\n		\n			\n				\n				Ajouter à Google\n			\n		\n		\n			\n				\n				Ajouter à Outloo
+ k\n			\n		\n		\n			\n				\n				Ajouter au calendrier Apple\n			\n		\n		\n						\n				\n				Ajouter à un autre cal
+ endrier\n			\n		\n		\n			\n				\n				Exporter vers XML
+DTSTART;VALUE=DATE:20270418
+DTEND;VALUE=DATE:20270422
+LOCATION:IUT/Faculté des sciences de Blois\, site Jean Jaurès
+SEQUENCE:0
+SUMMARY:ESIA 2027
+X-COST-TYPE:free
+X-WP-IMAGES-URL:thumbnail\;https://afia.asso.fr/wp-content/uploads/2024/07/
+ eurai_logo.png\;90\;48\,medium\;https://afia.asso.fr/wp-content/uploads/20
+ 24/07/eurai_logo.png\;90\;48\,large\;https://afia.asso.fr/wp-content/uploa
+ ds/2024/07/eurai_logo.png\;90\;48\,full\;https://afia.asso.fr/wp-content/u
+ ploads/2024/07/eurai_logo.png\;90\;48
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div id='pl-3575
+ '  class='panel-layout' ><div id='pg-3575-0'  class='panel-grid panel-no-s
+ tyle' ><div id='pgc-3575-0-0'  class='panel-grid-cell' ><div id='panel-357
+ 5-0-0-0' class='so-panel widget widget_sow-editor panel-first-child panel-
+ last-child' data-index='0' ><div\n			\n			class='so-widget-sow-editor so-widget-
+ sow-editor-base'\n			\n		>\n<div class='siteorigin-widget-tinymce textwidget'>
+ \n	<p>L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, est de p
+ romouvoir et de favoriser le développement de l’Intelligence Artificielle 
+ (IA) sous ses différentes formes\, de regrouper et de faire croître la com
+ munauté française en IA\, et d’en assurer la visibilité.</p>\n<p><img load
+ ing='lazy' decoding='async' class='' src='https://afia.asso.fr/wp-content/
+ uploads/2024/07/eurai_logo.png' alt='EURAI' width='90' height='48' /><br /
+ >\n<span style='font-size: 10pt\;'><em>L'AFIA est membre de l'<a href='htt
+ ps://eurai.org/'>EURAI</a> (European Association for Artificial Intelligen
+ ce).  </em></span></p>\n<table style='height: 93px\; width: 99.45205479452
+ 055%\; border-collapse: collapse\; background-color: #edfcff\;' border='1'
+ >\n<tbody>\n<tr style='height: 93px\;'>\n<td style='width: 100%\; height: 
+ 93px\;'><strong>La campagne d'adhésion 2026 à l’association est ouverte !<
+ /strong>\, accédez au <a href='https://afia.asso.fr/adhesion/'>site d’adhé
+ sion</a><br />\n<em>(trois modes d’adhésion sont possibles : personne indi
+ viduelle\, personne morale ou entreprise)</em>.</td>\n</tr>\n</tbody>\n</t
+ able>\n<p> </p>\n</div>\n</div></div></div><div id='pgc-3575-0-1'  class='
+ panel-grid-cell' ><div id='panel-3575-0-1-0' class='so-panel widget widget
+ _ai1ec_agenda_widget panel-first-child panel-last-child' data-index='1' >
+ \n\n	<h3 class='widget-title'>Événements AFIA à venir</h3>\n\n<style>\n<!--
+ \n\n-->\n</style>\n<div class='timely ai1ec-agenda-widget-view ai1ec-clear
+ fix'>\n\n			<div>\n													<div class='ai1ec-date\n					'>\n					<a class='ai1ec-date-title ai1
+ ec-load-view'\n						href='https://afia.asso.fr/calendar/action~oneday/exact_dat
+ e~18-4-2027/'>\n						<div class='ai1ec-month'>Avr</div>\n						<div class='ai1ec-day'
+ >18</div>\n						<div class='ai1ec-weekday'>dim</div>\n											</a>\n					<div class='ai1ec-d
+ ate-events'>\n																					<div class='ai1ec-event\n									ai1ec-event-id-11978\n									ai1ec-event-i
+ nstance-id-92\n									ai1ec-allday'>\n\n									<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n										class='ai1ec-popup-trigger ai1ec-load-event'>\n
+ 																					<span class='ai1ec-allday-badge'>\n												Jour entier\n											</span>\n										\n										<span class='ai
+ 1ec-event-title'>\n											ESIA 2027\n																							<span class='ai1ec-event-location'\n													>@ IUT/F
+ aculté des sciences de Blois\, site Jean Jaurès</span>\n																					</span>\n									</a>\n\n									<
+ div class='ai1ec-popover ai1ec-popup \n	ai1ec-event-instance-id-92'>\n\n		\n	<
+ span class='ai1ec-popup-title'>\n		<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n		   class='ai1ec-load-event'\n			>ESIA 2027</a>\n					<s
+ pan class='ai1ec-event-location'\n				>@ IUT/Faculté des sciences de Blois\, s
+ ite Jean Jaurès</span>\n					</span>\n\n	\n	<div class='ai1ec-event-time'>\n					Avr 1
+ 8 – Avr 21 <span class='ai1ec-allday-badge'>Jour entier</span>\n			</div>\n\n
+END:VEVENT
+BEGIN:VEVENT
+UID:ai1ec-8779@afia.asso.fr
+DTSTAMP:20261121T074711Z
+CATEGORIES:
+CONTACT:
+DESCRIPTION:L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, es
+ t de promouvoir et de favoriser le développement de l’Intelligence Artific
+ ielle (IA) sous ses différentes formes\, de regrouper et de faire croître 
+ la communauté française en IA\, et d’en assurer la visibilité.\n\nL'AFIA e
+ st membre de l'EURAI (European Association for Artificial Intelligence).  
+ \n\n\n\nLa campagne d'adhésion 2026 à l’association est ouverte !\, accéde
+ z au site d’adhésion\n(trois modes d’adhésion sont possibles : personne in
+ dividuelle\, personne morale ou entreprise).\n\n\n\n \n\n\n\n	Événements AF
+ IA à venir\n\n\n\n\n\n\n			\n													\n					\n						Avr\n						18\n						dim\n											\n					\n																					\n\n									\n																					\n												Jour entier\n											\n										\n										
+ \n											ESIA 2027\n																							@ IUT/Faculté des sciences de Blois\, site Jean Jaurès\n																					\n									\n
+ \n									\n\n		\n	\n		ESIA 2027\n					@ IUT/Faculté des sciences de Blois\, site Jean Jaurè
+ s\n					\n\n	\n	\n					Avr 18 – Avr 21 Jour entier\n			\n\n	\n			Plus d’informations ici: htt
+ ps://afia.asso.fr/ecoles-saisonnieres-afia/esia-2027/.\n	\n\n\n								\n							 													 						 					\n				\n			 		\n
+ 	 \n			\n							\n					Voir le calendrier\n					\n				\n			\n							\n	\n		\n		\n							Ajouter\n						\n		\n	\n			\n		\n			\n				\n				Ajouter au
+  calendrier Timely\n			\n		\n		\n			\n				\n				Ajouter à Google\n			\n		\n		\n			\n				\n				Ajouter à Outloo
+ k\n			\n		\n		\n			\n				\n				Ajouter au calendrier Apple\n			\n		\n		\n						\n				\n				Ajouter à un autre cal
+ endrier\n			\n		\n		\n			\n				\n				Exporter vers XML
+DTSTART;TZID=Europe/Paris:20231210T083000
+DTEND;TZID=Europe/Paris:20231210T173000
+SEQUENCE:0
+SUMMARY:AFCP & IA 23
+X-COST-TYPE:free
+X-WP-IMAGES-URL:thumbnail\;https://afia.asso.fr/wp-content/uploads/2024/07/
+ eurai_logo.png\;90\;48\,medium\;https://afia.asso.fr/wp-content/uploads/20
+ 24/07/eurai_logo.png\;90\;48\,large\;https://afia.asso.fr/wp-content/uploa
+ ds/2024/07/eurai_logo.png\;90\;48\,full\;https://afia.asso.fr/wp-content/u
+ ploads/2024/07/eurai_logo.png\;90\;48
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2//E
+ N'>\\n<HTML>\\n<HEAD>\\n<TITLE></TITLE>\\n</HEAD>\\n<BODY><div id='pl-3575
+ '  class='panel-layout' ><div id='pg-3575-0'  class='panel-grid panel-no-s
+ tyle' ><div id='pgc-3575-0-0'  class='panel-grid-cell' ><div id='panel-357
+ 5-0-0-0' class='so-panel widget widget_sow-editor panel-first-child panel-
+ last-child' data-index='0' ><div\n			\n			class='so-widget-sow-editor so-widget-
+ sow-editor-base'\n			\n		>\n<div class='siteorigin-widget-tinymce textwidget'>
+ \n	<p>L’objet de l’AFIA\, Association Loi 1901 sans but lucratif\, est de p
+ romouvoir et de favoriser le développement de l’Intelligence Artificielle 
+ (IA) sous ses différentes formes\, de regrouper et de faire croître la com
+ munauté française en IA\, et d’en assurer la visibilité.</p>\n<p><img load
+ ing='lazy' decoding='async' class='' src='https://afia.asso.fr/wp-content/
+ uploads/2024/07/eurai_logo.png' alt='EURAI' width='90' height='48' /><br /
+ >\n<span style='font-size: 10pt\;'><em>L'AFIA est membre de l'<a href='htt
+ ps://eurai.org/'>EURAI</a> (European Association for Artificial Intelligen
+ ce).  </em></span></p>\n<table style='height: 93px\; width: 99.45205479452
+ 055%\; border-collapse: collapse\; background-color: #edfcff\;' border='1'
+ >\n<tbody>\n<tr style='height: 93px\;'>\n<td style='width: 100%\; height: 
+ 93px\;'><strong>La campagne d'adhésion 2026 à l’association est ouverte !<
+ /strong>\, accédez au <a href='https://afia.asso.fr/adhesion/'>site d’adhé
+ sion</a><br />\n<em>(trois modes d’adhésion sont possibles : personne indi
+ viduelle\, personne morale ou entreprise)</em>.</td>\n</tr>\n</tbody>\n</t
+ able>\n<p> </p>\n</div>\n</div></div></div><div id='pgc-3575-0-1'  class='
+ panel-grid-cell' ><div id='panel-3575-0-1-0' class='so-panel widget widget
+ _ai1ec_agenda_widget panel-first-child panel-last-child' data-index='1' >
+ \n\n	<h3 class='widget-title'>Événements AFIA à venir</h3>\n\n<style>\n<!--
+ \n\n-->\n</style>\n<div class='timely ai1ec-agenda-widget-view ai1ec-clear
+ fix'>\n\n			<div>\n													<div class='ai1ec-date\n					'>\n					<a class='ai1ec-date-title ai1
+ ec-load-view'\n						href='https://afia.asso.fr/calendar/action~oneday/exact_dat
+ e~18-4-2027/'>\n						<div class='ai1ec-month'>Avr</div>\n						<div class='ai1ec-day'
+ >18</div>\n						<div class='ai1ec-weekday'>dim</div>\n											</a>\n					<div class='ai1ec-d
+ ate-events'>\n																					<div class='ai1ec-event\n									ai1ec-event-id-11978\n									ai1ec-event-i
+ nstance-id-92\n									ai1ec-allday'>\n\n									<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n										class='ai1ec-popup-trigger ai1ec-load-event'>\n
+ 																					<span class='ai1ec-allday-badge'>\n												Jour entier\n											</span>\n										\n										<span class='ai
+ 1ec-event-title'>\n											ESIA 2027\n																							<span class='ai1ec-event-location'\n													>@ IUT/F
+ aculté des sciences de Blois\, site Jean Jaurès</span>\n																					</span>\n									</a>\n\n									<
+ div class='ai1ec-popover ai1ec-popup \n	ai1ec-event-instance-id-92'>\n\n		\n	<
+ span class='ai1ec-popup-title'>\n		<a href='https://afia.asso.fr/évènement/e
+ sia-2027/?instance_id=92'\n		   class='ai1ec-load-event'\n			>ESIA 2027</a>\n					<s
+ pan class='ai1ec-event-location'\n				>@ IUT/Faculté des sciences de Blois\, s
+ ite Jean Jaurès</span>\n					</span>\n\n	\n	<div class='ai1ec-event-time'>\n					Avr 1
+ 8 – Avr 21 <span class='ai1ec-allday-badge'>Jour entier</span>\n			</div>\n\n
+END:VEVENT
+END:VCALENDAR

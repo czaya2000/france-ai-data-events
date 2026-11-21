@@ -1,58 +1,87 @@
-// City detection and grouping. Event `city` values use the English name.
+// City detection and grouping. Event `city` values use the usual French name ("Paris", "Aix-en-Provence", "Villeurbanne").
+// The place list comes from config/country.mjs (PLACE_TO_CITY): one source of truth for hubs and detection.
 import { CITIES, PLACE_TO_CITY } from '../../config/country.mjs';
 
 export const ONLINE = 'Online (FR)';
 export const NATIONWIDE = 'Nationwide';
 
-/** lowercase, strip diacritics, collapse non-letters to single spaces */
+/** lowercase, strip diacritics (accent-insensitive matching), ligatures expanded */
 export function fold(s) {
 	return String(s ?? '')
 		.normalize('NFKD')
 		.replace(/[̀-ͯ]/g, '')
 		.replace(/ß/g, 'ss')
+		.replace(/œ/gi, 'oe')
+		.replace(/æ/gi, 'ae')
 		.toLowerCase();
 }
 const slugify = (s) => fold(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-// [needle (folded, whole-word), English display name]
-const NAMES = [
-	['berlin', 'Berlin'], ['potsdam', 'Potsdam'],
-	['munich', 'Munich'], ['muenchen', 'Munich'], ['munchen', 'Munich'], ['garching', 'Garching'],
-	['hamburg', 'Hamburg'], ['norderstedt', 'Norderstedt'],
-	['frankfurt', 'Frankfurt'], ['darmstadt', 'Darmstadt'], ['mainz', 'Mainz'], ['wiesbaden', 'Wiesbaden'], ['offenbach', 'Offenbach'],
-	['cologne', 'Cologne'], ['koeln', 'Cologne'], ['koln', 'Cologne'], ['bonn', 'Bonn'],
-	['dusseldorf', 'Düsseldorf'], ['duesseldorf', 'Düsseldorf'], ['leverkusen', 'Leverkusen'],
-	['stuttgart', 'Stuttgart'], ['tubingen', 'Tübingen'], ['tuebingen', 'Tübingen'], ['ludwigsburg', 'Ludwigsburg'],
-	['esslingen', 'Esslingen'], ['boblingen', 'Böblingen'], ['sindelfingen', 'Sindelfingen'],
-	['leipzig', 'Leipzig'], ['dresden', 'Dresden'], ['nuremberg', 'Nuremberg'], ['nurnberg', 'Nuremberg'], ['nuernberg', 'Nuremberg'],
-	['karlsruhe', 'Karlsruhe'], ['heidelberg', 'Heidelberg'], ['munster', 'Münster'], ['muenster', 'Münster'], ['ulm', 'Ulm'],
-	['kassel', 'Kassel'], ['hanover', 'Hanover'], ['hannover', 'Hanover'], ['bremen', 'Bremen'], ['dortmund', 'Dortmund'],
-	['essen', 'Essen'], ['mannheim', 'Mannheim'], ['freiburg', 'Freiburg'], ['aachen', 'Aachen'], ['saarbrucken', 'Saarbrücken'],
-	['augsburg', 'Augsburg'], ['jena', 'Jena'], ['erfurt', 'Erfurt'], ['rostock', 'Rostock'], ['kiel', 'Kiel'],
-	['paderborn', 'Paderborn'], ['bochum', 'Bochum'], ['regensburg', 'Regensburg'], ['wurzburg', 'Würzburg'],
-	['wuerzburg', 'Würzburg'], ['magdeburg', 'Magdeburg'], ['braunschweig', 'Braunschweig'], ['warendorf', 'Warendorf'],
-	['kaiserslautern', 'Kaiserslautern'], ['konstanz', 'Konstanz'], ['siegen', 'Siegen'], ['oldenburg', 'Oldenburg'],
-	['chemnitz', 'Chemnitz'], ['gottingen', 'Göttingen'], ['luebeck', 'Lübeck'], ['lubeck', 'Lübeck'], ['halle', 'Halle'],
-	['ingolstadt', 'Ingolstadt'], ['bielefeld', 'Bielefeld'], ['duisburg', 'Duisburg'], ['wolfsburg', 'Wolfsburg'],
-];
-const NAME_RE = new RegExp('(?:^|[^a-z])(' + NAMES.map((n) => n[0]).join('|') + ')(?![a-z])');
-const NAME_MAP = new Map(NAMES);
+// Display names where title-casing the slug is not enough (accents, apostrophes, capital particles).
+const DISPLAY = {
+	'la-defense': 'La Défense', 'creteil': 'Créteil', 'evry': 'Évry', 'neuilly-sur-seine': 'Neuilly-sur-Seine',
+	'velizy-villacoublay': 'Vélizy-Villacoublay', 'le-kremlin-bicetre': 'Le Kremlin-Bicêtre', 'marne-la-vallee': 'Marne-la-Vallée',
+	'ecully': 'Écully', 'labege': 'Labège', 'merignac': 'Mérignac', 'begles': 'Bègles', 'villeneuve-d-ascq': "Villeneuve-d'Ascq",
+	'reze': 'Rezé', 'cesson-sevigne': 'Cesson-Sévigné', 'saint-martin-d-heres': "Saint-Martin-d'Hères", 'echirolles': 'Échirolles',
+	'saint-etienne': 'Saint-Étienne', 'orleans': 'Orléans', 'nimes': 'Nîmes', 'besancon': 'Besançon', 'chambery': 'Chambéry',
+	'evreux': 'Évreux', 'saint-nazaire': 'Saint-Nazaire', 'la-roche-sur-yon': 'La Roche-sur-Yon', 'le-havre': 'Le Havre',
+	'le-mans': 'Le Mans', 'la-rochelle': 'La Rochelle', 'les-milles': 'Les Milles', 'marcq-en-baroeul': 'Marcq-en-Barœul',
+	'saint-brieuc': 'Saint-Brieuc', 'saint-malo': 'Saint-Malo', 'saint-denis': 'Saint-Denis', 'saint-ouen': 'Saint-Ouen',
+	'saint-herblain': 'Saint-Herblain', 'clermont-ferrand': 'Clermont-Ferrand', 'nancy': 'Nancy',
+};
+const LOWER_PARTS = new Set(['sur', 'en', 'de', 'la', 'le', 'les', 'aux', 'au', 'd', 'sous', 'lez']);
+function displayName(slug) {
+	if (DISPLAY[slug]) return DISPLAY[slug];
+	return slug.split('-').map((p, i) => (i > 0 && LOWER_PARTS.has(p) ? p : p[0].toUpperCase() + p.slice(1))).join('-');
+}
 
-/** First known German city named in `text`, as its English display name, or null. */
+// Words that are also ordinary words in English or French: matched only when the WHOLE string is the place
+// (a feed city field), never inside a venue sentence or a URL.
+const AMBIGUOUS = new Set(['nice', 'tours', 'pau', 'bron', 'biot', 'metz', 'reze', 'arles', 'albi', 'brest', 'caen', 'orsay', 'massy', 'bobigny']);
+// Common alternative spellings (folded) -> slug.
+const ALIASES = {
+	'paris la defense': 'la-defense', 'saint denis': 'saint-denis', 'aix en provence': 'aix-en-provence', 'aix': 'aix-en-provence',
+	'sophia antipolis': 'sophia-antipolis', 'sophia': 'sophia-antipolis', 'lille metropole': 'lille', 'marseille 1er': 'marseille',
+	'villeneuve d ascq': 'villeneuve-d-ascq', 'saint martin d heres': 'saint-martin-d-heres',
+};
+
+const NAMES = []; // [folded needle with spaces, display, slug]
+for (const slug of Object.keys(PLACE_TO_CITY)) NAMES.push([slug.replace(/-/g, ' '), displayName(slug), slug]);
+for (const [alias, slug] of Object.entries(ALIASES)) NAMES.push([alias, displayName(slug), slug]);
+const BY_NEEDLE = new Map(NAMES.map((n) => [n[0], n[1]]));
+const DETECTABLE = NAMES.filter((n) => !AMBIGUOUS.has(n[2]) && !AMBIGUOUS.has(n[0]));
+const NAME_RE = new RegExp('(?:^|[^a-z])(' + DETECTABLE.map((n) => n[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).sort((a, b) => b.length - a.length).join('|') + ')(?![a-z])');
+const NAME_MAP = new Map(DETECTABLE.map((n) => [n[0], n[1]]));
+const spaced = (s) => fold(s).replace(/[^a-z0-9]+/g, ' ').trim();
+
+/** First known French place named in `text`, or null. Ambiguous names (Nice, Tours...) are never found inside text. */
 export function detectCity(text) {
-	const m = NAME_RE.exec(fold(text));
+	const m = NAME_RE.exec(spaced(text));
 	return m ? NAME_MAP.get(m[1]) : null;
 }
 
-/** Normalise a free-form city value ("München", "Frankfurt am Main") to our English name, or keep it trimmed. */
+const ONLINE_RE = /\b(online|en ligne|webinaire|webinar|visio(?:conf[ée]rence)?|distanciel|a distance|remote|virtual|virtuel(?:le)?|zoom|teams|live ?stream)\b/i;
+/** True when a location string says the event is online ("En ligne", "Webinaire", "Visioconférence", "Zoom"). */
+export function isOnlineText(s) {
+	const t = fold(s).trim();
+	if (!t) return false;
+	return ONLINE_RE.test(t) && !detectCity(t);
+}
+
+/** Normalise a free-form city value ("Paris 15e", "75008 Paris", "Lyon Cedex 03", "Aix") to the stored name, or keep it trimmed. */
 export function canonicalCity(raw) {
 	if (!raw) return null;
-	const s = String(raw).trim();
+	let s = String(raw).trim();
 	if (!s) return null;
+	if (isOnlineText(s) && s.length < 40) return ONLINE;
+	s = s.replace(/\b\d{5}\b/g, ' ').replace(/\bcedex\b\s*\d*/gi, ' ').replace(/\b\d{1,2}(?:e|er|eme|ème)\b/gi, ' ').replace(/\s+/g, ' ').replace(/^[\s,-]+|[\s,-]+$/g, '');
+	if (!s) return null;
+	const whole = BY_NEEDLE.get(spaced(s));
+	if (whole) return whole;
 	return detectCity(s) ?? s;
 }
 
-/** City hub slug for a city name ('berlin', ..., 'other-france', 'online', or null if unknown). */
+/** City hub slug for a city name ('paris', ..., 'other-france', 'online', or null if unknown). */
 export function hubSlug(city) {
 	if (!city) return null;
 	if (city === ONLINE) return 'online';
@@ -75,11 +104,11 @@ export function citiesCompatible(a, b) {
 	return ha === hb && ha !== 'other-france';
 }
 
-/** Every distinct known German city named in `text` (English display names). */
+/** Every distinct known French place named in `text` (display names). */
 export function citiesIn(text) {
 	const re = new RegExp(NAME_RE.source, 'g');
 	const out = new Set();
-	const t = fold(text);
+	const t = spaced(text);
 	let m;
 	while ((m = re.exec(t))) {
 		out.add(NAME_MAP.get(m[1]));
@@ -99,6 +128,7 @@ export function cityFromUrl(url) {
 	try { u = new URL(String(url ?? '').trim()); } catch { return null; }
 	let path = u.pathname;
 	try { path = decodeURIComponent(path); } catch { /* keep raw */ }
+	// A platform host such as "paris.aitinkerers.org" is evidence; "eventbrite.fr/e/ia-a-lyon-123" is too, but only when exactly one city.
 	return onlyCity(citiesIn(`${u.hostname} ${path}`));
 }
 
@@ -111,7 +141,7 @@ export function resolveCity({ city, venue, url, online } = {}) {
 	if (online || city === ONLINE || city === NATIONWIDE) return city ?? null;
 	let v = cityFromVenue(venue);
 	const u = cityFromUrl(url);
-	// A venue that is only the feed city's own name ("Munich") is no independent evidence.
+	// A venue that is only the feed city's own name ("Lyon") is no independent evidence.
 	if (v && city && isBareCity(venue) && citiesCompatible(city, v)) v = null;
 	const evident = v ?? u;
 	if (!evident || !city) return city ?? evident ?? null;
@@ -121,10 +151,9 @@ export function resolveCity({ city, venue, url, online } = {}) {
 	return evident;
 }
 
-/** True when a venue string is nothing but a city name ("Munich", "Berlin, Germany"). */
+/** True when a venue string is nothing but a city name ("Lyon", "Paris, France"). */
 function isBareCity(venue) {
-	const rest = fold(venue).replace(/\b(germany|deutschland|de)\b/g, '');
-	let t = rest;
-	for (const c of citiesIn(venue)) for (const [needle, name] of NAMES) if (name === c) t = t.split(needle).join('');
+	let t = spaced(venue).replace(/\b(france|fr)\b/g, ' ');
+	for (const [needle, name] of NAMES) if (citiesIn(venue).has(name)) t = t.split(needle).join(' ');
 	return !/[a-z0-9]/.test(t);
 }

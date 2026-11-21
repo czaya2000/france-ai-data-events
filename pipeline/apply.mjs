@@ -7,7 +7,7 @@ import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { WINDOW_DAYS } from '../config/country.mjs';
-import { today as berlinToday } from './lib/time.mjs';
+import { today as parisToday } from './lib/time.mjs';
 import { loadJson, loadLedger, lookup, matchesExisting, record, saveJson } from './lib/ledger.mjs';
 import { sameEvent } from './lib/dedupe.mjs';
 import { makeCandidate } from './lib/normalize.mjs';
@@ -42,7 +42,7 @@ function readUnits(work) {
 }
 
 /** Core: pure over the files under `root`; `write: false` computes the summary only. */
-export function applyEnrichment({ root = ROOT, today = berlinToday(), windowDays = WINDOW_DAYS, now = new Date(), write = true } = {}) {
+export function applyEnrichment({ root = ROOT, today = parisToday(), windowDays = WINDOW_DAYS, now = new Date(), write = true } = {}) {
 	const P = {
 		work: join(root, 'work'),
 		events: join(root, 'src/data/events.json'),
@@ -115,7 +115,7 @@ export function applyEnrichment({ root = ROOT, today = berlinToday(), windowDays
 	let fromPages = 0;
 	for (const a of toAdd) {
 		const c = a.cand;
-		const dupe = matchesExisting(c, existing) ?? added.find((e) => sameEvent({ title: c.title, start: c.start, city: c.city }, { title: e.title, start: e.date, city: e.city }));
+		const dupe = matchesExisting(c, existing) ?? added.find((e) => sameEvent({ title: c.title, start: c.start, city: c.city, time: c.time }, { title: e.title, start: e.date, city: e.city, time: e.time }));
 		if (dupe) {
 			record(ledger, c, 'rejected', { today, reason: 'duplicate' });
 			counts.add('duplicate');
@@ -144,7 +144,7 @@ export function applyEnrichment({ root = ROOT, today = berlinToday(), windowDays
 		added.push(ev);
 		record(ledger, c, 'accepted', { today, eventId: ev.id });
 		counts.add(a.extracted ? 'accepted:page' : 'accepted:feed');
-		if (!a.blurb_fr) counts.add('blurb-de-missing');
+		if (!a.blurb_fr) counts.add('blurb-fr-missing');
 		if (a.extracted) fromPages++;
 	}
 	for (const { cand, reason } of v.rejected) record(ledger, cand, 'rejected', { today, reason });

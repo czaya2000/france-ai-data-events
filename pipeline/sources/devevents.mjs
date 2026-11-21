@@ -1,5 +1,5 @@
 // dev.events RSS (global). The date and place live only in the description:
-//   "<name> is happening on <Month d, yyyy> in <City>, Germany, Europe."  Items that do not match are ignored.
+//   "<name> is happening on <Month d, yyyy> in <City>, France, Europe."  Items that do not match are ignored.
 import { getText } from '../lib/cache.mjs';
 import { parseRss } from '../lib/feeds.mjs';
 import { detectCity, canonicalCity, ONLINE } from '../lib/city.mjs';
@@ -19,14 +19,14 @@ export function normalise(it, src) {
 	const d = parseDateText(m[1]);
 	if (!d) return null;
 	const place = m[2] || '';
-	const germany = /Germany/i.test(place);
+	const france = /France/i.test(place);
 	const online = /^\s*Online/i.test(place);
-	if (!germany && !online) return null;
+	if (!france && !online) return null;
 	const first = place.split(',')[0].trim();
 	return makeCandidate(
 		{
 			title: it.title, start: d.start, end: d.end, city: online ? ONLINE : canonicalCity(first) ?? detectCity(place),
-			url: it.link, desc: it.categories.join(', '), online, country: germany ? 'DE' : null,
+			url: it.link, desc: it.categories.join(', '), online, country: france ? 'FR' : null,
 		},
 		src,
 	);

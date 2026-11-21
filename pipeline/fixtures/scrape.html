@@ -1,723 +1,258 @@
-<html><body><main role="main">
-    
-        <section class="inner-banner">
-            <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/innerpage-banner.webp" class="inner-banner-image" alt="Banner" />
-            <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/innerpage-banner-overlay.png" class="inner-banner-image overlay" alt="Banner" />
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                            <ol class="breadcrumb mb-0">
-                                
-                                    <li class="breadcrumb-item"><a href="/" title="Bifold">Bifold</a></li>
-                                    
-                                
-                                    <li class="breadcrumb-item"><a href="/news-events" title="News &amp; Events">News &amp; Events</a></li>
-                                    
-                                
-                                    <li class="breadcrumb-item"><a href="/news-events/events" title="Events">Events</a></li>
-                                    
-                                
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-                <!-- ./row -->
-                
-                    <div class="row">
-                        <div class="col-12 py-5">
-                            <h1>Events</h1>
-                        </div>
-                    </div>
-                
-                <!-- ./row -->
-            </div>
-        </section>
-    
-    
-        
-    
-
-            <div id="c58" class="frame frame-default frame-type-list frame-layout-0 frame-space-after-large">
-                
-                
-                    
-
-
-
-                
-                
-                    
-
-
-
-                
-                
-
-    
-        
-	<div class="tx-psn">
-		
-
-    <section class="default-xl-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 cstm-pe-30 search-collapsible">
-                    <h2 class="mb-4 searchCollapseJs">SEARCH</h2>
-                    <form id="searchForm" action="/news-events/events?tx_psn_eventslist%5Baction%5D=list&amp;tx_psn_eventslist%5Bcontroller%5D=Events&amp;cHash=e52fbce6f2b8dd8585eabb9034c50307" method="post">
-<div>
-<input type="hidden" name="tx_psn_eventslist[__referrer][@extension]" value="Psn" />
-<input type="hidden" name="tx_psn_eventslist[__referrer][@controller]" value="Events" />
-<input type="hidden" name="tx_psn_eventslist[__referrer][@action]" value="list" />
-<input type="hidden" name="tx_psn_eventslist[__referrer][arguments]" value="YTowOnt91b7d386c2efe6cb5db8b504afc190e429a44c35d" />
-<input type="hidden" name="tx_psn_eventslist[__referrer][@request]" value="{&quot;@extension&quot;:&quot;Psn&quot;,&quot;@controller&quot;:&quot;Events&quot;,&quot;@action&quot;:&quot;list&quot;}9ea54f0b03b08de0a448298675a51cb3b6ebe327" />
-<input type="hidden" name="tx_psn_eventslist[__trustedProperties]" value="[]db221029057453c6fbb5df5a37a0493c1475aba6" />
-</div>
-
-                    <div class="search-card">
-                        <div class="mb-3">
-                            <input type="text" id="event_keyword" name="event_keyword" value="" class="form-control" placeholder="Keywords">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <div class="input-group-over position-relative">
-                                <input type="hidden" name="fromDate" id="fromDate" value="">
-                                <input type="hidden" name="toDate" id="toDate" value="">
-                                <div class="fake-input">
-                                    <input type="text" class="form-control searchOutPreview" placeholder="Date">
-                                    
-                                    
-                                    <span class="from-date fromDatePreviewJs "></span>
-                                    <span class="to-date toDatePreviewJs"></span>
-                                </div>
-                                <button type="button" class="btn-input-group" data-bs-toggle="modal" data-bs-target="#dateFilterModal">
-                                    <i class="ri-calendar-2-line"></i>
-                                </button>
-                            </div>
-                            <div class="clear-search   d-none">
-                                <button type="button" class="clear-search-btn clearSearchBtnJs">Clear date</button>
-                            </div>
-                        </div>
-                        <div class="pt-2">
-                            
-                            
-                            <input type="checkbox" id="past_event" name="past_event" value="1"  />&nbsp;&nbsp;<span>Include Past Events</span>
-                        </div>
-                        <div class="search-ctrl d-flex align-items-center pt-2">
-                            <button type="submit" class="btn btn-primary xl">Search</button>
-                            
-                        </div>
-                    </div>
-                    </form>
-                    <!-- ./search-card -->
-
-                    <!-- Button trigger modal -->
-
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="dateFilterModal" tabindex="-1" aria-labelledby="dateFilterModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered date-range-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="date-range-wrapper enabled">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        <div class="date-range-row calendar-style-1">
-                                            <div class="date-range-item">
-                                                <div class="date-range-item-header">
-                                                    <h4>From date</h4>
-                                                </div>
-                                                <div class="date-range-item-body">
-                                                    <div class="calendar-wrapper" id="fromDateCalendar"></div>
-                                                </div>
-                                            </div>
-                                            <div class="date-range-item">
-                                                <div class="date-range-item-header">
-                                                    <h4>To date</h4>
-                                                </div>
-                                                <div class="date-range-item-body">
-                                                    <div class="calendar-wrapper" id="toDateCalendar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- ./date-range-row -->
-                                        <div class="date-range-footer d-flex justify-content-center pt-4">
-                                            <button type="button" class="btn btn-primary selectFilterDateJS" data-bs-dismiss="modal" aria-label="Close">Select Date for Filter</button>
-                                        </div>
-                                        <!-- ./date-range-foote -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ./Modal -->
-
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-8 cstm-ps-30"><!--/.col-lg-8 cstm-ps-30-->
-                    <h2 class="mb-4 profile-category">ALL EVENTS</h2>
-
-                    <div class="d-flex justify-content-end pagination-holder">
-<nav>
-<ul class="pagination">
-    
-            
-        
-    
-    
-        <li class="page-item active">
-            <a class="page-link" href="/news-events/events?tx_psn_eventslist%5Baction%5D=list&amp;tx_psn_eventslist%5Bcontroller%5D=Events&amp;tx_psn_eventslist%5BcurrentPage%5D=1&amp;tx_psn_eventslist%5Bevent_keyword%5D=&amp;tx_psn_eventslist%5Bevent_lab%5D=0&amp;tx_psn_eventslist%5Bevent_workgroup%5D=&amp;tx_psn_eventslist%5BfromDate%5D=&amp;tx_psn_eventslist%5Bpast_event%5D=0&amp;tx_psn_eventslist%5BtoDate%5D=&amp;cHash=e476904ad2e2dc75ddadb6fee5056842">1</a>
-        </li>
-    
-    
-    
-            
-        
+<html><body><main>FTERWORKS «DECIDEURS» &amp; APERO IA</strong> &#8211; Mensuellement notre écosystème se retrouve pour des moments d’échanges informels partout en France</li>
+<li>Et toujours nos salons partenaires &#8211; <strong>VIVATECH, SIDO, WAICF, BIG DATA &amp; AI PARIS, ADOPT AI…</strong></li>
 </ul>
-</nav>
+<p>Vous recherchez un intervenant ?<br />
+Ou souhaitez relayer votre événement auprès de notre communauté ?</div>
+</div>
+</div>
+</div>
 </div>
 
-                    <div class="profile-wrapper seperator-left"> <!--/.seperator-left-->
-                        <div class="news-row">
-                          
-                            
-                                <div class="news-item event-item">
-                                    
-                                        <div class="card border-0">
-                                            <div class="news-img">
-                                                    
-
-                                                            <h4 class="year-month">November</h4>
-                                                            <div class="h1_styled event-day">
-                                                                20
-                                                            </div>
-                                                            <h4 class="year-month">2026</h4>
-                                                        
 
 
-                                                    
-                                                
-                                            </div>
-                                            <div class="card-body ps-md-3">
-                                                <div class="category-date mb-md-2">
-
-
-                                                    
-                                                            10:00
-                                                            
-                                                                -&nbsp;16:00
-                                                            
-                                                            
-                                                                <span class="divider">|</span>
-                                                            
-                                                        
-
-                                                    
-                                                        BIFOLD, Franklin Str.28/29, 10587 Berlin, FR 713
-                                                    
-                                                </div>
-                                                
-                                                    <h3 class="card-title mb-2">
-                                                        <a href="/news-events/events/view/event-details/international-joint-symposium-bifold-hallym-university-korea">
-                                                        International Joint Symposium BIFOLD - Hallym University (Korea)
-                                                        </a></h3>
-                                                
-                                                <p class="event-list-content-image">
-                                                    
-
-                                                    
-                                                    BIFOLD is happy to welcome Prof. Dong-Ok Won, PhD,&nbsp;Associate&nbsp;Professor&nbsp;at Hallym University, Korea and his team for an international joint symposium on medical and healthcare AI. BIFOLD Director Prof. Dr. Klaus-Robert Müller and members of his Machine Learning department will be presenting their research.
-
-
-                                                    
-
-                                                </p>
-                                                <div class="d-flex">
-                                                    <a class="btn btn-primary" href="/news-events/events/view/event-details/international-joint-symposium-bifold-hallym-university-korea">Read
-                                                                                                              more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                <!--./card-->
-                            </div>
-
-                            <!-- ./news-item -->
-                          
-                                <div class="news-item event-item">
-                                    
-                                        <div class="card border-0">
-                                            <div class="news-img">
-                                                    
-
-                                                            <h4 class="year-month">November</h4>
-                                                            <div class="h1_styled event-day">
-                                                                25
-                                                            </div>
-                                                            <h4 class="year-month">2026</h4>
-                                                        
-
-
-                                                    
-                                                
-                                            </div>
-                                            <div class="card-body ps-md-3">
-                                                <div class="category-date mb-md-2">
-
-
-                                                    
-                                                            12:00
-                                                            
-                                                                -&nbsp;13:00
-                                                            
-                                                            
-                                                                <span class="divider">|</span>
-                                                            
-                                                        
-
-                                                    
-                                                        BIFOLD, Franklinstr 28/29, 10587 Berlin, 7th floor, Room 701
-                                                    
-                                                </div>
-                                                
-                                                    <h3 class="card-title mb-2">
-                                                        <a href="/news-events/events/view/event-details/lunch-talk-yubao-tang-generative-retrieval-foundations-tensions-and-opportunities">
-                                                        Lunch Talk: Yubao Tang &quot;Generative Retrieval: Foundations, Tensions, and Opportunities&quot;
-                                                        </a></h3>
-                                                
-                                                <p class="event-list-content-image">
-                                                    
-                                                      <div class="gallery-image-container event-list-img">
-                                                        <img loading="lazy" src="https://bifold.berlin/fileadmin/user_upload/photo-yubao-frei.png" width="1010" height="1058" alt="" />
-                                                        
-                                                          <figcaption class="image-caption">
-                                                                © Yubao Frei
-                                                          </figcaption>
-                                                        
-                                                        
-                                                    </div>
-                                                    
-
-                                                    
-                                                    Join us for the next Lunch Talk on November 25. Yubao Tang will talk about her work on "Generative Retrieval: Foundations, Tensions, and Opportunities". In her talk Yubao Tang explores generative retrieval, an emerging approach for building more effective, efficient, and trustworthy information access systems.
-                                                    
-
-                                                </p>
-                                                <div class="d-flex">
-                                                    <a class="btn btn-primary" href="/news-events/events/view/event-details/lunch-talk-yubao-tang-generative-retrieval-foundations-tensions-and-opportunities">Read
-                                                                                                              more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                <!--./card-->
-                            </div>
-
-                            <!-- ./news-item -->
-                          
-                                <div class="news-item event-item">
-                                    
-                                        <div class="card border-0">
-                                            <div class="news-img">
-                                                    
-
-                                                            <h4 class="year-month">November</h4>
-                                                            <div class="h1_styled event-day">
-                                                                26
-                                                            </div>
-                                                            <h4 class="year-month">2026</h4>
-                                                        
-
-
-                                                    
-                                                
-                                            </div>
-                                            <div class="card-body ps-md-3">
-                                                <div class="category-date mb-md-2">
-
-
-                                                    
-                                                            08:30
-                                                            
-                                                                -&nbsp;16:00
-                                                            
-                                                            
-                                                                <span class="divider">|</span>
-                                                            
-                                                        
-
-                                                    
-                                                        Forum Digitale Technologien, Salzufer 15/16, 10587 Berlin
-                                                    
-                                                </div>
-                                                
-                                                    <h3 class="card-title mb-2">
-                                                        <a href="/news-events/events/view/event-details/aicon-2026">
-                                                        AICon 2026
-                                                        </a></h3>
-                                                
-                                                <p class="event-list-content-image">
-                                                    
-                                                      <div class="gallery-image-container event-list-img">
-                                                        <img loading="lazy" src="https://bifold.berlin/fileadmin/user_upload/ai_con.png" width="405" height="379" alt="" />
-                                                        
-                                                          <figcaption class="image-caption">
-                                                                ©AICon
-                                                          </figcaption>
-                                                        
-                                                        
-                                                    </div>
-                                                    
-
-                                                    
-                                                    Reserve your spot early at AICon, the conference dedicated to secure and trustworthy artificial intelligence. Come and engage in conversation with experts from the worlds of politics, academia, and business. Discuss current developments and specific areas of application—from generative AI to industrial applications and safety-critical systems.
-                                                    
-
-                                                </p>
-                                                <div class="d-flex">
-                                                    <a class="btn btn-primary" href="/news-events/events/view/event-details/aicon-2026">Read
-                                                                                                              more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                <!--./card-->
-                            </div>
-
-                            <!-- ./news-item -->
-                          
-                                <div class="news-item event-item">
-                                    
-                                        <div class="card border-0">
-                                            <div class="news-img">
-                                                    
-
-                                                            <h4 class="year-month">November</h4>
-                                                            <div class="h1_styled event-day">
-                                                                30
-                                                            </div>
-                                                            <h4 class="year-month">2026</h4>
-                                                        
-
-
-                                                    
-                                                
-                                            </div>
-                                            <div class="card-body ps-md-3">
-                                                <div class="category-date mb-md-2">
-
-
-                                                    
-                                                            12:00
-                                                            
-                                                                -&nbsp;13:30
-                                                            
-                                                            
-                                                                <span class="divider">|</span>
-                                                            
-                                                        
-
-                                                    
-                                                        BIFOLD, Franklinstr. 28-29, 10587 Berlin, Floor 7, Open Space
-                                                    
-                                                </div>
-                                                
-                                                    <h3 class="card-title mb-2">
-                                                        <a href="/news-events/events/view/event-details/ellis-sites-neurips-fest-2026">
-                                                        Ellis Sites NeurIPS Fest 2026
-                                                        </a></h3>
-                                                
-                                                <p class="event-list-content-image">
-                                                    
-                                                      <div class="gallery-image-container event-list-img">
-                                                        <img loading="lazy" src="https://bifold.berlin/fileadmin/user_upload/aaaaaaa2026_11_30_NeuripsFest.png" width="800" height="800" alt="" />
-                                                        
-                                                          <figcaption class="image-caption">
-                                                                © ELLIS
-                                                          </figcaption>
-                                                        
-                                                        
-                                                    </div>
-                                                    
-
-                                                    
-                                                    Join us for the ELLIS NeurIPS Fest 2026 at BIFOLD. The ELLIS Unit Berlin at BIFOLD invites its members and all interested researchers from the Berlin ML/AI community to a poster session and lunch on November 30, 2026. Celebrate, Connect, Collaborate!
-
-
-                                                    
-
-                                                </p>
-                                                <div class="d-flex">
-                                                    <a class="btn btn-primary" href="/news-events/events/view/event-details/ellis-sites-neurips-fest-2026">Read
-                                                                                                              more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                <!--./card-->
-                            </div>
-
-                            <!-- ./news-item -->
-                          
-                                <div class="news-item event-item">
-                                    
-                                        <div class="card border-0">
-                                            <div class="news-img">
-                                                    
-
-                                                            <h4 class="year-month">November</h4>
-                                                            <div class="h1_styled event-day">
-                                                                30
-                                                            </div>
-                                                            <h4 class="year-month">2026</h4>
-                                                        
-
-
-                                                    
-                                                
-                                            </div>
-                                            <div class="card-body ps-md-3">
-                                                <div class="category-date mb-md-2">
-
-
-                                                    
-                                                            18:30
-                                                            
-                                                                -&nbsp;20:30
-                                                            
-                                                            
-                                                                <span class="divider">|</span>
-                                                            
-                                                        
-
-                                                    
-                                                        Zeiss-Großplanetarium, Prenzlauer Allee 80, 10405 Berlin
-                                                    
-                                                </div>
-                                                
-                                                    <h3 class="card-title mb-2">
-                                                        <a href="/news-events/events/view/event-details/ai-monday-x-planetarium">
-                                                        AI Monday x Planetarium
-                                                        </a></h3>
-                                                
-                                                <p class="event-list-content-image">
-                                                    
-                                                      <div class="gallery-image-container event-list-img">
-                                                        <img loading="lazy" src="https://bifold.berlin/fileadmin/user_upload/AiMonday_Adler.jpg" width="800" height="800" alt="" />
-                                                        
-                                                          <figcaption class="image-caption">
-                                                                © AI Monday
-                                                          </figcaption>
-                                                        
-                                                        
-                                                    </div>
-                                                    
-
-                                                    
-                                                    Join AI Monday Berlin at the Zeiss-Großplanetarium Berlin for an evening exploring how artificial intelligence is transforming the way we observe, understand and leverage space.
-                                                    
-
-                                                </p>
-                                                <div class="d-flex">
-                                                    <a class="btn btn-primary" href="/news-events/events/view/event-details/ai-monday-x-planetarium">Read
-                                                                                                              more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                <!--./card-->
-                            </div>
-
-                            <!-- ./news-item -->
-                          
-                        
-
-                        </div>
-                        <!-- ./news-row -->
-                    </div>
-                    <div class="d-flex justify-content-end pagination-holder">
-<nav>
-<ul class="pagination">
-    
-            
-        
-    
-    
-        <li class="page-item active">
-            <a class="page-link" href="/news-events/events?tx_psn_eventslist%5Baction%5D=list&amp;tx_psn_eventslist%5Bcontroller%5D=Events&amp;tx_psn_eventslist%5BcurrentPage%5D=1&amp;tx_psn_eventslist%5Bevent_keyword%5D=&amp;tx_psn_eventslist%5Bevent_lab%5D=0&amp;tx_psn_eventslist%5Bevent_workgroup%5D=&amp;tx_psn_eventslist%5BfromDate%5D=&amp;tx_psn_eventslist%5Bpast_event%5D=0&amp;tx_psn_eventslist%5BtoDate%5D=&amp;cHash=e476904ad2e2dc75ddadb6fee5056842">1</a>
-        </li>
-    
-    
-    
-            
-        
-</ul>
-</nav>
+<a class="nectar-button large regular accent-color  regular-button"  role="button" style=""  href="mailto:nicolas.bennis@hub-franceia.fr" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Contactez-nous</span></a><div id="fws_6b0143d615d83" data-midnight="" data-column-margin="default" class="wpb_row vc_row-fluid vc_row inner_row  top_padding_tablet_0px top_padding_phone_0px min_width_tablet_0px min_width_phone_0px"  style=""><div class="row-bg-wrap"> <div class="row-bg" ></div> </div><div class="row_col_wrap_12_inner col span_12  left"></div></div>
+	<div  class="vc_col-sm-12 wpb_column column_container vc_column_container col child_column padding-9-percent inherit_tablet inherit_phone "   data-padding-pos="right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+		<div class="wpb_wrapper">
+			<div class="divider-wrap" data-alignment="default"><div style="height: 30px;" class="divider"></div></div>
+<div class="wpb_text_column wpb_content_element " >
+	<div class="page" title="Page 3">
+<div class="section">
+<div class="layoutArea">
+<div class="column">
+<h4><strong><span style="color: #a3002e;">Retrouvez l&#8217;intégralité de nos replays sur</span> <a href="https://www.youtube.com/@hubfranceia">notre chaine Youtube</a></strong></h4>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-                    <!-- "All Events"-Button: nur wenn im Plugin eine Listenseite hinterlegt ist -->
-                    
-                </div>
-                <!-- ./col -->
-            </div>
-            <!-- ./row -->
-        </div>
-        <!-- ./container -->
-    </section>
 
+
+
+		</div> 
 	</div>
+	</div> 
 
-    
+			</div> 
+		</div>
+	</div> 
 
-
-                
-                    
-
-
-
-                
-                
-                    
-
-
-
-                
-            </div>
-
+	<div  class="vc_col-sm-6 vc_col-xs-12 wpb_column column_container vc_column_container col padding-3-percent inherit_tablet inherit_phone "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div id="fws_6b0143d6160d1" data-midnight="" data-column-margin="default" class="wpb_row vc_row-fluid vc_row inner_row  min_width_desktop_75vw min_width_tablet_100vw min_width_phone_100vw"  style=""><div class="row-bg-wrap"> <div class="row-bg" ></div> </div><div class="row_col_wrap_12_inner col span_12  left">
+	<div  class="vc_col-sm-12 wpb_column column_container vc_column_container col child_column no-extra-padding inherit_tablet inherit_phone "   data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+		<div class="wpb_wrapper">
+			<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            
+          </div>
+        </div>
         
-
-
-    
-</main>
-<!--TYPO3SEARCH_end-->
-
-
-<footer>
-    <div class="container footer-top">
-
-        <div class="row">
-            <div class="col-12 contrast-text">
-                <div class="h4_styled text-center text-white">FUNDED BY</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center sponsered-by">
-
-                <div class="sponsered-by-box">
-                    <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/BMFTR_de_v2__Web_Farbig.gif" alt="Logo BMFTR">
-                </div>
-
-                <div class="sponsered-by-box">
-                    <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/berlin.png" alt="Logo Bifold">
-                </div>
-
-            </div>
-            <!-- sponsered-by -->
-        </div>
+      </div>
     </div>
-    <!-- ./container -->
-
-    <div class="copy-right pt-5 pb-4 py-md-3">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-auto footer-brand">
-
-                    <a href="/" class="footer-brand-link">
-                        <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/BIFOLD_Logo_negativ_farbig.svg" alt="Logo">
-                    </a>
-
-
-                </div>
-                <div class="col-auto footer-nav">
-
-
-
-                    <a href='/imprint' class="footer-nav-item">
-                        Imprint
-                    </a>
-
-
-
-                    |
-
-
-
-
-                    <a href='/data-privacy' class="footer-nav-item">
-                        Data privacy
-                    </a>
-
-
-
-                    |
-
-
-
-
-
-                    <a href='/about-us/contact' class="footer-nav-item">
-                        Contact
-                    </a>
-
-
-
-                    |
-
-
-
-
-
-                    <a href='/login' class="footer-nav-item">
-                        Login
-                    </a>
-
-
-                </div>
-                <div class="col-auto footer-social">
-
-                    <a href='https://bsky.app/profile/bifold.berlin' rel="noreferrer" class="footer-social-link add-social-link-frame" target="_blank">
-                        <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/social-media/Bluesky_Logo-white.svg"
-                            alt="Social Media Icon">
-                    </a>
-
-                    <a href='https://twitter.com/bifoldberlin' rel="noreferrer" class="footer-social-link" target="_blank">
-                        <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/social-media/twitter-icon--white-2023.svg"
-                            alt="Social Media Icon">
-                    </a>
-
-                    <a href='https://www.linkedin.com/company/bifoldberlin' rel="noreferrer" class="footer-social-link" target="_blank">
-                        <img src="https://bifold.berlin/typo3conf/ext/psn_site_template_bifold/Resources/Public/images/social-media/LinkedIn-icon--white.svg"
-                            alt="Social Media Icon">
-                    </a>
-					
-
-                </div>
-            </div>
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_6b0143d6169a1"  data-column-margin="default" data-midnight="light" data-top-percent="4%"  class="wpb_row vc_row-fluid vc_row full-width-section has-row-bg-color"  style="padding-top: calc(100vw * 0.04); padding-bottom: 0px; --row-bg-color: #ffffff;"><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer" ><div class="row-bg viewport-desktop using-bg-color"  style="background-color: #ffffff; "></div></div></div><div class="row_col_wrap_12 col span_12 light left">
+	<div  class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="nectar-highlighted-text" data-style="text_outline" data-outline-thickness="regular" data-user-color="true" style="color: #ffffff;" data-using-custom-color="false" data-animation-delay="false" data-color="" data-color-gradient="" style=""><h2><span style="color: #00002e">Nos événements</span></h2>
+</div><div class="divider-wrap" data-alignment="default"><div style="height: 20px;" class="divider"></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_6b0143d616d17"  data-column-margin="default" data-midnight="dark" data-bottom-percent="4%"  class="wpb_row vc_row-fluid vc_row has-global-section has-row-bg-color"  style="padding-top: 0px; padding-bottom: calc(100vw * 0.04); --row-bg-color: #ffffff;"><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer" ><div class="row-bg viewport-desktop using-bg-color"  style="background-color: #ffffff; "></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div  class="vc_col-sm-12 wpb_column column_container vc_column_container col has-animation no-extra-padding inherit_tablet inherit_phone "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="fade-in-from-bottom" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				
+		<div id="fws_6b0143d617693"  data-column-margin="default" data-midnight="dark"  class="wpb_row vc_row-fluid vc_row"  style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer" ><div class="row-bg viewport-desktop"  style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div  class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <a href="https://www.eventbrite.co.uk/e/billets-future-intelligence-lia-au-service-de-lenvironnement-1987132459679" target="_blank" class="">
+              
+            </a>
+          </div>
         </div>
-    </div>
-    <!-- ./container-fluid -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="scroll-top-icon"></span></button> 
-</footer>
-  <script>
-   if(document.getElementById("kontakt-51-checkbox-1")){
-	document.getElementById("kontakt-51-checkbox-1").innerHTML = '<span>Ich habe die <a href="/datenschutz">Datenschutzbestimmungen</a> zur Kenntnis genommen. <span class="required">*##</span></span>';
-   }
-  </script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/jquery-3.6.3.min-10b7cbd584aff7aaf272c229bf5cd116.js?1791204584"></script>
-
-<script src="https://bifold.berlin/typo3temp/assets/compressed/jquery.min-b656a6f4b8f521d00414fdd456c805be.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/bootstrap.bundle.min-57c6ce45ee8db26418f470f41b37ebd1.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/jquery-ui-176e834b7d3c89dcdf65ddc440f79ac4.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/slick.min-a3227720217b38816114456b675e152f.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/custom-0989221538292e8ebbf668ebafcdbb76.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/lightbox.min-d06b264895438e2b0e995710510baaf8.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/jquery.easing.min-2d55271607438adcf3440f03ccd85478.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/jquery.marquee.min-1bd68a3f1c2a489ba21e3bf3f0f03b99.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/dataTables-431e2107e94dc3cdfd52cd4ebb1caba4.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/dataTablesInit-25744d9e8225b4d3de1b61902b788f00.js?1791204584"></script>
-<script src="https://bifold.berlin/typo3temp/assets/compressed/2f079c3cb5aab66484dd389d1affb985-4bba9e2cc613594e8b4b259df9ff4852.js?1791204584"></script>
+        
+      </div>
+      </div>
+<div class="wpb_text_column wpb_content_element " >
+	<p>10 décembre, Toulouse</p>
+<h4><a href="https://www.eventbrite.co.uk/e/billets-future-intelligence-lia-au-service-de-lenvironnement-1987132459679">Future Intelligence : L’IA AU SERVICE DE LA TRANSITION ÉCOLOGIQUE :</a><br />
+<a href="https://www.eventbrite.co.uk/e/billets-future-intelligence-lia-au-service-de-lenvironnement-1987132459679">Impacts positifs et paradoxe</a></h4>
+<p><span style="color: #ffffff;">.</span></p>
+</div>
 
 
 
-</body>
-</html>
+
+			</div> 
+		</div>
+	</div> 
+
+	<div  class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <a href="http://xl44m.mjt.lu/lnk/AAAAAAAAAAAAAch9ObYAAAAAAAAAAYCsJAsAnVXoAA6PwgBq13YqY2nEezf7SzCDWhVRPcYQRgAOZsw/3/Lqmig4v8gLpn_C1dKok-Yg/aHR0cHM6Ly9hZG9wdGFpLmFydGVmYWN0LmNvbS9jb250ZW50L3JlZ3VsYXItYWNjZXNzP2Rpc2NvdW50PUhGSUExNSZwdXJjaGFzZXN0ZXA9MCZzdGVwdHlwZT1wcm9kdWN0cw" target="_blank" class="">
+              
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+<div class="wpb_text_column wpb_content_element " >
+	<p>3 &amp; 4 décembre, Paris</p>
+<h4><a href="http://xl44m.mjt.lu/lnk/AAAAAAAAAAAAAch9ObYAAAAAAAAAAYCsJAsAnVXoAA6PwgBq13YqY2nEezf7SzCDWhVRPcYQRgAOZsw/3/Lqmig4v8gLpn_C1dKok-Yg/aHR0cHM6Ly9hZG9wdGFpLmFydGVmYWN0LmNvbS9jb250ZW50L3JlZ3VsYXItYWNjZXNzP2Rpc2NvdW50PUhGSUExNSZwdXJjaGFzZXN0ZXA9MCZzdGVwdHlwZT1wcm9kdWN0cw">ADOPT AI</a><br />
+<span style="color: #ffffff;">.</span></h4>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div  class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <a href="https://portal.joinfost.io/event/future-of-software-technologies-paris-2026/5e27c773-7fa8-4169-b6a7-93494701212a/shift-ai-paris" target="_blank" class="">
+              
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+<div class="wpb_text_column wpb_content_element " >
+	<p>2 décembre, Paris la Défense</p>
+<h4><a href="https://portal.joinfost.io/event/future-of-software-technologies-paris-2026/5e27c773-7fa8-4169-b6a7-93494701212a/shift-ai-paris">SHIFT AI &#8211; Journée conférence du Hub France IA</a></h4>
+<p><span style="color: #ffffff;">.</span></p>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div  class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <a href="https://luma.com/9jx65h4f" target="_blank" class="">
+              
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+<div class="wpb_text_column wpb_content_element " >
+	<p>24 novembre, Paris</p>
+<h4><a href="https://luma.com/9jx65h4f">RH Builder session : construisez en 3 heures un outil RH adapté à votre entreprise</a></h4>
+<p><span style="color: #ffffff;">.</span></p>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div  class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <a href="https://events.teams.microsoft.com/event/e46842a9-478a-4b88-bb63-5c733b1f8fc6@e559c784-c763-4655-8d99-0f865680faf8?source=copyLinkLegacyShareEventDialog" target="_blank" class="">
+              
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+<div class="wpb_text_column wpb_content_element " >
+	<p>24 novembre, en ligne</p>
+<h4 class="text-build-content"><a href="https://events.teams.microsoft.com/event/e46842a9-478a-4b88-bb63-5c733b1f8fc6@e559c784-c763-4655-8d99-0f865680faf8?source=copyLinkLegacyShareEventDialog">Webinaire : Les bons réflexes pour déployer l’IA en entreprise &#8211; IA Act, choix des outils, charte et formation : le plan d&#8217;action pour les PME</a><br />
+<span style="color: #ffffff;">.</span></h4>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div  class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <a href="https://luma.com/of51mz0k" target="_blank" class="">
+              
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+<div class="wpb_text_column wpb_content_element " >
+	<p>19 novembre, Paris</p>
+<h4><a href="https://luma.com/of51mz0k">L&#8217;apéro de l&#8217;IA #14 Paris</a></h4>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div  class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "  data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
+		<div class="vc_column-inner" >
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap center" data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="none" >
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <a href="https://events.teams.microsoft.com/event/d5404229-67c2-4a2d-bea8-6890a142e20c@e559c784-c763-4655-8d99-0f865680faf8?source=copyLinkLegacyShareLinkDialog" target="_blank" class="center">
+              <img decoding="async" class="img-with-animation skip-lazy nectar-lazy" data-delay="0" height="1707" width="2560" data-animation="none" data-nectar-img-src="https://www.hub-franceia.fr/wp-content/uploads/2025/12/headway-5QgIuuBxKwM-unsplash-scaled.jpg" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%202560%201707'%2F%3E" alt="" data-nectar-img-srcset="https://www.hub-franceia.fr/wp-content/uploads/2025/12/headway-5QgIuuBxKwM-unsplash-scaled.jpg</main></body></html>

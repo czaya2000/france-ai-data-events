@@ -1,4 +1,4 @@
-// Deterministic filters: Germany + window, cancelled, duration, keyword prefilter.
+// Deterministic filters: France + window, cancelled, duration, keyword prefilter.
 import { readFileSync } from 'node:fs';
 import { addDays, daysBetween } from './time.mjs';
 import { fold } from './city.mjs';
@@ -12,13 +12,14 @@ export function keywords() {
 	return (KW ??= loadKeywords());
 }
 
-const CANCEL_RE = /\b(cancel+ed|abgesagt|verschoben|postponed)\b/i;
+// "annulé(e)(s)", "reporté(e)(s)" (accented on purpose: "report" alone is an ordinary English word), English terms.
+const CANCEL_RE = /(?<![\p{L}\d])(cancel+ed|postponed|annul[ée]e?s?|report[é]e?s?)(?![\p{L}\d])/iu;
 
 /** Returns null when the candidate passes, otherwise the reason it was dropped. */
 export function dropReason(c, { today, windowDays, kw = keywords(), maxDays = 45 }) {
 	if (c.cancelled || CANCEL_RE.test(c.title)) return 'cancelled';
-	const isDE = c.country === 'DE';
-	if (!(isDE || (c.online && c.onlineOk))) return 'country';
+	const isFR = c.country === 'FR';
+	if (!(isFR || (c.online && c.onlineOk))) return 'country';
 	const limit = addDays(today, windowDays);
 	if (c.end < today || c.start > limit) return 'window';
 	if (c.trust !== 'curated' && daysBetween(c.start, c.end) > maxDays) return 'long';

@@ -1,27 +1,27 @@
 // Offline tests: the digest HTML must survive Buttondown's markdown pass and render as
-// the Swiss event cards. The Liquid conditions are evaluated locally for sample subscribers,
+// the event cards. The Liquid conditions are evaluated locally for sample subscribers,
 // then the resulting HTML is checked structurally. No network, no API key.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { selectEvents, renderDigest, placeMeta } from '../../scripts/lib/digest.mjs';
 
 const ev = (o) => ({
-	id: 'x', title: 'T', date: '2026-11-25', city: 'Berlin', venue: 'Mitte', format: 'Meetup', topics: [],
+	id: 'x', title: 'T', date: '2026-11-25', city: 'Paris', venue: 'Station F', format: 'Meetup', topics: [],
 	organiser: 'o', cost: 'Free', url: 'https://example.org', source: 's', firstSeen: '2026-11-21',
-	blurb: 'English only', blurb_en: 'English blurb', blurb_de: 'Deutscher Text', ...o,
+	blurb: 'English only', blurb_en: 'English blurb', blurb_fr: 'Texte français', ...o,
 });
 
 const MANY = Array.from({ length: 12 }, (_, i) =>
 	ev({
 		id: `m${i}`,
 		title: `Event number ${i}`,
-		city: ['Berlin', 'Hamburg', 'Munich', 'Frankfurt'][i % 4],
+		city: ['Paris', 'Lyon', 'Toulouse', 'Bordeaux'][i % 4],
 		format: ['Meetup', 'Conference', 'Webinar'][i % 3],
 		venue: i % 2 ? '' : 'House of AI',
 	}),
 ).concat([
-	ev({ id: 'dup1', title: 'Dup Berlin', city: 'Berlin', venue: 'Berlin', time: '09:00' }),
-	ev({ id: 'dup2', title: 'Dup Hamburg', city: 'Hamburg', venue: 'House of AI Hamburg', time: '10:00–12:00' }),
+	ev({ id: 'dup1', title: 'Dup Paris', city: 'Paris', venue: 'Paris', time: '09:00' }),
+	ev({ id: 'dup2', title: 'Dup Lyon', city: 'Lyon', venue: 'House of AI Lyon', time: '10:00–12:00' }),
 ]);
 const sel = selectEvents(MANY, { today: '2026-11-23' });
 
@@ -79,10 +79,10 @@ function checkWellFormed(html) {
 
 const rowsOf = (html) => html.match(/<tr><td valign="top" width="64".*<\/td><\/tr>/g) ?? [];
 
-for (const locale of ['de', 'en']) {
+for (const locale of ['fr', 'en']) {
 	for (const [label, tags] of [
 		['no tags', []],
-		['some tags', ['city-berlin', 'format-meetup']],
+		['some tags', ['city-paris', 'format-meetup']],
 		['only a format tag', ['format-webinar']],
 	]) {
 		test(`digest HTML (${locale}, subscriber with ${label}): well-formed, uniform cards, no duplicate city`, () => {
@@ -126,13 +126,13 @@ for (const locale of ['de', 'en']) {
 }
 
 test('placeMeta is only city and optional time', () => {
-	assert.deepEqual(placeMeta('Berlin', '09:00'), ['Berlin', '09:00']);
-	assert.deepEqual(placeMeta('Berlin', ''), ['Berlin']);
-	assert.deepEqual(placeMeta('Hamburg', undefined), ['Hamburg']);
-	assert.deepEqual(placeMeta('Munich', '10:00–12:00'), ['Munich', '10:00–12:00']);
+	assert.deepEqual(placeMeta('Paris', '09:00'), ['Paris', '09:00']);
+	assert.deepEqual(placeMeta('Paris', ''), ['Paris']);
+	assert.deepEqual(placeMeta('Lyon', undefined), ['Lyon']);
+	assert.deepEqual(placeMeta('Toulouse', '10:00–12:00'), ['Toulouse', '10:00–12:00']);
 });
 
-for (const locale of ['de', 'en']) {
+for (const locale of ['fr', 'en']) {
 	test(`digest links (${locale}): every <a> is #000000 or #6b6b70 with !important; titles and header not underlined`, () => {
 		const { body } = renderDigest(sel, locale);
 		const anchors = [...body.matchAll(/<a\b[^>]*>/g)].map((m) => m[0]);
@@ -151,16 +151,16 @@ for (const locale of ['de', 'en']) {
 
 	test(`digest meta lines (${locale}): only city and optional time, no venue or street`, () => {
 		const dirty = [
-			ev({ id: 'd1', title: 'D1', city: 'Berlin', venue: 'Ederstraße 10, Ederstraße 10', time: '09:00' }),
-			ev({ id: 'd2', title: 'D2', city: 'Munich', venue: 'Munich, Munich, Germany', time: '' }),
-			ev({ id: 'd3', title: 'D3', city: 'Hamburg', venue: 'House of AI Hamburg', time: '10:00–12:00' }),
+			ev({ id: 'd1', title: 'D1', city: 'Paris', venue: 'Rue de Rivoli 10, Rue de Rivoli 10', time: '09:00' }),
+			ev({ id: 'd2', title: 'D2', city: 'Toulouse', venue: 'Toulouse, Toulouse, France', time: '' }),
+			ev({ id: 'd3', title: 'D3', city: 'Lyon', venue: 'House of AI Lyon', time: '10:00–12:00' }),
 		];
 		const { body } = renderDigest(selectEvents(dirty, { today: '2026-11-23' }), locale);
-		assert.doesNotMatch(body, /Ederstraße|House of AI|Mitte|Alte Messe/);
+		assert.doesNotMatch(body, /Rivoli|House of AI|Station F|Rue de/);
 		const metas = [...body.matchAll(/font-size:14px;color:#3f3f45;margin-top:6px;">([^<]*)</g)].map((m) => m[1]);
 		assert.ok(metas.length >= 3);
-		const city = locale === 'de' ? '(Berlin|München|Hamburg)' : '(Berlin|Munich|Hamburg)';
+		const city = '(Paris|Toulouse|Lyon)';
 		for (const m of metas) assert.match(m, new RegExp(`^${city}(, \\d{2}:\\d{2}(–\\d{2}:\\d{2})?)?$`), m);
-		assert.ok(metas.some((m) => /^Berlin, 09:00$/.test(m)));
+		assert.ok(metas.some((m) => /^Paris, 09:00$/.test(m)));
 	});
 }

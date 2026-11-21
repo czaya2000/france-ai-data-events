@@ -2,11 +2,11 @@
   "results": [],
   "extracted": {
     "scrape_demo": [
-      { "title": "Data Platform Day Leipzig", "date": "2026-12-10", "city": "Leipzig", "organiser": "Demo Org", "url": "https://demo.example/events/data-platform-day", "cost": "EUR 90", "format": "Conference", "topics": ["Data platforms"], "blurb": "One-day conference on data platforms in Leipzig." },
-      { "title": "Data Platform Day Leipzig", "date": "2026-12-10", "city": "Leipzig", "organiser": "Demo Org", "url": "https://elsewhere.example/phish", "cost": "Free", "format": "Conference", "topics": ["Data platforms"], "blurb": "Link that is not on the page." },
-      { "title": "ML Summit Dresden", "date": "2027-08-01", "city": "Dresden", "organiser": "Demo Org", "url": "https://demo.example/events/ml-summit", "cost": "Free", "format": "Conference", "topics": ["ML"], "blurb": "Date is far outside the 120 day window." },
-      { "title": "Invented Congress Bonn", "date": "2026-12-12", "city": "Bonn", "organiser": "Demo Org", "url": "https://demo.example/events/invented", "cost": "Free", "format": "Conference", "topics": ["AI"], "blurb": "Title is not on the page." },
-      { "title": "Data Platform Day Leipzig", "date": "2026-12-10", "city": "Leipzig", "organiser": "Demo Org", "url": "https://demo.example/events/data-platform-day", "cost": "Free", "format": "Conference", "topics": ["Data platforms"], "blurb": "Has an extra field.", "price": 5 }
+      { "title": "Data Platform Day Toulouse", "date": "2026-12-10", "city": "Toulouse", "organiser": "Demo Org", "url": "https://demo.example/events/data-platform-day", "cost": "EUR 90", "format": "Conference", "topics": ["Data platforms"], "blurb_en": "One-day conference on data platforms in Toulouse.", "blurb_fr": "Conférence d’une journée sur les plateformes de données, à Toulouse." },
+      { "title": "Data Platform Day Toulouse", "date": "2026-12-10", "city": "Toulouse", "organiser": "Demo Org", "url": "https://elsewhere.example/phish", "cost": "Free", "format": "Conference", "topics": ["Data platforms"], "blurb": "Link that is not on the page." },
+      { "title": "ML Summit Nantes", "date": "2027-08-01", "city": "Nantes", "organiser": "Demo Org", "url": "https://demo.example/events/ml-summit", "cost": "Free", "format": "Conference", "topics": ["ML"], "blurb": "Date is far outside the 120 day window." },
+      { "title": "Invented Congress Rennes", "date": "2026-12-12", "city": "Rennes", "organiser": "Demo Org", "url": "https://demo.example/events/invented", "cost": "Free", "format": "Conference", "topics": ["AI"], "blurb": "Title is not on the page." },
+      { "title": "Data Platform Day Toulouse", "date": "2026-12-10", "city": "Toulouse", "organiser": "Demo Org", "url": "https://demo.example/events/data-platform-day", "cost": "Free", "format": "Conference", "topics": ["Data platforms"], "blurb": "Has an extra field.", "price": 5 }
     ]
   }
 }

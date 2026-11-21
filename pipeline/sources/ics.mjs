@@ -1,7 +1,7 @@
-// Generic ICS source (hessian.ai, bwcon, GFW, agentconfs, aieventlist city feeds, hackevents) and the Meetup variant.
+// Generic ICS source (Hi! PARIS, AFIA, numerique.gouv.fr, agentconfs, aieventlist, hackevents) and the Meetup variant.
 import { parseIcs } from '../lib/ical.mjs';
 import { getText } from '../lib/cache.mjs';
-import { canonicalCity, detectCity, ONLINE } from '../lib/city.mjs';
+import { canonicalCity, detectCity, isOnlineText, ONLINE } from '../lib/city.mjs';
 import { cleanOrganiser, makeCandidate } from '../lib/normalize.mjs';
 
 export async function fetchSource(src, ctx) {
@@ -25,12 +25,12 @@ export function normalise(parsed, src) {
 		let organiser = '';
 		let country = null;
 		const extraUrls = [];
-		let online = /^online\b|\bonline event\b|\bwebinar\b/i.test(loc) || /^online$/i.test(loc.trim());
+		let online = isOnlineText(loc) || /^online\b|\bonline event\b|\bwebinar\b/i.test(loc);
 
 		if (src.type === 'meetup') {
 			organiser = cleanOrganiser(parsed.calName) || src.id.replace(/^meetup:/, '');
 			if (!url) url = urlsIn(desc).find((u) => /meetup\.com\/[^/]+\/events\/\d+/.test(u)) ?? '';
-			online = /\b(virtual event|online event|online[- ]only|rein online|virtuell)\b/i.test(desc.slice(0, 700));
+			online = /\b(virtual event|online event|online[- ]only|[ée]v[ée]nement en ligne|en visio|100 ?% en ligne)\b/i.test(desc.slice(0, 700));
 		} else if (src.type === 'hackevents') {
 			const reg = /Register:\s*(\S+)/.exec(desc)?.[1];
 			const det = /Details:\s*(\S+)/.exec(desc)?.[1];
@@ -38,8 +38,8 @@ export function normalise(parsed, src) {
 			if (det) extraUrls.push(det);
 			organiser = (/Organizer:\s*([^\n\\]+?)\s*(?:\\n|\n|Going:|$)/.exec(desc)?.[1] ?? '').trim();
 		} else if (src.id.startsWith('agentconfs')) {
-			// "Berlin, Germany" / "Online"
-			if (/\bGermany\b/i.test(loc)) country = 'DE';
+			// "Paris, France" / "Online"
+			if (/\bFrance\b/i.test(loc)) country = 'FR';
 			else if (loc) country = 'XX';
 		}
 		const cleanDesc = desc.replace(/^[^\n]*\n/, src.type === 'meetup' ? '' : '$&').replace(/\s+/g, ' ');

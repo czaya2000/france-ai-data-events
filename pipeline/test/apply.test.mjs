@@ -18,7 +18,7 @@ const ids = (n) => 'c_' + String(n).padStart(10, '0');
 /** Full candidates as prepare writes them to work/candidates.full.json. */
 function fullCand(n, over = {}) {
 	const url = `https://example.com/e/${n}`;
-	const c = cand({ title: `Distinct Event Number ${['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven'][n - 1]} Topic ${n * 7}`, url, start: '2026-12-0' + n, end: '2026-12-0' + n, city: 'Berlin', trust: 'noisy', extraUrls: [], ...over });
+	const c = cand({ title: `Distinct Event Number ${['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven'][n - 1]} Topic ${n * 7}`, url, start: '2026-12-0' + n, end: '2026-12-0' + n, city: 'Paris', trust: 'noisy', extraUrls: [], ...over });
 	c.keys = ledgerKeys(c);
 	c.key = c.keys[0];
 	c.sources = ['t'];
@@ -26,8 +26,8 @@ function fullCand(n, over = {}) {
 	return c;
 }
 
-const PAGE_TEXT = 'Upcoming events\nData Platform Day Leipzig, 10 December 2026, Leipzig\nMore details on the organiser site.';
-const PAGE_LINKS = [{ text: 'Data Platform Day Leipzig', url: 'https://demo.example/events/data-platform-day' }];
+const PAGE_TEXT = 'Upcoming events\nData Platform Day Toulouse, 10 December 2026, Toulouse\nMore details on the organiser site.';
+const PAGE_LINKS = [{ text: 'Data Platform Day Toulouse', url: 'https://demo.example/events/data-platform-day' }];
 
 /** A throwaway repo root with work/, src/data, data/cache and config/sources.json. */
 function sandbox({ cands = [1, 2, 3, 4, 5, 6].map((n) => fullCand(n, n === 4 ? { city: null } : {})), events = [], files = {} } = {}) {
@@ -64,16 +64,18 @@ test('schema: shipped schema accepts a good item and names the problem in bad on
 test('helpers: URL detection, city check, cost check, page title match, registrable domain', () => {
 	for (const s of ['see https://a.example/x', 'visit www.foo.org', 'mail us at acme.com']) assert.ok(containsUrl(s), s);
 	for (const s of ['Talks on retrieval-augmented generation.', 'Node.js and dbt basics']) assert.ok(!containsUrl(s), s);
-	assert.equal(checkCity('München'), 'Munich');
-	assert.equal(checkCity('Frankfurt am Main'), 'Frankfurt');
-	assert.equal(checkCity('online'), 'Online (DE)');
-	assert.equal(checkCity('Paris'), null);
-	assert.equal(checkCity('Freising', true), 'Freising'); // the feed's own hint may be a place we have no name for
+	assert.equal(checkCity('LYON'), 'Lyon');
+	assert.equal(checkCity('Aix en Provence'), 'Aix-en-Provence');
+	assert.equal(checkCity('online'), 'Online (FR)');
+	assert.equal(checkCity('France'), 'Nationwide');
+	assert.equal(checkCity('Berlin'), null);
+	assert.equal(checkCity('Saint-Sever-du-Moustier', true), 'Saint-Sever-du-Moustier'); // the feed's own hint may be a place we have no name for
 	assert.equal(checkCost('EUR 49'), 'EUR 49');
 	assert.equal(checkCost('EUR 49,50'), 'EUR 49.50');
 	assert.equal(checkCost('CHF 20'), null);
-	assert.ok(titleOnPage('Data Platform Day Leipzig', 'data platform day leipzig 10 december'));
-	assert.ok(!titleOnPage('Invented Congress Bonn', 'data platform day leipzig'));
+	assert.equal(checkCost('Gratuit'), null); // only the canonical "Free" is accepted
+	assert.ok(titleOnPage('Data Platform Day Toulouse', 'data platform day toulouse 10 december'));
+	assert.ok(!titleOnPage('Invented Congress Rennes', 'data platform day toulouse'));
 	assert.equal(registrable('www.sub.example.co.uk'), 'example.co.uk');
 	assert.equal(registrable('www.demo.example'), 'demo.example');
 });
@@ -96,10 +98,10 @@ test('apply: good output is merged, rejected/deferred are ledgered, unanswered c
 	assert.equal(e.id.startsWith('distinct-event-number-one'), true);
 	assert.equal(e.url, 'https://example.com/e/1'); // from the feed, never the model
 	assert.equal(e.date, '2026-12-01');
-	assert.equal(e.city, 'Berlin');
+	assert.equal(e.city, 'Paris');
 	assert.equal(e.format, 'Meetup');
 	assert.equal(e.firstSeen, TODAY);
-	assert.deepEqual(Object.keys(e).sort(), ['blurb', 'blurb_en', 'city', 'cost', 'date', 'firstSeen', 'format', 'id', 'organiser', 'source', 'title', 'topics', 'url'].sort());
+	assert.deepEqual(Object.keys(e).sort(), ['blurb', 'blurb_en', 'blurb_fr', 'city', 'cost', 'date', 'firstSeen', 'format', 'id', 'organiser', 'source', 'title', 'topics', 'url'].sort());
 	assert.equal(summary.accepted, 1);
 	assert.equal(summary.rejected, 1);
 	assert.equal(summary.deferred, 2); // low confidence + no city
@@ -163,7 +165,7 @@ test('apply: injected URL field, URL in blurb, over-long blurb, unknown field, b
 test('apply: a candidate whose feed date has left the window is dropped and counted (out-of-window)', () => {
 	const stale = fullCand(1, { start: '2026-11-01', end: '2026-11-01' });
 	const far = fullCand(2, { start: '2027-06-01', end: '2027-06-01' });
-	const out = { results: [1, 2].map((n) => ({ id: ids(n), relevant: true, confidence: 0.9, format: 'Meetup', city: 'Berlin', topics: ['AI'], blurb: 'Fine.', cost: 'Free' })) };
+	const out = { results: [1, 2].map((n) => ({ id: ids(n), relevant: true, confidence: 0.9, format: 'Meetup', city: 'Paris', topics: ['AI'], blurb: 'Fine.', cost: 'Free' })) };
 	const root = sandbox({ cands: [stale, far], files: { 'work/enrichment.json': JSON.stringify(out) } });
 	const { summary } = run(root);
 	assert.equal(summary.counts['invalid:out-of-window'], 2);
@@ -172,7 +174,7 @@ test('apply: a candidate whose feed date has left the window is dropped and coun
 
 test('apply: a multi-day event already running today is in the window (regression: window uses end date, like prepare)', () => {
 	const running = fullCand(1, { start: '2026-11-16', end: '2026-11-20' });
-	const out = { results: [{ id: ids(1), relevant: true, confidence: 0.9, format: 'Conference', city: 'Berlin', topics: ['AI'], blurb: 'Fine.', cost: 'Free' }] };
+	const out = { results: [{ id: ids(1), relevant: true, confidence: 0.9, format: 'Conference', city: 'Paris', topics: ['AI'], blurb: 'Fine.', cost: 'Free' }] };
 	const root = sandbox({ cands: [running], files: { 'work/enrichment.json': JSON.stringify(out) } });
 	const { summary } = applyEnrichment({ root, today: '2026-11-20', write: false });
 	assert.equal(summary.counts['invalid:out-of-window'] ?? 0, 0);
@@ -180,7 +182,7 @@ test('apply: a multi-day event already running today is in the window (regressio
 });
 
 test('apply: a date supplied by the model is an unknown field and is rejected', () => {
-	const item = { id: ids(1), relevant: true, confidence: 0.9, format: 'Meetup', city: 'Berlin', topics: ['AI'], blurb: 'Fine.', cost: 'Free', date: '2031-01-01', time: '10:00' };
+	const item = { id: ids(1), relevant: true, confidence: 0.9, format: 'Meetup', city: 'Paris', topics: ['AI'], blurb: 'Fine.', cost: 'Free', date: '2031-01-01', time: '10:00' };
 	const root = sandbox({ files: { 'work/enrichment.json': JSON.stringify({ results: [item] }) } });
 	assert.equal(run(root).summary.counts['invalid:unknown-field'], 1);
 });
@@ -188,7 +190,7 @@ test('apply: a date supplied by the model is an unknown field and is rejected', 
 test('apply: curated candidates are accepted regardless of relevance; noisy low-confidence is not', () => {
 	const c1 = fullCand(1, { trust: 'curated' });
 	const c2 = fullCand(2, { trust: 'noisy' });
-	const base = { format: 'Conference', city: 'Berlin', topics: ['AI'], blurb: 'Fine.', cost: 'Free' };
+	const base = { format: 'Conference', city: 'Paris', topics: ['AI'], blurb: 'Fine.', cost: 'Free' };
 	const out = { results: [{ id: ids(1), relevant: false, confidence: 0.3, ...base }, { id: ids(2), relevant: true, confidence: 0.5, ...base }] };
 	const root = sandbox({ cands: [c1, c2], files: { 'work/enrichment.json': JSON.stringify(out) } });
 	const { summary } = run(root);
@@ -221,7 +223,7 @@ test('apply: scrape extractions are verified in code (not on page, out of window
 	assert.equal(summary.acceptedFromPages, 1);
 	const [e] = read(root, 'src/data/events.json');
 	assert.equal(e.url, 'https://demo.example/events/data-platform-day');
-	assert.equal(e.city, 'Leipzig');
+	assert.equal(e.city, 'Toulouse');
 	assert.equal(e.source, 'demo');
 	assert.equal(e.cost, 'EUR 90');
 });
@@ -239,14 +241,14 @@ test('apply: written events satisfy the site rules (blurb length, no URL, 1-4 to
 
 test('makeId: stable slug of title + city + year, unique on collision', () => {
 	const taken = new Set();
-	const ev = { title: 'KI-Forum Köln #3', city: 'Cologne', date: '2026-12-01' };
+	const ev = { title: 'Forum IA Villeneuve-d’Ascq #3', city: 'Lille', date: '2026-12-01' };
 	const a = makeId(ev, taken);
-	assert.equal(a, 'ki-forum-koln-3-cologne-2026');
+	assert.equal(a, 'forum-ia-villeneuve-d-ascq-3-lille-2026');
 	taken.add(a);
 	const b = makeId({ ...ev, date: '2026-12-08' }, taken);
-	assert.equal(b, 'ki-forum-koln-3-cologne-2026-2026-12-08');
+	assert.equal(b, 'forum-ia-villeneuve-d-ascq-3-lille-2026-2026-12-08');
 	taken.add(b);
-	assert.equal(makeId({ ...ev, date: '2026-12-08' }, taken), 'ki-forum-koln-3-cologne-2026-2026-12-08-2');
+	assert.equal(makeId({ ...ev, date: '2026-12-08' }, taken), 'forum-ia-villeneuve-d-ascq-3-lille-2026-2026-12-08-2');
 });
 
 // ---------- enrich-local ----------

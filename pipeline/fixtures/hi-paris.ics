@@ -1,0 +1,169 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hi! PARIS - ECPv6.18.4//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Hi! PARIS
+X-ORIGINAL-URL:https://hi-paris.fr
+X-WR-CALDESC:Events for Hi! PARIS
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:20250330T010000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:20251026T010000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:20260329T010000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:20261025T010000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:20270328T010000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:20271031T010000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:20280326T010000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:20281029T010000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Paris:20261123T113000
+DTEND;TZID=Europe/Paris:20261123T130000
+DTSTAMP:20261112T125544Z
+CREATED:20261112T125544Z
+LAST-MODIFIED:20261112T125544Z
+UID:10000045-1795433400-1795438800@hi-paris.fr
+SUMMARY:Seminar: Terrestrial Space Infrastructure and Great-Power Competition – Aaron Bateman (GWU)
+DESCRIPTION:Organized by the Business and Geopolitics Lab (HEC Paris) as part of the Weaponization of Economic Interdependence series with the support of Hi! PARIS\, this seminar features Aaron Bateman (Assistant Professor of History and International Affairs at George Washington University and author of Weapons in Space: Technology\, Politics\, and the Rise and Fall of the Strategic Defense Initiative\, MIT Press\, 2024).  \nThe session examines the global terrestrial infrastructure necessary for military and civilian space operations\, focusing on how physical infrastructure and technology create and shift state power\, the strategic role of overseas territories\, and their implications for contemporary U.S.–China competition.  \nTo meet Aaron Bateman during his visit\, please contact Isabel Anaya Perez (anaya-perez@hec.fr) ) or Olivier Chatain (chatain@hec.fr).
+URL:https://hi-paris.fr/event/seminar-terrestrial-space-infrastructure-and-great-power-competition-aaron-bateman-gwu/
+LOCATION:HEC Paris\, 1\, rue de la Libération\, Jouy en Josas\, 78351
+CATEGORIES:Research,Society
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Paris:20261124T173000
+DTEND;TZID=Europe/Paris:20261124T200000
+DTSTAMP:20261110T090458Z
+CREATED:20261110T090458Z
+LAST-MODIFIED:20261110T090458Z
+UID:10000043-1795541400-1795550400@hi-paris.fr
+SUMMARY:Hi! PARIS Meet Up on AI\, Disinformation & Democracy
+DESCRIPTION:Join us for the Hi! PARIS Meet Up on AI\, Disinformation & Democracy\, bringing together perspectives from research and the media to explore how AI is changing the production and spread of disinformation\, its potential to support fact-checking and investigative journalism\, and the broader challenges for trust and democratic debate. \nDate: November 24\, 2026 | 5:30–8:00 PM\nLocation: Collège des Bernardins\, Paris \nRegistration is free but subject to confirmation: https://evenium.events/meetupaidisinfodemocrac-registration-subject-to-approval
+URL:https://hi-paris.fr/event/hi-paris-meet-up-on-ai-disinformation-democracy/
+LOCATION:Collège des Bernardins\, 20 Rue de Poissy\, Paris\, 75005\, France
+CATEGORIES:Research,Society
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261201
+DTSTAMP:20260826T121551Z
+CREATED:20260826T121217Z
+LAST-MODIFIED:20260826T121551Z
+UID:10000033-1795737600-1796083199@hi-paris.fr
+SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge
+DESCRIPTION:About the Hi!ckathon: \nThe Hi!ckathon is a flagship AI and Data Science challenge organized by Hi! PARIS\, the interdisciplinary center for data science and artificial intelligence. \n\n\n\n\nOpen to students from Institut Polytechnique de Paris\, HEC Paris\, and partner universities\, the competition invites participants to work in teams on a real-world AI challenge with strong business and societal impact. \nThis edition will take place in several stages: \n\nFirst\, in a preparation phase\, intermediate-level courses will be given.\nA Career Fair will be held on November 3 at Télécom Paris. Come and discover internship and job opportunities in great AI & Data Science companies and start-ups!\nIn the final sprint\, you will have the opportunity to share a unique experience during this in-person weekend and to learn a lot thanks to mixed teams with fellow students with a large variety of backgrounds.\n\nInterested in joining the adventure? \nTo learn more about the challenge\, click here to visit our Hi!ckathon webpage. \nRegistration is mandatory and will open soon. In the meantime\, click here to pre-register and be among the first to receive further information. \nSpread the word and stay tuned! \n 
+URL:https://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-challenge/
+LOCATION:Institut Polytechnique de Paris (IP Paris)\, Route de Saclay\, Palaiseau\, 91120\, France
+CATEGORIES:Education
+ATTACH;FMTTYPE=image/jpeg:https://hi-paris.fr/wp-content/uploads/2026/08/Banner-events-website-46.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Paris:20261130T110000
+DTEND;TZID=Europe/Paris:20261130T120000
+DTSTAMP:20261013T102249Z
+CREATED:20261013T102249Z
+LAST-MODIFIED:20261013T102249Z
+UID:10000042-1796036400-1796040000@hi-paris.fr
+SUMMARY:AI Seminar Cycle: When Generators Condition on Themselves - Exposure Bias in Visual Autoregressive Models
+DESCRIPTION:Autoregressive models have emerged as a powerful alternative to diffusion for image and video generation\, making them a natural fit for streaming and interactive video world models. However\, because they generate content step by step and condition on their own previous outputs\, they remain vulnerable to exposure bias—where early errors propagate and shape the entire generation process. \nIn this talk\, Angela Yao (Associate Professor at the National University of Singapore) presents recent research from her group on mitigating exposure bias across the generation pipeline. The session covers key advances\, including tokenizer and generator regularization\, pixel-level quality alignment post-training\, training-free guidance to reinforce historical consistency\, and reinforcement learning strategies designed to maintain long-horizon stability in video world models.
+URL:https://hi-paris.fr/event/ai-seminar-cycle-when-generators-condition-on-themselves-exposure-bias-in-visual-autoregressive-models/
+CATEGORIES:Innovation,Research
+ORGANIZER;CN="Hi! PARIS":MAILTO:contact@hi-paris.fr
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Paris:20261203T140000
+DTEND;TZID=Europe/Paris:20261203T153000
+DTSTAMP:20261112T105257Z
+CREATED:20261112T105257Z
+LAST-MODIFIED:20261112T105257Z
+UID:10000044-1796306400-1796311800@hi-paris.fr
+SUMMARY:Hi! PARIS Reading groups “Fairness in AI” – Session 2
+DESCRIPTION:This session investigates the theoretical foundations of fair regression constrained by demographic parity within the unawareness framework—where explicit disparate treatment is disallowed. Expanding on existing models that permit such treatment\, the talk addresses how to characterize optimal fair regression functions when minimizing quadratic loss\, demonstrating how the solution maps to a barycenter problem with optimal transport costs. \nFurthermore\, the session examines the interplay between optimal fair cost-sensitive classification and fair regression. It shows that nestedness among classifier decision sets is both necessary and sufficient for equivalence between the two\, allowing optimal classifiers to be thresholded directly from the fair regression function (and vice versa). \nPaper: https://jmlr.org/beta/papers/v27/24-1338.html \nRegister here!
+URL:https://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-session-2/
+CATEGORIES:Research
+ORGANIZER;CN="Hi! PARIS":MAILTO:contact@hi-paris.fr
+LOCATION:https://us02web.zoom.us/meeting/register/7RpXASOnTGWkKAeo8CCtfA#/registration
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+DTSTAMP:20261026T134809Z
+CREATED:20261002T082344Z
+LAST-MODIFIED:20261026T134809Z
+UID:10000037-1796342400-1796428799@hi-paris.fr
+SUMMARY:CTRL+SOUND: AI for Sound and Creative Technologies Workshop
+DESCRIPTION:CTRL+SOUND brings together students\, researchers\, industry professionals\, and entrepreneurs to explore recent advances in AI for sound. \nThe program features hands-on workshops\, keynote talks\, and a scientific poster session covering neural audio models\, audio AI research\, and creative applications. Jointly supported by Hi! PARIS and SCAI\, the event aims to strengthen connections across the Île-de-France audio AI community and encourage new collaborations between research\, industry\, and the cultural sector. \nJoin us on December 4 at IRCAM and discover the latest research and applications in audio AI. \nRegister now: https://www.ircam.fr/en/events/ctrlsound
+URL:https://hi-paris.fr/event/ctrlsound-ai-for-sound-and-creative-technologies-workshop/
+LOCATION:Ircam\, 1 Place Igor Stravinsky\, Paris\, 75004
+CATEGORIES:Research
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+DTSTAMP:20260930T091918Z
+CREATED:20260930T091748Z
+LAST-MODIFIED:20260930T091918Z
+UID:10000036-1796688000-1796774399@hi-paris.fr
+SUMMARY:ELLIS UnConference 2026
+DESCRIPTION:The ELLIS UnConference 2026 will bring together the European machine learning community for a one-day event in Paris on December 8\, 2026\, at the Palais des Congrès de Paris\, just ahead of the NeurIPS satellite event. \nThe program will be built around 20 community-led sessions covering a broad range of machine learning topics\, alongside a poster session where participants can present papers accepted in 2026 at venues such as ICML\, ICLR\, AISTATS or JMLR. NeurIPS 2026 papers are not eligible for the poster session. \nRegister here: https://ellis-unconference.github.io/
+URL:https://hi-paris.fr/event/ellis-unconference-2026/
+LOCATION:Palais des Congrès de Paris\, 2 Place de la Porte Maillot\, Paris\, 75017\, France
+CATEGORIES:Research
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Paris:20270414T110000
+DTEND;TZID=Europe/Paris:20270414T120000
+DTSTAMP:20261006T092408Z
+CREATED:20261006T092408Z
+LAST-MODIFIED:20261006T092408Z
+UID:10000040-1807700400-1807704000@hi-paris.fr
+SUMMARY:AI Seminar Cycle: Nuria Oliver (ELLIS Alicante)
+DESCRIPTION:Join us for a session of the 2026–2027 Hi! PARIS × ELLIS AI Seminar Cycle\, featuring Nuria Oliver (ELLIS Alicante). \nNuria’s research areas include human-centered AI\, trustworthy AI\, and explainable AI. \nTalk title and abstract coming soon. \nRegister Now !
+URL:https://hi-paris.fr/event/ai-seminar-cycle-nuria-oliver-ellis-alicante/
+CATEGORIES:Research
+ORGANIZER;CN="Hi! PARIS":MAILTO:contact@hi-paris.fr
+END:VEVENT
+END:VCALENDAR

@@ -1,4 +1,4 @@
-// Meetup group calendars (ICS) plus the self-expanding discovery rule (A1 in SOURCES.de.md).
+// Meetup group calendars (ICS) plus the self-expanding discovery rule (A1 in SOURCES.fr.md).
 export { fetchSource, normalise } from './ics.mjs';
 
 const GROUP_URL = /meetup\.com\/([A-Za-z0-9_\-%.]+)\/events\/(\d+)/g;

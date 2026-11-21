@@ -1,0 +1,171 @@
+{
+ "entries": [
+  {
+   "api_id": "calev-yKX1Qq593vo0rYO",
+   "event": {
+    "api_id": "evt-UfrAd0W8B0JWeTN",
+    "name": "Meetup Agents IA — Choix d'architecture et retours de prod entre pairs",
+    "start_at": "2026-11-26T17:30:00.000Z",
+    "end_at": "2026-11-26T19:30:00.000Z",
+    "url": "meetup-agents-ia-choix-d-architecture-et-retours-d",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "3 Rue Rossini, Paris",
+     "full_address": "3 Rue Rossini, 75009 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "datacraft",
+    "api_id": "cal-5HpS5DjhfyP4hWY"
+   },
+   "hosts": [
+    {
+     "name": "datacraft datacraft"
+    }
+   ]
+  },
+  {
+   "api_id": "calev-fAGLKTFFb0qsUii",
+   "event": {
+    "api_id": "evt-5xkcSudsqXxg4tu",
+    "name": "REX - Du graphe au edge computing : concevoir une IA industrielle distribuée et réutilisable",
+    "start_at": "2026-12-03T17:00:00.000Z",
+    "end_at": "2026-12-03T19:00:00.000Z",
+    "url": "rex-du-graphe-au-edge-computing-concevoir-une-ia-i",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "3 Rue Rossini, Paris",
+     "full_address": "3 Rue Rossini, 75009 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "datacraft",
+    "api_id": "cal-5HpS5DjhfyP4hWY"
+   },
+   "hosts": [
+    {
+     "name": "datacraft datacraft"
+    }
+   ]
+  },
+  {
+   "api_id": "calev-3MLE1lfSQNXfV7b",
+   "event": {
+    "api_id": "evt-PYo93Di9lkUmhqq",
+    "name": "Meetup Labelia #4 : Amortizing Label Shift in Tabular Foundation Models",
+    "start_at": "2026-12-17T16:30:00.000Z",
+    "end_at": "2026-12-17T19:00:00.000Z",
+    "url": "datacraft-uy31",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {}
+   },
+   "calendar": {
+    "name": "datacraft",
+    "api_id": "cal-5HpS5DjhfyP4hWY"
+   },
+   "hosts": [
+    {
+     "name": "datacraft datacraft"
+    }
+   ]
+  },
+  {
+   "api_id": "calev-W3VP5PPuGJ6Hjz2",
+   "event": {
+    "api_id": "evt-CQFuNnXKeGnvogd",
+    "name": "Meetup Agents IA #2 — Ce qui marche (et ce qui coince) en production",
+    "start_at": "2027-01-14T17:00:00.000Z",
+    "end_at": "2027-01-14T19:00:00.000Z",
+    "url": "meetup-agents-ia-2-ce-qui-marche-et-ce-qui-coince",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {
+     "city": "Paris",
+     "country_code": "FR",
+     "short_address": "3 Rue Rossini, Paris",
+     "full_address": "3 Rue Rossini, 75009 Paris, France"
+    }
+   },
+   "calendar": {
+    "name": "datacraft",
+    "api_id": "cal-5HpS5DjhfyP4hWY"
+   },
+   "hosts": [
+    {
+     "name": "datacraft datacraft"
+    }
+   ]
+  },
+  {
+   "api_id": "calev-32iqzjEe7cf7uSu",
+   "event": {
+    "api_id": "evt-Zxjk3SS7LEnbyCd",
+    "name": "État de l’art : ontologies et graphes de connaissances",
+    "start_at": "2027-01-18T17:00:00.000Z",
+    "end_at": "2027-01-18T19:00:00.000Z",
+    "url": "datacraft-k1ko",
+    "location_type": "offline",
+    "timezone": "Europe/Paris",
+    "geo_address_info": {}
+   },
+   "calendar": {
+    "name": "datacraft",
+    "api_id": "cal-5HpS5DjhfyP4hWY"
+   },
+   "hosts": [
+    {
+     "name": "datacraft datacraft"
+    }
+   ]
+  },
+  {
+   "api_id": "calev-x1",
+   "event": {
+    "api_id": "evt-x1",
+    "name": "Neo4j Meetup Austin",
+    "start_at": "2026-12-02T01:00:00.000Z",
+    "end_at": "2026-12-02T03:00:00.000Z",
+    "url": "neoaustin",
+    "location_type": "offline",
+    "timezone": "America/Chicago",
+    "geo_address_info": {
+     "city": "Austin",
+     "country_code": "US",
+     "short_address": "1 Main St, Austin"
+    }
+   },
+   "calendar": {
+    "name": "Neo4j"
+   },
+   "hosts": []
+  },
+  {
+   "api_id": "calev-x2",
+   "event": {
+    "api_id": "evt-x2",
+    "name": "Data Quality Webinar",
+    "start_at": "2026-12-03T16:00:00.000Z",
+    "end_at": "2026-12-03T17:00:00.000Z",
+    "url": "dqweb",
+    "location_type": "online",
+    "timezone": "Europe/Paris"
+   },
+   "calendar": {
+    "name": "Neo4j"
+   },
+   "hosts": [
+    {
+     "name": "Neo4j France"
+    }
+   ]
+  }
+ ],
+ "has_more": false
+}

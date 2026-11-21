@@ -51,7 +51,7 @@ export function normalise(item, src) {
 			cost: costFromPrice(e),
 			desc: stripHtml(e.shortDescription || e.description || ''),
 			online,
-			country: cc ? String(cc).toUpperCase().slice(0, 2) : 'DE',
+			country: cc ? String(cc).toUpperCase().slice(0, 2) : 'FR',
 			categoryHint: FORMAT_HINT[e.eventType],
 		},
 		src,

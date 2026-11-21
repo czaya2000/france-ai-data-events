@@ -1,4 +1,4 @@
-// confs.tech conference-data JSON on GitHub, one file per year. Keep Germany only.
+// confs.tech conference-data JSON on GitHub, one file per year. Keep France only.
 import { getText } from '../lib/cache.mjs';
 import { canonicalCity, ONLINE } from '../lib/city.mjs';
 import { makeCandidate } from '../lib/normalize.mjs';
@@ -19,11 +19,11 @@ export async function fetchSource(src, ctx) {
 
 export function normalise(c, src) {
 	if (!c?.name || !c.startDate) return null;
-	const germany = c.country === 'Germany';
+	const france = c.country === 'France';
 	return makeCandidate(
 		{
 			title: c.name, start: c.startDate, end: c.endDate, city: c.online ? ONLINE : canonicalCity(c.city),
-			url: c.url, desc: [c.name, c.city].filter(Boolean).join(' '), online: !!c.online, country: germany ? 'DE' : null,
+			url: c.url, desc: [c.name, c.city].filter(Boolean).join(' '), online: !!c.online, country: france ? 'FR' : null,
 		},
 		src,
 	);

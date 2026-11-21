@@ -10,7 +10,7 @@ export const FORMATS = SCHEMA.definitions.format.enum;
 export const BLURB_MAX = SCHEMA.definitions.blurb.maxLength;
 export const MAX_EVENT_DAYS = 45;
 
-const URL_RE = /(?:https?:\/\/|www\.|\b[a-z0-9-]+\.(?:com|de|org|net|eu)\b)/i;
+const URL_RE = /(?:https?:\/\/|www\.|\b[a-z0-9-]+\.(?:com|fr|org|net|eu|io|ai)\b)/i;
 export const containsUrl = (s) => URL_RE.test(String(s ?? ''));
 
 // ---- tiny JSON-schema subset: type, enum, pattern, min/max(Length|Items|imum), required, properties, additionalProperties, items, $ref ----
@@ -64,25 +64,25 @@ export function validateNode(rawNode, value, path = '$') {
 	return errs;
 }
 
-/** Normalise text for the "German is just a copy of the English" check. */
+/** Normalise text for the "French is just a copy of the English" check. */
 const sameText = (a, b) => a.toLowerCase().replace(/\s+/g, ' ').trim() === b.toLowerCase().replace(/\s+/g, ' ').trim();
 
 /**
  * Blurbs of one schema-valid item (result or extracted event). A legacy `blurb` counts as blurb_en.
- * Returns { en, de, problem }: `problem` is a counter reason when blurb_fr equals the English text; `de` is null when absent.
+ * Returns { en, fr, problem }: `problem` is a counter reason when blurb_fr equals the English text; `fr` is null when absent.
  */
 export function resolveBlurbs(item) {
 	const en = (item.blurb_en ?? item.blurb)?.trim() || null;
-	const de = item.blurb_fr?.trim() || null;
-	if (en && de && sameText(en, de)) return { en, de: null, problem: 'blurb-identical' };
-	return { en, de, problem: null };
+	const fr = item.blurb_fr?.trim() || null;
+	if (en && fr && sameText(en, fr)) return { en, fr: null, problem: 'blurb-identical' };
+	return { en, fr, problem: null };
 }
 
 /** Collapse a list of validator errors into one counter reason. */
 function reasonOf(errs) {
 	const unknown = errs.find((e) => e.startsWith('unknown-field:'));
 	if (unknown) return 'unknown-field';
-	if (errs.some((e) => /\.blurb(_en|_de)?: too long/.test(e))) return 'blurb-too-long';
+	if (errs.some((e) => /\.blurb(_en|_fr)?: too long/.test(e))) return 'blurb-too-long';
 	return 'schema';
 }
 
@@ -107,14 +107,14 @@ export function parseEnrichment(text) {
 	return { results: doc.results, extracted, error: null };
 }
 
-/** City value for events.json. The model's answer is accepted only if it names a known German place (or Online/Nationwide);
+/** City value for events.json. The model's answer is accepted only if it names a known French place (or Online/Nationwide);
     `trusted` (the feed's own city hint) may also be a place we have no name for. Returns null when unusable. */
 export function checkCity(raw, trusted = false) {
 	if (raw == null) return null;
 	const s = String(raw).trim();
 	if (!s || s.length > 40) return null;
 	if (/^online/i.test(s)) return ONLINE;
-	if (/^(nationwide|germany|deutschland|bundesweit)$/i.test(s)) return NATIONWIDE;
+	if (/^(nationwide|france|frankreich|nationwide|national)$/i.test(s)) return NATIONWIDE;
 	const d = detectCity(s);
 	if (d) return d;
 	return trusted && !containsUrl(s) ? s : null;
@@ -154,7 +154,7 @@ export function verifyResults(results, candidates, ctx) {
 			if (item.relevant && !('city' in item)) missing.push('city');
 			if (missing.length) { counts.add('invalid:incomplete'); continue; }
 		}
-		const bl = needsDetail ? resolveBlurbs(item) : { en: null, de: null, problem: null };
+		const bl = needsDetail ? resolveBlurbs(item) : { en: null, fr: null, problem: null };
 		if (bl.problem) { counts.add('invalid:' + bl.problem); continue; }
 		answered.add(item.id);
 		if ((cand.end ?? cand.start) < ctx.today || cand.start > horizon) { counts.add('invalid:out-of-window'); out.unanswered.push(cand); continue; }
@@ -164,7 +164,7 @@ export function verifyResults(results, candidates, ctx) {
 		const city = checkCity(item.city) ?? checkCity(cand.city, true) ?? (cand.online ? ONLINE : null);
 		if (!city) { out.deferred.push({ cand, reason: 'no-city' }); counts.add('deferred:no-city'); continue; }
 		const feedCost = checkCost(cand.cost);
-		out.accepted.push({ cand, city, format: item.format, topics: item.topics.map((t) => t.trim()), blurb: bl.en, blurb_en: bl.en, blurb_fr: bl.de, cost: feedCost ?? item.cost });
+		out.accepted.push({ cand, city, format: item.format, topics: item.topics.map((t) => t.trim()), blurb: bl.en, blurb_en: bl.en, blurb_fr: bl.fr, cost: feedCost ?? item.cost });
 	}
 	for (const cand of candidates.values()) {
 		if (!answered.has(cand.id) && !out.unanswered.includes(cand)) out.unanswered.push(cand);
@@ -220,8 +220,8 @@ export function verifyExtracted(items, page, ctx, counts = new Counter()) {
 		if (!titleOnPage(item.title, pageNorm)) { counts.add('extract:invalid:title-not-on-page'); continue; }
 		const city = checkCity(item.city) ?? checkCity(page.cityHint, true);
 		if (!city) { counts.add('extract:invalid:no-city'); continue; }
-		const { blurb: _legacy, blurb_en: _en, blurb_fr: _de, ...rest } = item;
-		accepted.push({ ...rest, blurb: bl.en, blurb_en: bl.en, blurb_fr: bl.de, city, cost: checkCost(item.cost) ?? 'Not listed', end });
+		const { blurb: _legacy, blurb_en: _en, blurb_fr: _fr, ...rest } = item;
+		accepted.push({ ...rest, blurb: bl.en, blurb_en: bl.en, blurb_fr: bl.fr, city, cost: checkCost(item.cost) ?? 'Not listed', end });
 	}
 	return { accepted, counts };
 }

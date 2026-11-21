@@ -1,0 +1,115 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//aieventlist.ai//AI Event List//DE
+X-WR-CALNAME:AI Events Paris
+BEGIN:VEVENT
+UID:build-it-summit-paris-2026@aieventlist.ai
+DTSTAMP:20261117T000000Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261204
+SUMMARY:Build It Summit 2026
+DESCRIPTION:Erste Ausgabe des Build It Summit vom 1. bis 3. Dezember 2026 im CNIT Forest in Paris-La Défense\, veranstaltet vom Team der früheren NoCode Summits und co-located mit FOST Paris. Themen sind AI Agents\, Gen AI\, Voice AI\, Low-Code/No-Code\, Automatisierung und Vibe Coding\; an allen drei Tagen läuft ein „Builders Village" mit 50 Ausstellerständen. — https://aieventlist.ai/events/build-it-summit-paris-2026/
+LOCATION:CNIT Forest\, La Défense
+URL:https://aieventlist.ai/events/build-it-summit-paris-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:generationai-conference-paris-2026@aieventlist.ai
+DTSTAMP:20261117T000000Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261204
+SUMMARY:GenerationAI Conference Paris 2026
+DESCRIPTION:Vom 1. bis 3. Dezember 2026 richtet das apidays-Team die GenerationAI Conference in Paris aus. Im Mittelpunkt stehen generative KI\, Agent Experience und APIs\; laut Veranstalter kommen über 4.000 Entwickler:innen\, Product Leads und Gründer:innen sowie mehr als 150 Expert:innen zusammen. — https://aieventlist.ai/events/generationai-conference-paris-2026/
+LOCATION:CNIT Forest\, La Défense
+URL:https://aieventlist.ai/events/generationai-conference-paris-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:cloud-native-ai-summit-europe-paris-2026@aieventlist.ai
+DTSTAMP:20261117T000000Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261204
+SUMMARY:Cloud Native AI Summit Europe 2026
+DESCRIPTION:Erste europäische Ausgabe des Cloud Native AI Summit am 2. und 3. Dezember 2026 im CNIT Forest in Paris-La Défense\, mit Vorträgen zu AI on Kubernetes\, agentischen Workloads\, Observability\, Security und Platform Engineering. — https://aieventlist.ai/events/cloud-native-ai-summit-europe-paris-2026/
+LOCATION:CNIT Forest\, La Défense
+URL:https://aieventlist.ai/events/cloud-native-ai-summit-europe-paris-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:adopt-ai-paris-2026@aieventlist.ai
+DTSTAMP:20261117T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261205
+SUMMARY:Adopt AI 2026 — Grand Palais Paris
+DESCRIPTION:Adopt AI ist die offizielle Business-Fortsetzung des AI Action Summit: am 3. und 4. Dezember 2026 im Grand Palais in Paris kommen internationale Führungskräfte zusammen\, die die KI-Adoption in Wirtschaft und Gesellschaft vorantreiben. — https://aieventlist.ai/events/adopt-ai-paris-2026/
+LOCATION:Grand Palais
+URL:https://aieventlist.ai/events/adopt-ai-paris-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:eurips-paris-2026@aieventlist.ai
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261214
+SUMMARY:EurIPS 2026 — NeurIPS in Paris
+DESCRIPTION:NeurIPS verteilt sich 2026 auf mehrere Standorte — die europäische Ausgabe läuft vom 9. bis 13. Dezember 2026 als offizielles Satellitenevent EurIPS im Palais des Congrès de Paris\, während die Hauptkonferenz in Sydney stattfindet. Gezeigt werden dieselben angenommenen NeurIPS-Papers\, Tutorials (9.–11. Dezember) und 28 Workshops (12.–13. Dezember). — https://aieventlist.ai/events/eurips-paris-2026/
+LOCATION:Palais des Congrès de Paris
+URL:https://aieventlist.ai/events/eurips-paris-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:paris-ai-agent-summit-2027@aieventlist.ai
+DTSTAMP:20261119T000000Z
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270311
+SUMMARY:Paris AI Agent Summit 2027
+DESCRIPTION:Am 9. und 10. März 2027 findet in Paris der Paris AI Agent Summit statt — ein B2B-Event rund um das agentische Unternehmen mit strategischen Vorträgen\, Praxis-Cases\, Workshops und Networking. Laut Veranstalter werden über 1.200 Teilnehmende und mehr als 80 Speaker erwartet. — https://aieventlist.ai/events/paris-ai-agent-summit-2027/
+LOCATION:Espace Saint Martin\, 199 Rue Saint-Martin\, 75003 Paris
+URL:https://aieventlist.ai/events/paris-ai-agent-summit-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-higher-education-summit-paris-2027@aieventlist.ai
+DTSTAMP:20261119T000000Z
+DTSTART;VALUE=DATE:20270316
+DTEND;VALUE=DATE:20270318
+SUMMARY:AI in Higher Education Summit 2027
+DESCRIPTION:Zweitägiger englischsprachiger Gipfel am 16. und 17. März 2027 am ESCP Campus Champerret in Paris zu der Frage\, wie sich Hochschulen in einer von KI geprägten Welt weiterentwickeln. — https://aieventlist.ai/events/ai-higher-education-summit-paris-2027/
+LOCATION:ESCP Campus Champerret\, 8 Av. de la Porte de Champerret
+URL:https://aieventlist.ai/events/ai-higher-education-summit-paris-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:vivatech-paris-2027@aieventlist.ai
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270616
+DTEND;VALUE=DATE:20270620
+SUMMARY:VivaTech 2027
+DESCRIPTION:Die Technologiemesse VivaTech findet laut Veranstalter vom 16. bis 19. Juni 2027 auf der Paris Expo Porte de Versailles statt. KI ist ein Schwerpunkt des Programms\; Programm\, Speaker und Ticketpreise für 2027 sind noch nicht veröffentlicht. — https://aieventlist.ai/events/vivatech-paris-2027/
+LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versailles\, 75015 Paris
+URL:https://aieventlist.ai/events/vivatech-paris-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:raise-summit-paris-2027@aieventlist.ai
+DTSTAMP:20261121T000000Z
+DTSTART;VALUE=DATE:20270706
+DTEND;VALUE=DATE:20270709
+SUMMARY:RAISE Summit 2027
+DESCRIPTION:Dreitägiger internationaler KI-Gipfel vom 6. bis 8. Juli 2027 im Palais des Congrès und im Château de Versailles in Paris\, der Führungskräfte\, Investorinnen\, Entwickler und politische Entscheidungsträger zusammenbringt. — https://aieventlist.ai/events/raise-summit-paris-2027/
+LOCATION:Palais des Congrès & Château de Versailles
+URL:https://aieventlist.ai/events/raise-summit-paris-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:big-data-ai-paris-2027@aieventlist.ai
+DTSTAMP:20261110T000000Z
+DTSTART;VALUE=DATE:20270929
+DTEND;VALUE=DATE:20271001
+SUMMARY:Big Data & AI Paris 2027
+DESCRIPTION:Nächste Ausgabe der französischen Leitmesse für Daten und KI am 29. und 30. September 2027 in der Paris Expo Porte de Versailles (Pavillon 4): Aussteller\, Vorträge und Networking für Entscheider:innen\, Technologieanbieter und Startups aus dem Daten- und KI-Umfeld. — https://aieventlist.ai/events/big-data-ai-paris-2027/
+LOCATION:Paris Expo Porte de Versailles\, Pavillon 4
+URL:https://aieventlist.ai/events/big-data-ai-paris-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:dotai-paris-2027@aieventlist.ai
+DTSTAMP:20261110T000000Z
+DTSTART;VALUE=DATE:20271021
+DTEND;VALUE=DATE:20271022
+SUMMARY:dotAI 2027
+DESCRIPTION:dotAI kehrt am 21. Oktober 2027 ins Pariser Theater Folies Bergère zurück: ein Tag\, eine Bühne\, kuratierte 20-Minuten-Vorträge von Engineers und Forschenden statt Sponsoren-Slots. Die Veranstalterreihe dotConferences hat die Ausgabe 2027 angekündigt\, die Registrierung ist eröffnet. — https://aieventlist.ai/events/dotai-paris-2027/
+LOCATION:Folies Bergère
+URL:https://aieventlist.ai/events/dotai-paris-2027/
+END:VEVENT
+END:VCALENDAR

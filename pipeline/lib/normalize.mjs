@@ -1,4 +1,4 @@
-// Candidate shape, URL canonicalisation, ledger keys, text cleanup, German/English date parsing.
+// Candidate shape, URL canonicalisation, ledger keys, text cleanup, French/English date parsing.
 import { fold, resolveCity } from './city.mjs';
 import { MONTHS } from './time.mjs';
 import { AGGREGATOR_DOMAINS, NOT_LISTED } from '../../config/country.mjs';
@@ -27,7 +27,7 @@ export function canonicalUrl(raw) {
 	try { u = new URL(String(raw).trim()); } catch { return null; }
 	const host = u.hostname.replace(/^www\./, '').toLowerCase();
 	let m;
-	if (host === 'meetup.com' && (m = /^\/([^/]+)\/events\/(\d+)/.exec(u.pathname))) return `meetup.com/${m[1].toLowerCase()}/events/${m[2]}`;
+	if (host === 'meetup.com' && (m = /^\/(?:[a-z]{2}-[A-Z]{2}\/)?([^/]+)\/events\/(\d+)/.exec(u.pathname))) return `meetup.com/${m[1].toLowerCase()}/events/${m[2]}`;
 	if ((host === 'luma.com' || host === 'lu.ma') && (m = /^\/([^/]+)\/?$/.exec(u.pathname))) return `luma.com/${m[1]}`;
 	if (/(^|\.)eventbrite\./.test(host) && (m = /(\d{8,})\/?$/.exec(u.pathname))) return `eventbrite/${m[1]}`;
 	const keep = [...u.searchParams].filter(([k]) => !TRACKING.test(k));
@@ -36,16 +36,18 @@ export function canonicalUrl(raw) {
 }
 
 const STOP = new Set([
-	'the', 'and', 'of', 'in', 'at', 'der', 'die', 'das', 'und', 'für', 'fur', 'mit', 'von', 'zu', 'im', 'an', 'a', 'for', 'to', 'with',
-	'berlin', 'munich', 'muenchen', 'munchen', 'hamburg', 'frankfurt', 'cologne', 'koln', 'stuttgart', 'germany', 'deutschland',
-	'event', 'events', 'meetup', 'online',
+	'the', 'and', 'of', 'in', 'at', 'a', 'for', 'to', 'with', 'by', 'on',
+	'le', 'la', 'les', 'l', 'd', 'de', 'du', 'des', 'et', 'pour', 'sur', 'au', 'aux', 'en', 'un', 'une', 'dans', 'par', 'avec', 'ou', 'chez', 'qui', 'que',
+	'paris', 'lyon', 'toulouse', 'marseille', 'aix', 'nice', 'sophia', 'antipolis', 'bordeaux', 'lille', 'nantes', 'rennes', 'grenoble',
+	'strasbourg', 'montpellier', 'france', 'francais', 'francaise', 'idf',
+	'event', 'events', 'evenement', 'meetup', 'online', 'ligne', 'soiree', 'afterwork', 'rencontre', 'rencontres', 'edition', 'special', 'conference', 'conferences', 'conf',
 ]);
 
 /** Port of norm_title from reference/dedupe-and-keywords.py. */
 export function normTitle(t) {
 	let s = fold(t);
 	s = s.replace(/20\d\d|#\d+|\bno\.?\s*\d+/g, '').replace(/[^a-z0-9 ]/g, ' ');
-	return s.split(/\s+/).filter((w) => w && !STOP.has(w)).join(' ');
+	return s.split(/\s+/).filter((w) => w.length > 1 && !STOP.has(w)).join(' ');
 }
 
 export function ledgerKeys(c) {
@@ -63,7 +65,8 @@ export function ledgerKeys(c) {
 
 // ---- organiser cleanup ----
 const PLATFORMS = new Set([
-	'meetup', 'meetup.com', 'eventbrite', 'eventbrite.de', 'eventbrite.com', 'luma', 'lu.ma', 'luma.com', 'brainberg', 'brainberg.com',
+	'meetup', 'meetup.com', 'eventbrite', 'eventbrite.fr', 'eventbrite.com', 'luma', 'lu.ma', 'luma.com', 'brainberg', 'brainberg.com', 'brainberg.eu',
+	'briefia', 'brief ia', 'briefia.fr', 'allai', 'allai.events', 'openagenda', 'helloasso', 'weezevent', 'billetweb',
 	'hackevents', 'hackevents.org', 'devevents', 'dev.events', 'confs.tech', 'confstech', 'aieventlist', 'facebook', 'linkedin',
 	'unknown', 'n/a', 'na', 'none', 'tbd', 'tba', 'null', 'undefined', '-', '--',
 ]);
@@ -88,9 +91,9 @@ export function cleanOrganiser(raw) {
 	return s;
 }
 
-const MULTI_TLD = new Set(['co.uk', 'org.uk', 'ac.uk', 'com.au', 'co.jp', 'com.br', 'co.nz', 'co.za']);
+const MULTI_TLD = new Set(['co.uk', 'org.uk', 'ac.uk', 'com.au', 'co.jp', 'com.br', 'co.nz', 'co.za', 'asso.fr', 'gouv.fr', 'com.fr']);
 
-/** Registrable domain of a URL ("https://www.ai-engineering-summit.de/x" -> "ai-engineering-summit.de"), or ''. */
+/** Registrable domain of a URL ("https://www.hub-franceia.fr/x" -> "hub-franceia.fr"), or ''. */
 export function registrableDomain(url) {
 	let host;
 	try { host = new URL(String(url ?? '').trim()).hostname.toLowerCase().replace(/\.$/, ''); } catch { return ''; }
@@ -144,44 +147,43 @@ export function makeCandidate(f, src) {
 	return c;
 }
 
-// ---- date text parsing (German and English) ----
-const DE_MONTHS = {
-	januar: 1, februar: 2, maerz: 3, marz: 3, april: 4, mai: 5, juni: 6, juli: 7, august: 8,
-	september: 9, oktober: 10, november: 11, dezember: 12,
+// ---- date text parsing (French and English) ----
+const FR_MONTHS = {
+	janvier: 1, fevrier: 2, mars: 3, avril: 4, mai: 5, juin: 6, juillet: 7, aout: 8,
+	septembre: 9, octobre: 10, novembre: 11, decembre: 12,
+	janv: 1, fevr: 2, avr: 4, juil: 7, sept: 9, oct: 10, nov: 11, dec: 12,
 };
-const MON_ALL = { ...MONTHS, ...DE_MONTHS };
+// German month names: the aieventlist.ai feed (a French-relevant source) writes its dates in German ("1.–3. Dezember 2026").
+const DE_MONTHS = { januar: 1, februar: 2, maerz: 3, marz: 3, mai: 5, juni: 6, juli: 7, oktober: 10, dezember: 12, mrz: 3, okt: 10, dez: 12 };
+const MON_ALL = { ...MONTHS, ...FR_MONTHS, ...DE_MONTHS };
 for (const [k, v] of Object.entries(MONTHS)) MON_ALL[k.slice(0, 3)] = v;
 const monthNum = (s) => MON_ALL[fold(s).replace(/\./g, '')];
 const iso = (y, m, d) => `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
-const MON_RE = '(?:[A-Za-zÄÖÜäöüß]{3,9})\\.?';
+const MON_RE = '(?:[A-Za-zÀ-ÿ]{3,9})\\.?';
+const SEP = '(?:au|à|a|[–—-])';
 
 /**
  * Find the first date or date range in free text.
- * Handles "16.–20. November 2026", "5.-7. Oktober 2027", "10. November 2026", "December 10, 2026",
- * "Dec 10-11, 2026", "10 Dec 2026", "2026-11-20", "20.11.2026".
- * Returns { start, end } or null.
+ * French: "12 décembre 2026", "1er décembre 2026", "du 3 au 5 décembre 2026", "3-5 décembre 2026",
+ * "28 novembre au 2 décembre 2026", "12/12/2026", "12.12.2026". English: "December 10, 2026", "Dec 10-11, 2026",
+ * "10 Dec 2026". ISO: "2026-11-20". Returns { start, end } or null.
  */
 export function parseDateText(text) {
 	const t = String(text ?? '');
 	let m;
-	if ((m = /(\d{1,2})\.\s*(?:(\d{1,2})\.\s*)?[–—-]\s*(\d{1,2})\.\s*(?:(\d{1,2})\.\s*)?(\d{4})/.exec(t)) && m[2] && m[4]) {
-		return { start: iso(m[5], m[2], m[1]), end: iso(m[5], m[4], m[3]) };
-	}
-	// German: 16.–20. November 2026 | 10. November 2026 | 28. Nov. – 2. Dez. 2026
-	m = new RegExp(`(\\d{1,2})\\.\\s*(${MON_RE})?\\s*[–—-]\\s*(\\d{1,2})\\.\\s*(${MON_RE})\\s*(\\d{4})`).exec(t);
-	if (m) {
-		const m2 = monthNum(m[4]), m1 = m[2] ? monthNum(m[2]) : m2;
-		if (m1 && m2) return { start: iso(m[5], m1, m[1]), end: iso(m[5], m2, m[3]) };
-	}
+	m = new RegExp(`(\\d{1,2})(?:er)?\\s+(${MON_RE})\\s*${SEP}\\s*(\\d{1,2})(?:er)?\\s+(${MON_RE})\\s+(\\d{4})`, 'i').exec(t);
+	if (m && monthNum(m[2]) && monthNum(m[4])) return { start: iso(m[5], monthNum(m[2]), m[1]), end: iso(m[5], monthNum(m[4]), m[3]) };
+	m = new RegExp(`(\\d{1,2})(?:er)?(?:\\s*${SEP}\\s*(\\d{1,2})(?:er)?)?\\s+(${MON_RE})\\s+(\\d{4})`, 'i').exec(t);
+	if (m && monthNum(m[3])) return { start: iso(m[4], monthNum(m[3]), m[1]), end: iso(m[4], monthNum(m[3]), m[2] ?? m[1]) };
+	// German: 1.–3. Dezember 2026 | 28. Nov. – 2. Dez. 2026 | 10. November 2026
+	m = new RegExp(`(\\d{1,2})\\.\\s*(?:(${MON_RE})\\s*)?[–—-]\\s*(\\d{1,2})\\.\\s*(${MON_RE})\\s*(\\d{4})`).exec(t);
+	if (m && monthNum(m[4]) && (!m[2] || monthNum(m[2]))) return { start: iso(m[5], m[2] ? monthNum(m[2]) : monthNum(m[4]), m[1]), end: iso(m[5], monthNum(m[4]), m[3]) };
 	m = new RegExp(`(\\d{1,2})\\.\\s*(${MON_RE})\\s*(\\d{4})`).exec(t);
 	if (m && monthNum(m[2])) return { start: iso(m[3], monthNum(m[2]), m[1]), end: iso(m[3], monthNum(m[2]), m[1]) };
-	if ((m = /(\d{1,2})\.(\d{1,2})\.(\d{4})/.exec(t))) return { start: iso(m[3], m[2], m[1]), end: iso(m[3], m[2], m[1]) };
+	if ((m = /\b(\d{1,2})[./](\d{1,2})[./](\d{4})\b/.exec(t))) return { start: iso(m[3], m[2], m[1]), end: iso(m[3], m[2], m[1]) };
 	if ((m = /\b(\d{4})-(\d{2})-(\d{2})\b/.exec(t))) return { start: m[0], end: m[0] };
-	// English: December 10, 2026 | Dec 10-11, 2026 | 10 December 2026 | 10-12 December 2026
 	m = new RegExp(`(${MON_RE})\\s+(\\d{1,2})(?:st|nd|rd|th)?(?:\\s*[–—-]\\s*(\\d{1,2}))?,?\\s+(\\d{4})`).exec(t);
 	if (m && monthNum(m[1])) return { start: iso(m[4], monthNum(m[1]), m[2]), end: iso(m[4], monthNum(m[1]), m[3] ?? m[2]) };
-	m = new RegExp(`(\\d{1,2})(?:\\s*[–—-]\\s*(\\d{1,2}))?\\s+(${MON_RE})\\s+(\\d{4})`).exec(t);
-	if (m && monthNum(m[3])) return { start: iso(m[4], monthNum(m[3]), m[1]), end: iso(m[4], monthNum(m[3]), m[2] ?? m[1]) };
 	return null;
 }
 

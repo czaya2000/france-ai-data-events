@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//numerique.gouv.fr – Agenda//Sites faciles//FR
+BEGIN:VEVENT
+SUMMARY:Hackathon « Désinformation et souveraineté démocratique » - A
+ dopt AI 2026
+DTSTART:20261202T080000Z
+DTEND:20261204T170000Z
+DTSTAMP:20261121T074710Z
+UID:1498
+LOCATION:Grand Palais\, Paris 8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tour de France TNT : Étape Provence-Alpes-Côte d'Azur - 8 décem
+ bre 2026 à Aix-en-Provence
+DTSTART:20261208T074500Z
+DTEND:20261208T163000Z
+DTSTAMP:20261121T074710Z
+UID:1370
+LOCATION:Cité du livre - 8/10 rue des Allumettes 13100 Aix-en-Provence
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:D2NS 2027 : découvrir les technologies au service de la défense 
+ et de l'État
+DTSTART:20270413T060000Z
+DTEND:20270415T170000Z
+DTSTAMP:20261121T074710Z
+UID:1495
+LOCATION:Parc des Expositions\, Cr Jules Ladoumegue\, 33300 Bordeaux
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Numerique.gouv à VivaTech 2027
+DTSTART:20270616T020000Z
+DTEND:20270619T170000Z
+DTSTAMP:20261121T074710Z
+UID:1496
+LOCATION:Paris Expo Porte de Versailles\, 1 Place de la Porte de Versaille
+ s\, Paris 15e
+END:VEVENT
+END:VCALENDAR

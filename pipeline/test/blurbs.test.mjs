@@ -9,74 +9,74 @@ import { selectInputs, toBatches, validateOutput, mergeBlurbs, outputComplete, w
 
 const ID = 'c_0000000001';
 const ctx = { today: '2026-11-20', windowDays: 120 };
-const candidates = () => new Map([[ID, { id: ID, title: 'T', start: '2026-12-01', end: '2026-12-01', url: 'https://example.com/e/1', city: 'Berlin', trust: 'noisy' }]]);
-const EN = 'Evening meetup in Berlin about data platforms and MLOps.';
-const DE = 'Abendliches Treffen in Berlin zu Datenplattformen und MLOps.';
-const item = (over = {}) => ({ id: ID, relevant: true, confidence: 0.9, format: 'Meetup', city: 'Berlin', topics: ['MLOps'], cost: 'Free', ...over });
+const candidates = () => new Map([[ID, { id: ID, title: 'T', start: '2026-12-01', end: '2026-12-01', url: 'https://example.com/e/1', city: 'Paris', trust: 'noisy' }]]);
+const EN = 'Evening meetup in Paris about data platforms and MLOps.';
+const FR = 'Rencontre en soirée à Paris autour des plateformes de données et du MLOps.';
+const item = (over = {}) => ({ id: ID, relevant: true, confidence: 0.9, format: 'Meetup', city: 'Paris', topics: ['MLOps'], cost: 'Free', ...over });
 const run = (it) => verifyResults([it], candidates(), ctx);
 
-test('verify: blurb_en and blurb_de both present are accepted; blurb mirrors blurb_en', () => {
-	const r = run(item({ blurb_en: EN, blurb_de: DE }));
+test('verify: blurb_en and blurb_fr both present are accepted; blurb mirrors blurb_en', () => {
+	const r = run(item({ blurb_en: EN, blurb_fr: FR }));
 	assert.equal(r.accepted.length, 1);
-	assert.deepEqual([r.accepted[0].blurb, r.accepted[0].blurb_en, r.accepted[0].blurb_de], [EN, EN, DE]);
+	assert.deepEqual([r.accepted[0].blurb, r.accepted[0].blurb_en, r.accepted[0].blurb_fr], [EN, EN, FR]);
 });
 
-test('verify: a legacy blurb is read as blurb_en and blurb_de is missing', () => {
+test('verify: a legacy blurb is read as blurb_en and blurb_fr is missing', () => {
 	const r = run(item({ blurb: EN }));
 	assert.equal(r.accepted.length, 1);
 	assert.equal(r.accepted[0].blurb_en, EN);
-	assert.equal(r.accepted[0].blurb_de, null);
+	assert.equal(r.accepted[0].blurb_fr, null);
 });
 
 test('verify: no blurb at all is incomplete', () => {
 	assert.equal(run(item()).counts.n['invalid:incomplete'], 1);
 });
 
-test('verify: German blurb over 240 characters is rejected', () => {
-	const r = run(item({ blurb_en: EN, blurb_de: 'a '.repeat(121) }));
+test('verify: French blurb over 240 characters is rejected', () => {
+	const r = run(item({ blurb_en: EN, blurb_fr: 'a '.repeat(121) }));
 	assert.equal(r.accepted.length, 0);
 	assert.equal(r.counts.n['invalid:blurb-too-long'], 1);
 });
 
-test('verify: German blurb with a URL is rejected', () => {
-	const r = run(item({ blurb_en: EN, blurb_de: 'Mehr Informationen unter https://example.com/anmeldung gibt es dort.' }));
+test('verify: French blurb with a URL is rejected', () => {
+	const r = run(item({ blurb_en: EN, blurb_fr: 'Plus d’informations sur https://example.com/inscription et sur place.' }));
 	assert.equal(r.accepted.length, 0);
 	assert.equal(r.counts.n['invalid:url-in-text'], 1);
 });
 
-test('verify: identical German and English text is rejected', () => {
-	const r = run(item({ blurb_en: EN, blurb_de: '  ' + EN.toUpperCase() }));
+test('verify: identical French and English text is rejected', () => {
+	const r = run(item({ blurb_en: EN, blurb_fr: '  ' + EN.toUpperCase() }));
 	assert.equal(r.accepted.length, 0);
 	assert.equal(r.counts.n['invalid:blurb-identical'], 1);
-	assert.equal(resolveBlurbs({ blurb_en: EN, blurb_de: EN }).problem, 'blurb-identical');
+	assert.equal(resolveBlurbs({ blurb_en: EN, blurb_fr: EN }).problem, 'blurb-identical');
 });
 
 test('verify: scrape extraction accepts both blurbs and a legacy blurb', () => {
-	const page = { text: 'Data Platform Day Leipzig 10 December', links: [{ text: 'x', url: 'https://demo.example/e' }], url: 'https://demo.example/', curated: false, cityHint: 'Leipzig' };
-	const ev = { title: 'Data Platform Day Leipzig', date: '2026-12-10', city: 'Leipzig', organiser: 'Demo', url: 'https://demo.example/e', format: 'Conference', topics: ['Data'] };
-	const both = verifyExtracted([{ ...ev, blurb_en: EN, blurb_de: DE }], page, ctx);
+	const page = { text: 'Data Platform Day Toulouse 10 December', links: [{ text: 'x', url: 'https://demo.example/e' }], url: 'https://demo.example/', curated: false, cityHint: 'Toulouse' };
+	const ev = { title: 'Data Platform Day Toulouse', date: '2026-12-10', city: 'Toulouse', organiser: 'Demo', url: 'https://demo.example/e', format: 'Conference', topics: ['Data'] };
+	const both = verifyExtracted([{ ...ev, blurb_en: EN, blurb_fr: FR }], page, ctx);
 	assert.equal(both.accepted.length, 1);
-	assert.equal(both.accepted[0].blurb_de, DE);
+	assert.equal(both.accepted[0].blurb_fr, FR);
 	const legacy = verifyExtracted([{ ...ev, blurb: EN }], page, ctx);
 	assert.equal(legacy.accepted[0].blurb_en, EN);
-	assert.equal(legacy.accepted[0].blurb_de, null);
-	assert.equal(verifyExtracted([{ ...ev, blurb_en: EN, blurb_de: 'x'.repeat(300) }], page, ctx).accepted.length, 0);
+	assert.equal(legacy.accepted[0].blurb_fr, null);
+	assert.equal(verifyExtracted([{ ...ev, blurb_en: EN, blurb_fr: 'x'.repeat(300) }], page, ctx).accepted.length, 0);
 	assert.equal(verifyExtracted([ev], page, ctx).accepted.length, 0);
 });
 
 test('blurbFor: locale and fallback rules', () => {
-	assert.deepEqual(blurbFor({ blurb: 'L', blurb_en: 'E', blurb_de: 'D' }, 'de'), { text: 'D', lang: 'de' });
-	assert.deepEqual(blurbFor({ blurb: 'L', blurb_en: 'E' }, 'de'), { text: 'E', lang: 'en' });
-	assert.deepEqual(blurbFor({ blurb: 'L' }, 'de'), { text: 'L', lang: 'en' });
-	assert.deepEqual(blurbFor({ blurb: 'L', blurb_en: 'E', blurb_de: 'D' }, 'en'), { text: 'E', lang: 'en' });
+	assert.deepEqual(blurbFor({ blurb: 'L', blurb_en: 'E', blurb_fr: 'D' }, 'fr'), { text: 'D', lang: 'fr' });
+	assert.deepEqual(blurbFor({ blurb: 'L', blurb_en: 'E' }, 'fr'), { text: 'E', lang: 'en' });
+	assert.deepEqual(blurbFor({ blurb: 'L' }, 'fr'), { text: 'L', lang: 'en' });
+	assert.deepEqual(blurbFor({ blurb: 'L', blurb_en: 'E', blurb_fr: 'D' }, 'en'), { text: 'E', lang: 'en' });
 	assert.deepEqual(blurbFor({ blurb: 'L' }, 'en'), { text: 'L', lang: 'en' });
 });
 
 // ---------- backfill ----------
-const ev = (n, over = {}) => ({ id: `e${n}`, title: `Event ${n}`, organiser: 'Org', city: 'Berlin', format: 'Meetup', blurb: `English blurb number ${n} about data.`, ...over });
+const ev = (n, over = {}) => ({ id: `e${n}`, title: `Event ${n}`, organiser: 'Org', city: 'Paris', format: 'Meetup', blurb: `English blurb number ${n} about data.`, ...over });
 
-test('backfill: selects only events lacking blurb_de, honours --limit, batches of at most 60', () => {
-	const events = [ev(1), ev(2, { blurb_de: DE }), ...Array.from({ length: 130 }, (_, i) => ev(i + 3))];
+test('backfill: selects only events lacking blurb_fr, honours --limit, batches of at most 60', () => {
+	const events = [ev(1), ev(2, { blurb_fr: FR }), ...Array.from({ length: 130 }, (_, i) => ev(i + 3))];
 	const inputs = selectInputs(events);
 	assert.equal(inputs.length, 131);
 	assert.deepEqual(Object.keys(inputs[0]), ['id', 'title', 'organiser', 'city', 'format', 'blurb_en']);
@@ -92,13 +92,13 @@ test('backfill: canned output is validated per item and merged (blurb_en filled 
 	const inputs = selectInputs(events);
 	const out = JSON.stringify({
 		results: [
-			{ id: 'e1', blurb_de: 'Deutscher Text über Daten, Nummer eins, ohne Link.' },
-			{ id: 'e2', blurb_de: 'x'.repeat(241) },
-			{ id: 'e3', blurb_de: 'Siehe www.example.com für alle Details dazu.' },
-			{ id: 'e4', blurb_de: events[3].blurb },
-			{ id: 'zz', blurb_de: 'Unbekannte ID, aber sonst ein gültiger Text.' },
-			{ id: 'e1', blurb_de: 'Doppelte ID, zweiter Versuch mit anderem Text.' },
-			{ id: 'e5', blurb_de: 'kurz' },
+			{ id: 'e1', blurb_fr: 'Texte français sur les données, numéro un, sans lien.' },
+			{ id: 'e2', blurb_fr: 'x'.repeat(241) },
+			{ id: 'e3', blurb_fr: 'Voir www.example.com pour tous les détails.' },
+			{ id: 'e4', blurb_fr: events[3].blurb },
+			{ id: 'zz', blurb_fr: 'Identifiant inconnu mais texte valable par ailleurs.' },
+			{ id: 'e1', blurb_fr: 'Identifiant en double, deuxième essai avec un autre texte.' },
+			{ id: 'e5', blurb_fr: 'court' },
 		],
 	});
 	const v = validateOutput(out, inputs);
@@ -107,8 +107,8 @@ test('backfill: canned output is validated per item and merged (blurb_en filled 
 	assert.equal(mergeBlurbs(events, v.good), 1);
 	assert.equal(events[0].blurb_en, events[0].blurb);
 	assert.equal(events[0].blurb, 'English blurb number 1 about data.');
-	assert.ok(events[0].blurb_de.startsWith('Deutscher'));
-	assert.equal(events[1].blurb_de, undefined);
+	assert.ok(events[0].blurb_fr.startsWith('Texte français'));
+	assert.equal(events[1].blurb_fr, undefined);
 	assert.equal(validateOutput('not json', inputs).error, 'malformed-json');
 	assert.equal(validateOutput('[1', inputs).error, 'malformed-json');
 	assert.equal(validateOutput('{"x":1}', inputs).error, 'malformed-structure');
@@ -121,8 +121,8 @@ test('backfill: resumable, a batch is done only when output.json is valid and co
 	assert.equal(outputComplete(dir, inputs), false);
 	writeFileSync(join(dir, 'output.json'), '[broken');
 	assert.equal(outputComplete(dir, inputs), false);
-	const one = { id: 'e1', blurb_de: 'Erster deutscher Text zu Daten und KI.' };
-	const two = { id: 'e2', blurb_de: 'Zweiter deutscher Text zu Daten und KI.' };
+	const one = { id: 'e1', blurb_fr: 'Premier texte français sur les données et l’IA.' };
+	const two = { id: 'e2', blurb_fr: 'Deuxième texte français sur les données et l’IA.' };
 	writeFileSync(join(dir, 'output.json'), JSON.stringify({ results: [one] }));
 	assert.equal(outputComplete(dir, inputs), false, 'partial answer is re-run');
 	writeFileSync(join(dir, 'output.json'), JSON.stringify({ results: [one, two] }));

@@ -36,12 +36,28 @@ export function titlesMatch(nta, ntb) {
 	return charSimilarity(nta, ntb) >= 0.85;
 }
 
-/** a, b: { title, start, city, nt? }. */
+const startMinutes = (t) => {
+	const m = /^(\d{2}):(\d{2})/.exec(String(t ?? ''));
+	return m ? +m[1] * 60 + +m[2] : null;
+};
+
+/**
+ * a, b: { title, start, city, time?, nt? }. Same event = dates within a day, compatible cities, matching normalised titles.
+ * Two sessions of one series on the same day (a morning and an afternoon webinar with near-identical titles) are told
+ * apart by their start times: 90 minutes or more apart, with titles that are not identical, means two events.
+ */
 export function sameEvent(a, b) {
 	if (Math.abs(daysBetween(a.start, b.start)) > 1) return false;
 	if (!citiesCompatible(a.city, b.city)) return false;
-	return titlesMatch(a.nt ?? normTitle(a.title), b.nt ?? normTitle(b.title));
+	const na = a.nt ?? normTitle(a.title), nb = b.nt ?? normTitle(b.title);
+	if (!titlesMatch(na, nb)) return false;
+	const ma = startMinutes(a.time), mb = startMinutes(b.time);
+	if (ma != null && mb != null && a.start === b.start && na !== nb && Math.abs(ma - mb) >= 90) return false;
+	return true;
 }
+
+/** Url keys that identify ONE event page (Meetup event, Luma page, Eventbrite id). A conference's agenda page is shared by many talks and must not merge them. */
+const isEventUrlKey = (k) => /^u:(meetup\.com\/[^/]+\/events\/\d+|luma\.com\/|eventbrite\/\d)/.test(k);
 
 /** Lower is better: organiser/Meetup/Luma page, then Eventbrite, then curated, then aggregators. */
 export function sourcePriority(c) {
@@ -52,7 +68,7 @@ export function sourcePriority(c) {
 	return 3;
 }
 
-const AGGREGATOR_HOSTS = /(^|\.)(hackevents\.net|brainberg\.eu|dev\.events|aieventlist\.ai|agentconfs\.com|allai\.events|confs\.tech)$/;
+const AGGREGATOR_HOSTS = /(^|\.)(hackevents\.net|brainberg\.eu|dev\.events|aieventlist\.ai|agentconfs\.com|allai\.events|confs\.tech|briefia\.fr|openagenda\.com)$/;
 function urlRank(url) {
 	try {
 		const h = new URL(url).hostname;
@@ -74,13 +90,17 @@ export function dedupe(cands, { onMerge } = {}) {
 		.sort((x, y) => sourcePriority(x.c) - sourcePriority(y.c) || (y.c.desc?.length ?? 0) - (x.c.desc?.length ?? 0));
 	const clusters = [];
 	const byDate = new Map(); // date -> clusters starting that date, for cheap lookup
+	const byUrl = new Map(); // canonical url key -> cluster: the same page listed by two sources is one event, whatever the titles say
 	for (const item of sorted) {
 		let home = null;
+		for (const k of item.c.keys) {
+			if (isEventUrlKey(k) && byUrl.has(k) && Math.abs(daysBetween(byUrl.get(k).rep.c.start, item.c.start)) <= 1) { home = byUrl.get(k); break; }
+		}
 		for (let d = -1; d <= 1 && !home; d++) {
 			const date = shift(item.c.start, d);
 			for (const cl of byDate.get(date) ?? []) {
-				if (sameEvent({ title: cl.rep.c.title, start: cl.rep.c.start, city: cl.rep.c.city, nt: cl.rep.nt },
-					{ title: item.c.title, start: item.c.start, city: item.c.city, nt: item.nt })) {
+				if (sameEvent({ title: cl.rep.c.title, start: cl.rep.c.start, city: cl.rep.c.city, time: cl.rep.c.time, nt: cl.rep.nt },
+					{ title: item.c.title, start: item.c.start, city: item.c.city, time: item.c.time, nt: item.nt })) {
 					home = cl;
 					break;
 				}
@@ -90,11 +110,12 @@ export function dedupe(cands, { onMerge } = {}) {
 			home.members.push(item);
 			onMerge?.(home.rep.c, item.c);
 		} else {
-			const cl = { rep: item, members: [item] };
-			clusters.push(cl);
+			home = { rep: item, members: [item] };
+			clusters.push(home);
 			if (!byDate.has(item.c.start)) byDate.set(item.c.start, []);
-			byDate.get(item.c.start).push(cl);
+			byDate.get(item.c.start).push(home);
 		}
+		for (const k of item.c.keys) if (isEventUrlKey(k) && !byUrl.has(k)) byUrl.set(k, home);
 	}
 	return clusters.map((cl) => mergeCluster(cl));
 }

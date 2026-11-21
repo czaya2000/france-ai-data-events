@@ -60,6 +60,27 @@ export function timeRange(startT, endT) {
 	if (!startT) return undefined;
 	return endT && endT !== startT ? `${startT}–${endT}` : startT;
 }
+/**
+ * Parse a schema.org / ISO date-time into Europe/Paris wall-clock parts.
+ *  - "2026-12-01"                      -> { date, time: undefined, dateOnly: true }
+ *  - "2026-12-01T18:30:00"             -> naive: taken as Paris wall-clock
+ *  - "2026-12-01T17:30:00Z" / "+01:00" -> converted to Paris
+ * A time that lands on 00:00 Paris (or 00:00 UTC, which feeds use for "no time given") is reported as date-only.
+ */
+export function parseStamp(str) {
+	const s = String(str ?? '').trim();
+	let m = /^(\d{4}-\d{2}-\d{2})$/.exec(s);
+	if (m) return { date: m[1], time: undefined, dateOnly: true };
+	m = /^(\d{4}-\d{2}-\d{2})[T ](\d{2}):(\d{2})(?::\d{2}(?:\.\d+)?)?\s*(Z|[+-]\d{2}:?\d{2})?$/i.exec(s);
+	if (!m) return null;
+	const [, date, hh, mm, zone] = m;
+	if (!zone) return hh === '00' && mm === '00' ? { date, time: undefined, dateOnly: true } : { date, time: `${hh}:${mm}`, dateOnly: false };
+	if (/^(Z|[+-]00:?00)$/i.test(zone) && hh === '00' && mm === '00') return { date, time: undefined, dateOnly: true };
+	const l = isoToLocal(s.replace(/([+-]\d{2})(\d{2})$/, '$1:$2'));
+	if (!l) return null;
+	return l.time === '00:00' ? { date: l.date, time: undefined, dateOnly: true } : { date: l.date, time: l.time, dateOnly: false };
+}
+
 export const MONTHS = {
 	january: 1, february: 2, march: 3, april: 4, may: 5, june: 6,
 	july: 7, august: 8, september: 9, october: 10, november: 11, december: 12,

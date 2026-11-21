@@ -100,7 +100,7 @@ export function matchesExisting(cand, existing) {
 	for (const ev of existing) {
 		const evUrlKey = ledgerKeys({ url: ev.url, title: '', start: ev.date }).find((k) => k.startsWith('u:'));
 		if (evUrlKey && urlKeys.has(evUrlKey)) return ev;
-		if (sameEvent({ title: cand.title, start: cand.start, city: cand.city }, { title: ev.title, start: ev.date, city: ev.city })) return ev;
+		if (sameEvent({ title: cand.title, start: cand.start, city: cand.city, time: cand.time }, { title: ev.title, start: ev.date, city: ev.city, time: ev.time })) return ev;
 	}
 	return null;
 }
