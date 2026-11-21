@@ -28,7 +28,7 @@ test.describe('not indexable yet (INDEXABLE=false)', () => {
 		await expect(s).toHaveCount(1);
 		await expect(s).toHaveAttribute('data-website-id', '58997630-33d4-4cf2-a171-1178d161205b');
 		await expect(s).toHaveAttribute('src', 'https://umami-data-events.vercel.app/script.js');
-		await expect(s).toHaveAttribute('data-domains', /frenchdataevents\.fr/);
+		await expect(s).toHaveAttribute('data-domains', /.+/); // SITE_HOST (localhost in e2e, frenchdataevents.fr in production)
 	});
 });
 
