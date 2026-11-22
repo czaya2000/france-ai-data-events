@@ -2,7 +2,7 @@
 // scripts (validator, digest, indexnow) and the pipeline can all import it.
 //
 // Domain: frenchdataevents.fr (public/CNAME must match). The site builds at the domain root.
-// INDEXABLE stays false until launch (see TODO-OWNER.md).
+// INDEXABLE is true: the site has launched and can be crawled (see TODO-OWNER.md).
 export const COUNTRY_CODE = 'FR';
 export const COUNTRY_NAME = 'France';
 export const TIMEZONE = 'Europe/Paris';
@@ -29,9 +29,9 @@ export const UID_DOMAIN = new URL(CUSTOM_DOMAIN_URL).hostname;
 /** Source repository, used in the fetcher User-Agent until a contact email is set. */
 export const REPO_URL = 'https://github.com/czaya2000/france-ai-data-events';
 
-// Not live yet (no domain, no DNS). While false: noindex + robots.txt Disallow + no sitemap + no IndexNow ping.
-// Set to true on go-live day (see TODO-OWNER.md).
-export const INDEXABLE = false;
+// Launched. While true: no site-wide noindex, robots.txt allows crawling and lists the sitemap, the sitemap is built.
+// While false: noindex + robots.txt Disallow + no sitemap + no IndexNow ping.
+export const INDEXABLE = true;
 
 // Owner-supplied values (open items are listed in the owner notes file).
 export const CONTACT_EMAIL = 'hallo@germandataevents.com';

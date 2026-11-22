@@ -5,7 +5,7 @@ French edition of germandataevents.com (German edition of swissdataevents.ch). S
 ## Layout
 
 - Astro app at the repo root (`astro` pinned to `^6.4.8`; do not upgrade).
-- `config/country.mjs`: all country-specific values (names, `DEFAULT_SITE_URL` / base, `INDEXABLE`, timezone Europe/Paris, cities, `PLACE_TO_CITY`, contact, owner placeholders). Plain `.mjs`, imported by Astro, scripts and the pipeline.
+- `config/country.mjs`: all country-specific values (names, `DEFAULT_SITE_URL` / base, `INDEXABLE` = true, timezone Europe/Paris, cities, `PLACE_TO_CITY`, contact, owner placeholders). Plain `.mjs`, imported by Astro, scripts and the pipeline.
 - `src/data/events.json`, `archive.json`, `meta.json`: event data (schema in `src/content.config.ts`; fields incl. `blurb_en`, `blurb_fr`).
 - Every internal `href`/`src` goes through `withBase` / `localePath` (the site lives under `/france-ai-data-events/` until the domain is switched, see TODO-OWNER.md step 4). Absolute URLs: `${SITE_URL}/path` (`${SITE_URL}/en/path`).
 - `scripts/`: `validate-events.mjs`, `archive-past.mjs`, `test-ics.mjs`, `test-agent-files.mjs`, `test-i18n.mjs`, `build-digest.mjs` (`npm run digest:preview` writes `preview/`), `buttondown-redirects.mjs`, `buttondown-tag-css.mjs`, `indexnow.mjs`, `make-brand-assets.mjs`.
@@ -18,7 +18,7 @@ French edition of germandataevents.com (German edition of swissdataevents.ch). S
 ## Rules
 
 - No Node script calls the Anthropic API or reads `CLAUDE_CODE_OAUTH_TOKEN`; only `daily-refresh.yml` references the secret and skips the Claude step with a notice when it is missing. No secrets in the repo.
-- `INDEXABLE=false` until the domain is live: noindex meta, `Disallow: /`, no sitemap, no IndexNow. No `public/CNAME` until then.
+- Go-live happened (2026-11-22): `INDEXABLE` is `true` in `config/country.mjs` (the only switch; workflows inherit it). Do not set it back to false. The site is crawlable: robots.txt allows all and lists `sitemap-index.xml`, no site-wide noindex. Page-level noindex stays on thanks/confirmed/404 pages and thin hubs. Search Console sitemap submission is still an owner step in the UI (not verified). IndexNow stays off until `INDEXNOW_KEY` is set.
 - Umami: `UMAMI_WEBSITE_ID` is set (empty would mean no script at all).
 - Third-party listings (Brief IA, allai, Meetup city pages, Eventbrite): facts only, never descriptions; blurbs are generated. Eventbrite: slow, cached, backs off, never bypassed.
 - Public pages carry no TODO / Brouillon / Draft text (tests enforce it).

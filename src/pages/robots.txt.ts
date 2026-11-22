@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { SITE_URL, INDEXABLE } from '../lib/events';
 
-/* While INDEXABLE is false (config/country.mjs) everything is disallowed, and
+/* When INDEXABLE (config/country.mjs) is false everything is disallowed, and
    every page also carries <meta name="robots" content="noindex, nofollow">.
    GitHub Pages cannot set response headers, so these two are the mechanism.
    The site is live (INDEXABLE is true): crawling is allowed and the sitemap is listed. */

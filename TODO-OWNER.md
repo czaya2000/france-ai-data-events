@@ -1,6 +1,10 @@
 # Owner to-do (French Data Events)
 
-Only things you can do. In order. The site already runs at **https://czaya2000.github.io/france-ai-data-events/** (not indexable on purpose). Everything below is needed for go-live, none of it blocks the preview.
+**Launch status (2026-11-22): go-live happened. `INDEXABLE` is `true` in `config/country.mjs`**, so robots.txt allows crawling, lists `https://frenchdataevents.fr/sitemap-index.xml`, and the sitemap is built. Still open for you:
+- Search Console: add the property and submit the sitemap in the UI (step 8). Search Console is **not** verified yet.
+- IndexNow stays off until you set `INDEXNOW_KEY` (and host the key file).
+
+Only things you can do. In order. Steps below that were needed for go-live are kept for reference; check which ones you already did.
 
 ## 1. Buy the domain
 
@@ -25,7 +29,7 @@ Delete any parking A/AAAA records and a `www` CNAME that points at the apex, the
 
 1. In `config/country.mjs` change `const DEFAULT_SITE_URL = GITHUB_PAGES_URL;` to `const DEFAULT_SITE_URL = CUSTOM_DOMAIN_URL;`.
 2. Create `public/CNAME` containing exactly `frenchdataevents.fr`.
-3. In the same file set `INDEXABLE = true` (removes noindex, opens robots.txt, emits the sitemap).
+3. Done: `INDEXABLE = true` (removes noindex, opens robots.txt, emits the sitemap).
 4. Commit and push to `main`. Then GitHub repo > Settings > Pages > Custom domain = `frenchdataevents.fr` > Save; when the certificate is ready tick **Enforce HTTPS**.
 5. Open the site, check one event page and `/en/`.
 

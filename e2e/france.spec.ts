@@ -1,26 +1,39 @@
 import { test, expect } from '@playwright/test';
 import { LOCALES, NOW, at, open } from './helpers';
 
-/* France-specific checks: not indexable yet, Europe/Paris in the calendar feeds, the form and
+/* France-specific checks: indexable (launched), Europe/Paris in the calendar feeds, the form and
    newsletter endpoints, French-first language handling, ICS download. */
 
 const FORM = 'https://formsubmit.co/hallo@germandataevents.com';
 
-test.describe('not indexable yet (INDEXABLE=false)', () => {
+test.describe('indexable (INDEXABLE=true)', () => {
 	for (const loc of LOCALES) {
 		for (const p of ['/', '/paris/', '/events/p-sun-span/', '/mentions-legales/']) {
 			// The legal pages have an English twin under a different slug; skip the mismatched combinations.
 			if (loc === 'en' && p === '/mentions-legales/') continue;
-			test(`${at(loc, p)} carries noindex`, async ({ page }) => {
+			test(`${at(loc, p)} has no noindex`, async ({ page }) => {
 				await page.goto(at(loc, p));
-				await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+				const robots = page.locator('meta[name="robots"]');
+				// /paris/ may carry a page-level "noindex, follow" only when it is a thin hub.
+				if (p === '/paris/') return;
+				await expect(robots).toHaveCount(0);
 			});
 		}
+		test(`${at(loc, '/subscribe/thanks/')} stays noindex`, async ({ page }) => {
+			await page.goto(at(loc, '/subscribe/thanks/'));
+			await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+		});
 	}
-	test('robots.txt disallows everything and there is no sitemap', async ({ request }) => {
+	test('robots.txt allows everything and points at the sitemap', async ({ request }) => {
 		const robots = await (await request.get('/robots.txt')).text();
-		expect(robots).toMatch(/Disallow:\s*\/\s*$/m);
-		expect((await request.get('/sitemap-index.xml')).status()).toBe(404);
+		expect(robots).toMatch(/^User-agent: \*\nAllow: \/$/m);
+		expect(robots).not.toMatch(/^Disallow:\s*\/\s*$/m);
+		expect(robots).toMatch(/^Sitemap: .+\/sitemap-index\.xml$/m);
+	});
+	test('sitemap-index.xml is built', async ({ request }) => {
+		const res = await request.get('/sitemap-index.xml');
+		expect(res.status()).toBe(200);
+		expect(await res.text()).toMatch(/<loc>[^<]*sitemap-\d+\.xml<\/loc>/);
 	});
 	test('self-hosted Umami script is restricted to the site domain', async ({ page }) => {
 		await page.goto('/');

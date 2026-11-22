@@ -24,7 +24,7 @@ Architecture, schema (`src/content.config.ts`, no new fields except `blurb_fr`),
 | Sources | German registry | `config/sources.json` from `../france-research/sources.fr.json` (127 sources, 61 tier 1), see `SOURCES.fr.md` |
 | New fetcher types | none | `jsonld`, `luma-calendar`, `openagenda` |
 | Accent colour | German red | deep blue `#1F3A93` (Swiss/German look otherwise) |
-| Indexing | live | `INDEXABLE=false` until the domain is live (noindex + robots Disallow + no sitemap) |
+| Indexing | live | Launched 2026-11-22: `INDEXABLE=true` (was false until go-live: noindex + robots Disallow + no sitemap) |
 | Hosting URL | germandataevents.com | `https://czaya2000.github.io/france-ai-data-events/` now (base path), custom domain later by one config line |
 
 ## 3. Decisions
@@ -43,9 +43,9 @@ Logged one by one in `DECISIONS.md`. Headlines:
 2. French (root) and English (`/en/`) render every page, switch works, hreflang pairs, no German text left (grep gate: `Deutsch|Germany|Berlin|Impressum|Datenschutz|germandataevents|Europe/Berlin` returns only justified exceptions).
 3. Ended events are hidden (build time and client JS, Europe/Paris end time, else 23:59:59 of the last day); events running today sit under "Aujourd'hui" / "Today"; cards show city + time only.
 4. Week filter = today..Sunday, month = today..end of month.
-5. `noindex` meta and `Disallow: /` while `INDEXABLE=false`; no `public/CNAME`; all links work under `/france-ai-data-events/`.
+5. (Historical, pre-launch.) `noindex` meta and `Disallow: /` while `INDEXABLE=false`. Now `INDEXABLE=true`: robots allows crawling, sitemap emitted.
 6. Pages: no `TODO`, `Brouillon`, `Draft` on any built page.
-7. Live Pages URL answers 200 with noindex.
+7. (Historical, pre-launch.) Live URL answered 200 with noindex; after launch it answers 200 without site-wide noindex.
 8. No Node file references `api.anthropic.com`, `@anthropic-ai/sdk` or `CLAUDE_CODE_OAUTH_TOKEN`; the secret appears only in `daily-refresh.yml`. No secrets in the repo.
 9. Backlog: all upcoming events from today to at least +8 weeks that the sources list are in `src/data/events.json`.
 
