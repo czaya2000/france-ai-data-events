@@ -1,12 +1,21 @@
 {
 	"dedupeMerges": [
 		{
-			"kept": "🚀 Découvrez la nouvelle ère de l'agentic coding",
-			"merged": "⚽ Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
+			"kept": "Découvrez la nouvelle ère de l'agentic coding",
+			"merged": "Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
 			"date": "2026-11-26",
 			"sources": [
 				"meetup:strasbourg-aws-user-group",
 				"meetup:strasbourg-aws-user-group"
+			]
+		},
+		{
+			"kept": "IA & Apéro 10e rencontre !",
+			"merged": "Apéro de l'IA",
+			"date": "2026-11-26",
+			"sources": [
+				"meetup:ia-innovateurs",
+				"meetup:l-apero-de-l-ia"
 			]
 		},
 		{
@@ -64,8 +73,8 @@
 			]
 		},
 		{
-			"kept": "🚀 Découvrez la nouvelle ère de l'agentic coding",
-			"merged": "⚽ Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
+			"kept": "Découvrez la nouvelle ère de l'agentic coding",
+			"merged": "Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
 			"date": "2026-11-26",
 			"sources": [
 				"meetup:strasbourg-aws-user-group",
@@ -118,15 +127,6 @@
 			]
 		},
 		{
-			"kept": "Future Intelligence - L'IA au service de l'environnement",
-			"merged": "Future Intelligence",
-			"date": "2026-12-10",
-			"sources": [
-				"eventbrite-online",
-				"brainberg-fr"
-			]
-		},
-		{
 			"kept": "Build It Summit 2026",
 			"merged": "Build It Summit",
 			"date": "2026-12-01",
@@ -149,7 +149,7 @@
 			"merged": "IA avancée pour facilitateur, formateur, coach",
 			"date": "2026-11-24",
 			"sources": [
-				"eventbrite-online",
+				"briefia-meetups",
 				"briefia-meetups"
 			]
 		},
@@ -158,7 +158,7 @@
 			"merged": "Journée de l'Entrepreneur : Intelligence Artificielle Générative",
 			"date": "2026-11-26",
 			"sources": [
-				"eventbrite-online",
+				"brainberg-fr",
 				"briefia-meetups"
 			]
 		},
@@ -349,6 +349,76 @@
 			"title": "Seminar: Terrestrial Space Infrastructure and Great-Power Competition – Aaron Bateman (GWU)",
 			"date": "2026-11-23",
 			"source": "hi-paris-ics"
+		},
+		{
+			"title": "Book Launch: Corpodivinidades",
+			"date": "2026-11-26",
+			"source": "luma-paris"
+		},
+		{
+			"title": "Launch Day Hackathon",
+			"date": "2026-11-28",
+			"source": "luma-paris"
+		},
+		{
+			"title": "Mardi 8 décembre un Noël entre meufs",
+			"date": "2026-12-08",
+			"source": "luma-paris"
+		},
+		{
+			"title": "C# .NET Paris #9 - .NET Conf",
+			"date": "2026-11-24",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "FDTour 2026 - Lille",
+			"date": "2026-11-26",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "DevFest Paris 2026",
+			"date": "2026-11-27",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "The Glassbox Roadshow | Paris",
+			"date": "2026-11-24",
+			"source": "createwith-paris"
+		},
+		{
+			"title": "WEBINAIRE : l'IAE Paris-Est école de management",
+			"date": "2027-01-26",
+			"source": "openagenda"
+		},
+		{
+			"title": "Forum de l'insertion par l'activité économique à Woippy (IAE) : On vous attend !",
+			"date": "2026-11-26",
+			"source": "openagenda"
+		},
+		{
+			"title": "Les permanences de L' IAE rencontre avec la structure ADEF",
+			"date": "2026-12-10",
+			"source": "openagenda"
+		},
+		{
+			"title": "Présentation de l'Insertion par l'Activité Economique (IAE) - Réservé aux demandeurs d'emploi de l'Ariège",
+			"date": "2026-12-07",
+			"source": "openagenda"
+		},
+		{
+			"title": "[Masterclass] Comment m'inscrire en tant qu'intervenante dans les écoles ?",
+			"date": "2026-12-02",
+			"source": "meetup:yeeso-itwomen-network"
+		},
+		{
+			"title": "[VISIO] Café Yeeso - Spécial Networking",
+			"date": "2026-12-11",
+			"source": "meetup:yeeso-itwomen-network"
+		},
+		{
+			"title": "ConUt - Saint Paul sur Save (31): Chasse et promenade en forêt sont-elles compatibles ?",
+			"date": "2026-11-28",
+			"source": "luma-cal:cal-cedsWn0tyHau5wm"
 		}
 	]
 }

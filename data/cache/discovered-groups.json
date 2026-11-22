@@ -202,6 +202,13 @@
 			"trust": "noisy",
 			"icsOk": true,
 			"checked": "2026-11-21"
+		},
+		"l-apero-de-l-ia": {
+			"firstSeen": "2026-11-22",
+			"via": "meetup-city-pages",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-22"
 		}
 	}
 }

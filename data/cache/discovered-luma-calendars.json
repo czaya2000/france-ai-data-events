@@ -71,6 +71,22 @@
 			"via": "luma-cal:bond-paris",
 			"firstSeen": "2026-11-21",
 			"trust": "noisy"
+		},
+		"cal-TOpA5LAFfuDeFpu": {
+			"name": "Claude Community Events",
+			"slug": "claudecommunity",
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-22",
+			"trust": "noisy"
+		},
+		"cal-jvRrCBfKE0G06XV": {
+			"name": "Softr",
+			"slug": "softr-events",
+			"city": null,
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-22",
+			"trust": "noisy"
 		}
 	},
 	"slugs": {
@@ -98,6 +114,16 @@
 		"aic-ab-11-21": "cal-E74MDlDKBaeAwXK",
 		"aic-ch-11-21": "cal-E74MDlDKBaeAwXK",
 		"genai-em4z": "cal-E74MDlDKBaeAwXK",
-		"aic-do-11-23": "cal-E74MDlDKBaeAwXK"
+		"aic-do-11-23": "cal-E74MDlDKBaeAwXK",
+		"Sorbonne-Claude": "cal-TOpA5LAFfuDeFpu",
+		"softr-mnkh": "cal-jvRrCBfKE0G06XV",
+		"aic-sw-ws-series-3": "cal-E74MDlDKBaeAwXK",
+		"aic-ta-11-24": "cal-E74MDlDKBaeAwXK",
+		"aic-du-11-24": "cal-E74MDlDKBaeAwXK",
+		"aic-sw-11-24": "cal-E74MDlDKBaeAwXK",
+		"genai-jymn": "cal-E74MDlDKBaeAwXK",
+		"toronto-revenue-leaders-nov24": "cal-E74MDlDKBaeAwXK",
+		"aic-du-11-25": "cal-E74MDlDKBaeAwXK",
+		"genai-b9wy": "cal-E74MDlDKBaeAwXK"
 	}
 }

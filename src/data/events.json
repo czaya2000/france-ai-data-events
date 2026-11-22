@@ -22,6 +22,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "banc-d-essai-2-build-club-securite-de-l-ia-paris-2026",
+		"title": "Banc d'Essai #2 — build club sécurité de l'IA",
+		"date": "2026-11-21",
+		"time": "14:00–17:00",
+		"city": "Paris",
+		"venue": "53 Rue de Cléry, Paris",
+		"format": "Workshop",
+		"topics": [
+			"AI safety"
+		],
+		"organiser": "Nouvelle Machine",
+		"cost": "Not listed",
+		"url": "https://luma.com/xyiow6bw",
+		"source": "Luma",
+		"blurb": "Second Banc d'Essai build club session on AI safety, run by Nouvelle Machine in Paris.",
+		"blurb_en": "Second Banc d'Essai build club session on AI safety, run by Nouvelle Machine in Paris.",
+		"blurb_fr": "Deuxième séance du build club Banc d'Essai consacré à la sécurité de l'IA, organisée par Nouvelle Machine à Paris.",
+		"firstSeen": "2026-11-21"
+	},
+	{
 		"id": "conut-paris-tous-artistes-avec-l-ia-paris-2026",
 		"title": "ConUt - Paris : Tous artistes avec L'IA ?",
 		"date": "2026-11-21",
@@ -40,26 +60,6 @@
 		"blurb": "ConUt debate evening in Paris asking whether everyone can become an artist with AI.",
 		"blurb_en": "ConUt debate evening in Paris asking whether everyone can become an artist with AI.",
 		"blurb_fr": "Soirée-débat ConUt à Paris sur la question de savoir si l'IA permet à chacun de devenir artiste.",
-		"firstSeen": "2026-11-21"
-	},
-	{
-		"id": "banc-d-essai-2-build-club-securite-de-l-ia-paris-2026",
-		"title": "Banc d'Essai #2 — build club sécurité de l'IA",
-		"date": "2026-11-21",
-		"time": "14:00–17:00",
-		"city": "Paris",
-		"venue": "53 Rue de Cléry, Paris",
-		"format": "Workshop",
-		"topics": [
-			"AI safety"
-		],
-		"organiser": "Nouvelle Machine",
-		"cost": "Not listed",
-		"url": "https://luma.com/xyiow6bw",
-		"source": "Luma",
-		"blurb": "Second Banc d'Essai build club session on AI safety, run by Nouvelle Machine in Paris.",
-		"blurb_en": "Second Banc d'Essai build club session on AI safety, run by Nouvelle Machine in Paris.",
-		"blurb_fr": "Deuxième séance du build club Banc d'Essai consacré à la sécurité de l'IA, organisée par Nouvelle Machine à Paris.",
 		"firstSeen": "2026-11-21"
 	},
 	{
@@ -497,6 +497,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "governing-together-ai-governance-in-pakistan-policies-progre-paris-2026",
+		"title": "Governing Together: AI Governance in Pakistan: Policies, Progress and Global Relevance (w/ The AI Collective) (w/ The AI Collective)",
+		"date": "2026-11-24",
+		"time": "16:00–17:00",
+		"city": "Paris",
+		"format": "Meetup",
+		"topics": [
+			"AI governance",
+			"Public policy"
+		],
+		"organiser": "The AI Collective",
+		"cost": "Not listed",
+		"url": "https://luma.com/aic-du-11-24",
+		"source": "Luma",
+		"blurb": "A Paris event by The AI Collective on AI governance, covering policies and progress in Pakistan and their global relevance.",
+		"blurb_en": "A Paris event by The AI Collective on AI governance, covering policies and progress in Pakistan and their global relevance.",
+		"blurb_fr": "Événement parisien de The AI Collective sur la gouvernance de l'IA, avec les politiques et avancées au Pakistan et leur portée mondiale.",
+		"firstSeen": "2026-11-22"
+	},
+	{
 		"id": "grafton-ia-atelier-ia-pratique-paris-2026",
 		"title": "Grafton IA : Atelier IA Pratique",
 		"date": "2026-11-24",
@@ -895,6 +915,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "building-together-share-your-work-find-your-people-w-the-ai--paris-2026",
+		"title": "Building Together: Share Your Work, Find Your People (w/ The AI Collective)",
+		"date": "2026-11-25",
+		"time": "16:00–17:00",
+		"city": "Paris",
+		"format": "Networking",
+		"topics": [
+			"AI community",
+			"Networking"
+		],
+		"organiser": "The AI Collective",
+		"cost": "Not listed",
+		"url": "https://luma.com/aic-du-11-25",
+		"source": "Luma",
+		"blurb": "A Paris community event by The AI Collective for sharing your work and meeting other members of the group.",
+		"blurb_en": "A Paris community event by The AI Collective for sharing your work and meeting other members of the group.",
+		"blurb_fr": "Rencontre communautaire à Paris organisée par The AI Collective pour présenter ses travaux et rencontrer d'autres membres.",
+		"firstSeen": "2026-11-22"
+	},
+	{
 		"id": "compute-paris-2026-paris-2026",
 		"title": "Compute! Paris 2026",
 		"date": "2026-11-25",
@@ -999,28 +1039,6 @@
 		"blurb": "The AI Collective pitch night in Paris during LA Tech Week.",
 		"blurb_en": "The AI Collective pitch night in Paris during LA Tech Week.",
 		"blurb_fr": "Soirée de pitchs de The AI Collective à Paris, pendant la LA Tech Week.",
-		"firstSeen": "2026-11-21"
-	},
-	{
-		"id": "decouvrez-la-nouvelle-ere-de-l-agentic-coding-strasbourg-2026",
-		"title": "Découvrez la nouvelle ère de l'agentic coding",
-		"date": "2026-11-26",
-		"time": "09:00–13:30",
-		"city": "Strasbourg",
-		"venue": "Epitech Strasbourg, 4 Rue du Dôme, 67000 Strasbourg, France",
-		"format": "Workshop",
-		"topics": [
-			"Agentic AI",
-			"AWS",
-			"Agentic coding"
-		],
-		"organiser": "Strasbourg AWS User Group",
-		"cost": "Free",
-		"url": "https://www.meetup.com/strasbourg-aws-user-group/events/317410992/",
-		"source": "Meetup",
-		"blurb": "Half-day of agentic AI at Epitech Strasbourg: technical sessions in the morning, then the Agentic Football Cup GameDay across four AWS cities.",
-		"blurb_en": "Half-day of agentic AI at Epitech Strasbourg: technical sessions in the morning, then the Agentic Football Cup GameDay across four AWS cities.",
-		"blurb_fr": "Demi-journée sur l'IA agentique à Epitech Strasbourg : sessions techniques le matin, puis Agentic Football Cup, un GameDay entre quatre villes AWS.",
 		"firstSeen": "2026-11-21"
 	},
 	{
@@ -1147,6 +1165,28 @@
 		"blurb": "Conference on agentic AI uses, with business tools to discover and a look at the changes ahead, organised by 2 jours pour entreprendre in Les Sables-d'Olonne.",
 		"blurb_en": "Conference on agentic AI uses, with business tools to discover and a look at the changes ahead, organised by 2 jours pour entreprendre in Les Sables-d'Olonne.",
 		"blurb_fr": "Conférence sur les usages de l'IA agentique, avec présentation d'outils métiers et perspectives de transformation, organisée par 2 jours pour entreprendre aux Sables-d'Olonne.",
+		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "decouvrez-la-nouvelle-ere-de-l-agentic-coding-strasbourg-2026",
+		"title": "Découvrez la nouvelle ère de l'agentic coding",
+		"date": "2026-11-26",
+		"time": "09:00–13:30",
+		"city": "Strasbourg",
+		"venue": "Epitech Strasbourg, 4 Rue du Dôme, 67000 Strasbourg, France",
+		"format": "Workshop",
+		"topics": [
+			"Agentic AI",
+			"AWS",
+			"Agentic coding"
+		],
+		"organiser": "Strasbourg AWS User Group",
+		"cost": "Free",
+		"url": "https://www.meetup.com/strasbourg-aws-user-group/events/317410992/",
+		"source": "Meetup",
+		"blurb": "Half-day of agentic AI at Epitech Strasbourg: technical sessions in the morning, then the Agentic Football Cup GameDay across four AWS cities.",
+		"blurb_en": "Half-day of agentic AI at Epitech Strasbourg: technical sessions in the morning, then the Agentic Football Cup GameDay across four AWS cities.",
+		"blurb_fr": "Demi-journée sur l'IA agentique à Epitech Strasbourg : sessions techniques le matin, puis Agentic Football Cup, un GameDay entre quatre villes AWS.",
 		"firstSeen": "2026-11-21"
 	},
 	{
@@ -1296,6 +1336,27 @@
 		"blurb_en": "Networking event in Paris hosted by The AI Collective.",
 		"blurb_fr": "Soirée de réseautage à Paris organisée par The AI Collective.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "paris-claude-for-finance-paris-2026",
+		"title": "Paris | Claude For Finance",
+		"date": "2026-11-26",
+		"time": "18:30–21:00",
+		"city": "Paris",
+		"venue": "17 Rue de la Sorbonne Amphithéâtre Richelieu, Paris",
+		"format": "Meetup",
+		"topics": [
+			"LLM",
+			"Finance"
+		],
+		"organiser": "Claude Community Events",
+		"cost": "Not listed",
+		"url": "https://luma.com/Sorbonne-Claude",
+		"source": "Luma",
+		"blurb": "A Paris meetup by Claude Community Events on using Claude in finance.",
+		"blurb_en": "A Paris meetup by Claude Community Events on using Claude in finance.",
+		"blurb_fr": "Rencontre parisienne de la communauté Claude Community Events sur l'usage de Claude dans la finance.",
+		"firstSeen": "2026-11-22"
 	},
 	{
 		"id": "rencontre-club-data-nice-nice-2026",
@@ -1679,6 +1740,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "au-revoir-spreadsheet-a-60-minute-ai-ops-hack-paris-2026",
+		"title": "Au Revoir, Spreadsheet: a 60-minute AI Ops Hack",
+		"date": "2026-12-01",
+		"time": "19:00–21:00",
+		"city": "Paris",
+		"format": "Workshop",
+		"topics": [
+			"AI operations",
+			"No-code"
+		],
+		"organiser": "Softr",
+		"cost": "Not listed",
+		"url": "https://luma.com/softr-mnkh",
+		"source": "Luma",
+		"blurb": "A 60-minute hands-on session by Softr on using AI to move beyond spreadsheet-based operations.",
+		"blurb_en": "A 60-minute hands-on session by Softr on using AI to move beyond spreadsheet-based operations.",
+		"blurb_fr": "Atelier pratique d'une heure proposé par Softr pour remplacer les opérations sur tableur par des outils d'IA.",
+		"firstSeen": "2026-11-22"
+	},
+	{
 		"id": "bootcamp-26-semaines-pour-apprendre-l-ia-et-entreprendre-online-fr-2026",
 		"title": "Bootcamp 26 semaines pour apprendre l’IA et entreprendre",
 		"date": "2026-12-01",
@@ -1934,6 +2015,26 @@
 		"blurb_en": "Doctolib AI Community session on Claude Code for developers, held in Levallois-Perret.",
 		"blurb_fr": "Session de la Doctolib AI Community sur Claude Code à destination des développeurs, à Levallois-Perret.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "paris-claude-community-x-insidrs-women-meetup-paris-2026",
+		"title": "Paris | Claude Community x Insidrs Women Meetup",
+		"date": "2026-12-01",
+		"time": "18:30–21:30",
+		"city": "Paris",
+		"format": "Meetup",
+		"topics": [
+			"LLM",
+			"Community"
+		],
+		"organiser": "Claude Community Events",
+		"cost": "Not listed",
+		"url": "https://luma.com/claude-fowo",
+		"source": "Luma",
+		"blurb": "A Paris meetup by Claude Community Events and Insidrs for women interested in Claude and AI.",
+		"blurb_en": "A Paris meetup by Claude Community Events and Insidrs for women interested in Claude and AI.",
+		"blurb_fr": "Rencontre parisienne organisée par Claude Community Events et Insidrs à destination des femmes intéressées par Claude et l'IA.",
+		"firstSeen": "2026-11-22"
 	},
 	{
 		"id": "presentation-de-la-formation-en-intelligence-artificielle-online-fr-2026",
@@ -3669,6 +3770,26 @@
 		"blurb_en": "Evening at a Paris bar where AI agents split a task under human supervision, with a 10 EUR price.",
 		"blurb_fr": "Soirée dans un bar du 13e arrondissement où des agents IA se répartissent une tâche sous supervision humaine, à 10 EUR.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "masterclass-intelligence-artificielle-pour-le-droit-online-fr-2027",
+		"title": "MasterClass Intelligence Artificielle pour le droit",
+		"date": "2027-01-13",
+		"time": "09:00–12:00",
+		"city": "Online (FR)",
+		"format": "Workshop",
+		"topics": [
+			"Legal AI",
+			"Generative AI"
+		],
+		"organiser": "marketing-ai",
+		"cost": "Not listed",
+		"url": "https://www.eventbrite.fr/e/billets-masterclass-intelligence-artificielle-pour-le-droit-1989993887286",
+		"source": "Brief IA",
+		"blurb": "An online masterclass by marketing-ai on artificial intelligence applied to law.",
+		"blurb_en": "An online masterclass by marketing-ai on artificial intelligence applied to law.",
+		"blurb_fr": "Masterclass en ligne consacrée à l'intelligence artificielle appliquée au droit, proposée par marketing-ai.",
+		"firstSeen": "2026-11-22"
 	},
 	{
 		"id": "webinaire-ardoise-anonymiser-pseudonymiser-pour-diffuser-des-online-fr-2027",
