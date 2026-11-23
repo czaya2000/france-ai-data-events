@@ -374,6 +374,27 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "build-your-first-mini-app-with-claude-a-live-no-code-worksho-online-fr-2026",
+		"title": "Build Your First Mini App with Claude: A Live, No-Code Workshop [ONLINE]",
+		"date": "2026-11-24",
+		"time": "19:00",
+		"city": "Online (FR)",
+		"format": "Workshop",
+		"topics": [
+			"Generative AI",
+			"No-code",
+			"Claude"
+		],
+		"organiser": "The AI Business Society",
+		"cost": "Not listed",
+		"url": "https://www.briefia.fr/meetups/build-your-first-mini-app-with-claude-a-live-no-code-workshop-online-en-ligne-2026-11-24",
+		"source": "Brief IA",
+		"blurb": "A live, no-code online workshop where participants build a first mini app with Claude, run by The AI Business Society.",
+		"blurb_en": "A live, no-code online workshop where participants build a first mini app with Claude, run by The AI Business Society.",
+		"blurb_fr": "Atelier en ligne en direct, sans code, pour créer une première mini-application avec Claude, organisé par The AI Business Society.",
+		"firstSeen": "2026-11-23"
+	},
+	{
 		"id": "caf-data-17-le-petit-dejeuner-autour-de-la-data-le-coudray-2026",
 		"title": "CAF'DATA #17 - le petit déjeuner autour de la data",
 		"date": "2026-11-24",
@@ -978,6 +999,27 @@
 		"blurb_en": "Mirokaï experience at Enchanted Tools in Paris, a museum visit about robotics and AI.",
 		"blurb_fr": "Expérience Mirokaï chez Enchanted Tools à Paris : visite d'un musée consacré à la robotique et à l'IA.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "l-impact-reel-de-l-ia-sur-les-equipes-tech-online-fr-2026",
+		"title": "L’impact réel de l’IA sur les équipes Tech",
+		"date": "2026-11-25",
+		"time": "12:00–13:00",
+		"city": "Online (FR)",
+		"format": "Webinar",
+		"topics": [
+			"AI adoption",
+			"Tech teams",
+			"AI productivity"
+		],
+		"organiser": "TPC",
+		"cost": "Not listed",
+		"url": "https://www.meetup.com/theproductcrew/events/317354468/",
+		"source": "Meetup",
+		"blurb": "Online session by TPC on how AI is used in tech teams, based on a survey of 1,713 product, engineering, design, data and people professionals.",
+		"blurb_en": "Online session by TPC on how AI is used in tech teams, based on a survey of 1,713 product, engineering, design, data and people professionals.",
+		"blurb_fr": "Séance en ligne organisée par TPC sur l'usage de l'IA dans les équipes tech, s'appuyant sur une enquête auprès de 1 713 professionnels du produit, de l'ingénierie, du design, de la data et des RH.",
+		"firstSeen": "2026-11-23"
 	},
 	{
 		"id": "meetup-27-snds-et-gastroenterologie-paris-2026",
@@ -2182,6 +2224,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "les-cercles-de-l-ia-les-familles-d-agents-ia-online-fr-2026",
+		"title": "Les Cercles de l'IA : Les familles d'agents IA",
+		"date": "2026-12-02",
+		"time": "19:30–20:10",
+		"city": "Online (FR)",
+		"format": "Webinar",
+		"topics": [
+			"AI agents",
+			"Generative AI"
+		],
+		"organiser": "GO AI PARTY",
+		"cost": "Not listed",
+		"url": "https://www.eventbrite.fr/e/billets-les-cercles-de-lia-les-familles-dagents-ia-2004911178305",
+		"source": "Brief IA",
+		"blurb": "Online session of the Cercles de l'IA series by GO AI PARTY on the main families of AI agents.",
+		"blurb_en": "Online session of the Cercles de l'IA series by GO AI PARTY on the main families of AI agents.",
+		"blurb_fr": "Séance en ligne de la série Les Cercles de l'IA, organisée par GO AI PARTY, sur les grandes familles d'agents IA.",
+		"firstSeen": "2026-11-23"
+	},
+	{
 		"id": "meetup-gain-16-architecture-et-finops-des-systemes-multi-mod-paris-2026",
 		"title": "Meetup GAIN #16 | Architecture et FinOps des systèmes multi-modèles : performance, coûts et indépendance de vos systèmes IA.",
 		"date": "2026-12-02",
@@ -2636,6 +2698,27 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "automatic-lunch-webinar-ep-0-let-s-lunch-with-nod-oss-person-paris-2026",
+		"title": "Automatic Lunch Webinar - Ep 0 - Let's Lunch with Nod (OSS Personal n8n AI Agent Assistant)",
+		"date": "2026-12-04",
+		"time": "13:00–14:00",
+		"city": "Paris",
+		"format": "Webinar",
+		"topics": [
+			"AI agents",
+			"Automation",
+			"n8n"
+		],
+		"organiser": "n8n Community Events",
+		"cost": "Not listed",
+		"url": "https://luma.com/n8n-v1ho",
+		"source": "Luma",
+		"blurb": "Webinar by n8n Community Events presenting an open-source personal AI agent assistant built with n8n.",
+		"blurb_en": "Webinar by n8n Community Events presenting an open-source personal AI agent assistant built with n8n.",
+		"blurb_fr": "Webinaire de n8n Community Events présentant un assistant personnel open source fondé sur un agent IA construit avec n8n.",
+		"firstSeen": "2026-11-23"
+	},
+	{
 		"id": "beyond-ai-readiness-architecting-the-intelligent-enterprise--paris-2026",
 		"title": "Beyond AI Readiness: Architecting the Intelligent Enterprise (w/ The AI Collective)",
 		"date": "2026-12-04",
@@ -3028,6 +3111,26 @@
 		"blurb_en": "Monthly open-format mixer for people building and questioning AI, with unmoderated chats on ethics, bias and transparency and video networking.",
 		"blurb_fr": "Rencontre mensuelle libre autour de l'IA appliquée, avec échanges non modérés sur l'éthique, les biais et la transparence, et mise en relation en visio.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "bonifiez-votre-conformite-douaniere-grace-a-l-intelligence-a-online-fr-2026",
+		"title": "Bonifiez votre conformité douanière grâce à l’intelligence artificielle",
+		"date": "2026-12-09",
+		"time": "16:00–18:00",
+		"city": "Online (FR)",
+		"format": "Webinar",
+		"topics": [
+			"Applied AI",
+			"Customs compliance"
+		],
+		"organiser": "Rémy Franzoni",
+		"cost": "Not listed",
+		"url": "https://www.eventbrite.ca/e/billets-bonifiez-votre-conformite-douaniere-grace-a-lintelligence-artificielle-2004879720213",
+		"source": "Brief IA",
+		"blurb": "Online session organised by Rémy Franzoni on using artificial intelligence to improve customs compliance.",
+		"blurb_en": "Online session organised by Rémy Franzoni on using artificial intelligence to improve customs compliance.",
+		"blurb_fr": "Séance en ligne organisée par Rémy Franzoni sur l'usage de l'intelligence artificielle pour améliorer la conformité douanière.",
+		"firstSeen": "2026-11-23"
 	},
 	{
 		"id": "quel-est-le-niveau-de-maturite-ia-de-votre-agence-de-marketi-online-fr-2026",
@@ -3952,6 +4055,26 @@
 		"blurb_en": "Discussion café at the Université de Rennes about our relationship with digital tools and AI and their impact on society.",
 		"blurb_fr": "Café de réflexion à l'Université de Rennes sur notre rapport au numérique et à l'IA et sur leurs effets dans la société.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "retour-d-experience-comment-une-entreprise-deeptech-de-la-cy-paris-2027",
+		"title": "Retour d'expérience : Comment une entreprise deeptech de la cyber sécurise ses usages de l'IA",
+		"date": "2027-01-28",
+		"time": "18:00–20:00",
+		"city": "Paris",
+		"format": "Meetup",
+		"topics": [
+			"AI security",
+			"Enterprise AI"
+		],
+		"organiser": "datacraft",
+		"cost": "Not listed",
+		"url": "https://luma.com/retour-d-experience-comment-une-entreprise",
+		"source": "Luma",
+		"blurb": "Talk by datacraft, a deeptech cybersecurity company, on securing its own use of AI.",
+		"blurb_en": "Talk by datacraft, a deeptech cybersecurity company, on securing its own use of AI.",
+		"blurb_fr": "Témoignage de datacraft, entreprise deeptech de cybersécurité, sur la sécurisation de ses propres usages de l'IA.",
+		"firstSeen": "2026-11-23"
 	},
 	{
 		"id": "declics-ia-du-renseignement-a-l-apprentissage-automatise-rouen-2027",

@@ -209,6 +209,34 @@
 			"trust": "noisy",
 			"icsOk": true,
 			"checked": "2026-11-22"
+		},
+		"golang-paris": {
+			"firstSeen": "2026-11-23",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-23"
+		},
+		"wptoulouse": {
+			"firstSeen": "2026-11-23",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-23"
+		},
+		"mug-toulouse-mobile-user-group": {
+			"firstSeen": "2026-11-23",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-23"
+		},
+		"theproductcrew": {
+			"firstSeen": "2026-11-23",
+			"via": "briefia-meetups",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-23"
 		}
 	}
 }

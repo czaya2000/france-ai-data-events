@@ -46,18 +46,18 @@
 			]
 		},
 		{
-			"kept": "AI Tinkerers Paris: PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
-			"merged": "PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
-			"date": "2026-12-01",
+			"kept": "AI Tinkerers Paris: Physical AI — Builders Day",
+			"merged": "Physical AI — Builders Day",
+			"date": "2026-12-02",
 			"sources": [
 				"agentconfs",
 				"aitinkerers-paris"
 			]
 		},
 		{
-			"kept": "AI Tinkerers Paris: Physical AI — Builders Day",
-			"merged": "Physical AI — Builders Day",
-			"date": "2026-12-02",
+			"kept": "AI Tinkerers Paris: PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
+			"merged": "PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
+			"date": "2026-12-01",
 			"sources": [
 				"agentconfs",
 				"aitinkerers-paris"
@@ -70,6 +70,15 @@
 			"sources": [
 				"openagenda",
 				"openagenda"
+			]
+		},
+		{
+			"kept": "IA & Apéro 10e rencontre !",
+			"merged": "Apéro de l'IA",
+			"date": "2026-11-26",
+			"sources": [
+				"meetup:ia-innovateurs",
+				"brainberg-fr"
 			]
 		},
 		{
@@ -168,15 +177,6 @@
 			"date": "2026-11-26",
 			"sources": [
 				"openagenda",
-				"briefia-meetups"
-			]
-		},
-		{
-			"kept": "AI for Chip Design @NeurIPS",
-			"merged": "AI for Chip Design at NeurIPS 2026",
-			"date": "2026-12-12",
-			"sources": [
-				"agentconfs",
 				"briefia-meetups"
 			]
 		},
@@ -419,6 +419,66 @@
 			"title": "ConUt - Saint Paul sur Save (31): Chasse et promenade en forêt sont-elles compatibles ?",
 			"date": "2026-11-28",
 			"source": "luma-cal:cal-cedsWn0tyHau5wm"
+		},
+		{
+			"title": "Venez discuter de votre projet au Salon de l’Industrie",
+			"date": "2026-11-28",
+			"source": "meetup:le-wagon-bordeaux-coding-station-bootcamp"
+		},
+		{
+			"title": "Notion Paris Summit",
+			"date": "2026-11-25",
+			"source": "luma-paris"
+		},
+		{
+			"title": "Vernissage de l’exposition Outside the Threshold",
+			"date": "2026-12-02",
+			"source": "luma-paris"
+		},
+		{
+			"title": "Meet with Modal at NeurIPS Paris '26",
+			"date": "2026-12-09",
+			"source": "luma-cal:bond-paris"
+		},
+		{
+			"title": "Tech & Business Networking in Paris",
+			"date": "2026-12-15",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Entrypoint 2027",
+			"date": "2027-03-15",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Agile France 2027 : Transformons dans un monde incertain",
+			"date": "2027-03-18",
+			"source": "brainberg-fr"
+		},
+		{
+			"title": "Build It Summit",
+			"date": "2026-12-01",
+			"source": "confstech"
+		},
+		{
+			"title": "Reprendre un emploi avec l'Activité par l'Insertion Economique (IAE)",
+			"date": "2027-01-26",
+			"source": "openagenda"
+		},
+		{
+			"title": "FORUM Insertion par l'activité Economique (IAE) de Saint-Denis",
+			"date": "2026-12-08",
+			"source": "openagenda"
+		},
+		{
+			"title": "Présentation du dispositif IAE (Insertion par l'Activité Economique) et Accès aux offres d'emploi de l'IAE",
+			"date": "2026-12-08",
+			"source": "openagenda"
+		},
+		{
+			"title": "Apéro Agile Montpellier",
+			"date": "2026-12-23",
+			"source": "meetup:aperos-agiles-montpellier"
 		}
 	]
 }
