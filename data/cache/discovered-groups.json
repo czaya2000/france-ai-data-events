@@ -237,6 +237,13 @@
 			"trust": "noisy",
 			"icsOk": true,
 			"checked": "2026-11-23"
+		},
+		"le-wagon-nantes-coding-bootcamp": {
+			"firstSeen": "2026-11-24",
+			"via": "meetup-city-pages",
+			"trust": "noisy",
+			"icsOk": false,
+			"checked": "2026-11-24"
 		}
 	}
 }

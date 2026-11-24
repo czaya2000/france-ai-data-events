@@ -19,9 +19,9 @@
 			]
 		},
 		{
-			"kept": "The AI Collective Podcast with AJ & Catherine: Monday, Nov 23",
-			"merged": "The AI Collective Podcast with AJ & Catherine: Tuesday, Nov 24",
-			"date": "2026-11-23",
+			"kept": "The AI Collective Podcast with AJ & Catherine: Tuesday, Nov 24",
+			"merged": "The AI Collective Podcast with AJ & Catherine: Wednesday, Nov 25",
+			"date": "2026-11-24",
 			"sources": [
 				"luma-cal:genai-collective",
 				"luma-cal:genai-collective"
@@ -70,6 +70,15 @@
 			"sources": [
 				"openagenda",
 				"openagenda"
+			]
+		},
+		{
+			"kept": "AI-Ficionados #8 · Usages créatifs : de l'image au film avec l'IA",
+			"merged": "AI-Ficionados #8",
+			"date": "2026-12-08",
+			"sources": [
+				"luma-cal:aificionados",
+				"toulouse-tech-hub"
 			]
 		},
 		{
@@ -154,15 +163,6 @@
 			]
 		},
 		{
-			"kept": "Facilitateur, formateur, coach : maîtrisez l'IA générative",
-			"merged": "IA avancée pour facilitateur, formateur, coach",
-			"date": "2026-11-24",
-			"sources": [
-				"briefia-meetups",
-				"briefia-meetups"
-			]
-		},
-		{
 			"kept": "Conférence Intelligence Artificielle",
 			"merged": "Journée de l'Entrepreneur : Intelligence Artificielle Générative",
 			"date": "2026-11-26",
@@ -177,6 +177,15 @@
 			"date": "2026-11-26",
 			"sources": [
 				"openagenda",
+				"briefia-meetups"
+			]
+		},
+		{
+			"kept": "AI for Chip Design @NeurIPS",
+			"merged": "AI for Chip Design at NeurIPS 2026",
+			"date": "2026-12-12",
+			"sources": [
+				"agentconfs",
 				"briefia-meetups"
 			]
 		},
@@ -479,6 +488,26 @@
 			"title": "Apéro Agile Montpellier",
 			"date": "2026-12-23",
 			"source": "meetup:aperos-agiles-montpellier"
+		},
+		{
+			"title": "ALMOST. Kris Lef I Vernissage",
+			"date": "2026-12-05",
+			"source": "luma-paris"
+		},
+		{
+			"title": "Ciné-conférence : Partage des invisibles",
+			"date": "2026-12-14",
+			"source": "luma-paris"
+		},
+		{
+			"title": "[Kanpur] n8n Community Meetup(online) · Explore Possibilites from n8n - Phase 1",
+			"date": "2026-12-05",
+			"source": "luma-cal:n8n-events"
+		},
+		{
+			"title": "L’ÉNERGIE : VOUS LA CONSOMMEZ, POURQUOI LA DÉCARBONER ?",
+			"date": "2026-12-08",
+			"source": "brainberg-fr"
 		}
 	]
 }

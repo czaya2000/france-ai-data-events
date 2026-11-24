@@ -87,6 +87,62 @@
 			"via": "luma-cal:bond-paris",
 			"firstSeen": "2026-11-22",
 			"trust": "noisy"
+		},
+		"cal-iRk0Ck3LB66OAMa": {
+			"name": "Duchess France",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-24",
+			"trust": "noisy"
+		},
+		"cal-5QALGbpeLcvA6dg": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-24",
+			"trust": "noisy"
+		},
+		"cal-zEeI5VCF8jeLwjB": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-24",
+			"trust": "noisy"
+		},
+		"cal-NaPnXUgmbSL42IS": {
+			"name": "IQ Project",
+			"slug": "iq-project-ai",
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-24",
+			"trust": "noisy"
+		},
+		"cal-5a2J8U3e8jKPu3W": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-24",
+			"trust": "noisy"
+		},
+		"cal-yOWNNoRAAvD3vVD": {
+			"name": "Augmented",
+			"slug": "augmented-thiga",
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-24",
+			"trust": "noisy"
+		},
+		"cal-nyhJqquBlMBkFy3": {
+			"name": "Google Developer Group Epita",
+			"slug": "GdgEpita",
+			"city": "Le Kremlin-Bicêtre",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-24",
+			"trust": "noisy"
 		}
 	},
 	"slugs": {
@@ -134,6 +190,16 @@
 		"pr9k3uap": null,
 		"aic-gtm-rewind": "cal-E74MDlDKBaeAwXK",
 		"aic-se-11-29": "cal-E74MDlDKBaeAwXK",
-		"genai-2c9z": "cal-E74MDlDKBaeAwXK"
+		"genai-2c9z": "cal-E74MDlDKBaeAwXK",
+		"rex-voice-ai-architecture-temps-reel-et-passage-a": "cal-5HpS5DjhfyP4hWY",
+		"2krybbmv": "cal-iRk0Ck3LB66OAMa",
+		"xxi7xlfg": "cal-5QALGbpeLcvA6dg",
+		"m6exfysj": "cal-zEeI5VCF8jeLwjB",
+		"iq-bdem": "cal-NaPnXUgmbSL42IS",
+		"y1uanlsj": "cal-5a2J8U3e8jKPu3W",
+		"augmented-aflo": "cal-yOWNNoRAAvD3vVD",
+		"8dl5fglx": "cal-nyhJqquBlMBkFy3",
+		"aic-kul-20261128": "cal-E74MDlDKBaeAwXK",
+		"aic-nz-12-1": "cal-E74MDlDKBaeAwXK"
 	}
 }

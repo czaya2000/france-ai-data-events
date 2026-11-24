@@ -9,848 +9,924 @@
 			"consecutiveFailures": 0
 		},
 		"prairie-psai": {
-			"lastSuccess": "2026-11-21",
+			"lastSuccess": "2026-11-24",
 			"consecutiveFailures": 0
 		},
 		"miai": {
-			"lastSuccess": "2026-11-21",
+			"lastSuccess": "2026-11-24",
 			"consecutiveFailures": 0
 		},
 		"meetup:pydata-paris": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:compute-paris": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-dataladies": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-ai-tech-talk": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-ai": {
 			"recentCounts": [
 				1,
 				1,
-				1
+				1,
+				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 2,
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:artificial-intelligence-meetup-paris": {
 			"recentCounts": [
 				1,
 				1,
-				1
+				1,
+				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 2,
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-big-data": {
 			"recentCounts": [
 				6,
 				6,
+				6,
 				6
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 6,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-big-data-meetup": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-dbt-meetup": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-apache-airflow-meetup": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-machine-learning-study-group-in-english-meetup": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-women-in-machine-learning-data-science": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:mlops-paris": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-dataops": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-nlp": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:generative-ai-paris": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:data-science-leaders": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:search-and-data": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:data-for-good-france": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:ia-paris": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:rladies-paris": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:french-aws-ug": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:gdg-paris": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:semweb-pro": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:health-data-hub": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:lyon-data-science": {
 			"recentCounts": [
 				3,
 				3,
+				3,
 				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:lyon-ia": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:lyon-dataviz": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:aws-lyon-amazon-web-services-user-group": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:tlse-data-science": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:meetup-visualisation-des-donnees-toulouse": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:ia-innovateurs": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:postgres-toulouse": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:python-toulouse": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:latoulboxducloudnatif": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:intelligence-artificielle-aix-marseille": {
 			"recentCounts": [
 				1,
 				1,
-				1
+				1,
+				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 0,
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:google-developer-group-aix-en-provence": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:bordeaux-ia": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:le-wagon-bordeaux-coding-station-bootcamp": {
 			"recentCounts": [
 				10,
 				10,
+				10,
 				10
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 10,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:le-wagon-lille-coding-station": {
 			"recentCounts": [
 				7,
 				7,
+				7,
 				7
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 7,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:meetup-postgresql-lille": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:groupe-meetup-nice-data": {
 			"recentCounts": [
 				3,
 				3,
+				3,
 				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:nice-natural-language-processing-meetup-group": {
 			"recentCounts": [
 				1,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:generative-ai-rennes": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:python-rennes": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:strasbourg-deep-learning-meetup": {
 			"recentCounts": [
 				3,
 				3,
+				3,
 				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:strasbourg-dev": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:strasbourg-aws-user-group": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:afterwork-ia-montpellier": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:ianancy": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:cfdatalovers": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:les-meetups-de-l-ia": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:ai-first": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:ai-for-dev": {
 			"recentCounts": [
 				1,
 				1,
-				1
+				1,
+				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 0,
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:it-business-club-data-cloud-dev": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-paris": {
 			"recentCounts": [
 				40,
 				39,
-				39
+				39,
+				38
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 39,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 38,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:datacraft": {
 			"recentCounts": [
 				5,
 				5,
-				6
+				6,
+				7
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 6,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 7,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:bond-paris": {
 			"recentCounts": [
 				13,
 				12,
-				12
+				12,
+				23
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 12,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 23,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:genai-collective": {
 			"recentCounts": [
 				59,
 				60,
+				61,
 				61
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 61,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:airstreet": {
 			"recentCounts": [
 				3,
 				3,
+				3,
 				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:doctolib-ai-community": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:dust": {
 			"recentCounts": [
 				3,
 				3,
-				3
+				3,
+				4
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 4,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:hcompany.ai": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:amilabs": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:notionparis": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:aificionados": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cto-de-lyon": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:genainetwork": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:womenincode": {
 			"recentCounts": [
 				5,
 				5,
+				5,
 				5
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 5,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:nouvellemachine": {
 			"recentCounts": [
 				4,
 				3,
+				3,
 				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:machina": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:clickhouse-events": {
 			"recentCounts": [
 				19,
 				19,
-				19
+				19,
+				18
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 19,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 18,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:n8n-events": {
 			"recentCounts": [
 				58,
 				50,
-				53
+				53,
+				52
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 53,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 52,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:neo4j": {
 			"recentCounts": [
 				4,
 				4,
-				5
+				5,
+				6
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 5,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 6,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:ai-automations-make-global-calendar": {
 			"recentCounts": [
 				4,
 				4,
-				4
+				4,
+				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 4,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 3,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:hub-france-ia": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"eventbrite-paris": {
 			"recentCounts": [],
@@ -974,67 +1050,73 @@
 			"recentCounts": [
 				228,
 				226,
-				236
+				236,
+				227
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 236,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 227,
+			"lastCountDate": "2026-11-24"
 		},
 		"aieventlist-paris": {
 			"recentCounts": [
 				11,
 				11,
+				12,
 				12
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 12,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"aieventlist-europe": {
 			"recentCounts": [
 				171,
 				172,
+				184,
 				184
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 184,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"agentconfs": {
 			"recentCounts": [
 				544,
 				544,
+				544,
 				544
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 544,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"devevents": {
 			"recentCounts": [
 				18,
 				15,
-				15
+				15,
+				14
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 15,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 14,
+			"lastCountDate": "2026-11-24"
 		},
 		"confstech": {
 			"recentCounts": [
 				138,
 				138,
+				138,
 				138
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 138,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"hackevents-fr": {
 			"recentCounts": [],
@@ -1045,100 +1127,109 @@
 			"recentCounts": [
 				50,
 				50,
+				50,
 				50
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 50,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup-city-pages": {
 			"recentCounts": [
 				0,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"toulouse-tech-hub": {
 			"recentCounts": [
 				15,
 				15,
-				15
+				15,
+				14
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 15,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 14,
+			"lastCountDate": "2026-11-24"
 		},
 		"createwith-paris": {
 			"recentCounts": [
 				6,
 				6,
+				6,
 				6
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 6,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"openagenda": {
 			"recentCounts": [
 				229,
 				221,
-				219
+				219,
+				213
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 219,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 213,
+			"lastCountDate": "2026-11-24"
 		},
 		"numerique-gouv": {
 			"recentCounts": [
 				4,
 				4,
+				4,
 				4
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 4,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"afia": {
 			"recentCounts": [
 				15,
 				15,
+				15,
 				15
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 15,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"hi-paris-ics": {
 			"recentCounts": [
 				8,
 				8,
+				7,
 				7
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 7,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"aitinkerers-paris": {
 			"recentCounts": [
 				20,
 				20,
+				20,
 				20
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 20,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"aniti-rss": {
 			"recentCounts": [],
@@ -1159,449 +1250,490 @@
 			"recentCounts": [
 				6,
 				6,
+				6,
 				6
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 6,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:lyondatascience": {
 			"recentCounts": [
 				3,
 				3,
+				3,
 				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:rencontres-tech-innovation": {
 			"recentCounts": [
 				1,
 				1,
-				1
+				1,
+				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 0,
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:aperos-agiles-montpellier": {
 			"recentCounts": [
 				10,
 				10,
+				10,
 				10
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 10,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:chtijug": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-tech-afterwork-talks-networking": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:gdg-rennes": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:finistdevs": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:staff42": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:proxiadnord": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:solutiontech": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:android-paris": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:hacksxb": {
 			"recentCounts": [
 				8,
 				8,
+				8,
 				8
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 8,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:parisapi": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:yeeso-itwomen-network": {
 			"recentCounts": [
 				8,
 				8,
+				8,
 				8
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 8,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:alpesjug": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:lyonjs": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:digital-nomads-remote-workers-montpellier": {
 			"recentCounts": [
 				10,
 				10,
+				10,
 				10
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 10,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:meetup-harrycow-coworking-toulouse": {
 			"recentCounts": [
 				3,
 				3,
+				3,
 				3
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 3,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:maxsessions": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:rladies-limoges": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:cara-grenoble": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:software-craftsmanship-lille": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:strasbourg-net-group": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:lyondigitalhub": {
 			"recentCounts": [
 				4,
 				4,
+				4,
 				4
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 4,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:meetup-programmez": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:ksug-in": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:paris-philosophy-cafe": {
 			"recentCounts": [
 				1,
 				1,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:le-meetup-du-laptop-ux-creation": {
 			"recentCounts": [
 				2,
 				2,
-				2
+				2,
+				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 1,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cal-cedsWn0tyHau5wm": {
 			"recentCounts": [
 				9,
 				8,
+				8,
 				8
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 8,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:alan.eu": {
 			"recentCounts": [
 				1,
 				1,
-				1
+				1,
+				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 2,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cal-1hB7mHUJ8WZ0l8h": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cal-8yPHi9oITkCB5CI": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:Paris-hardware-meetup": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cal-QEWfkaGcHSASBfq": {
 			"recentCounts": [
 				1,
 				1,
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cal-0ICm7FJKGW0OHUA": {
 			"recentCounts": [
 				1,
 				0,
+				0,
 				0
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 0,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cal-ouvsbv3Gj9kvRGD": {
 			"recentCounts": [
 				8,
 				8,
+				8,
 				8
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 8,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:cal-R4V662MAZSQBUp5": {
 			"recentCounts": [
 				2,
 				2,
+				2,
 				2
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 2,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:l-apero-de-l-ia": {
 			"recentCounts": [
 				10,
+				10,
 				10
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 10,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:claudecommunity": {
 			"recentCounts": [
 				121,
-				122
+				122,
+				123
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 122,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 123,
+			"lastCountDate": "2026-11-24"
 		},
 		"luma-cal:softr-events": {
 			"recentCounts": [
 				6,
-				7
+				7,
+				9
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
-			"lastCount": 7,
-			"lastCountDate": "2026-11-23"
+			"lastSuccess": "2026-11-24",
+			"lastCount": 9,
+			"lastCountDate": "2026-11-24"
 		},
 		"bigdataparis": {
 			"lastSuccess": "2026-11-23",
@@ -1613,49 +1745,124 @@
 		},
 		"meetup:golang-paris": {
 			"recentCounts": [
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:wptoulouse": {
 			"recentCounts": [
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:mug-toulouse-mobile-user-group": {
 			"recentCounts": [
+				1,
 				1
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 1,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
 		},
 		"meetup:theproductcrew": {
 			"recentCounts": [
+				5,
 				5
 			],
 			"consecutiveFailures": 0,
-			"lastSuccess": "2026-11-23",
+			"lastSuccess": "2026-11-24",
 			"lastCount": 5,
-			"lastCountDate": "2026-11-23"
+			"lastCountDate": "2026-11-24"
+		},
+		"3ia-cote-d-azur": {
+			"lastSuccess": "2026-11-24",
+			"consecutiveFailures": 0
+		},
+		"dataia-saclay": {
+			"lastSuccess": "2026-11-24",
+			"consecutiveFailures": 0
+		},
+		"luma-cal:cal-iRk0Ck3LB66OAMa": {
+			"recentCounts": [
+				1
+			],
+			"consecutiveFailures": 0,
+			"lastSuccess": "2026-11-24",
+			"lastCount": 1,
+			"lastCountDate": "2026-11-24"
+		},
+		"luma-cal:cal-5QALGbpeLcvA6dg": {
+			"recentCounts": [
+				2
+			],
+			"consecutiveFailures": 0,
+			"lastSuccess": "2026-11-24",
+			"lastCount": 2,
+			"lastCountDate": "2026-11-24"
+		},
+		"luma-cal:cal-zEeI5VCF8jeLwjB": {
+			"recentCounts": [
+				2
+			],
+			"consecutiveFailures": 0,
+			"lastSuccess": "2026-11-24",
+			"lastCount": 2,
+			"lastCountDate": "2026-11-24"
+		},
+		"luma-cal:iq-project-ai": {
+			"recentCounts": [
+				2
+			],
+			"consecutiveFailures": 0,
+			"lastSuccess": "2026-11-24",
+			"lastCount": 2,
+			"lastCountDate": "2026-11-24"
+		},
+		"luma-cal:cal-5a2J8U3e8jKPu3W": {
+			"recentCounts": [
+				1
+			],
+			"consecutiveFailures": 0,
+			"lastSuccess": "2026-11-24",
+			"lastCount": 1,
+			"lastCountDate": "2026-11-24"
+		},
+		"luma-cal:augmented-thiga": {
+			"recentCounts": [
+				2
+			],
+			"consecutiveFailures": 0,
+			"lastSuccess": "2026-11-24",
+			"lastCount": 2,
+			"lastCountDate": "2026-11-24"
+		},
+		"luma-cal:GdgEpita": {
+			"recentCounts": [
+				1
+			],
+			"consecutiveFailures": 0,
+			"lastSuccess": "2026-11-24",
+			"lastCount": 1,
+			"lastCountDate": "2026-11-24"
 		}
 	},
 	"etags": {
 		"https://aieventlist.ai/feed.xml": {
-			"etag": "W/\"6b03dbe8-1ee1b\"",
-			"lastModified": "Mon, 23 Nov 2026 06:23:36 GMT"
+			"etag": "W/\"6b0511e2-1ee4d\"",
+			"lastModified": "Tue, 24 Nov 2026 04:26:10 GMT"
 		},
 		"https://aieventlist.ai/cities/paris/events.ics": {
-			"etag": "\"6b03dbc9-1efc\"",
-			"lastModified": "Mon, 23 Nov 2026 06:23:05 GMT"
+			"etag": "\"6b0511c2-1efc\"",
+			"lastModified": "Tue, 24 Nov 2026 04:25:38 GMT"
 		},
 		"https://agentconfs.com/feeds/all.ics": {
 			"etag": "\"0af2a74502a073f8f1c6eb02d5782523\""
@@ -1667,52 +1874,53 @@
 			"etag": "W/\"73f2fae2aa80ad3ac4e69d78c24e9dd10c503f4db49d2b4f7fdd14268db93c09\""
 		},
 		"https://www.briefia.fr/meetups": {
-			"etag": "W/\"oy6ld3avwiboa8\""
+			"etag": "W/\"kc8s9xeof3b3qj\""
 		},
 		"https://toulouse-tech-hub.fr/": {
-			"etag": "W/\"6b036b89-acefd\"",
-			"lastModified": "Sun, 22 Nov 2026 22:24:09 GMT"
+			"etag": "W/\"6b04a946-acf9b\"",
+			"lastModified": "Mon, 23 Nov 2026 20:59:50 GMT"
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/paris/events/": {
-			"etag": "W/\"e4Xj6jG6CHAt3p3mOtRtWs6jCKAtuX4-\""
+			"etag": "W/\"v9k3BZHODJJ97zbzrrNAn2tjmsOb4_pV\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/lyon/events/": {
-			"etag": "W/\"jwnlVbJLp_e2BkG3ZYgUFxHRJY5JXYPl\""
+			"etag": "W/\"W_WwWQY5YHup97j3maKN2nUqrxR1P0DV\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/toulouse/events/": {
-			"etag": "W/\"4cXOuXiOKqj9EAE-wZV3xUin6ykrQ-H7\""
+			"etag": "W/\"yRqsBlDeXPYxBGD6logIs-oGSAm3-EYx\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/marseille/events/": {
-			"etag": "W/\"XxFFsN_ZCpejJKObq-CS3B1Sa9CgsI13\""
+			"etag": "W/\"CXa9h3mBrdmNKB7WXFHcVPMfvgT-F9LQ\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/nice/events/": {
-			"etag": "W/\"W04SIzYOE0Sm7be3aTT50QKElVhwZyja\""
+			"etag": "W/\"JksAPbs1-YBRkKpX0Oa7Y9sUELME1NZj\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/bordeaux/events/": {
-			"etag": "W/\"IbbsEu1Gic8V8e7k6P9kx24BDW8r0Oqr\""
+			"etag": "W/\"JAwGweRdlIdDG0vxslgK0xduTmKxDYv8\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/lille/events/": {
-			"etag": "W/\"SBjQlx2OLDy7h9Ek0iR0NOuSXfOg8BxC\""
+			"etag": "W/\"kMY8Cdxkr4-rfy699xz0GvWPBSASWIDf\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/nantes/events/": {
-			"etag": "W/\"szvXCiAiQJZfcQV2HoHVrI07K0pILckL\""
+			"etag": "W/\"AZbvIMW33ZQSev9sSQmo4IEJndbcbJkW\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/rennes/events/": {
-			"etag": "W/\"w7uviwvzdMy7d2Krn1ktvpwG4P3iTUst\""
+			"etag": "W/\"XyfcUfAR7hnD8VBi17l2n7Ia_ejG_MxC\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/grenoble/events/": {
-			"etag": "W/\"4p5OFi0elDPqPzZ-UaGtzKkUJPzbD68-\""
+			"etag": "W/\"PjHL_uCk5Dhjz1PjzjnIyRbHgYU3U544\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/strasbourg/events/": {
-			"etag": "W/\"K848z5mEbXqeIijb-zd5nYHfMJPSzz2o\""
+			"etag": "W/\"c0GGQ1odHYFk5rfmQfGf5hrtoLeiF9Wy\""
 		},
 		"https://www.meetup.com/fr-FR/cities/fr/montpellier/events/": {
-			"etag": "W/\"RHJxVM_HhLAfxCT92LjzL_PLO2eNGg9p\""
+			"etag": "W/\"ca1Ns_5tYEjLBG76ud3Ot0USZJSVOgS8\""
 		}
 	},
 	"pageHashes": {
 		"hub-franceia": "2605f2489b4a6298d973342c6f648287cb49e6f0",
 		"allai-fr": "9e32bc47092453ea42c509a92280353b570df662",
-		"miai": "e7696e44d3ab691e0af10f295dce4abb53628798"
+		"miai": "dcabbd98e2e081ccd4b650a6a2c7df6dc4f9bc18",
+		"3ia-cote-d-azur": "a61d132e4dea57b45b06fd03fe22211aaf49c158"
 	}
 }

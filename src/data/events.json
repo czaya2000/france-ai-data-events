@@ -729,6 +729,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "meetup-ia-avec-devwithai-google-paris-2026",
+		"title": "Meetup IA avec DevWithAI @ Google",
+		"date": "2026-11-24",
+		"time": "18:30–21:30",
+		"city": "Paris",
+		"format": "Meetup",
+		"topics": [
+			"Artificial intelligence",
+			"Community"
+		],
+		"organiser": "Duchess France",
+		"cost": "Not listed",
+		"url": "https://luma.com/2krybbmv",
+		"source": "Luma",
+		"blurb": "An AI community meetup in Paris organised by Duchess France, held with DevWithAI at Google.",
+		"blurb_en": "An AI community meetup in Paris organised by Duchess France, held with DevWithAI at Google.",
+		"blurb_fr": "Rencontre communautaire sur l'IA à Paris, organisée par Duchess France avec DevWithAI chez Google.",
+		"firstSeen": "2026-11-24"
+	},
+	{
 		"id": "opportunites-et-risques-de-l-ia-dans-l-education-online-fr-2026",
 		"title": "Opportunités et risques de l'IA dans l'éducation",
 		"date": "2026-11-24",
@@ -954,6 +974,27 @@
 		"blurb_en": "A Paris community event by The AI Collective for sharing your work and meeting other members of the group.",
 		"blurb_fr": "Rencontre communautaire à Paris organisée par The AI Collective pour présenter ses travaux et rencontrer d'autres membres.",
 		"firstSeen": "2026-11-22"
+	},
+	{
+		"id": "claude-pour-dirigeants-venez-vous-former-gratuitement-paris-2026",
+		"title": "Claude pour dirigeants : venez vous former gratuitement",
+		"date": "2026-11-25",
+		"time": "19:00–21:00",
+		"city": "Paris",
+		"venue": "12 Rue Chabanais, Paris",
+		"format": "Workshop",
+		"topics": [
+			"LLM",
+			"AI for business"
+		],
+		"organiser": "Personal",
+		"cost": "Free",
+		"url": "https://luma.com/xxi7xlfg",
+		"source": "Luma",
+		"blurb": "A free training session for business leaders on using Claude, at a venue in Paris.",
+		"blurb_en": "A free training session for business leaders on using Claude, at a venue in Paris.",
+		"blurb_fr": "Formation gratuite destinée aux dirigeants sur l'utilisation de Claude, dans un lieu situé à Paris.",
+		"firstSeen": "2026-11-24"
 	},
 	{
 		"id": "compute-paris-2026-paris-2026",
@@ -1210,6 +1251,27 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "databricks-i-shane-beyond-the-prompt-control-context-paris-2026",
+		"title": "Databricks × I-Shane : Beyond the Prompt — Control & Context",
+		"date": "2026-11-26",
+		"time": "18:30–21:30",
+		"city": "Paris",
+		"venue": "198 Av. de France, Paris",
+		"format": "Meetup",
+		"topics": [
+			"Databricks",
+			"Data platforms"
+		],
+		"organiser": "Personal",
+		"cost": "Not listed",
+		"url": "https://luma.com/y1uanlsj",
+		"source": "Luma",
+		"blurb": "An in-person session in Paris on controlling and adding context to AI systems, with Databricks and I-Shane.",
+		"blurb_en": "An in-person session in Paris on controlling and adding context to AI systems, with Databricks and I-Shane.",
+		"blurb_fr": "Session en présence à Paris sur le contrôle et le contexte des systèmes d'IA, avec Databricks et I-Shane.",
+		"firstSeen": "2026-11-24"
+	},
+	{
 		"id": "decouvrez-la-nouvelle-ere-de-l-agentic-coding-strasbourg-2026",
 		"title": "Découvrez la nouvelle ère de l'agentic coding",
 		"date": "2026-11-26",
@@ -1230,6 +1292,27 @@
 		"blurb_en": "Half-day of agentic AI at Epitech Strasbourg: technical sessions in the morning, then the Agentic Football Cup GameDay across four AWS cities.",
 		"blurb_fr": "Demi-journée sur l'IA agentique à Epitech Strasbourg : sessions techniques le matin, puis Agentic Football Cup, un GameDay entre quatre villes AWS.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "demo-night-agentiq-iq-project-1re-promotion-paris-2026",
+		"title": "Demo Night AgentIQ · IQ Project · 1re promotion",
+		"date": "2026-11-26",
+		"time": "18:30–22:00",
+		"city": "Paris",
+		"venue": "136 Rue d'Aboukir, Paris",
+		"format": "Meetup",
+		"topics": [
+			"AI agents",
+			"Demo day"
+		],
+		"organiser": "IQ Project",
+		"cost": "Not listed",
+		"url": "https://luma.com/iq-bdem",
+		"source": "Luma",
+		"blurb": "A demo night in Paris where the first promotion of IQ Project presents its AgentIQ projects.",
+		"blurb_en": "A demo night in Paris where the first promotion of IQ Project presents its AgentIQ projects.",
+		"blurb_fr": "Soirée de démonstrations à Paris où la première promotion d'IQ Project présente ses projets AgentIQ.",
+		"firstSeen": "2026-11-24"
 	},
 	{
 		"id": "ia-apero-10e-rencontre-toulouse-2026",
@@ -1464,6 +1547,27 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "workshop-ai-native-sdlc-le-playbook-anthropic-from-the-trenc-paris-2026",
+		"title": "Workshop AI-Native SDLC : Le playbook Anthropic from the trenches",
+		"date": "2026-11-26",
+		"time": "18:30–22:30",
+		"city": "Paris",
+		"venue": "23 Rue Taitbout, Paris",
+		"format": "Workshop",
+		"topics": [
+			"AI-native SDLC",
+			"Software development"
+		],
+		"organiser": "Augmented",
+		"cost": "Not listed",
+		"url": "https://luma.com/augmented-aflo",
+		"source": "Luma",
+		"blurb": "A workshop in Paris on an AI-native software development lifecycle, drawing on Anthropic's playbook.",
+		"blurb_en": "A workshop in Paris on an AI-native software development lifecycle, drawing on Anthropic's playbook.",
+		"blurb_fr": "Atelier à Paris sur un cycle de développement logiciel conçu autour de l'IA, à partir du guide d'Anthropic.",
+		"firstSeen": "2026-11-24"
+	},
+	{
 		"id": "faites-pas-de-l-ia-faites-de-la-pub-creaitive-day-2-paris-2026",
 		"title": "Faites pas de l’IA. Faites de la pub. — créAItive Day #2",
 		"date": "2026-11-27",
@@ -1592,6 +1696,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "hackathon-build-ai-on-kaspa-le-kremlin-bicetre-2026",
+		"title": "HACKATHON: Build AI on KASPA",
+		"date": "2026-11-28",
+		"time": "09:00–18:00",
+		"city": "Le Kremlin-Bicêtre",
+		"format": "Workshop",
+		"topics": [
+			"AI",
+			"Blockchain"
+		],
+		"organiser": "Google Developer Group Epita",
+		"cost": "Not listed",
+		"url": "https://luma.com/8dl5fglx",
+		"source": "Luma",
+		"blurb": "A hackathon in Le Kremlin-Bicêtre, organised by GDG EPITA, to build AI applications on the Kaspa blockchain.",
+		"blurb_en": "A hackathon in Le Kremlin-Bicêtre, organised by GDG EPITA, to build AI applications on the Kaspa blockchain.",
+		"blurb_fr": "Hackathon au Kremlin-Bicêtre, organisé par GDG EPITA, pour construire des applications d'IA sur la blockchain Kaspa.",
+		"firstSeen": "2026-11-24"
+	},
+	{
 		"id": "ia-agentique-et-droit-europeen-strasbourg-2026",
 		"title": "IA agentique et droit européen",
 		"date": "2026-11-28",
@@ -1714,6 +1838,26 @@
 		"blurb_en": "Podcast session hosted by The AI Collective with AJ and Catherine, on Monday 30 November.",
 		"blurb_fr": "Session de podcast de The AI Collective animée par AJ et Catherine, le lundi 30 novembre.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "virtual-google-agents-in-production-for-enterprises-with-ora-online-fr-2026",
+		"title": "[Virtual] Google Agents in Production for Enterprises with Oracle",
+		"date": "2026-12-01",
+		"time": "18:00–19:00",
+		"city": "Online (FR)",
+		"format": "Webinar",
+		"topics": [
+			"AI agents",
+			"Google Cloud"
+		],
+		"organiser": "Paris Enterprise AI",
+		"cost": "Not listed",
+		"url": "https://www.meetup.com/paris-ai/events/317563576/",
+		"source": "Meetup",
+		"blurb": "A virtual session organised by Paris Enterprise AI on bringing AI agents into production in large organisations, with Google Cloud and Oracle.",
+		"blurb_en": "A virtual session organised by Paris Enterprise AI on bringing AI agents into production in large organisations, with Google Cloud and Oracle.",
+		"blurb_fr": "Session en ligne organisée par Paris Enterprise AI sur la mise en production d'agents d'IA dans les grandes organisations, avec Google Cloud et Oracle.",
+		"firstSeen": "2026-11-24"
 	},
 	{
 		"id": "ai-tinkerers-paris-pair-ed-builder-summit-physical-ai-roboti-paris-2026",
@@ -2392,6 +2536,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "what-happens-when-agents-run-every-layer-of-the-company-paris-2026",
+		"title": "What happens when agents run every layer of the company?",
+		"date": "2026-12-02",
+		"time": "18:00–21:00",
+		"city": "Paris",
+		"format": "Meetup",
+		"topics": [
+			"AI agents",
+			"Enterprise AI"
+		],
+		"organiser": "Personal",
+		"cost": "Not listed",
+		"url": "https://luma.com/3br4reod",
+		"source": "Luma",
+		"blurb": "An event in Paris on how AI agents might operate across every layer of a company.",
+		"blurb_en": "An event in Paris on how AI agents might operate across every layer of a company.",
+		"blurb_fr": "Événement à Paris sur la manière dont des agents d'IA peuvent intervenir à tous les niveaux d'une entreprise.",
+		"firstSeen": "2026-11-24"
+	},
+	{
 		"id": "a-travers-les-yeux-d-une-ia-atelier-decouverte-de-la-data-sc-bordeaux-2026",
 		"title": "À travers les yeux d’une IA : atelier découverte de la data science",
 		"date": "2026-12-03",
@@ -2471,6 +2635,27 @@
 		"blurb_en": "Introductory session on building a startup, run in Paris by The AI Collective community.",
 		"blurb_fr": "Session d'introduction à la création de startup, proposée à Paris par la communauté The AI Collective.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "claude-pour-dirigeants-venez-vous-former-gratuitement-paris-2026-2026-12-03",
+		"title": "Claude pour dirigeants : venez vous former gratuitement",
+		"date": "2026-12-03",
+		"time": "19:00–21:00",
+		"city": "Paris",
+		"venue": "12 Rue Chabanais, Paris",
+		"format": "Workshop",
+		"topics": [
+			"LLM",
+			"AI for business"
+		],
+		"organiser": "Personal",
+		"cost": "Free",
+		"url": "https://luma.com/qhym7uq4",
+		"source": "Luma",
+		"blurb": "A free training session for business leaders on using Claude, at a venue in Paris.",
+		"blurb_en": "A free training session for business leaders on using Claude, at a venue in Paris.",
+		"blurb_fr": "Formation gratuite destinée aux dirigeants sur l'utilisation de Claude, dans un lieu situé à Paris.",
+		"firstSeen": "2026-11-24"
 	},
 	{
 		"id": "hi-paris-reading-groups-fairness-in-ai-session-2-online-fr-2026",
@@ -2924,6 +3109,27 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "ai-product-sprint-toulouse-du-pitch-au-lancement-toulouse-2026",
+		"title": "AI Product Sprint Toulouse : Du pitch au lancement",
+		"date": "2026-12-08",
+		"time": "18:00–19:30",
+		"city": "Toulouse",
+		"venue": "27 Rue d'Aubuisson, Toulouse",
+		"format": "Workshop",
+		"topics": [
+			"AI products",
+			"No-code"
+		],
+		"organiser": "Softr",
+		"cost": "Not listed",
+		"url": "https://luma.com/softr-c2k2",
+		"source": "Luma",
+		"blurb": "An in-person sprint in Toulouse, organised by Softr, on taking an AI product from pitch to launch.",
+		"blurb_en": "An in-person sprint in Toulouse, organised by Softr, on taking an AI product from pitch to launch.",
+		"blurb_fr": "Sprint en présence à Toulouse, organisé par Softr, pour mener un produit d'IA du pitch au lancement.",
+		"firstSeen": "2026-11-24"
+	},
+	{
 		"id": "ai-ficionados-8-toulouse-2026",
 		"title": "AI-Ficionados #8",
 		"date": "2026-12-08",
@@ -3027,6 +3233,27 @@
 		"blurb_en": "One-day ELLIS gathering of the European machine learning community at the Palais des Congrès, with 20 community-led sessions and a poster session, just before NeurIPS.",
 		"blurb_fr": "Journée de la communauté européenne du machine learning au Palais des Congrès de Paris : 20 sessions animées par les participants et une session de posters, avant NeurIPS.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "is-your-product-agent-ready-second-opinion-x-agent-connect-paris-2026",
+		"title": "Is your product agent-ready? Second Opinion x Agent Connect",
+		"date": "2026-12-08",
+		"time": "18:30–21:30",
+		"city": "Paris",
+		"venue": "117 Quai de Valmy, Paris",
+		"format": "Meetup",
+		"topics": [
+			"AI agents",
+			"Product development"
+		],
+		"organiser": "Alpic",
+		"cost": "Not listed",
+		"url": "https://luma.com/agent-connect-paris",
+		"source": "Luma",
+		"blurb": "An in-person meetup in Paris, organised by Alpic, on making products ready for AI agents, with Second Opinion and Agent Connect.",
+		"blurb_en": "An in-person meetup in Paris, organised by Alpic, on making products ready for AI agents, with Second Opinion and Agent Connect.",
+		"blurb_fr": "Rencontre en présence à Paris, organisée par Alpic, sur l'adaptation des produits aux agents d'IA, avec Second Opinion et Agent Connect.",
+		"firstSeen": "2026-11-24"
 	},
 	{
 		"id": "jurix-2026-39th-international-conference-on-legal-knowledge--toulouse-2026",
@@ -3403,6 +3630,26 @@
 		"firstSeen": "2026-11-21"
 	},
 	{
+		"id": "rex-voice-ai-architecture-temps-reel-et-passage-a-l-echelle--paris-2026",
+		"title": "REX - Voice AI : architecture, temps réel et passage à l'échelle d'un agent vocal en production",
+		"date": "2026-12-10",
+		"time": "18:00–20:00",
+		"city": "Paris",
+		"format": "Meetup",
+		"topics": [
+			"Voice AI",
+			"Real-time systems"
+		],
+		"organiser": "datacraft",
+		"cost": "Not listed",
+		"url": "https://luma.com/rex-voice-ai-architecture-temps-reel-et-passage-a",
+		"source": "Luma",
+		"blurb": "An experience report from datacraft in Paris on the architecture, real-time performance and scaling of a voice AI agent in production.",
+		"blurb_en": "An experience report from datacraft in Paris on the architecture, real-time performance and scaling of a voice AI agent in production.",
+		"blurb_fr": "Retour d'expérience de datacraft à Paris sur l'architecture, le temps réel et la montée en charge d'un agent vocal en production.",
+		"firstSeen": "2026-11-24"
+	},
+	{
 		"id": "conference-lecture-ai-deepfake-technology-in-english-online-fr-2026",
 		"title": "Conférence | Lecture — AI & Deepfake Technology (in English)",
 		"date": "2026-12-11",
@@ -3420,6 +3667,27 @@
 		"blurb_en": "English-language lecture from Westmount Public Library on AI and deepfake technology.",
 		"blurb_fr": "Conférence en anglais de la bibliothèque publique de Westmount sur l'IA et la technologie des deepfakes.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "data-party-festival-bordeaux-2026",
+		"title": "Data Party Festival",
+		"date": "2026-12-11",
+		"time": "18:00–22:59",
+		"city": "Bordeaux",
+		"venue": "Le Garage Moderne, 1, rue des Etrangers",
+		"format": "Conference",
+		"topics": [
+			"Data",
+			"AI"
+		],
+		"organiser": "Le Garage Moderne",
+		"cost": "Free",
+		"url": "https://openagenda.com/salon-de-letudiant-grandes-ecoles-sante-social-arts-sport-et-digital/events/data-party-festival",
+		"source": "OpenAgenda (Opendatasoft)",
+		"blurb": "A two-day festival at Le Garage Moderne in Bordeaux covering data and digital topics through workshops, talks and performances.",
+		"blurb_en": "A two-day festival at Le Garage Moderne in Bordeaux covering data and digital topics through workshops, talks and performances.",
+		"blurb_fr": "Festival de deux jours au Garage Moderne à Bordeaux, autour de la data et du numérique, avec ateliers, conférences et performances.",
+		"firstSeen": "2026-11-24"
 	},
 	{
 		"id": "demo-day-decouvrez-les-projets-finaux-de-nos-apprenants-bordeaux-2026",
@@ -3668,6 +3936,27 @@
 		"blurb_en": "Paris evening comparing open source, US, Chinese and French AI options.",
 		"blurb_fr": "Soirée à Paris pour comparer les options d'IA open source, américaines, chinoises et françaises, au Stendhal Paris 20.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "quelle-place-pour-l-ia-dans-la-litterature-et-nos-vies-paris-2026",
+		"title": "Quelle place pour l’IA dans la littérature et nos vies ?",
+		"date": "2026-12-16",
+		"time": "19:30–21:30",
+		"city": "Paris",
+		"venue": "12 Espl. Nathalie Sarraute",
+		"format": "Meetup",
+		"topics": [
+			"AI and society",
+			"Culture"
+		],
+		"organiser": "des liens",
+		"cost": "Not listed",
+		"url": "https://www.eventbrite.fr/e/quelle-place-pour-lia-dans-la-litterature-et-nos-vies-tickets-2004666092246",
+		"source": "Brief IA",
+		"blurb": "A Paris event on the place of artificial intelligence in literature and everyday life, organised by des liens.",
+		"blurb_en": "A Paris event on the place of artificial intelligence in literature and everyday life, organised by des liens.",
+		"blurb_fr": "Événement à Paris sur la place de l'intelligence artificielle dans la littérature et le quotidien, organisé par des liens.",
+		"firstSeen": "2026-11-24"
 	},
 	{
 		"id": "serverless-ia-du-code-assiste-aux-apis-managees-lyon-2026",
@@ -4392,5 +4681,26 @@
 		"blurb_en": "International conference on AI in courts held in Paris, linked to UNESCO.",
 		"blurb_fr": "Conférence internationale sur l'IA dans les tribunaux, organisée à Paris et liée à l'UNESCO.",
 		"firstSeen": "2026-11-21"
+	},
+	{
+		"id": "les-cafes-ia-a-l-universite-de-rennes-rennes-2027-2027-03-24",
+		"title": "Les Cafés IA à l'Université de Rennes",
+		"date": "2027-03-24",
+		"time": "13:00–14:00",
+		"city": "Rennes",
+		"venue": "Pôle Numérique Rennes Beaulieu - Bât. 9B, 263 Avenue du Général Leclerc Rennes",
+		"format": "Meetup",
+		"topics": [
+			"AI and society",
+			"Education"
+		],
+		"organiser": "Suptice - Université de Rennes",
+		"cost": "Not listed",
+		"url": "https://openagenda.com/transition-universite-de-rennes/events/les-cafes-ia-a-luniversite-de-rennes-4220225",
+		"source": "OpenAgenda (Opendatasoft)",
+		"blurb": "A collective discussion at the University of Rennes on our relationship with AI and digital technology and their effects on society.",
+		"blurb_en": "A collective discussion at the University of Rennes on our relationship with AI and digital technology and their effects on society.",
+		"blurb_fr": "Échange collectif à l'Université de Rennes sur notre rapport au numérique et à l'IA, et leurs effets sur la société.",
+		"firstSeen": "2026-11-24"
 	}
 ]
