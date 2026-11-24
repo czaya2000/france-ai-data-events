@@ -45,9 +45,9 @@ Delete any parking A/AAAA records and a `www` CNAME that points at the apex, the
 2. Create the tags listed in `buttondown/description.md`, give each a public description, set the accent colour to black (Settings > Appearance), turn on double opt-in.
 3. Paste the confirmation and welcome texts from `buttondown/confirmation-email.md` and `welcome-email.md`; check the `{{ confirmation_url }}` variable against Buttondown's docs.
 4. Run `node scripts/buttondown-tag-css.mjs` (needs the API key), paste its lines into `buttondown/web.css`, then paste the whole file into Settings > Web > Custom CSS.
-5. Settings > Programming > API: create a key, add it as repository secret `BUTTONDOWN_API_KEY`. Until then the Monday draft step skips itself.
+5. Settings > Programming > API: create a key, add it as repository secret `BUTTONDOWN_API_KEY`. Until then the weekly draft step skips itself.
 6. Redirect URLs (Settings): after the form `https://frenchdataevents.fr/subscribe/thanks/`, after confirmation `https://frenchdataevents.fr/subscribe/confirmed/`.
-7. Every Monday two drafts (French, English) appear. Check them, send them yourself. Local previews: `preview/digest-fr.html`, `preview/digest-en.html`.
+7. Every Sunday evening two drafts (French, English) are created, ready for you to check and send yourself on Monday morning (Monday's daily run is only a fallback if Sunday failed; it never makes a second draft). Local previews: `preview/digest-fr.html`, `preview/digest-en.html`.
 
 ## 7. Umami analytics
 

@@ -34,7 +34,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { newsletterCity } from '../src/lib/newsletter.mjs';
 import { isoDateIn } from '../src/i18n/format.ts';
 import { wallClockIn } from '../src/lib/schedule.mjs';
-import { LOCALES, LANG_TAGS, MAX_EVENTS, selectEvents, renderDigest, audienceFilters, newTagPayload, previewPage } from './lib/digest.mjs';
+import { LOCALES, LANG_TAGS, MAX_EVENTS, digestWeekStart, selectEvents, renderDigest, audienceFilters, newTagPayload, previewPage } from './lib/digest.mjs';
 import { sampleEvents } from './lib/sample-events.mjs';
 
 const API = 'https://api.buttondown.com/v1';
@@ -48,7 +48,10 @@ const args = Object.fromEntries(
 );
 const preview = Boolean(args.preview);
 const dryRun = Boolean(args['dry-run']) || preview;
-const today = args.today ?? isoDateIn(new Date()); // Europe/Paris date
+// Drafts are built Sunday evening for the owner to send Monday morning, so the digest is
+// for the Monday of that week (a Sunday maps to the NEXT Monday). Window = [Monday, Monday + ahead].
+const calendarDate = args.today ?? isoDateIn(new Date()); // Europe/Paris date
+const today = digestWeekStart(calendarDate);
 
 const select = (events) =>
 	selectEvents(events, {
