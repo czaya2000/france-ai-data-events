@@ -244,6 +244,41 @@
 			"trust": "noisy",
 			"icsOk": false,
 			"checked": "2026-11-24"
+		},
+		"agile-toulouse": {
+			"firstSeen": "2026-11-25",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-25"
+		},
+		"code-is-art": {
+			"firstSeen": "2026-11-25",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-25"
+		},
+		"data-cloud-paris": {
+			"firstSeen": "2026-11-25",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-25"
+		},
+		"mindstone-lyon-ai-meetup": {
+			"firstSeen": "2026-11-25",
+			"via": "meetup-city-pages",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-25"
+		},
+		"afterwork": {
+			"firstSeen": "2026-11-25",
+			"via": "meetup-city-pages",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-25"
 		}
 	}
 }

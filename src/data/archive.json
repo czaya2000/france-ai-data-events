@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "id": "banc-d-essai-2-build-club-securite-de-l-ia-paris-2026",
+    "title": "Banc d'Essai #2 — build club sécurité de l'IA",
+    "date": "2026-11-21",
+    "time": "14:00–17:00",
+    "city": "Paris",
+    "venue": "53 Rue de Cléry, Paris",
+    "format": "Workshop",
+    "topics": [
+      "AI safety"
+    ],
+    "organiser": "Nouvelle Machine",
+    "cost": "Not listed",
+    "url": "https://luma.com/xyiow6bw",
+    "source": "Luma",
+    "blurb": "Second Banc d'Essai build club session on AI safety, run by Nouvelle Machine in Paris.",
+    "blurb_en": "Second Banc d'Essai build club session on AI safety, run by Nouvelle Machine in Paris.",
+    "blurb_fr": "Deuxième séance du build club Banc d'Essai consacré à la sécurité de l'IA, organisée par Nouvelle Machine à Paris.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "conut-paris-tous-artistes-avec-l-ia-paris-2026",
+    "title": "ConUt - Paris : Tous artistes avec L'IA ?",
+    "date": "2026-11-21",
+    "time": "16:00–18:30",
+    "city": "Paris",
+    "venue": "78 Rue Amelot, Paris",
+    "format": "Meetup",
+    "topics": [
+      "Generative AI",
+      "Art"
+    ],
+    "organiser": "ConUt - Les Controverses d'Utilité publique",
+    "cost": "Not listed",
+    "url": "https://luma.com/reppeu2t",
+    "source": "Luma",
+    "blurb": "ConUt debate evening in Paris asking whether everyone can become an artist with AI.",
+    "blurb_en": "ConUt debate evening in Paris asking whether everyone can become an artist with AI.",
+    "blurb_fr": "Soirée-débat ConUt à Paris sur la question de savoir si l'IA permet à chacun de devenir artiste.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "first-batch-nice-2026",
+    "title": "First batch",
+    "date": "2026-11-21",
+    "time": "16:00–18:00",
+    "city": "Nice",
+    "venue": "Plage De Carras, 385 Prom. des Anglais, 06200 Nice, France",
+    "format": "Meetup",
+    "topics": [
+      "Machine learning",
+      "CUDA",
+      "Inference"
+    ],
+    "organiser": "Gradient Ascent Promenade (GAP) - Nice AI & ML",
+    "cost": "Free",
+    "url": "https://www.meetup.com/nice-natural-language-processing-meetup-group/events/317449936/",
+    "source": "Meetup",
+    "blurb": "First walking meetup of the Gradient Ascent Promenade community for ML engineers and researchers in Nice, held along the Promenade des Anglais.",
+    "blurb_en": "First walking meetup of the Gradient Ascent Promenade community for ML engineers and researchers in Nice, held along the Promenade des Anglais.",
+    "blurb_fr": "Première balade-rencontre de la communauté Gradient Ascent Promenade pour les ingénieurs et chercheurs en ML de Nice, sur la Promenade des Anglais.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "pme-comment-exploiter-la-richesse-de-vos-donnees-online-fr-2026",
+    "title": "PME, Comment exploiter la richesse de vos données?",
+    "date": "2026-11-21",
+    "time": "12:00–12:30",
+    "city": "Online (FR)",
+    "venue": "En ligne, paris",
+    "format": "Webinar",
+    "topics": [
+      "Data strategy",
+      "Data governance"
+    ],
+    "organiser": "Torsy conseil",
+    "cost": "Free",
+    "url": "https://openagenda.com/printemps-numerique-2026/events/pme-comment-exploiter-la-richesse-de-vos-donnees-1018778",
+    "source": "OpenAgenda (Opendatasoft)",
+    "blurb": "Online session by Torsy conseil on building a strategy to get value from data in small and medium businesses.",
+    "blurb_en": "Online session by Torsy conseil on building a strategy to get value from data in small and medium businesses.",
+    "blurb_fr": "Session en ligne de Torsy conseil sur l'élaboration d'une stratégie de valorisation des données pour les PME.",
+    "firstSeen": "2026-11-21"
+  }
+]

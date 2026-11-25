@@ -143,6 +143,22 @@
 			"via": "luma-cal:bond-paris",
 			"firstSeen": "2026-11-24",
 			"trust": "noisy"
+		},
+		"cal-3G8iH6OhKXzkwOU": {
+			"name": "Personal",
+			"slug": null,
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-25",
+			"trust": "noisy"
+		},
+		"cal-xpnypCkGRQUAEjo": {
+			"name": "AI CIRCLE",
+			"slug": "ai-circle",
+			"city": "Paris",
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-25",
+			"trust": "noisy"
 		}
 	},
 	"slugs": {
@@ -200,6 +216,16 @@
 		"augmented-aflo": "cal-yOWNNoRAAvD3vVD",
 		"8dl5fglx": "cal-nyhJqquBlMBkFy3",
 		"aic-kul-20261128": "cal-E74MDlDKBaeAwXK",
-		"aic-nz-12-1": "cal-E74MDlDKBaeAwXK"
+		"aic-nz-12-1": "cal-E74MDlDKBaeAwXK",
+		"59bj0lgf": "cal-3G8iH6OhKXzkwOU",
+		"ai-2xao": "cal-xpnypCkGRQUAEjo",
+		"aic-ad-12-1": "cal-E74MDlDKBaeAwXK",
+		"genai-4b4m": "cal-E74MDlDKBaeAwXK",
+		"aic-us-12-1": "cal-E74MDlDKBaeAwXK",
+		"aic-st-12-1": "cal-E74MDlDKBaeAwXK",
+		"aic-sw-health-claims-evidence-checking": "cal-E74MDlDKBaeAwXK",
+		"genai-8i73": "cal-E74MDlDKBaeAwXK",
+		"aic-ny-12-02": "cal-E74MDlDKBaeAwXK",
+		"aic-cl-12-2": "cal-E74MDlDKBaeAwXK"
 	}
 }

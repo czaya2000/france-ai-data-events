@@ -19,15 +19,6 @@
 			]
 		},
 		{
-			"kept": "The AI Collective Podcast with AJ & Catherine: Tuesday, Nov 24",
-			"merged": "The AI Collective Podcast with AJ & Catherine: Wednesday, Nov 25",
-			"date": "2026-11-24",
-			"sources": [
-				"luma-cal:genai-collective",
-				"luma-cal:genai-collective"
-			]
-		},
-		{
 			"kept": "The AI Collective Podcast with AJ & Catherine: Tuesday, Dec 1",
 			"merged": "The AI Collective Podcast with AJ & Catherine: Wednesday, Dec 2",
 			"date": "2026-12-01",
@@ -46,18 +37,18 @@
 			]
 		},
 		{
-			"kept": "AI Tinkerers Paris: Physical AI — Builders Day",
-			"merged": "Physical AI — Builders Day",
-			"date": "2026-12-02",
+			"kept": "AI Tinkerers Paris: PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
+			"merged": "PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
+			"date": "2026-12-01",
 			"sources": [
 				"agentconfs",
 				"aitinkerers-paris"
 			]
 		},
 		{
-			"kept": "AI Tinkerers Paris: PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
-			"merged": "PAIR(ED) Builder Summit — Physical AI, Robotics, Edge and Drones",
-			"date": "2026-12-01",
+			"kept": "AI Tinkerers Paris: Physical AI — Builders Day",
+			"merged": "Physical AI — Builders Day",
+			"date": "2026-12-02",
 			"sources": [
 				"agentconfs",
 				"aitinkerers-paris"
@@ -73,20 +64,20 @@
 			]
 		},
 		{
-			"kept": "AI-Ficionados #8 · Usages créatifs : de l'image au film avec l'IA",
-			"merged": "AI-Ficionados #8",
-			"date": "2026-12-08",
-			"sources": [
-				"luma-cal:aificionados",
-				"toulouse-tech-hub"
-			]
-		},
-		{
 			"kept": "IA & Apéro 10e rencontre !",
 			"merged": "Apéro de l'IA",
 			"date": "2026-11-26",
 			"sources": [
 				"meetup:ia-innovateurs",
+				"brainberg-fr"
+			]
+		},
+		{
+			"kept": "Démo Day : Découvrez les projets finaux des apprenants Data du Wagon Lille",
+			"merged": "Demo Day : Découvrez les projets finaux des apprenants Data du Wagon Lille",
+			"date": "2026-12-11",
+			"sources": [
+				"meetup:le-wagon-lille-coding-station",
 				"brainberg-fr"
 			]
 		},
@@ -160,15 +151,6 @@
 			"sources": [
 				"agentconfs",
 				"brainberg-fr"
-			]
-		},
-		{
-			"kept": "Conférence Intelligence Artificielle",
-			"merged": "Journée de l'Entrepreneur : Intelligence Artificielle Générative",
-			"date": "2026-11-26",
-			"sources": [
-				"brainberg-fr",
-				"briefia-meetups"
 			]
 		},
 		{
