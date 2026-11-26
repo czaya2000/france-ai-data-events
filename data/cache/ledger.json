@@ -1,6 +1,6 @@
 {
 	"version": 1,
-	"lastMissingCheck": "2026-11-25",
+	"lastMissingCheck": "2026-11-26",
 	"entries": {
 		"u:luma.com/iwlbokns": {
 			"decision": "rejected",
@@ -102,8 +102,8 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
-			"end": "2026-11-25",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
 			],
@@ -160,7 +160,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-20",
 			"sources": [
 				"briefia-meetups"
@@ -1204,7 +1204,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:pydata-paris",
@@ -1356,7 +1356,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:strasbourg-aws-user-group",
@@ -1392,7 +1392,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda",
@@ -1440,7 +1440,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:paris-big-data",
@@ -1543,7 +1543,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"eventbrite-online",
@@ -1555,7 +1555,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"eventbrite-online",
@@ -1633,7 +1633,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:ia-innovateurs",
@@ -1660,7 +1660,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"brainberg-fr"
@@ -1718,7 +1718,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -1773,7 +1773,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"luma-paris",
@@ -1834,7 +1834,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:groupe-meetup-nice-data",
@@ -1858,7 +1858,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:semweb-pro"
@@ -1880,7 +1880,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"eventbrite-online",
@@ -1905,7 +1905,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"briefia-meetups"
@@ -1927,7 +1927,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"hi-paris-ics"
@@ -1949,7 +1949,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"meetup:le-wagon-bordeaux-coding-station-bootcamp",
@@ -1973,7 +1973,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"openagenda"
@@ -1995,7 +1995,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"openagenda"
@@ -2017,7 +2017,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"luma-paris",
@@ -2042,7 +2042,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"meetup:strasbourg-deep-learning-meetup",
@@ -2066,7 +2066,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"hi-paris-ics"
@@ -2088,7 +2088,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"luma-cal:nouvellemachine"
@@ -2110,7 +2110,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"briefia-meetups",
@@ -2158,7 +2158,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"meetup:ai-first",
@@ -2182,7 +2182,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -2204,7 +2204,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"agentconfs",
@@ -2252,7 +2252,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:parisapi",
@@ -2276,7 +2276,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"createwith-paris"
@@ -2298,7 +2298,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"briefia-meetups"
@@ -2331,7 +2331,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"aieventlist-paris",
@@ -2370,7 +2370,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:lyon-data-science",
@@ -2397,7 +2397,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:cfdatalovers",
@@ -2421,7 +2421,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:le-wagon-bordeaux-coding-station-bootcamp",
@@ -2445,7 +2445,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"meetup:paris-ai-tech-talk",
@@ -2487,7 +2487,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"aieventlist-paris",
@@ -2533,7 +2533,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:postgres-toulouse",
@@ -2557,7 +2557,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -2579,7 +2579,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"brainberg-fr"
@@ -2601,7 +2601,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"luma-paris",
@@ -2627,7 +2627,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"briefia-meetups"
@@ -2660,7 +2660,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:le-wagon-lille-coding-station",
@@ -2684,7 +2684,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"briefia-meetups"
@@ -2717,7 +2717,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -2761,7 +2761,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:alpesjug",
@@ -2785,7 +2785,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"agentconfs",
@@ -2833,7 +2833,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"agentconfs",
@@ -2938,7 +2938,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"luma-cal:genainetwork"
@@ -2960,7 +2960,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"brainberg-fr"
@@ -2982,7 +2982,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -3004,7 +3004,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"meetup:paris-dataladies",
@@ -3028,7 +3028,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -3050,7 +3050,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"meetup:paris-big-data",
@@ -3074,7 +3074,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:le-wagon-bordeaux-coding-station-bootcamp",
@@ -3130,7 +3130,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"agentconfs",
@@ -3169,7 +3169,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-paris",
@@ -3194,7 +3194,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -3216,7 +3216,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"hi-paris-ics"
@@ -3260,7 +3260,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:ianancy",
@@ -3284,7 +3284,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:paris-apache-airflow-meetup",
@@ -3308,7 +3308,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:health-data-hub",
@@ -3332,7 +3332,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:datacraft",
@@ -3369,7 +3369,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:le-wagon-bordeaux-coding-station-bootcamp",
@@ -3393,7 +3393,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:le-wagon-lille-coding-station",
@@ -3417,7 +3417,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -3461,7 +3461,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"eventbrite-rennes",
@@ -3487,7 +3487,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"meetup:paris-big-data",
@@ -3511,7 +3511,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -3533,7 +3533,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"meetup:meetup-harrycow-coworking-toulouse",
@@ -3557,7 +3557,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"hi-paris-ics"
@@ -3579,7 +3579,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"luma-paris",
@@ -3603,7 +3603,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"meetup:strasbourg-deep-learning-meetup",
@@ -3627,7 +3627,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"agentconfs"
@@ -3649,7 +3649,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-06",
 			"sources": [
 				"meetup:lyon-data-science",
@@ -3699,7 +3699,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"eventbrite-online",
@@ -3711,7 +3711,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-07",
 			"sources": [
 				"agentconfs",
@@ -3747,7 +3747,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-07",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -3769,7 +3769,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"luma-cal:aificionados",
@@ -3817,7 +3817,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"eventbrite-online",
@@ -3829,7 +3829,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"meetup:le-wagon-bordeaux-coding-station-bootcamp",
@@ -3868,7 +3868,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"meetup:google-developer-group-aix-en-provence",
@@ -3892,7 +3892,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"hi-paris-ics",
@@ -3928,7 +3928,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"agentconfs"
@@ -3950,7 +3950,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"meetup:paris-dbt-meetup",
@@ -3974,7 +3974,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"meetup:strasbourg-net-group",
@@ -3998,7 +3998,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"meetup:paris-big-data",
@@ -4022,7 +4022,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"briefia-meetups"
@@ -4079,7 +4079,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"eventbrite-rennes",
@@ -4115,7 +4115,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:le-wagon-bordeaux-coding-station-bootcamp",
@@ -4163,7 +4163,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"eventbrite-online",
@@ -4175,7 +4175,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -4197,7 +4197,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"eventbrite-online",
@@ -4223,7 +4223,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"eventbrite-online",
@@ -4262,7 +4262,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:generative-ai-rennes",
@@ -4286,7 +4286,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:strasbourg-deep-learning-meetup",
@@ -4310,7 +4310,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"briefia-meetups"
@@ -4343,7 +4343,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:les-meetups-de-l-ia",
@@ -4367,7 +4367,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"briefia-meetups"
@@ -4400,7 +4400,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:groupe-meetup-nice-data"
@@ -4422,7 +4422,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"briefia-meetups"
@@ -4455,7 +4455,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"meetup:le-wagon-bordeaux-coding-station-bootcamp",
@@ -4479,7 +4479,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"meetup:le-wagon-lille-coding-station",
@@ -4502,7 +4502,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-12",
 			"sources": [
 				"agentconfs",
@@ -4554,7 +4554,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-14",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -4576,7 +4576,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-14",
 			"sources": [
 				"openagenda"
@@ -4598,7 +4598,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-14",
 			"sources": [
 				"meetup:ai-first",
@@ -4622,7 +4622,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"agentconfs"
@@ -4644,7 +4644,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"meetup:lyon-data-science",
@@ -4668,7 +4668,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"openagenda"
@@ -4690,7 +4690,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"meetup:paris-big-data",
@@ -4714,7 +4714,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"briefia-meetups"
@@ -4747,7 +4747,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"briefia-meetups"
@@ -4780,7 +4780,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"meetup:aws-lyon-amazon-web-services-user-group",
@@ -4804,7 +4804,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"brainberg-fr",
@@ -4840,7 +4840,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"luma-cal:datacraft"
@@ -4862,7 +4862,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"briefia-meetups"
@@ -4895,7 +4895,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-24",
 			"sources": [
 				"meetup:paris-big-data",
@@ -4919,7 +4919,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-24",
 			"sources": [
 				"meetup:groupe-meetup-nice-data"
@@ -4941,7 +4941,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-12",
 			"sources": [
 				"briefia-meetups"
@@ -4998,7 +4998,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-12",
 			"sources": [
 				"eventbrite-online",
@@ -5034,7 +5034,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-13",
 			"sources": [
 				"brainberg-fr"
@@ -5056,7 +5056,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-14",
 			"sources": [
 				"openagenda"
@@ -5078,7 +5078,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-14",
 			"sources": [
 				"luma-cal:hub-france-ia"
@@ -5100,7 +5100,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-14",
 			"sources": [
 				"meetup:les-meetups-de-l-ia"
@@ -5122,7 +5122,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-14",
 			"sources": [
 				"luma-cal:datacraft",
@@ -5145,7 +5145,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-18",
 			"sources": [
 				"luma-cal:datacraft"
@@ -5167,7 +5167,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-20",
 			"sources": [
 				"openagenda"
@@ -5189,10 +5189,11 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-21",
 			"sources": [
-				"eventbrite-online"
+				"eventbrite-online",
+				"briefia-meetups"
 			],
 			"missingDays": 0
 		},
@@ -5211,7 +5212,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-28",
 			"sources": [
 				"openagenda"
@@ -5233,7 +5234,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-02",
 			"sources": [
 				"openagenda"
@@ -5255,7 +5256,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-04",
 			"sources": [
 				"openagenda"
@@ -5277,7 +5278,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-06",
 			"sources": [
 				"openagenda"
@@ -5299,7 +5300,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-09",
 			"sources": [
 				"openagenda"
@@ -5321,7 +5322,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-11",
 			"sources": [
 				"brainberg-fr"
@@ -5343,11 +5344,12 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-11",
 			"sources": [
 				"agentconfs",
-				"aieventlist-europe"
+				"aieventlist-europe",
+				"briefia-meetups"
 			],
 			"missingDays": 0
 		},
@@ -5379,7 +5381,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-11",
 			"sources": [
 				"openagenda"
@@ -5401,7 +5403,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-13",
 			"sources": [
 				"openagenda"
@@ -5423,7 +5425,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-18",
 			"sources": [
 				"openagenda"
@@ -5445,7 +5447,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-25",
 			"sources": [
 				"luma-cal:womenincode"
@@ -5467,7 +5469,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-02",
 			"sources": [
 				"eventbrite-online",
@@ -5491,7 +5493,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-10",
 			"sources": [
 				"aieventlist-paris",
@@ -5515,7 +5517,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-11",
 			"sources": [
 				"openagenda"
@@ -5537,7 +5539,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-17",
 			"sources": [
 				"agentconfs",
@@ -5576,7 +5578,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-19",
 			"sources": [
 				"agentconfs"
@@ -5642,8 +5644,8 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
-			"end": "2026-11-25",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
 			],
@@ -5664,8 +5666,8 @@
 			"decision": "rejected",
 			"reason": "exhibition",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
-			"end": "2026-11-25",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
 			],
@@ -5708,8 +5710,8 @@
 			"decision": "rejected",
 			"reason": "exhibition",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
-			"end": "2026-11-25",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
 			],
@@ -5774,7 +5776,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"openagenda"
@@ -6198,8 +6200,8 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-21",
-			"end": "2026-11-25",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
 			],
@@ -6629,7 +6631,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:solutiontech",
@@ -6653,7 +6655,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6675,7 +6677,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"luma-cal:bond-paris",
@@ -6721,7 +6723,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:gdg-rennes",
@@ -6745,7 +6747,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6767,7 +6769,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6789,7 +6791,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6811,7 +6813,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6833,7 +6835,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6877,7 +6879,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6899,7 +6901,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:android-paris",
@@ -6945,7 +6947,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -6989,7 +6991,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -7033,7 +7035,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:finistdevs",
@@ -7057,7 +7059,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:proxiadnord",
@@ -7081,7 +7083,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -7103,7 +7105,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -7125,7 +7127,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -7169,7 +7171,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"meetup:hacksxb",
@@ -7193,7 +7195,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"openagenda"
@@ -7215,7 +7217,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"openagenda"
@@ -7237,7 +7239,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"openagenda"
@@ -7259,7 +7261,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"openagenda"
@@ -7281,7 +7283,7 @@
 			"decision": "rejected",
 			"reason": "abroad",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-12",
 			"sources": [
 				"luma-cal:n8n-events"
@@ -7303,7 +7305,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"openagenda"
@@ -7325,7 +7327,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"openagenda"
@@ -7369,7 +7371,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"luma-cal:ai-automations-make-global-calendar"
@@ -7391,7 +7393,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"openagenda"
@@ -7413,7 +7415,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"openagenda"
@@ -7459,7 +7461,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:yeeso-itwomen-network",
@@ -7483,7 +7485,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:lyonjs",
@@ -7507,7 +7509,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"openagenda"
@@ -7529,7 +7531,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"openagenda"
@@ -7551,7 +7553,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"openagenda"
@@ -7573,7 +7575,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"brainberg-fr"
@@ -7595,7 +7597,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"openagenda"
@@ -7617,7 +7619,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"openagenda"
@@ -7639,7 +7641,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"luma-paris",
@@ -7663,7 +7665,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"openagenda"
@@ -7685,7 +7687,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"openagenda"
@@ -7707,7 +7709,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"openagenda"
@@ -7729,7 +7731,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"openagenda"
@@ -7751,7 +7753,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"luma-cal:clickhouse-events"
@@ -7773,7 +7775,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"openagenda"
@@ -7839,7 +7841,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"openagenda"
@@ -7861,7 +7863,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"toulouse-tech-hub",
@@ -7909,7 +7911,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:cal-cedsWn0tyHau5wm"
@@ -7931,7 +7933,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-paris",
@@ -7957,7 +7959,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier",
@@ -7981,7 +7983,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -8003,7 +8005,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -8025,7 +8027,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -8047,7 +8049,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -8069,7 +8071,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -8091,7 +8093,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -8113,7 +8115,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"openagenda"
@@ -8157,7 +8159,7 @@
 			"decision": "rejected",
 			"reason": "sales",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"brainberg-fr"
@@ -8179,7 +8181,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"meetup:maxsessions",
@@ -8203,7 +8205,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"openagenda"
@@ -8225,7 +8227,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"openagenda"
@@ -8247,7 +8249,7 @@
 			"decision": "rejected",
 			"reason": "sales",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"brainberg-fr"
@@ -8269,7 +8271,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"openagenda"
@@ -8291,7 +8293,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"openagenda"
@@ -8335,7 +8337,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-06",
 			"sources": [
 				"openagenda"
@@ -8357,7 +8359,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-06",
 			"sources": [
 				"openagenda"
@@ -8401,7 +8403,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-07",
 			"sources": [
 				"openagenda"
@@ -8423,7 +8425,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-07",
 			"sources": [
 				"meetup:cara-grenoble",
@@ -8470,7 +8472,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"openagenda"
@@ -8492,7 +8494,7 @@
 			"decision": "rejected",
 			"reason": "consumer",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"openagenda"
@@ -8538,7 +8540,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"toulouse-tech-hub",
@@ -8562,7 +8564,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"openagenda"
@@ -8584,7 +8586,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"meetup:lyondigitalhub",
@@ -8608,7 +8610,7 @@
 			"decision": "rejected",
 			"reason": "consumer",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"openagenda"
@@ -8630,7 +8632,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"openagenda"
@@ -8652,7 +8654,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"openagenda"
@@ -8674,7 +8676,7 @@
 			"decision": "rejected",
 			"reason": "abroad",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"luma-cal:clickhouse-events"
@@ -8696,7 +8698,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"openagenda"
@@ -8718,7 +8720,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"openagenda"
@@ -8740,7 +8742,7 @@
 			"decision": "rejected",
 			"reason": "unclear",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"luma-cal:ai-automations-make-global-calendar"
@@ -8762,7 +8764,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:meetup-programmez",
@@ -8877,7 +8879,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"openagenda"
@@ -8899,7 +8901,7 @@
 			"decision": "rejected",
 			"reason": "consumer",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"openagenda"
@@ -8921,7 +8923,7 @@
 			"decision": "rejected",
 			"reason": "abroad",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-12",
 			"sources": [
 				"luma-cal:neo4j"
@@ -8943,7 +8945,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"openagenda"
@@ -8965,7 +8967,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"openagenda"
@@ -8987,7 +8989,7 @@
 			"decision": "rejected",
 			"reason": "lowquality",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-13",
 			"sources": [
 				"eventbrite-online",
@@ -9011,7 +9013,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-12",
 			"sources": [
 				"openagenda"
@@ -9055,7 +9057,7 @@
 			"decision": "rejected",
 			"reason": "consumer",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-14",
 			"sources": [
 				"openagenda"
@@ -9077,7 +9079,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-14",
 			"sources": [
 				"openagenda"
@@ -9099,7 +9101,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"openagenda"
@@ -9121,7 +9123,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"openagenda"
@@ -9143,7 +9145,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"openagenda"
@@ -9176,7 +9178,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"openagenda"
@@ -9209,7 +9211,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"openagenda"
@@ -9231,7 +9233,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"openagenda"
@@ -9253,7 +9255,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"openagenda"
@@ -9297,7 +9299,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"eventbrite-online",
@@ -9321,7 +9323,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -9343,7 +9345,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"openagenda"
@@ -9365,7 +9367,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"openagenda"
@@ -9387,7 +9389,7 @@
 			"decision": "rejected",
 			"reason": "sales",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"brainberg-fr"
@@ -9409,7 +9411,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"openagenda"
@@ -9455,7 +9457,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-17",
 			"sources": [
 				"luma-cal:clickhouse-events"
@@ -9477,7 +9479,7 @@
 			"decision": "rejected",
 			"reason": "abroad",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-19",
 			"sources": [
 				"meetup:ksug-in"
@@ -9499,7 +9501,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-19",
 			"sources": [
 				"openagenda"
@@ -9521,7 +9523,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-23",
 			"sources": [
 				"openagenda"
@@ -9589,7 +9591,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-29",
 			"sources": [
 				"openagenda"
@@ -9611,7 +9613,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-31",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -9633,7 +9635,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-05",
 			"sources": [
 				"openagenda"
@@ -9655,7 +9657,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-08",
 			"sources": [
 				"openagenda"
@@ -9677,7 +9679,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-08",
 			"sources": [
 				"openagenda"
@@ -9699,7 +9701,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-13",
 			"sources": [
 				"meetup:lyondigitalhub"
@@ -9721,7 +9723,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-13",
 			"sources": [
 				"openagenda"
@@ -9743,7 +9745,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-13",
 			"sources": [
 				"openagenda"
@@ -9765,7 +9767,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-14",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -9787,7 +9789,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-17",
 			"sources": [
 				"openagenda"
@@ -9809,7 +9811,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-17",
 			"sources": [
 				"openagenda"
@@ -9831,7 +9833,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-20",
 			"sources": [
 				"brainberg-fr"
@@ -9875,7 +9877,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-28",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -9897,7 +9899,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-28",
 			"sources": [
 				"meetup:solutiontech"
@@ -9919,7 +9921,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-28",
 			"sources": [
 				"luma-cal:womenincode"
@@ -9941,7 +9943,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-10",
 			"sources": [
 				"meetup:lyondigitalhub"
@@ -9963,7 +9965,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-11",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -9985,7 +9987,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-13",
 			"sources": [
 				"openagenda"
@@ -10007,7 +10009,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-25",
 			"sources": [
 				"openagenda"
@@ -10029,7 +10031,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-25",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -10073,7 +10075,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-01",
 			"sources": [
 				"brainberg-fr"
@@ -10095,7 +10097,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-01",
 			"sources": [
 				"brainberg-fr"
@@ -10117,7 +10119,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-06",
 			"sources": [
 				"openagenda"
@@ -10139,7 +10141,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-10",
 			"sources": [
 				"meetup:lyondigitalhub"
@@ -10161,7 +10163,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-11",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -10183,7 +10185,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-11",
 			"sources": [
 				"openagenda"
@@ -10205,7 +10207,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-11",
 			"sources": [
 				"brainberg-fr"
@@ -10306,7 +10308,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"openagenda"
@@ -10638,7 +10640,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"openagenda"
@@ -10682,7 +10684,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:staff42",
@@ -10706,7 +10708,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-27",
 			"sources": [
 				"openagenda"
@@ -10728,7 +10730,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"openagenda"
@@ -10750,7 +10752,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"luma-cal:nouvellemachine"
@@ -10772,7 +10774,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"openagenda"
@@ -10794,7 +10796,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"openagenda"
@@ -10816,7 +10818,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"openagenda"
@@ -10838,7 +10840,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"openagenda"
@@ -10860,7 +10862,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-30",
 			"sources": [
 				"openagenda"
@@ -10882,7 +10884,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"luma-cal:neo4j"
@@ -10928,7 +10930,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"luma-cal:clickhouse-events"
@@ -10950,7 +10952,7 @@
 			"decision": "deferred",
 			"reason": "no-url",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"numerique-gouv"
@@ -10961,7 +10963,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"openagenda"
@@ -10983,7 +10985,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"luma-cal:clickhouse-events"
@@ -11005,7 +11007,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:n8n-events"
@@ -11027,7 +11029,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -11049,7 +11051,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"brainberg-fr"
@@ -11071,7 +11073,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:womenincode"
@@ -11093,7 +11095,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"openagenda"
@@ -11115,7 +11117,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"openagenda"
@@ -11159,7 +11161,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"meetup:rladies-limoges",
@@ -11207,7 +11209,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"openagenda"
@@ -11229,7 +11231,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-07",
 			"sources": [
 				"openagenda"
@@ -11273,7 +11275,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"toulouse-tech-hub",
@@ -11297,7 +11299,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"eventbrite-rennes",
@@ -11321,7 +11323,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"meetup:software-craftsmanship-lille",
@@ -11367,7 +11369,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"openagenda"
@@ -11389,7 +11391,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"luma-paris",
@@ -11413,7 +11415,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"eventbrite-rennes",
@@ -11437,7 +11439,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-13",
 			"sources": [
 				"luma-cal:womenincode"
@@ -11459,7 +11461,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-14",
 			"sources": [
 				"brainberg-fr"
@@ -11481,7 +11483,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"brainberg-fr",
@@ -11515,7 +11517,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"openagenda"
@@ -11537,7 +11539,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-22",
 			"sources": [
 				"luma-cal:clickhouse-events"
@@ -11559,7 +11561,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-22",
 			"sources": [
 				"openagenda"
@@ -11581,7 +11583,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-13",
 			"sources": [
 				"eventbrite-online",
@@ -11605,7 +11607,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-14",
 			"sources": [
 				"openagenda"
@@ -11627,7 +11629,7 @@
 			"decision": "deferred",
 			"reason": "low-confidence",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-22",
 			"sources": [
 				"openagenda"
@@ -11938,7 +11940,7 @@
 			"decision": "accepted",
 			"eventId": "au-revoir-spreadsheet-a-60-minute-ai-ops-hack-paris-2026",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"luma-cal:bond-paris",
@@ -11961,10 +11963,11 @@
 			"decision": "accepted",
 			"eventId": "paris-claude-community-x-insidrs-women-meetup-paris-2026",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
-				"luma-cal:claudecommunity"
+				"luma-cal:claudecommunity",
+				"luma-paris"
 			],
 			"missingDays": 0
 		},
@@ -11983,7 +11986,7 @@
 			"decision": "accepted",
 			"eventId": "masterclass-intelligence-artificielle-pour-le-droit-online-fr-2027",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-13",
 			"sources": [
 				"briefia-meetups"
@@ -12016,7 +12019,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12038,7 +12041,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-24",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12060,7 +12063,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-07",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12082,7 +12085,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-21",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12104,7 +12107,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-04",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12126,7 +12129,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-02-18",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12148,7 +12151,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-04",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12170,7 +12173,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-22",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-18",
 			"sources": [
 				"meetup:l-apero-de-l-ia"
@@ -12311,7 +12314,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"eventbrite-online",
@@ -12334,7 +12337,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"eventbrite-online",
@@ -12416,7 +12419,7 @@
 			"decision": "accepted",
 			"eventId": "les-cercles-de-l-ia-les-familles-d-agents-ia-online-fr-2026",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"briefia-meetups"
@@ -12449,7 +12452,7 @@
 			"decision": "accepted",
 			"eventId": "automatic-lunch-webinar-ep-0-let-s-lunch-with-nod-oss-person-paris-2026",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-04",
 			"sources": [
 				"luma-cal:n8n-events"
@@ -12471,7 +12474,7 @@
 			"decision": "accepted",
 			"eventId": "bonifiez-votre-conformite-douaniere-grace-a-l-intelligence-a-online-fr-2026",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-09",
 			"sources": [
 				"briefia-meetups"
@@ -12504,10 +12507,11 @@
 			"decision": "accepted",
 			"eventId": "retour-d-experience-comment-une-entreprise-deeptech-de-la-cy-paris-2027",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-28",
 			"sources": [
-				"luma-cal:datacraft"
+				"luma-cal:datacraft",
+				"briefia-meetups"
 			],
 			"missingDays": 0
 		},
@@ -12550,7 +12554,7 @@
 			"decision": "rejected",
 			"reason": "abroad",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-05",
 			"sources": [
 				"luma-cal:n8n-events"
@@ -12572,7 +12576,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"brainberg-fr"
@@ -12594,7 +12598,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-25",
 			"sources": [
 				"brainberg-fr"
@@ -12638,7 +12642,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:theproductcrew"
@@ -12660,7 +12664,7 @@
 			"decision": "deferred",
 			"reason": "no-city",
 			"firstSeen": "2026-11-23",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"meetup:theproductcrew"
@@ -12776,7 +12780,7 @@
 			"decision": "accepted",
 			"eventId": "databricks-i-shane-beyond-the-prompt-control-context-paris-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"luma-cal:bond-paris",
@@ -12800,7 +12804,7 @@
 			"decision": "accepted",
 			"eventId": "demo-night-agentiq-iq-project-1re-promotion-paris-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"luma-cal:bond-paris",
@@ -12824,7 +12828,7 @@
 			"decision": "accepted",
 			"eventId": "workshop-ai-native-sdlc-le-playbook-anthropic-from-the-trenc-paris-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"luma-cal:bond-paris",
@@ -12848,7 +12852,7 @@
 			"decision": "accepted",
 			"eventId": "hackathon-build-ai-on-kaspa-le-kremlin-bicetre-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-28",
 			"sources": [
 				"luma-cal:bond-paris",
@@ -12872,7 +12876,7 @@
 			"decision": "accepted",
 			"eventId": "virtual-google-agents-in-production-for-enterprises-with-ora-online-fr-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-01",
 			"sources": [
 				"meetup:paris-ai",
@@ -12896,7 +12900,7 @@
 			"decision": "accepted",
 			"eventId": "what-happens-when-agents-run-every-layer-of-the-company-paris-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-02",
 			"sources": [
 				"luma-cal:dust"
@@ -12918,7 +12922,7 @@
 			"decision": "accepted",
 			"eventId": "claude-pour-dirigeants-venez-vous-former-gratuitement-paris-2026-2026-12-03",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:cal-5QALGbpeLcvA6dg"
@@ -12940,7 +12944,7 @@
 			"decision": "accepted",
 			"eventId": "ai-product-sprint-toulouse-du-pitch-au-lancement-toulouse-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"luma-cal:softr-events"
@@ -12962,10 +12966,12 @@
 			"decision": "accepted",
 			"eventId": "is-your-product-agent-ready-second-opinion-x-agent-connect-paris-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
-				"luma-cal:alan.eu"
+				"luma-cal:alan.eu",
+				"luma-paris",
+				"luma-cal:alpic"
 			],
 			"missingDays": 0
 		},
@@ -12984,7 +12990,7 @@
 			"decision": "accepted",
 			"eventId": "rex-voice-ai-architecture-temps-reel-et-passage-a-l-echelle--paris-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"luma-cal:datacraft"
@@ -13006,7 +13012,7 @@
 			"decision": "accepted",
 			"eventId": "data-party-festival-bordeaux-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"openagenda"
@@ -13028,7 +13034,7 @@
 			"decision": "accepted",
 			"eventId": "quelle-place-pour-l-ia-dans-la-litterature-et-nos-vies-paris-2026",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"briefia-meetups"
@@ -13061,7 +13067,7 @@
 			"decision": "accepted",
 			"eventId": "les-cafes-ia-a-l-universite-de-rennes-rennes-2027-2027-03-24",
 			"firstSeen": "2026-11-24",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-24",
 			"sources": [
 				"openagenda"
@@ -13174,7 +13180,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-24",
 			"sources": [
 				"eventbrite-online",
@@ -13186,7 +13192,7 @@
 			"decision": "rejected",
 			"reason": "jobs",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-28",
 			"sources": [
 				"eventbrite-online",
@@ -13198,7 +13204,7 @@
 			"decision": "rejected",
 			"reason": "duplicate",
 			"firstSeen": "2026-11-21",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-01-13",
 			"sources": [
 				"eventbrite-online",
@@ -13210,7 +13216,7 @@
 			"decision": "accepted",
 			"eventId": "apero-partage-autour-de-l-ia-marseille-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-11-26",
 			"sources": [
 				"meetup:afterwork"
@@ -13254,7 +13260,7 @@
 			"decision": "accepted",
 			"eventId": "practical-ai-at-work-stay-on-brand-with-ai-images-paris-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"luma-cal:genai-collective"
@@ -13276,7 +13282,7 @@
 			"decision": "accepted",
 			"eventId": "sous-le-capot-de-l-ia-ce-que-les-agents-ia-changent-dans-nos-niort-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-03",
 			"sources": [
 				"brainberg-fr"
@@ -13298,7 +13304,7 @@
 			"decision": "accepted",
 			"eventId": "ai-tinkerers-neo4j-context-connected-paris-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"aitinkerers-paris"
@@ -13320,7 +13326,7 @@
 			"decision": "accepted",
 			"eventId": "mindstone-lyon-december-ai-meetup-lyon-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"meetup:mindstone-lyon-ai-meetup"
@@ -13342,7 +13348,7 @@
 			"decision": "accepted",
 			"eventId": "alice-x-ai-circle-neurips-paris-private-dinner-expert-panel--paris-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-11",
 			"sources": [
 				"luma-cal:bond-paris",
@@ -13366,7 +13372,7 @@
 			"decision": "accepted",
 			"eventId": "paris-ai-hackathon-paris-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-12",
 			"sources": [
 				"luma-paris",
@@ -13390,7 +13396,7 @@
 			"decision": "accepted",
 			"eventId": "une-data-plateforme-cloud-agnostique-c-est-possible-paris-2026",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-16",
 			"sources": [
 				"meetup:data-cloud-paris",
@@ -13414,7 +13420,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-08",
 			"sources": [
 				"meetup:theproductcrew"
@@ -13436,7 +13442,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-10",
 			"sources": [
 				"brainberg-fr"
@@ -13458,7 +13464,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2026-12-15",
 			"sources": [
 				"meetup:code-is-art",
@@ -13482,7 +13488,7 @@
 			"decision": "rejected",
 			"reason": "offtopic",
 			"firstSeen": "2026-11-25",
-			"lastSeen": "2026-11-25",
+			"lastSeen": "2026-11-26",
 			"end": "2027-03-25",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
@@ -13497,6 +13503,200 @@
 			"end": "2027-03-25",
 			"sources": [
 				"meetup:digital-nomads-remote-workers-montpellier"
+			],
+			"missingDays": 0
+		},
+		"t:data analytics|2026-12-08": {
+			"decision": "rejected",
+			"reason": "duplicate",
+			"firstSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
+			"end": "2026-12-07",
+			"sources": [
+				"agentconfs",
+				"aitinkerers-paris"
+			],
+			"missingDays": 0
+		},
+		"u:briefia.fr/meetups/world-ai-cannes-festival-2027-cannes-2027-02-10": {
+			"decision": "rejected",
+			"reason": "duplicate",
+			"firstSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
+			"end": "2027-02-11",
+			"sources": [
+				"agentconfs",
+				"aieventlist-europe",
+				"briefia-meetups"
+			],
+			"missingDays": 0
+		},
+		"u:briefia.fr/meetups/retour-d-experience-comment-une-entreprise-deeptech-de-la-cyber-securise-ses-usages-de-l-i": {
+			"decision": "accepted",
+			"eventId": "retour-d-experience-comment-une-entreprise-deeptech-de-la-cy-paris-2027",
+			"firstSeen": "2026-11-23",
+			"lastSeen": "2026-11-26",
+			"end": "2027-01-28",
+			"sources": [
+				"luma-cal:datacraft",
+				"briefia-meetups"
+			],
+			"missingDays": 0
+		},
+		"t:pme comment exploiter richesse vos donnees|2026-11-26": {
+			"decision": "rejected",
+			"reason": "duplicate",
+			"firstSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
+			"sources": [
+				"openagenda"
+			],
+			"missingDays": 0
+		},
+		"t:exposition qu est ce qu ia|2026-11-26": {
+			"decision": "rejected",
+			"reason": "exhibition",
+			"firstSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
+			"sources": [
+				"openagenda"
+			],
+			"missingDays": 0
+		},
+		"t:lab espace jeu video|2026-11-26": {
+			"decision": "rejected",
+			"reason": "offtopic",
+			"firstSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
+			"sources": [
+				"openagenda"
+			],
+			"missingDays": 0
+		},
+		"t:intelligence artificielle droits devant|2026-11-26": {
+			"decision": "rejected",
+			"reason": "exhibition",
+			"firstSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
+			"end": "2026-11-26",
+			"sources": [
+				"openagenda"
+			],
+			"missingDays": 0
+		},
+		"u:briefia.fr/meetups/quand-l-ia-touche-terre-specificites-de-l-ia-physique-paris-2027-01-21": {
+			"decision": "rejected",
+			"reason": "duplicate",
+			"firstSeen": "2026-11-21",
+			"lastSeen": "2026-11-26",
+			"end": "2027-01-21",
+			"sources": [
+				"eventbrite-online",
+				"briefia-meetups"
+			],
+			"missingDays": 0
+		},
+		"u:meetup.com/ai-agent-builders-paris-by-dataiku/events/317591127": {
+			"decision": "accepted",
+			"eventId": "let-s-talk-tech-building-and-managing-multi-agent-systems-paris-2026",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2026-12-15",
+			"sources": [
+				"meetup:paris-dataops",
+				"meetup:ai-agent-builders-paris-by-dataiku"
+			],
+			"missingDays": 0
+		},
+		"t:let talk tech building managing multi agent systems|2026-12-15": {
+			"decision": "accepted",
+			"eventId": "let-s-talk-tech-building-and-managing-multi-agent-systems-paris-2026",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2026-12-15",
+			"sources": [
+				"meetup:paris-dataops",
+				"meetup:ai-agent-builders-paris-by-dataiku"
+			],
+			"missingDays": 0
+		},
+		"u:briefia.fr/meetups/ai-day-2027-paris-2027-02-02": {
+			"decision": "accepted",
+			"eventId": "ai-day-2027-paris-2027",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2027-02-02",
+			"sources": [
+				"briefia-meetups"
+			],
+			"missingDays": 0
+		},
+		"u:eventbrite/1998208953771": {
+			"decision": "accepted",
+			"eventId": "ai-day-2027-paris-2027",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2027-02-02",
+			"sources": [
+				"briefia-meetups"
+			],
+			"missingDays": 0
+		},
+		"t:ai day|2027-02-02": {
+			"decision": "accepted",
+			"eventId": "ai-day-2027-paris-2027",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2027-02-02",
+			"sources": [
+				"briefia-meetups"
+			],
+			"missingDays": 0
+		},
+		"u:openagenda.com/culture/events/le-tarot-de-lia-theatre-numerique": {
+			"decision": "rejected",
+			"reason": "offtopic",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2027-03-26",
+			"sources": [
+				"openagenda"
+			],
+			"missingDays": 0
+		},
+		"t:tarot ia theatre numerique|2027-03-26": {
+			"decision": "rejected",
+			"reason": "offtopic",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2027-03-26",
+			"sources": [
+				"openagenda"
+			],
+			"missingDays": 0
+		},
+		"u:meetup.com/theproductcrew/events/317591065": {
+			"decision": "deferred",
+			"reason": "no-city",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2026-12-10",
+			"sources": [
+				"meetup:theproductcrew"
+			],
+			"missingDays": 0
+		},
+		"t:securiser agents codes|2026-12-10": {
+			"decision": "deferred",
+			"reason": "no-city",
+			"firstSeen": "2026-11-26",
+			"lastSeen": "2026-11-26",
+			"end": "2026-12-10",
+			"sources": [
+				"meetup:theproductcrew"
 			],
 			"missingDays": 0
 		}

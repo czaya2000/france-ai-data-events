@@ -1,48 +1,5 @@
 [
   {
-    "id": "european-ai-championship-paris-le-kremlin-bicetre-2026",
-    "title": "European AI Championship Paris",
-    "date": "2026-11-20",
-    "endDate": "2026-11-22",
-    "time": "19:00",
-    "city": "Le Kremlin-Bicêtre",
-    "venue": "EPITA - Bâtiment Voltaire, 24 Rue Pasteur, Le Kremlin-Bicêtre",
-    "format": "Workshop",
-    "topics": [
-      "AI competition",
-      "Applied AI"
-    ],
-    "organiser": "PoC Innovation",
-    "cost": "Not listed",
-    "url": "https://luma.com/iwlbokns",
-    "source": "Luma",
-    "blurb": "European AI Championship Paris, organised by PoC Innovation at the EPITA building in Le Kremlin-Bicêtre.",
-    "blurb_en": "European AI Championship Paris, organised by PoC Innovation at the EPITA building in Le Kremlin-Bicêtre.",
-    "blurb_fr": "European AI Championship Paris, organisé par PoC Innovation dans les locaux de l'EPITA au Kremlin-Bicêtre.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "ia-humanity-vs-robots-paris-2026",
-    "title": "IA : humanity VS robots ?",
-    "date": "2026-11-22",
-    "time": "15:00–17:00",
-    "city": "Paris",
-    "venue": "France",
-    "format": "Meetup",
-    "topics": [
-      "AI and society",
-      "Philosophy"
-    ],
-    "organiser": "Paris Philosophy café",
-    "cost": "Free",
-    "url": "https://www.meetup.com/paris-philosophy-cafe/events/317228790/",
-    "source": "Meetup",
-    "blurb": "Paris Philosophy café discussion on what is still worth doing ourselves in an age of AI; venue to be confirmed, French and English.",
-    "blurb_en": "Paris Philosophy café discussion on what is still worth doing ourselves in an age of AI; venue to be confirmed, French and English.",
-    "blurb_fr": "Discussion du Paris Philosophy café sur ce qu'il reste à faire soi-même à l'ère de l'IA ; lieu à confirmer, en français et en anglais.",
-    "firstSeen": "2026-11-21"
-  },
-  {
     "id": "soiree-pizz-ia-conference-debat-sur-l-ia-saint-sever-du-moustier-2026",
     "title": "Soirée Pizz'IA - conférence/débat sur l'IA",
     "date": "2026-11-22",
@@ -3957,6 +3914,27 @@
     "firstSeen": "2026-11-21"
   },
   {
+    "id": "let-s-talk-tech-building-and-managing-multi-agent-systems-paris-2026",
+    "title": "Let’s Talk Tech: Building and managing multi-agent systems",
+    "date": "2026-12-15",
+    "time": "18:30–21:30",
+    "city": "Paris",
+    "format": "Meetup",
+    "topics": [
+      "Multi-agent systems",
+      "LLM",
+      "AI agents"
+    ],
+    "organiser": "AI Agent Builders Paris powered by Dataiku",
+    "cost": "Not listed",
+    "url": "https://www.meetup.com/ai-agent-builders-paris-by-dataiku/events/317591127/",
+    "source": "Meetup",
+    "blurb": "An evening at Dataiku's Paris office on managing fleets of AI agents: monitoring, performance measurement and the move from a single LLM call to multi-agent architectures.",
+    "blurb_en": "An evening at Dataiku's Paris office on managing fleets of AI agents: monitoring, performance measurement and the move from a single LLM call to multi-agent architectures.",
+    "blurb_fr": "Soirée dans les locaux parisiens de Dataiku sur la gestion de systèmes multi-agents : supervision, mesure des performances et passage d'un appel LLM unique à une architecture multi-agents.",
+    "firstSeen": "2026-11-26"
+  },
+  {
     "id": "agentic-ai-multimodal-monthlymixer-where-agents-minds-meet-online-fr-2026",
     "title": "Agentic AI Multimodal MonthlyMixer - Where Agents Minds Meet",
     "date": "2026-12-16",
@@ -4466,6 +4444,26 @@
     "blurb_en": "Talk by datacraft, a deeptech cybersecurity company, on securing its own use of AI.",
     "blurb_fr": "Témoignage de datacraft, entreprise deeptech de cybersécurité, sur la sécurisation de ses propres usages de l'IA.",
     "firstSeen": "2026-11-23"
+  },
+  {
+    "id": "ai-day-2027-paris-2027",
+    "title": "AI Day 2027",
+    "date": "2027-02-02",
+    "time": "08:00–19:30",
+    "city": "Paris",
+    "venue": "STATION F",
+    "format": "Conference",
+    "topics": [
+      "Artificial intelligence"
+    ],
+    "organiser": "France Digitale",
+    "cost": "Not listed",
+    "url": "https://www.eventbrite.fr/e/billets-ai-day-2027-1998208953771",
+    "source": "Brief IA",
+    "blurb": "An AI event organised by France Digitale at STATION F in Paris.",
+    "blurb_en": "An AI event organised by France Digitale at STATION F in Paris.",
+    "blurb_fr": "Événement consacré à l'intelligence artificielle, organisé par France Digitale à STATION F, à Paris.",
+    "firstSeen": "2026-11-26"
   },
   {
     "id": "declics-ia-du-renseignement-a-l-apprentissage-automatise-rouen-2027",

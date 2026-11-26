@@ -1,15 +1,6 @@
 {
 	"dedupeMerges": [
 		{
-			"kept": "Découvrez la nouvelle ère de l'agentic coding",
-			"merged": "Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
-			"date": "2026-11-26",
-			"sources": [
-				"meetup:strasbourg-aws-user-group",
-				"meetup:strasbourg-aws-user-group"
-			]
-		},
-		{
 			"kept": "IA & Apéro 10e rencontre !",
 			"merged": "Apéro de l'IA",
 			"date": "2026-11-26",
@@ -55,6 +46,15 @@
 			]
 		},
 		{
+			"kept": "AI Tinkerers Paris: Data Analytics",
+			"merged": "Data Analytics",
+			"date": "2026-12-07",
+			"sources": [
+				"agentconfs",
+				"aitinkerers-paris"
+			]
+		},
+		{
 			"kept": "Visite du site VERESCENCE SOMME avec les élèves du collège Millevoye d'Abbeville",
 			"merged": "Visite du site VERESCENCE SOMME avec les élèves du collège Ponthieu d'Abbeville",
 			"date": "2026-11-26",
@@ -78,15 +78,6 @@
 			"date": "2026-12-11",
 			"sources": [
 				"meetup:le-wagon-lille-coding-station",
-				"brainberg-fr"
-			]
-		},
-		{
-			"kept": "Découvrez la nouvelle ère de l'agentic coding",
-			"merged": "Agentic Football Cup : vos agents IA jouent au foot, c'est vous le coach !",
-			"date": "2026-11-26",
-			"sources": [
-				"meetup:strasbourg-aws-user-group",
 				"brainberg-fr"
 			]
 		},
@@ -154,18 +145,18 @@
 			]
 		},
 		{
-			"kept": "ADOPT'TON IA - Expérimentez l’IA pour votre entreprise",
-			"merged": "ADOPT’TON IA",
-			"date": "2026-11-26",
+			"kept": "AI for Chip Design @NeurIPS",
+			"merged": "AI for Chip Design at NeurIPS 2026",
+			"date": "2026-12-12",
 			"sources": [
-				"openagenda",
+				"agentconfs",
 				"briefia-meetups"
 			]
 		},
 		{
-			"kept": "AI for Chip Design @NeurIPS",
-			"merged": "AI for Chip Design at NeurIPS 2026",
-			"date": "2026-12-12",
+			"kept": "World AI Cannes Festival",
+			"merged": "World AI Cannes Festival 2027",
+			"date": "2027-02-10",
 			"sources": [
 				"agentconfs",
 				"briefia-meetups"

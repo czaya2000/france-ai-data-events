@@ -159,6 +159,14 @@
 			"via": "luma-cal:bond-paris",
 			"firstSeen": "2026-11-25",
 			"trust": "noisy"
+		},
+		"cal-73DrqykM2XUzHje": {
+			"name": "Alpic",
+			"slug": "alpic",
+			"city": "Paris",
+			"via": "luma-paris",
+			"firstSeen": "2026-11-26",
+			"trust": "noisy"
 		}
 	},
 	"slugs": {
@@ -226,6 +234,16 @@
 		"aic-sw-health-claims-evidence-checking": "cal-E74MDlDKBaeAwXK",
 		"genai-8i73": "cal-E74MDlDKBaeAwXK",
 		"aic-ny-12-02": "cal-E74MDlDKBaeAwXK",
-		"aic-cl-12-2": "cal-E74MDlDKBaeAwXK"
+		"aic-cl-12-2": "cal-E74MDlDKBaeAwXK",
+		"claude-fowo": "cal-TOpA5LAFfuDeFpu",
+		"agent-connect-paris": "cal-73DrqykM2XUzHje",
+		"aic-at-12-2b": "cal-E74MDlDKBaeAwXK",
+		"fundorfold": "cal-E74MDlDKBaeAwXK",
+		"l7lm0xx0": "cal-E74MDlDKBaeAwXK",
+		"aic-ta-12-3": "cal-E74MDlDKBaeAwXK",
+		"aic-la-12-3": "cal-E74MDlDKBaeAwXK",
+		"OpenAITraining": "cal-E74MDlDKBaeAwXK",
+		"aic-ne-12-3": "cal-E74MDlDKBaeAwXK",
+		"genai-6mz7": "cal-E74MDlDKBaeAwXK"
 	}
 }

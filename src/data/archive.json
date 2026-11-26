@@ -1,5 +1,27 @@
 [
   {
+    "id": "european-ai-championship-paris-le-kremlin-bicetre-2026",
+    "title": "European AI Championship Paris",
+    "date": "2026-11-20",
+    "endDate": "2026-11-22",
+    "time": "19:00",
+    "city": "Le Kremlin-Bicêtre",
+    "venue": "EPITA - Bâtiment Voltaire, 24 Rue Pasteur, Le Kremlin-Bicêtre",
+    "format": "Workshop",
+    "topics": [
+      "AI competition",
+      "Applied AI"
+    ],
+    "organiser": "PoC Innovation",
+    "cost": "Not listed",
+    "url": "https://luma.com/iwlbokns",
+    "source": "Luma",
+    "blurb": "European AI Championship Paris, organised by PoC Innovation at the EPITA building in Le Kremlin-Bicêtre.",
+    "blurb_en": "European AI Championship Paris, organised by PoC Innovation at the EPITA building in Le Kremlin-Bicêtre.",
+    "blurb_fr": "European AI Championship Paris, organisé par PoC Innovation dans les locaux de l'EPITA au Kremlin-Bicêtre.",
+    "firstSeen": "2026-11-21"
+  },
+  {
     "id": "banc-d-essai-2-build-club-securite-de-l-ia-paris-2026",
     "title": "Banc d'Essai #2 — build club sécurité de l'IA",
     "date": "2026-11-21",
@@ -81,6 +103,27 @@
     "blurb": "Online session by Torsy conseil on building a strategy to get value from data in small and medium businesses.",
     "blurb_en": "Online session by Torsy conseil on building a strategy to get value from data in small and medium businesses.",
     "blurb_fr": "Session en ligne de Torsy conseil sur l'élaboration d'une stratégie de valorisation des données pour les PME.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "ia-humanity-vs-robots-paris-2026",
+    "title": "IA : humanity VS robots ?",
+    "date": "2026-11-22",
+    "time": "15:00–17:00",
+    "city": "Paris",
+    "venue": "France",
+    "format": "Meetup",
+    "topics": [
+      "AI and society",
+      "Philosophy"
+    ],
+    "organiser": "Paris Philosophy café",
+    "cost": "Free",
+    "url": "https://www.meetup.com/paris-philosophy-cafe/events/317228790/",
+    "source": "Meetup",
+    "blurb": "Paris Philosophy café discussion on what is still worth doing ourselves in an age of AI; venue to be confirmed, French and English.",
+    "blurb_en": "Paris Philosophy café discussion on what is still worth doing ourselves in an age of AI; venue to be confirmed, French and English.",
+    "blurb_fr": "Discussion du Paris Philosophy café sur ce qu'il reste à faire soi-même à l'ère de l'IA ; lieu à confirmer, en français et en anglais.",
     "firstSeen": "2026-11-21"
   }
 ]

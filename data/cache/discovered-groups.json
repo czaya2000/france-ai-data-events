@@ -279,6 +279,13 @@
 			"trust": "noisy",
 			"icsOk": true,
 			"checked": "2026-11-25"
+		},
+		"ai-agent-builders-paris-by-dataiku": {
+			"firstSeen": "2026-11-26",
+			"via": "meetup:paris-dataops",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-26"
 		}
 	}
 }
