@@ -1,15 +1,6 @@
 {
 	"dedupeMerges": [
 		{
-			"kept": "IA & Apéro 10e rencontre !",
-			"merged": "Apéro de l'IA",
-			"date": "2026-11-26",
-			"sources": [
-				"meetup:ia-innovateurs",
-				"meetup:l-apero-de-l-ia"
-			]
-		},
-		{
 			"kept": "The AI Collective Podcast with AJ & Catherine: Tuesday, Dec 1",
 			"merged": "The AI Collective Podcast with AJ & Catherine: Wednesday, Dec 2",
 			"date": "2026-12-01",
@@ -55,29 +46,20 @@
 			]
 		},
 		{
-			"kept": "Visite du site VERESCENCE SOMME avec les élèves du collège Millevoye d'Abbeville",
-			"merged": "Visite du site VERESCENCE SOMME avec les élèves du collège Ponthieu d'Abbeville",
-			"date": "2026-11-26",
+			"kept": "AI Tinkerers Paris: Physical AI — Builders Day",
+			"merged": "Physical AI — Builders Day",
+			"date": "2026-12-02",
 			"sources": [
-				"openagenda",
-				"openagenda"
+				"agentconfs",
+				"luma-cal:bond-paris"
 			]
 		},
 		{
-			"kept": "IA & Apéro 10e rencontre !",
-			"merged": "Apéro de l'IA",
-			"date": "2026-11-26",
+			"kept": "Serverless & IA : Go vs Python et Helpdesk automatisé",
+			"merged": "Serverless & IA : Du code assisté aux APIs managées",
+			"date": "2026-12-15",
 			"sources": [
-				"meetup:ia-innovateurs",
-				"brainberg-fr"
-			]
-		},
-		{
-			"kept": "Démo Day : Découvrez les projets finaux des apprenants Data du Wagon Lille",
-			"merged": "Demo Day : Découvrez les projets finaux des apprenants Data du Wagon Lille",
-			"date": "2026-12-11",
-			"sources": [
-				"meetup:le-wagon-lille-coding-station",
+				"meetup:aws-lyon-amazon-web-services-user-group",
 				"brainberg-fr"
 			]
 		},
@@ -93,7 +75,7 @@
 		{
 			"kept": "Cloud Native AI Summit Europe",
 			"merged": "Cloud Native AI Summit Europe 2026",
-			"date": "2026-12-02",
+			"date": "2026-12-01",
 			"sources": [
 				"agentconfs",
 				"aieventlist-paris"
@@ -120,7 +102,7 @@
 		{
 			"kept": "Cloud Native AI Summit Europe",
 			"merged": "Cloud Native AI Summit Europe 2026",
-			"date": "2026-12-02",
+			"date": "2026-12-01",
 			"sources": [
 				"agentconfs",
 				"aieventlist-europe"
@@ -138,7 +120,7 @@
 		{
 			"kept": "Cloud Native AI Summit Europe",
 			"merged": "Cloud Native AI Summit - EUROPE 2026",
-			"date": "2026-12-02",
+			"date": "2026-12-01",
 			"sources": [
 				"agentconfs",
 				"brainberg-fr"
@@ -165,7 +147,7 @@
 		{
 			"kept": "Cloud Native AI Summit Europe",
 			"merged": "Cloud Native AI Summit Paris 2026 — European Edition",
-			"date": "2026-12-02",
+			"date": "2026-12-01",
 			"sources": [
 				"agentconfs",
 				"createwith-paris"

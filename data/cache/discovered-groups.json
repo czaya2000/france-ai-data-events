@@ -286,6 +286,20 @@
 			"trust": "noisy",
 			"icsOk": true,
 			"checked": "2026-11-26"
+		},
+		"agile-testing-paris": {
+			"firstSeen": "2026-11-27",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-27"
+		},
+		"afup-lorraine-php": {
+			"firstSeen": "2026-11-27",
+			"via": "brainberg-fr",
+			"trust": "noisy",
+			"icsOk": true,
+			"checked": "2026-11-27"
 		}
 	}
 }

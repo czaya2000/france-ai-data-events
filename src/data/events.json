@@ -21,171 +21,6 @@
     "firstSeen": "2026-11-21"
   },
   {
-    "id": "ai-for-devs-tactical-ddd-paris-2026",
-    "title": "AI FOR DEVS - Tactical DDD",
-    "date": "2026-11-23",
-    "time": "19:00–21:00",
-    "city": "Paris",
-    "venue": "21 Rue du Bouloi, 21 Rue du Bouloi",
-    "format": "Meetup",
-    "topics": [
-      "Generative AI",
-      "Software architecture",
-      "DDD"
-    ],
-    "organiser": "AI for DEVs",
-    "cost": "Free",
-    "url": "https://www.meetup.com/ai-for-dev/events/317452425/",
-    "source": "Meetup",
-    "blurb": "AI for DEVs session on tactical domain-driven design and how generative AI affects software architecture and technical debt.",
-    "blurb_en": "AI for DEVs session on tactical domain-driven design and how generative AI affects software architecture and technical debt.",
-    "blurb_fr": "Rencontre AI for DEVs sur le Tactical DDD et l'effet de l'IA générative sur l'architecture logicielle et la dette technique.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "atelier-numerique-l-ia-un-nouvel-allie-pour-les-entreprises-mussidan-2026",
-    "title": "Atelier numérique : l'IA un nouvel allié pour les entreprises",
-    "date": "2026-11-23",
-    "time": "09:30–16:00",
-    "city": "Mussidan",
-    "venue": "Communauté de Communes de Mussidan (CCICP), 2 Rue du Périgord, 24400 Mussidan",
-    "format": "Workshop",
-    "topics": [
-      "Applied AI",
-      "Automation"
-    ],
-    "organiser": "Agenda France Num du numérique pour les TPE PME",
-    "cost": "Free",
-    "url": "https://openagenda.com/francenum/events/atelier-numerique-lia-un-nouvel-allie-pour-les-entreprises",
-    "source": "OpenAgenda (Opendatasoft)",
-    "blurb": "Workshop in Mussidan for small businesses on using AI to automate daily tasks, with a case study for the attendee's sector.",
-    "blurb_en": "Workshop in Mussidan for small businesses on using AI to automate daily tasks, with a case study for the attendee's sector.",
-    "blurb_fr": "Atelier à Mussidan pour les petites entreprises sur l'automatisation des tâches courantes avec l'IA, avec étude de cas selon le secteur.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "clickhouse-managed-postgres-the-vision-comes-together-paris-2026",
-    "title": "ClickHouse Managed Postgres: The Vision Comes Together",
-    "date": "2026-11-23",
-    "time": "19:00–20:00",
-    "city": "Paris",
-    "format": "Meetup",
-    "topics": [
-      "ClickHouse",
-      "Postgres",
-      "Data platforms"
-    ],
-    "organiser": "ClickHouse Events",
-    "cost": "Not listed",
-    "url": "https://luma.com/clickh-o62x",
-    "source": "Luma",
-    "blurb": "ClickHouse Events session in Paris on ClickHouse Managed Postgres.",
-    "blurb_en": "ClickHouse Events session in Paris on ClickHouse Managed Postgres.",
-    "blurb_fr": "Soirée ClickHouse Events à Paris consacrée à ClickHouse Managed Postgres.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "diner-machine-9-la-peur-ai-safety-paris-2026",
-    "title": "Dîner Machine, #9: La peur (AI Safety)",
-    "date": "2026-11-23",
-    "time": "19:00–21:00",
-    "city": "Paris",
-    "venue": "77 Rue Saint-Martin, Paris",
-    "format": "Networking",
-    "topics": [
-      "AI safety"
-    ],
-    "organiser": "Nouvelle Machine",
-    "cost": "Not listed",
-    "url": "https://luma.com/tf7j0cts",
-    "source": "Luma",
-    "blurb": "Ninth Dîner Machine by Nouvelle Machine in Paris, themed on fear and AI safety.",
-    "blurb_en": "Ninth Dîner Machine by Nouvelle Machine in Paris, themed on fear and AI safety.",
-    "blurb_fr": "Neuvième Dîner Machine de Nouvelle Machine à Paris, sur le thème de la peur et de la sécurité de l'IA.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "ia-aix-marseille-meetup-13-marseille-2026",
-    "title": "IA Aix Marseille Meetup #13",
-    "date": "2026-11-23",
-    "time": "19:00–22:00",
-    "city": "Marseille",
-    "venue": "Klanik, 221 Av. du Prado, 13008 Marseille, France",
-    "format": "Meetup",
-    "topics": [
-      "AI",
-      "Environmental impact"
-    ],
-    "organiser": "Intelligence Artificielle Aix Marseille",
-    "cost": "Free",
-    "url": "https://www.meetup.com/intelligence-artificielle-aix-marseille/events/317401906/",
-    "source": "Meetup",
-    "blurb": "IA Aix Marseille meetup #13 hosted by Klanik, with a talk on the environmental footprint of AI by Delphine Tagger.",
-    "blurb_en": "IA Aix Marseille meetup #13 hosted by Klanik, with a talk on the environmental footprint of AI by Delphine Tagger.",
-    "blurb_fr": "Meetup IA Aix Marseille n°13 chez Klanik, avec un exposé de Delphine Tagger sur l'impact environnemental de l'IA.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "meetup-hacienda-qui-protege-l-ia-les-nouveaux-enjeux-de-secu-nantes-2026",
-    "title": "Meetup Hacienda - Qui protège l'IA ? Les nouveaux enjeux de sécurité",
-    "date": "2026-11-23",
-    "time": "20:00–23:00",
-    "city": "Nantes",
-    "venue": "4 Rue Voltaire, 4 Rue Voltaire, 44000 Nantes",
-    "format": "Meetup",
-    "topics": [
-      "AI security",
-      "Cryptography"
-    ],
-    "organiser": "Not listed",
-    "cost": "Free",
-    "url": "https://www.eventbrite.co.uk/e/billets-meetup-hacienda-qui-protege-lia-les-nouveaux-enjeux-de-securite-2003057463795",
-    "source": "Brainberg",
-    "blurb": "Meetup Hacienda in Nantes on AI security, with Marie Paindavoine, founder of Skyld.",
-    "blurb_en": "Meetup Hacienda in Nantes on AI security, with Marie Paindavoine, founder of Skyld.",
-    "blurb_fr": "Meetup Hacienda à Nantes sur la sécurité de l'IA, avec Marie Paindavoine, fondatrice de Skyld.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "the-ai-collective-podcast-with-aj-catherine-monday-nov-23-paris-2026",
-    "title": "The AI Collective Podcast with AJ & Catherine: Monday, Nov 23",
-    "date": "2026-11-23",
-    "time": "18:00–19:30",
-    "city": "Paris",
-    "format": "Meetup",
-    "topics": [
-      "AI community"
-    ],
-    "organiser": "The AI Collective",
-    "cost": "Not listed",
-    "url": "https://luma.com/genai-em4z",
-    "source": "Luma",
-    "blurb": "The AI Collective podcast session for 23 November, listed for Paris.",
-    "blurb_en": "The AI Collective podcast session for 23 November, listed for Paris.",
-    "blurb_fr": "Session podcast de The AI Collective prévue le 23 novembre, listée pour Paris.",
-    "firstSeen": "2026-11-21"
-  },
-  {
-    "id": "webinaire-comment-l-ia-accelere-un-projet-des-sa-conception-online-fr-2026",
-    "title": "Webinaire : Comment l’IA accélère un projet dès sa conception",
-    "date": "2026-11-23",
-    "time": "18:30–19:30",
-    "city": "Online (FR)",
-    "format": "Webinar",
-    "topics": [
-      "AI",
-      "Project management"
-    ],
-    "organiser": "Ecole O'clock",
-    "cost": "Not listed",
-    "url": "https://www.eventbrite.fr/e/billets-webinaire-comment-lia-accelere-un-projet-des-sa-conception-2004641591965",
-    "source": "Brief IA",
-    "blurb": "Webinar by Ecole O'clock on how AI speeds up a project from the design stage.",
-    "blurb_en": "Webinar by Ecole O'clock on how AI speeds up a project from the design stage.",
-    "blurb_fr": "Webinaire de l'Ecole O'clock sur la façon dont l'IA accélère un projet dès sa conception.",
-    "firstSeen": "2026-11-21"
-  },
-  {
     "id": "lab-ia-creer-son-systeme-d-agents-pour-faciliter-les-sprints-online-fr-2026",
     "title": "[LAB IA] Créer son système d’agents pour faciliter les Sprints",
     "date": "2026-11-24",
@@ -2013,6 +1848,27 @@
     "firstSeen": "2026-11-21"
   },
   {
+    "id": "grafton-ia-atelier-ia-pratique-paris-2026-2026-12-01",
+    "title": "Grafton IA : Atelier IA Pratique",
+    "date": "2026-12-01",
+    "time": "11:00–13:00",
+    "city": "Paris",
+    "venue": "Spaces Paris 2e - 124 Rue Reaumur, 124 Rue Réaumur, 75002 Paris",
+    "format": "Workshop",
+    "topics": [
+      "IA générative",
+      "Assistants IA"
+    ],
+    "organiser": "Not listed",
+    "cost": "Free",
+    "url": "https://www.eventbrite.fr/e/grafton-ia-atelier-ia-pratique-tickets-1988980239438",
+    "source": "Brainberg",
+    "blurb": "Two-hour in-person hands-on workshop in Paris in which participants set up an AI assistant live, with 20 places.",
+    "blurb_en": "Two-hour in-person hands-on workshop in Paris in which participants set up an AI assistant live, with 20 places.",
+    "blurb_fr": "Atelier pratique de deux heures en présentiel à Paris pour configurer un assistant IA en direct, avec 20 places maximum.",
+    "firstSeen": "2026-11-27"
+  },
+  {
     "id": "hdi-day-2026-nouvelles-frontieres-de-la-donnee-de-sante-paris-2026",
     "title": "HDI Day 2026 : Nouvelles frontières de la donnée de santé",
     "date": "2026-12-01",
@@ -2196,6 +2052,27 @@
     "blurb_en": "3iL Tech webinar on frugal AI and next-generation AI routing.",
     "blurb_fr": "Webinaire RDV Tech@3iL sur l'IA frugale et le routage d'IA de nouvelle génération.",
     "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "search-data-ai-meetup-tech-for-retail-paris-paris-2026",
+    "title": "Search, Data & AI Meetup @ Tech for Retail – Paris",
+    "date": "2026-12-01",
+    "time": "13:45–15:00",
+    "city": "Paris",
+    "format": "Meetup",
+    "topics": [
+      "Search",
+      "Data",
+      "Intelligence artificielle"
+    ],
+    "organiser": "Search, Data and AI",
+    "cost": "Free",
+    "url": "https://www.meetup.com/search-and-data/events/317600574/",
+    "source": "Meetup",
+    "blurb": "Free community evening of the Search, Data and AI group at Tech for Retail in Paris, with talks and practitioner feedback.",
+    "blurb_en": "Free community evening of the Search, Data and AI group at Tech for Retail in Paris, with talks and practitioner feedback.",
+    "blurb_fr": "Soirée gratuite de la communauté Search, Data & AI chez Tech for Retail, à Paris, avec conférences et retours d'expérience.",
+    "firstSeen": "2026-11-27"
   },
   {
     "id": "the-ai-collective-podcast-with-aj-catherine-tuesday-dec-1-paris-2026",
@@ -2630,6 +2507,27 @@
     "blurb_en": "Meetup IA Nancy hears Harmonie Mutuelle's CIO on AI tools used for fraud detection and reimbursements.",
     "blurb_fr": "Le Meetup IA Nancy accueille le DSI d'Harmonie Mutuelle sur les outils d'IA utilisés pour l'anti-fraude et les remboursements.",
     "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "les-opportunites-entrepreneuriales-de-demain-grace-a-l-ia-paris-2026",
+    "title": "Les opportunités entrepreneuriales de demain grâce à l'ia",
+    "date": "2026-12-03",
+    "time": "19:30–22:30",
+    "city": "Paris",
+    "venue": "Bistrot Romain Clichy, 181 Avenue de Clichy",
+    "format": "Networking",
+    "topics": [
+      "Entrepreneuriat",
+      "IA"
+    ],
+    "organiser": "Les opportunités de demain grâce à l'IA",
+    "cost": "Free",
+    "url": "https://www.meetup.com/agile-testing-paris/events/317414456/",
+    "source": "Meetup",
+    "blurb": "Networking event in Paris on entrepreneurial opportunities created by AI; attendees are asked to confirm their presence in advance.",
+    "blurb_en": "Networking event in Paris on entrepreneurial opportunities created by AI; attendees are asked to confirm their presence in advance.",
+    "blurb_fr": "Événement de réseautage à Paris sur les opportunités entrepreneuriales ouvertes par l'IA, avec confirmation de présence demandée à l'avance.",
+    "firstSeen": "2026-11-27"
   },
   {
     "id": "meetup-airflow-chez-datadog-paris-paris-2026",
@@ -3420,6 +3318,26 @@
     "firstSeen": "2026-11-21"
   },
   {
+    "id": "chatgpt-perplexity-claude-quel-outil-ia-choisir-et-quand-online-fr-2026",
+    "title": "ChatGPT, Perplexity, Claude... Quel outil IA choisir (et quand) ?",
+    "date": "2026-12-10",
+    "time": "12:00–13:30",
+    "city": "Online (FR)",
+    "format": "Webinar",
+    "topics": [
+      "Outils IA",
+      "IA générative"
+    ],
+    "organiser": "Le Wagon Bordeaux | Formations Tech & IA",
+    "cost": "Free",
+    "url": "https://www.meetup.com/le-wagon-bordeaux-coding-station-bootcamp/events/317604006/",
+    "source": "Meetup",
+    "blurb": "Free online webinar by Le Wagon on choosing and using AI tools such as ChatGPT, Perplexity and Claude in everyday work.",
+    "blurb_en": "Free online webinar by Le Wagon on choosing and using AI tools such as ChatGPT, Perplexity and Claude in everyday work.",
+    "blurb_fr": "Webinaire gratuit en ligne de Le Wagon sur le choix et l'usage d'outils d'IA comme ChatGPT, Perplexity ou Claude dans le travail quotidien.",
+    "firstSeen": "2026-11-27"
+  },
+  {
     "id": "factory-excellence-paris-2026-de-la-machine-a-la-valeur-par--paris-2026",
     "title": "Factory Excellence Paris 2026 : de la machine à la valeur par l'IA",
     "date": "2026-12-10",
@@ -3564,6 +3482,26 @@
     "blurb_en": "Third Marseille edition of Les Meetups de l'IA: an open table discussion about AI, its uses and limits, with no stage or talks.",
     "blurb_fr": "Troisième rencontre marseillaise des Meetups de l'IA : discussion libre autour d'une table sur l'IA, ses usages et ses limites, sans conférence.",
     "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "les-opportunites-entrepreneuriales-de-demain-grace-a-l-ia-paris-2026-2026-12-10",
+    "title": "Les opportunités entrepreneuriales de demain grâce à l'ia",
+    "date": "2026-12-10",
+    "time": "19:30–22:30",
+    "city": "Paris",
+    "format": "Networking",
+    "topics": [
+      "Entrepreneuriat",
+      "IA"
+    ],
+    "organiser": "Les opportunités de demain grâce à l'IA",
+    "cost": "Not listed",
+    "url": "https://www.meetup.com/agile-testing-paris/events/317451401/",
+    "source": "Meetup",
+    "blurb": "Networking event in Paris on entrepreneurial opportunities created by AI; attendees are asked to confirm their presence in advance.",
+    "blurb_en": "Networking event in Paris on entrepreneurial opportunities created by AI; attendees are asked to confirm their presence in advance.",
+    "blurb_fr": "Événement de réseautage à Paris sur les opportunités entrepreneuriales ouvertes par l'IA, avec confirmation de présence demandée à l'avance.",
+    "firstSeen": "2026-11-27"
   },
   {
     "id": "mindstone-lyon-december-ai-meetup-lyon-2026",
@@ -3767,6 +3705,48 @@
     "blurb_en": "AI for Chip Design workshop held alongside NeurIPS in Paris.",
     "blurb_fr": "Atelier AI for Chip Design organisé à Paris en marge de NeurIPS.",
     "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "cafe-ia-l-ia-et-la-consommation-energetique-bordeaux-2026",
+    "title": "CAFÉ IA - L'IA et la consommation énergétique",
+    "date": "2026-12-12",
+    "time": "11:00–13:00",
+    "city": "Bordeaux",
+    "venue": "Aquinum - Le Node, 12 Rue des Faussets, 33000 Bordeaux",
+    "format": "Meetup",
+    "topics": [
+      "Énergie",
+      "IA responsable"
+    ],
+    "organiser": "Not listed",
+    "cost": "Free",
+    "url": "https://www.eventbrite.fr/e/cafe-ia-lia-et-la-consommation-energetique-tickets-2005508857981",
+    "source": "Brainberg",
+    "blurb": "Café IA evening in Bordeaux on how much energy an AI request consumes, with infographics and a group discussion.",
+    "blurb_en": "Café IA evening in Bordeaux on how much energy an AI request consumes, with infographics and a group discussion.",
+    "blurb_fr": "Café IA à Bordeaux sur la consommation énergétique d'une requête d'IA, avec infographies et débat collectif.",
+    "firstSeen": "2026-11-27"
+  },
+  {
+    "id": "neurips-2026-workshop-foundations-of-llm-post-training-in-ch-paris-2026",
+    "title": "NeurIPS 2026 Workshop - Foundations of LLM Post-Training in Changing Environments",
+    "date": "2026-12-12",
+    "endDate": "2026-12-13",
+    "city": "Paris",
+    "venue": "Paris, France",
+    "format": "Workshop",
+    "topics": [
+      "LLM",
+      "Post-training"
+    ],
+    "organiser": "Not listed",
+    "cost": "Not listed",
+    "url": "https://agentconfs.com/events/neurips-2026-workshop-foundations-of-llm-post-training-in-changing-environments",
+    "source": "agentconfs.com",
+    "blurb": "Workshop in Paris on the foundations of LLM post-training in changing environments, part of NeurIPS 2026.",
+    "blurb_en": "Workshop in Paris on the foundations of LLM post-training in changing environments, part of NeurIPS 2026.",
+    "blurb_fr": "Atelier à Paris sur les fondements du post-entraînement des LLM dans des environnements changeants, dans le cadre de NeurIPS 2026.",
+    "firstSeen": "2026-11-27"
   },
   {
     "id": "paris-ai-hackathon-paris-2026",
@@ -4080,6 +4060,47 @@
     "blurb_en": "Networking night in Paris for AI and startup founders, investors and builders, with short introductions.",
     "blurb_fr": "Soirée de réseautage à Paris pour fondateurs, investisseurs et développeurs de l'IA et des startups, avec de courtes présentations.",
     "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "l-ia-code-vite-mais-code-t-elle-pour-tout-le-monde-nancy-2026",
+    "title": "L'IA code vite ... mais code-t-elle pour tout le monde ?",
+    "date": "2026-12-17",
+    "time": "19:00–22:00",
+    "city": "Nancy",
+    "venue": "EPITECH Nancy, 80, rue Saint-Georges",
+    "format": "Meetup",
+    "topics": [
+      "Accessibilité",
+      "IA générative"
+    ],
+    "organiser": "Antenne AFUP Lorraine : PHP",
+    "cost": "Free",
+    "url": "https://www.meetup.com/afup-lorraine-php/events/317565802/",
+    "source": "Meetup",
+    "blurb": "PHP user-group meetup in Nancy with a 40-minute talk on whether AI-generated code is accessible to everyone.",
+    "blurb_en": "PHP user-group meetup in Nancy with a 40-minute talk on whether AI-generated code is accessible to everyone.",
+    "blurb_fr": "Rencontre du groupe PHP de Nancy avec une conférence de 40 minutes sur l'accessibilité du code produit par l'IA.",
+    "firstSeen": "2026-11-27"
+  },
+  {
+    "id": "les-opportunites-entrepreneuriales-de-demain-grace-a-l-ia-paris-2026-2026-12-17",
+    "title": "Les opportunités entrepreneuriales de demain grâce à l'ia",
+    "date": "2026-12-17",
+    "time": "19:30–22:30",
+    "city": "Paris",
+    "format": "Networking",
+    "topics": [
+      "Entrepreneuriat",
+      "IA"
+    ],
+    "organiser": "Les opportunités de demain grâce à l'IA",
+    "cost": "Not listed",
+    "url": "https://www.meetup.com/agile-testing-paris/events/dzkrxtyjcqbwb/",
+    "source": "Meetup",
+    "blurb": "Networking event in Paris on entrepreneurial opportunities created by AI; attendees are asked to confirm their presence in advance.",
+    "blurb_en": "Networking event in Paris on entrepreneurial opportunities created by AI; attendees are asked to confirm their presence in advance.",
+    "blurb_fr": "Événement de réseautage à Paris sur les opportunités entrepreneuriales ouvertes par l'IA, avec confirmation de présence demandée à l'avance.",
+    "firstSeen": "2026-11-27"
   },
   {
     "id": "meetup-labelia-4-amortizing-label-shift-in-tabular-foundatio-paris-2026",
@@ -4634,6 +4655,26 @@
     "blurb_en": "Library session in Rouen on how AI works, from intelligence gathering to automated learning.",
     "blurb_fr": "Séance en bibliothèque à Rouen pour comprendre le fonctionnement des IA, du renseignement à l'apprentissage automatisé.",
     "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "la-transformation-numerique-et-l-ia-pour-les-entreprises-online-fr-2027",
+    "title": "La transformation numérique et l’IA pour les entreprises",
+    "date": "2027-02-17",
+    "time": "17:00–18:00",
+    "city": "Online (FR)",
+    "format": "Webinar",
+    "topics": [
+      "Transformation numérique",
+      "IA en entreprise"
+    ],
+    "organiser": "Innovation Canada",
+    "cost": "Not listed",
+    "url": "https://www.eventbrite.ca/e/la-transformation-numerique-et-lia-pour-les-entreprises-tickets-1995680786956",
+    "source": "Brief IA",
+    "blurb": "Online session in French on digital transformation and artificial intelligence for companies.",
+    "blurb_en": "Online session in French on digital transformation and artificial intelligence for companies.",
+    "blurb_fr": "Session en ligne sur la transformation numérique et l'intelligence artificielle dans les entreprises.",
+    "firstSeen": "2026-11-27"
   },
   {
     "id": "les-cafes-ia-a-l-universite-de-rennes-rennes-2027-2027-02-18",

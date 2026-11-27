@@ -125,5 +125,170 @@
     "blurb_en": "Paris Philosophy café discussion on what is still worth doing ourselves in an age of AI; venue to be confirmed, French and English.",
     "blurb_fr": "Discussion du Paris Philosophy café sur ce qu'il reste à faire soi-même à l'ère de l'IA ; lieu à confirmer, en français et en anglais.",
     "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "ai-for-devs-tactical-ddd-paris-2026",
+    "title": "AI FOR DEVS - Tactical DDD",
+    "date": "2026-11-23",
+    "time": "19:00–21:00",
+    "city": "Paris",
+    "venue": "21 Rue du Bouloi, 21 Rue du Bouloi",
+    "format": "Meetup",
+    "topics": [
+      "Generative AI",
+      "Software architecture",
+      "DDD"
+    ],
+    "organiser": "AI for DEVs",
+    "cost": "Free",
+    "url": "https://www.meetup.com/ai-for-dev/events/317452425/",
+    "source": "Meetup",
+    "blurb": "AI for DEVs session on tactical domain-driven design and how generative AI affects software architecture and technical debt.",
+    "blurb_en": "AI for DEVs session on tactical domain-driven design and how generative AI affects software architecture and technical debt.",
+    "blurb_fr": "Rencontre AI for DEVs sur le Tactical DDD et l'effet de l'IA générative sur l'architecture logicielle et la dette technique.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "atelier-numerique-l-ia-un-nouvel-allie-pour-les-entreprises-mussidan-2026",
+    "title": "Atelier numérique : l'IA un nouvel allié pour les entreprises",
+    "date": "2026-11-23",
+    "time": "09:30–16:00",
+    "city": "Mussidan",
+    "venue": "Communauté de Communes de Mussidan (CCICP), 2 Rue du Périgord, 24400 Mussidan",
+    "format": "Workshop",
+    "topics": [
+      "Applied AI",
+      "Automation"
+    ],
+    "organiser": "Agenda France Num du numérique pour les TPE PME",
+    "cost": "Free",
+    "url": "https://openagenda.com/francenum/events/atelier-numerique-lia-un-nouvel-allie-pour-les-entreprises",
+    "source": "OpenAgenda (Opendatasoft)",
+    "blurb": "Workshop in Mussidan for small businesses on using AI to automate daily tasks, with a case study for the attendee's sector.",
+    "blurb_en": "Workshop in Mussidan for small businesses on using AI to automate daily tasks, with a case study for the attendee's sector.",
+    "blurb_fr": "Atelier à Mussidan pour les petites entreprises sur l'automatisation des tâches courantes avec l'IA, avec étude de cas selon le secteur.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "clickhouse-managed-postgres-the-vision-comes-together-paris-2026",
+    "title": "ClickHouse Managed Postgres: The Vision Comes Together",
+    "date": "2026-11-23",
+    "time": "19:00–20:00",
+    "city": "Paris",
+    "format": "Meetup",
+    "topics": [
+      "ClickHouse",
+      "Postgres",
+      "Data platforms"
+    ],
+    "organiser": "ClickHouse Events",
+    "cost": "Not listed",
+    "url": "https://luma.com/clickh-o62x",
+    "source": "Luma",
+    "blurb": "ClickHouse Events session in Paris on ClickHouse Managed Postgres.",
+    "blurb_en": "ClickHouse Events session in Paris on ClickHouse Managed Postgres.",
+    "blurb_fr": "Soirée ClickHouse Events à Paris consacrée à ClickHouse Managed Postgres.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "diner-machine-9-la-peur-ai-safety-paris-2026",
+    "title": "Dîner Machine, #9: La peur (AI Safety)",
+    "date": "2026-11-23",
+    "time": "19:00–21:00",
+    "city": "Paris",
+    "venue": "77 Rue Saint-Martin, Paris",
+    "format": "Networking",
+    "topics": [
+      "AI safety"
+    ],
+    "organiser": "Nouvelle Machine",
+    "cost": "Not listed",
+    "url": "https://luma.com/tf7j0cts",
+    "source": "Luma",
+    "blurb": "Ninth Dîner Machine by Nouvelle Machine in Paris, themed on fear and AI safety.",
+    "blurb_en": "Ninth Dîner Machine by Nouvelle Machine in Paris, themed on fear and AI safety.",
+    "blurb_fr": "Neuvième Dîner Machine de Nouvelle Machine à Paris, sur le thème de la peur et de la sécurité de l'IA.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "ia-aix-marseille-meetup-13-marseille-2026",
+    "title": "IA Aix Marseille Meetup #13",
+    "date": "2026-11-23",
+    "time": "19:00–22:00",
+    "city": "Marseille",
+    "venue": "Klanik, 221 Av. du Prado, 13008 Marseille, France",
+    "format": "Meetup",
+    "topics": [
+      "AI",
+      "Environmental impact"
+    ],
+    "organiser": "Intelligence Artificielle Aix Marseille",
+    "cost": "Free",
+    "url": "https://www.meetup.com/intelligence-artificielle-aix-marseille/events/317401906/",
+    "source": "Meetup",
+    "blurb": "IA Aix Marseille meetup #13 hosted by Klanik, with a talk on the environmental footprint of AI by Delphine Tagger.",
+    "blurb_en": "IA Aix Marseille meetup #13 hosted by Klanik, with a talk on the environmental footprint of AI by Delphine Tagger.",
+    "blurb_fr": "Meetup IA Aix Marseille n°13 chez Klanik, avec un exposé de Delphine Tagger sur l'impact environnemental de l'IA.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "meetup-hacienda-qui-protege-l-ia-les-nouveaux-enjeux-de-secu-nantes-2026",
+    "title": "Meetup Hacienda - Qui protège l'IA ? Les nouveaux enjeux de sécurité",
+    "date": "2026-11-23",
+    "time": "20:00–23:00",
+    "city": "Nantes",
+    "venue": "4 Rue Voltaire, 4 Rue Voltaire, 44000 Nantes",
+    "format": "Meetup",
+    "topics": [
+      "AI security",
+      "Cryptography"
+    ],
+    "organiser": "Not listed",
+    "cost": "Free",
+    "url": "https://www.eventbrite.co.uk/e/billets-meetup-hacienda-qui-protege-lia-les-nouveaux-enjeux-de-securite-2003057463795",
+    "source": "Brainberg",
+    "blurb": "Meetup Hacienda in Nantes on AI security, with Marie Paindavoine, founder of Skyld.",
+    "blurb_en": "Meetup Hacienda in Nantes on AI security, with Marie Paindavoine, founder of Skyld.",
+    "blurb_fr": "Meetup Hacienda à Nantes sur la sécurité de l'IA, avec Marie Paindavoine, fondatrice de Skyld.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "the-ai-collective-podcast-with-aj-catherine-monday-nov-23-paris-2026",
+    "title": "The AI Collective Podcast with AJ & Catherine: Monday, Nov 23",
+    "date": "2026-11-23",
+    "time": "18:00–19:30",
+    "city": "Paris",
+    "format": "Meetup",
+    "topics": [
+      "AI community"
+    ],
+    "organiser": "The AI Collective",
+    "cost": "Not listed",
+    "url": "https://luma.com/genai-em4z",
+    "source": "Luma",
+    "blurb": "The AI Collective podcast session for 23 November, listed for Paris.",
+    "blurb_en": "The AI Collective podcast session for 23 November, listed for Paris.",
+    "blurb_fr": "Session podcast de The AI Collective prévue le 23 novembre, listée pour Paris.",
+    "firstSeen": "2026-11-21"
+  },
+  {
+    "id": "webinaire-comment-l-ia-accelere-un-projet-des-sa-conception-online-fr-2026",
+    "title": "Webinaire : Comment l’IA accélère un projet dès sa conception",
+    "date": "2026-11-23",
+    "time": "18:30–19:30",
+    "city": "Online (FR)",
+    "format": "Webinar",
+    "topics": [
+      "AI",
+      "Project management"
+    ],
+    "organiser": "Ecole O'clock",
+    "cost": "Not listed",
+    "url": "https://www.eventbrite.fr/e/billets-webinaire-comment-lia-accelere-un-projet-des-sa-conception-2004641591965",
+    "source": "Brief IA",
+    "blurb": "Webinar by Ecole O'clock on how AI speeds up a project from the design stage.",
+    "blurb_en": "Webinar by Ecole O'clock on how AI speeds up a project from the design stage.",
+    "blurb_fr": "Webinaire de l'Ecole O'clock sur la façon dont l'IA accélère un projet dès sa conception.",
+    "firstSeen": "2026-11-21"
   }
 ]

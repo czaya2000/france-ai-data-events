@@ -167,6 +167,22 @@
 			"via": "luma-paris",
 			"firstSeen": "2026-11-26",
 			"trust": "noisy"
+		},
+		"cal-SqDwK6XAVF8AiZh": {
+			"name": "Personal",
+			"slug": null,
+			"city": null,
+			"via": "meetup:paris-ai-tech-talk",
+			"firstSeen": "2026-11-27",
+			"trust": "noisy"
+		},
+		"cal-qFg6R8OBKsMjMhr": {
+			"name": "AI Tinkerers Paris",
+			"slug": null,
+			"city": null,
+			"via": "luma-cal:bond-paris",
+			"firstSeen": "2026-11-27",
+			"trust": "noisy"
 		}
 	},
 	"slugs": {
@@ -244,6 +260,16 @@
 		"aic-la-12-3": "cal-E74MDlDKBaeAwXK",
 		"OpenAITraining": "cal-E74MDlDKBaeAwXK",
 		"aic-ne-12-3": "cal-E74MDlDKBaeAwXK",
-		"genai-6mz7": "cal-E74MDlDKBaeAwXK"
+		"genai-6mz7": "cal-E74MDlDKBaeAwXK",
+		"ks29n5ih": "cal-SqDwK6XAVF8AiZh",
+		"nj1sszby": "cal-qFg6R8OBKsMjMhr",
+		"aic-ca-11-25": "cal-E74MDlDKBaeAwXK",
+		"aic-tr-12-3": "cal-E74MDlDKBaeAwXK",
+		"aic-sw-ai-ready-2": "cal-E74MDlDKBaeAwXK",
+		"aic-si-12-4": "cal-E74MDlDKBaeAwXK",
+		"ai-safety-lecture01": "cal-E74MDlDKBaeAwXK",
+		"genai-5nj1": "cal-E74MDlDKBaeAwXK",
+		"aic-dc-12-4": "cal-E74MDlDKBaeAwXK",
+		"aic-be-12-5": "cal-E74MDlDKBaeAwXK"
 	}
 }
